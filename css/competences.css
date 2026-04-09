@@ -1,85 +1,112 @@
-    body {
-        scroll-behavior: smooth;
-    }
+/* competences.css — Styles spécifiques à la page Compétences */
 
-    header {
-        background-color: #4a5568;
-    }
+/* ── SKILLS BENTO ── */
+.skills-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+.skill-card {
+  background: var(--card);
+  padding: 28px 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: background 0.2s, opacity 0.5s ease, transform 0.5s ease;
+}
+.skill-card:hover { background: var(--card-hover); }
+.skill-card.visible { opacity: 1; transform: translateY(0); }
+.skill-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+  display: block;
+}
+.skill-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+.skill-tags {
+  display: flex; flex-wrap: wrap; gap: 5px;
+  margin-bottom: 10px;
+}
+.skill-source {
+  font-size: 11px;
+  color: var(--text3);
+  font-weight: 400;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
 
-    .nav-link.active {
-        font-weight: bold;
-        border-bottom: 2px solid #fff;
-    }
+/* ── PATRIMOINE SECTION ── */
+.patrimoine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.patrimoine-card {
+  background: var(--card);
+  padding: 28px 24px;
+  transition: background 0.2s;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: background 0.2s, opacity 0.5s ease, transform 0.5s ease;
+}
+.patrimoine-card:hover { background: var(--card-hover); }
+.patrimoine-card.visible { opacity: 1; transform: translateY(0); }
+.patrimoine-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.patrimoine-list {
+  list-style: none;
+  padding: 0;
+}
+.patrimoine-list li {
+  font-size: 13px;
+  color: var(--text3);
+  font-weight: 300;
+  line-height: 1.6;
+  padding: 4px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.patrimoine-list li::before {
+  content: '·';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
 
-    .icon-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+/* ── CTA DOWNLOAD ── */
+.cta-center {
+  text-align: center;
+  padding: 40px 0;
+}
 
-    .section-icon {
-        font-size: 1.5rem;
-        color: #4a5568;
-    }
-
-    /* CARTES */
-    .skill-card {
-        position: relative;
-        height: 300px;
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease;
-    }
-
-    .skill-card:hover {
-        transform: translateY(-6px);
-    }
-
-    .skill-front,
-    .skill-back {
-        position: absolute;
-        inset: 0;
-        padding: 22px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-
-    .skill-front {
-        background: #fff;
-    }
-
-    .skill-back {
-        background: #4a5568;
-        color: #fff;
-        opacity: 0;
-        transform: translateY(20px);
-        font-size: 0.9rem;
-    }
-
-    .skill-card:hover .skill-front {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    .skill-card:hover .skill-back {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .skill-icon {
-        font-size: 2.8rem;
-        color: #4a5568;
-        margin-bottom: 10px;
-    }
-
-    /* On s'assure que le header couvre la grille */
-    header {
-        position: relative;
-        z-index: 10;
-    }
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .skills-bento { grid-template-columns: 1fr 1fr; }
+  .patrimoine-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .skills-bento { grid-template-columns: 1fr; }
+}

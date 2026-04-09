@@ -1,114 +1,48 @@
-/**
- * Logic for the Tools Carousel and Side Drawer in veille.html
- */
+// veille.js — Scripts pour la page Veille technologique
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Initialize Swiper
-    const swiper = new Swiper('.tools-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-        }
-    });
+// ── THEME TOGGLE ──
+const html = document.documentElement;
+const toggle = document.getElementById('themeToggle');
+const icon = document.getElementById('themeIcon');
 
-    // Elements for Side Drawer
-    const toolCards = document.querySelectorAll('.artifact-card');
-    const offcanvasElement = document.getElementById('veilleSideDrawer');
+const sunPath = 'M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 101.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.591-1.59a.75.75 0 00-1.06-1.061L6.166 6.166z';
+const moonPath = 'M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z';
 
-    if (!offcanvasElement) return;
-
-    const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
-    const titleEl = document.getElementById('drawerTitle');
-    const descriptionEl = document.getElementById('drawerDescription');
-    const iconEl = document.getElementById('drawerIcon');
-
-    // Data for each tool
-    const toolsData = {
-        'anssi': {
-            title: 'ANSSI',
-            icon: 'bi-shield-fill-check',
-            description: 'L\'Agence nationale de la sécurité des systèmes d\'information est le service à compétence nationale rattaché au secrétaire général de la Défense et de la Sécurité nationale. C\'est la référence absolue en France pour la cybersécurité, fournissant rapports techniques, alertes et guides de bonnes pratiques.'
-        },
-        'sentinel': {
-            title: 'Microsoft Sentinel',
-            icon: 'bi-shield-lock-fill',
-            description: 'Microsoft Sentinel est une solution complète, native-cloud, intégrée au SIEM (Security Information and Event Management) et au SOAR (Security Orchestration, Automation, and Response). Elle utilise l\'intelligence artificielle intelligente pour analyser des volumes massifs de données à travers l\'entreprise.'
-        },
-        'splunk': {
-            title: 'Splunk',
-            icon: 'bi-bar-chart-fill',
-            description: 'Splunk est une plateforme de "Data-to-Everything" qui permet d\'ingérer, indexer et corréler des logs en temps réel. Dans un cadre de sécurité, il sert de SIEM puissant pour détecter les anomalies et enquêter sur les incidents complexes via des tableaux de bord avancés.'
-        },
-        'enisa': {
-            title: 'ENISA',
-            icon: 'bi-globe2',
-            description: 'L\'Agence de l\'Union européenne pour la cybersécurité. Elle publie chaque année le "ENISA Threat Landscape", une analyse approfondie des tendances mondiales et européennes en matière de menaces numériques, essentielle pour une veille stratégique.'
-        },
-        'mit': {
-            title: 'MIT Technology Review',
-            icon: 'bi-journal-text',
-            description: 'Publication de référence mondiale issue du Massachusetts Institute of Technology. Elle offre un regard prospectif sur les technologies de rupture, particulièrement l\'intelligence artificielle et ses implications éthiques et sécuritaires dans la défense.'
-        },
-        'feedly': {
-            title: 'Feedly',
-            icon: 'bi-rss',
-            description: 'Agrégateur de flux RSS indispensable pour centraliser toutes vos sources (blogs experts, Hacker News, sites institutionnels). Il permet de filtrer le bruit et de se concentrer sur les signaux faibles et les annonces techniques majeures.'
-        },
-        'google-alerts': {
-            title: 'Google Alertes',
-            icon: 'bi-bell-fill',
-            description: 'Un service d\'envoi de notifications par e-mail lorsque de nouveaux résultats correspondant à des termes de recherche spécifiques (ex: "CVE-2025", "Zero Trust Architecture") sont indexés par le moteur de recherche.'
-        },
-        'osint': {
-            title: 'OSINT Framework',
-            icon: 'bi-search',
-            description: 'Open Source Intelligence Framework. Un ensemble d\'outils et de ressources facilitant la collecte d\'informations à partir de sources publiques. Crucial pour le renseignement sur les menaces et la cartographie de la surface d\'attaque.'
-        }
-    };
-
-    // Add click listeners to cards
-    toolCards.forEach(card => {
-        card.addEventListener('click', function () {
-            const toolKey = this.getAttribute('data-tool');
-            const data = toolsData[toolKey];
-
-            if (data) {
-                // Update drawer content
-                titleEl.textContent = data.title;
-                descriptionEl.textContent = data.description;
-
-                // Update icon class
-                iconEl.className = `bi ${data.icon} tool-detail-icon`;
-
-                // Open the drawer
-                bsOffcanvas.show();
-            }
-        });
-    });
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  icon.innerHTML = theme === 'dark'
+    ? `<path d="${sunPath}"/>`
+    : `<path d="${moonPath}"/>`;
+}
+const saved = localStorage.getItem('theme') || 'dark';
+setTheme(saved);
+toggle.addEventListener('click', () => {
+  setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
 });
+
+// ── MOBILE NAV ──
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+function closeMobileNav() { mobileNav.classList.remove('open'); }
+
+// ── SCROLL ANIMATIONS ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.theme-card').forEach((card, i) => {
+  card.style.transitionDelay = (i * 0.1) + 's';
+  observer.observe(card);
+});
+
+// ── MARQUEE OUTILS (géré en CSS pur via animation marqueeScroll) ──
+// Pause au survol gérée via CSS hover rule dans veille.css
+
+
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entreprise — Groupe Ragni · Portfolio Nedj Belloum</title>
+  <meta name="description"
+    content="Mon alternance chez Groupe Ragni : technicien support informatique, missions IT, outils et chantiers menés.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/entreprise.css">
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Nedj Belloum</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="entreprise.html" class="active">Entreprise</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="theme-toggle" id="themeToggle" title="Changer le thème">
+          <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 3a9 9 0 100 18A9 9 0 0012 3zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z" />
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../index.html" onclick="closeMobileNav()">Accueil</a>
+    <a href="projets.html" onclick="closeMobileNav()">Projets</a>
+    <a href="entreprise.html" class="active" onclick="closeMobileNav()">Entreprise</a>
+    <a href="competences.html" onclick="closeMobileNav()">Compétences</a>
+    <a href="veille.html" onclick="closeMobileNav()">Veille</a>
+    <a href="contact.html" onclick="closeMobileNav()">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-tag">Alternance · Sept. 2025 — Sept. 2026</div>
+    <h1>Groupe Ragni</h1>
+    <p>Technicien Support Informatique en alternance — éclairage public & solutions connectées.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PRÉSENTATION ENTREPRISE -->
+  <section id="presentation">
+    <p class="section-label">L'entreprise</p>
+    <h2 class="section-title">Éclairage public<br>& solutions connectées.</h2>
+
+    <div class="company-header">
+      <div>
+        <p class="missions-intro">
+          Entreprise française spécialisée dans la conception et la fabrication de luminaires pour l'éclairage public et
+          la mise en valeur des espaces extérieurs. Mon rôle en alternance : soutenir les utilisateurs au quotidien,
+          contribuer à la fiabilité des services IT et participer à des chantiers d'industrialisation (sécurité, réseau,
+          cloud, M365), comme la migration des données vers OneDrive et l'optimisation du stockage serveur.
+        </p>
+        <a href="https://www.ragni.com/" target="_blank" class="company-link">Visiter le site de l'entreprise →</a>
+      </div>
+      <div class="company-meta">
+        <div class="meta-item">
+          <span class="meta-icon">📍</span>
+          <span>Site : Cagnes-sur-Mer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">📅</span>
+          <span>Alternance : Sept. 2025 → Sept. 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">👥</span>
+          <span>Équipe IT : Support & Projets</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">🏭</span>
+          <span>Secteur : Éclairage / Industrie</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MISSIONS -->
+  <section id="missions">
+    <p class="section-label">Mon rôle</p>
+    <h2 class="section-title">Missions<br>& chantiers.</h2>
+    <p class="section-sub">Missions concrètes menées en alternance, alignées sur les projets IT du Groupe Ragni.</p>
+
+    <div class="missions-grid">
+
+      <div class="mission-card">
+        <span class="mission-icon">🚀</span>
+        <div class="mission-title">Mise en service & Onboarding</div>
+        <ul class="mission-list">
+          <li>Mise en place de nouveaux postes pour les nouveaux employés</li>
+          <li>Création et configuration des profils utilisateurs</li>
+          <li>Paramétrage et intégration aux outils Microsoft 365</li>
+        </ul>
+      </div>
+
+      <div class="mission-card">
+        <span class="mission-icon">🗂</span>
+        <div class="mission-title">Active Directory & Automatisation</div>
+        <ul class="mission-list">
+          <li>Script PowerShell pour mettre à jour les infos utilisateurs</li>
+          <li>Workflow : réception RH → vérification → application dans l'AD</li>
+          <li>Gestion des droits et groupes d'accès</li>
+        </ul>
+      </div>
+
+      <div class="mission-card">
+        <span class="mission-icon">🛟</span>
+        <div class="mission-title">Support utilisateurs & Applicatif</div>
+        <ul class="mission-list">
+          <li>Support Cegid, Outlook, Teams, applications métiers</li>
+          <li>Prise en main via TeamViewer pour dépannage rapide</li>
+          <li>Réinstallation & réparation via commandes avancées</li>
+        </ul>
+      </div>
+
+      <div class="mission-card">
+        <span class="mission-icon">📄</span>
+        <div class="mission-title">Documentation & Capitalisation</div>
+        <ul class="mission-list">
+          <li>Rédaction de la PSSI du Groupe Ragni</li>
+          <li>Procédures Windows 11 & guides utilisateurs</li>
+          <li>Documentation standardisée pour tickets récurrents</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- OUTILS -->
+  <section id="outils">
+    <p class="section-label">Environnement</p>
+    <h2 class="section-title">Outils<br>& technologies.</h2>
+    <p class="section-sub">Stack technique utilisée au quotidien chez Groupe Ragni.</p>
+
+    <div class="tools-grid">
+      <span class="tool-badge">🪟 Windows Server</span>
+      <span class="tool-badge">🗂 Active Directory</span>
+      <span class="tool-badge">☁️ Entra ID / Azure AD</span>
+      <span class="tool-badge">📦 Tersedia Cloud</span>
+      <span class="tool-badge">🔐 Fortinet</span>
+      <span class="tool-badge">🛡 Sophos</span>
+      <span class="tool-badge">📧 Office 365</span>
+      <span class="tool-badge">💾 OneDrive</span>
+      <span class="tool-badge">⚡ PowerShell</span>
+      <span class="tool-badge">💿 Veeam Backup</span>
+      <span class="tool-badge">📊 Cockpit</span>
+      <span class="tool-badge">🖥 TeamViewer</span>
+      <span class="tool-badge">🔍 Wireshark</span>
+      <span class="tool-badge">🖧 MobaXterm</span>
+      <span class="tool-badge">📱 Intune</span>
+      <span class="tool-badge">🌐 IIS</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="../index.html">Accueil</a>
+        <a href="projets.html">Projets</a>
+        <a href="entreprise.html">Entreprise</a>
+        <a href="competences.html">Compétences</a>
+        <a href="veille.html">Veille</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-links" style="margin-top:10px;">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="plan-site.html">Plan du site</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+      </div>
+      <p class="footer-copy">© 2025 Nedj Belloum — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="../js/entreprise.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="../js/particles-init.js"></script>
+</body>
+
+</html>

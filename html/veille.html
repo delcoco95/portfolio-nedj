@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique — Portfolio Nedj Belloum</title>
+  <meta name="description"
+    content="Veille technologique de Nedj Belloum sur l'impact de l'IA sur la cybersécurité et la défense des réseaux.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/veille.css">
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Nedj Belloum</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="entreprise.html">Entreprise</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="veille.html" class="active">Veille</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="theme-toggle" id="themeToggle" title="Changer le thème">
+          <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 3a9 9 0 100 18A9 9 0 0012 3zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z" />
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="../index.html" onclick="closeMobileNav()">Accueil</a>
+    <a href="projets.html" onclick="closeMobileNav()">Projets</a>
+    <a href="entreprise.html" onclick="closeMobileNav()">Entreprise</a>
+    <a href="competences.html" onclick="closeMobileNav()">Compétences</a>
+    <a href="veille.html" class="active" onclick="closeMobileNav()">Veille</a>
+    <a href="contact.html" onclick="closeMobileNav()">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-tag">Veille technologique</div>
+    <h1>L'impact de l'IA sur la défense<br>et la sécurité des réseaux.</h1>
+    <p>Surveillance continue des évolutions en intelligence artificielle appliquée à la défense des réseaux.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- INTRODUCTION -->
+  <section id="introduction">
+    <p class="section-label">Introduction</p>
+    <h2 class="section-title">Pourquoi<br>cette veille ?</h2>
+    <p class="veille-intro">
+      La veille technologique est une démarche continue qui consiste à surveiller les évolutions, innovations et
+      tendances dans un domaine précis. Dans un secteur aussi critique que la cybersécurité, elle est indispensable pour
+      anticiper les nouvelles menaces et adapter ses défenses en permanence.
+      <br><br>
+      Aujourd'hui, l'intelligence artificielle redéfinit en profondeur les stratégies de défense des réseaux. De la
+      détection comportementale en temps réel aux systèmes de réponse autonome (SOAR), en passant par la lutte contre
+      les attaques adversariales, l'IA s'impose comme un pilier incontournable de la cyberdéfense moderne.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- THÈMES -->
+  <section id="themes">
+    <p class="section-label">Thèmes suivis</p>
+    <h2 class="section-title">Axes<br>de veille.</h2>
+
+    <div class="themes-grid">
+
+      <div class="theme-card">
+        <img src="../img/Detection.jpg" alt="Détection des menaces" class="theme-img">
+        <span class="theme-topic">Threat Detection</span>
+        <div class="theme-title">Détection intelligente des menaces</div>
+        <div class="theme-desc">L'IA analyse en temps réel des millions d'événements réseau pour identifier des
+          comportements anormaux invisibles à l'œil humain. Les SIEM nouvelle génération comme Splunk et Microsoft
+          Sentinel utilisent le machine learning pour réduire les faux positifs et accélérer la réponse aux incidents
+          jusqu'à 60% plus rapidement.</div>
+        <a href="https://www.splunk.com" target="_blank" class="theme-source">Splunk.com →</a>
+      </div>
+
+      <div class="theme-card">
+        <img src="../img/attaques.jpg" alt="Attaques adversariales" class="theme-img">
+        <span class="theme-topic">Attaques émergentes</span>
+        <div class="theme-title">Attaques adversariales &amp; menaces IA</div>
+        <div class="theme-desc">L'IA peut aussi être weaponizée : les attaques adversariales manipulent les modèles de
+          détection pour contourner les défenses. Les deepfakes audio/vidéo facilitent le phishing ciblé
+          (spear-phishing), tandis que les LLM permettent de générer du code malveillant à grande échelle.</div>
+        <a href="https://www.enisa.europa.eu" target="_blank" class="theme-source">ENISA →</a>
+      </div>
+
+      <div class="theme-card">
+        <img src="../img/zero.jpg" alt="Zero Trust" class="theme-img">
+        <span class="theme-topic">Zero Trust augmenté</span>
+        <div class="theme-title">Défense autonome &amp; Zero Trust</div>
+        <div class="theme-desc">Le modèle Zero Trust (ne jamais faire confiance, toujours vérifier) est renforcé par
+          l'IA via l'analyse comportementale continue des utilisateurs (UEBA). Les systèmes de réponse automatisée
+          (SOAR) permettent d'isoler une machine compromise en millisecondes sans intervention humaine.</div>
+        <a href="https://www.anssi.gouv.fr" target="_blank" class="theme-source">ANSSI →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+  <!-- OUTILS DE VEILLE -->
+  <section id="outils">
+    <p class="section-label">Outils</p>
+    <h2 class="section-title">Sources<br>& outils utilisés.</h2>
+
+    <div class="tools-marquee-wrap">
+      <div class="tools-marquee-fade tools-marquee-fade-left"></div>
+      <div class="tools-marquee-fade tools-marquee-fade-right"></div>
+      <div class="tools-marquee" id="toolsMarquee">
+        <div class="tools-marquee-track">
+
+          <!-- Logos - set 1 -->
+          <div class="marquee-item">
+            <img src="../img/Logo_ANSSI-removebg-preview.png" alt="ANSSI">
+            <span>ANSSI</span>
+          </div>
+          <div class="marquee-item">
+            <img src="../img/Sentinel.svg" alt="Microsoft Sentinel">
+            <span>Microsoft Sentinel</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/splunk/white" alt="Splunk">
+            <span>Splunk</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/europeanunion/003399" alt="ENISA">
+            <span>ENISA</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google Alertes">
+            <span>Google Alertes</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/feedly/2BB24C" alt="Feedly">
+            <span>Feedly</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/mitt/000000" alt="MIT Tech Review"
+              onerror="this.style.display='none';this.parentElement.querySelector('span').style.fontSize='14px'">
+            <span>MIT Tech Review</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/fortinet/EE3124" alt="Fortinet">
+            <span>Fortinet</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco">
+            <span>Cisco</span>
+          </div>
+
+          <!-- Logos - set 2 (duplication infinie) -->
+          <div class="marquee-item">
+            <img src="../img/Logo_ANSSI-removebg-preview.png" alt="ANSSI">
+            <span>ANSSI</span>
+          </div>
+          <div class="marquee-item">
+            <img src="../img/Sentinel.svg" alt="Microsoft Sentinel">
+            <span>Microsoft Sentinel</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/splunk/000000" alt="Splunk">
+            <span>Splunk</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/europeanunion/003399" alt="ENISA">
+            <span>ENISA</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google Alertes">
+            <span>Google Alertes</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/feedly/2BB24C" alt="Feedly">
+            <span>Feedly</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/mitt/000000" alt="MIT Tech Review"
+              onerror="this.style.display='none'">
+            <span>MIT Tech Review</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/fortinet/EE3124" alt="Fortinet">
+            <span>Fortinet</span>
+          </div>
+          <div class="marquee-item">
+            <img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco">
+            <span>Cisco</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="divider"></div>
+
+    <!-- SITOGRAPHIE -->
+    <section id="sitographie">
+      <p class="section-label">Sources</p>
+      <h2 class="section-title">Sitographie.</h2>
+
+      <div class="sitographie-grid">
+
+        <a href="https://cyber.gouv.fr/" target="_blank" class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">ANSSI – Cybersécurité nationale</div>
+            <div class="sito-url">anssi.gouv.fr</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+        <a href="https://www.enisa.europa.eu/publications/enisa-threat-landscape-2024" target="_blank"
+          class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">ENISA – Threat Landscape 2024</div>
+            <div class="sito-url">enisa.europa.eu</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+        <a href="https://www.technologyreview.com/topic/artificial-intelligence/" target="_blank" class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">MIT Technology Review – AI & Cybersecurity</div>
+            <div class="sito-url">technologyreview.com</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+        <a href="https://www.splunk.com" target="_blank" class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">Splunk – Analyse logs & SIEM</div>
+            <div class="sito-url">splunk.com</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+        <a href="https://www.microsoft.com/fr-fr/security/business/siem-and-xdr/microsoft-sentinel" target="_blank"
+          class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">Microsoft Sentinel – SIEM cloud</div>
+            <div class="sito-url">microsoft.com/sentinel</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+        <a href="https://www.ibm.com/security" target="_blank" class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">IBM Security – IA & cyberdéfense</div>
+            <div class="sito-url">ibm.com/security</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+        <a href="https://feedly.com" target="_blank" class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">Feedly – Agrégateur de flux RSS</div>
+            <div class="sito-url">feedly.com</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+        <a href="https://attack.mitre.org" target="_blank" class="sito-card">
+          <div class="sito-dot"></div>
+          <div class="sito-content">
+            <div class="sito-title">MITRE ATT&CK – Framework menaces</div>
+            <div class="sito-url">attack.mitre.org</div>
+          </div>
+          <span class="sito-arrow">↗</span>
+        </a>
+
+      </div>
+
+      <!-- Conclusion -->
+      <div class="veille-conclusion">
+        Cette veille me permet de rester informé des dernières évolutions en matière de cybersécurité augmentée par
+        l'IA. Elle couvre trois axes majeurs : la <strong style="color:var(--text)">détection intelligente des
+          menaces</strong> via les SIEM nouvelle génération, la compréhension des <strong
+          style="color:var(--text)">attaques adversariales et menaces émergentes</strong>, et les stratégies de <strong
+          style="color:var(--text)">défense autonome Zero Trust</strong>. Elle me donne les clés pour anticiper les
+        mutations technologiques, adapter mes compétences défensives, et répondre aux enjeux de sécurité dans des
+        environnements réseau critiques et modernes.
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="../index.html">Accueil</a>
+          <a href="projets.html">Projets</a>
+          <a href="entreprise.html">Entreprise</a>
+          <a href="competences.html">Compétences</a>
+          <a href="veille.html">Veille</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
+        </div>
+        <div class="footer-links" style="margin-top:10px;">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="plan-site.html">Plan du site</a>
+          <a href="confidentialite.html">Politique de confidentialité</a>
+        </div>
+        <p class="footer-copy">© 2025 Nedj Belloum — Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script src="../js/veille.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="../js/particles-init.js"></script>
+</body>
+
+</html>

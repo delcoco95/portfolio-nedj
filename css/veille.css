@@ -1,143 +1,241 @@
-/* veille.css — Styles dédiés à la page Veille Technologique */
+/* veille.css — Styles spécifiques à la page Veille technologique */
 
-body {
-  scroll-behavior: smooth;
+/* ── VEILLE THÈMES ── */
+.veille-intro {
+  font-size: 17px;
+  color: var(--text2);
+  font-weight: 300;
+  line-height: 1.75;
+  margin-bottom: 52px;
+  max-width: 700px;
 }
 
-header {
-  background-color: #4a5568;
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 60px;
 }
-
-.nav-link.active {
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
+.theme-card {
+  background: var(--card);
+  padding: 32px 26px;
+  transition: background 0.2s;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: background 0.2s, opacity 0.5s ease, transform 0.5s ease;
 }
-
-.icon-title {
-  display: flex;
+.theme-card:hover { background: var(--card-hover); }
+.theme-card.visible { opacity: 1; transform: translateY(0); }
+.theme-topic {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(41,151,255,0.1);
+  border-radius: 20px;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+.theme-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+.theme-desc {
+  font-size: 14px;
+  color: var(--text3);
+  font-weight: 300;
+  line-height: 1.65;
+}
+.theme-source {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
 }
+.theme-source:hover { opacity: 0.75; }
 
-.section-icon {
-  font-size: 1.5rem;
-  color: #4a5568;
+/* ── OUTILS MARQUEE (défilant infini) ── */
+.tools-marquee-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 60px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 0;
+  background: var(--card);
 }
-
-/* --- Artifact Cards (AI Studio Style) --- */
-.artifact-card {
-  height: 200px;
+.tools-marquee-fade {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.tools-marquee-fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--card), transparent);
+}
+.tools-marquee-fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--card), transparent);
+}
+.tools-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+.tools-marquee-track {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+.tools-marquee-wrap:hover .tools-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: rgba(40, 40, 40, 0.4) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 20px !important;
-  position: relative;
-  overflow: hidden;
+  gap: 10px;
+  min-width: 120px;
+  padding: 0 20px;
+  transition: opacity 0.2s;
+  border-right: 1px solid var(--border);
 }
-
-.artifact-card:hover {
-  background: rgba(60, 60, 60, 0.6) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.1) !important;
+.marquee-item:last-child { border-right: none; }
+.marquee-item img {
+  height: 34px;
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+  filter: saturate(0) opacity(0.55);
+  transition: filter 0.3s;
 }
+.marquee-item:hover img {
+  filter: saturate(1) opacity(1);
+}
+[data-theme="dark"] .marquee-item img {
+  filter: saturate(0) opacity(0.5);
+}
+[data-theme="dark"] .marquee-item:hover img {
+  filter: saturate(1) brightness(1.3) opacity(1);
+}
+/* Logos noirs à inverser en blanc pour le mode sombre */
+[data-theme="dark"] .marquee-item img[alt="ANSSI"],
+[data-theme="dark"] .marquee-item img[alt="Splunk"] {
+  filter: brightness(0) invert(1) opacity(0.55);
+}
+[data-theme="dark"] .marquee-item:hover img[alt="ANSSI"],
+[data-theme="dark"] .marquee-item:hover img[alt="Splunk"] {
+  filter: brightness(0) invert(1) opacity(1);
+}
+.marquee-item span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text3);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.marquee-item:hover span { color: var(--text2); }
 
-.artifact-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
+
+/* ── IMAGE THEME CARD ── */
+.theme-img {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-  transition: 0.5s;
-}
-
-.artifact-card:hover::before {
-  left: 100%;
-}
-
-.artifact-card h5 {
-  margin-top: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-/* --- Swiper Customization --- */
-.tools-swiper {
-  padding: 40px 20px 60px !important;
-}
-
-.swiper-slide {
-  height: auto;
-  opacity: 0.4;
-  transition: opacity 0.3s ease;
-}
-
-.swiper-slide-active {
-  opacity: 1;
-}
-
-.swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.3) !important;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background: #007bff !important;
-  width: 30px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff !important;
-  background: rgba(255, 255, 255, 0.1);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 20px !important;
-  font-weight: bold;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-}
-
-/* Image des thèmes */
-.theme-image {
-  width: 100%;
-  height: 300px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  display: block;
 }
 
-.theme-image:hover,
-a img:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
+/* ── SITOGRAPHIE ── */
+.sitographie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.sito-card {
+  background: var(--card);
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.sito-card:hover { background: var(--card-hover); }
+.sito-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.sito-content { flex: 1; }
+.sito-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  letter-spacing: -0.2px;
+}
+.sito-url {
+  font-size: 12px;
+  color: var(--text3);
+  font-weight: 300;
+}
+.sito-arrow {
+  margin-left: auto;
+  color: var(--text3);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.sito-card:hover .sito-arrow { color: var(--accent); }
+
+/* ── CONCLUSION ── */
+.veille-conclusion {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 36px 32px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.8;
 }
 
-#themes {
-  scroll-margin-top: 50px;
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .themes-grid { grid-template-columns: 1fr; }
+  .tools-carousel { grid-template-columns: repeat(2, 1fr); }
+  .sitographie-grid { grid-template-columns: 1fr; }
 }
-
+@media (max-width: 480px) {
+  .tools-carousel { grid-template-columns: repeat(2, 1fr); }
+}

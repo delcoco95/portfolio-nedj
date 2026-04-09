@@ -1,26 +1,199 @@
-    body {
-        scroll-behavior: smooth;
-    }
+/* projets.css — Styles spécifiques à la page Projets */
 
-    header {
-        background-color: #4a5568;
-    }
+/* ── FILTRES ── */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.filter-btn {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  background: var(--bg4);
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover {
+  background: var(--card-hover);
+  color: var(--text);
+}
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
 
-    .nav-link.active {
-        font-weight: bold;
-        border-bottom: 2px solid #fff;
-    }
+/* ── GRILLE PROJETS ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.project-card {
+  background: var(--card);
+  padding: 28px 26px;
+  transition: background 0.2s, opacity 0.3s, transform 0.3s;
+  position: relative;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover { background: var(--card-hover); }
+.project-card.hidden {
+  display: none;
+}
+.project-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.project-desc {
+  font-size: 13px;
+  color: var(--text3);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  flex: 1;
+}
+.project-tech {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.project-link {
+  position: absolute;
+  top: 20px; right: 20px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  color: var(--text3);
+  transition: all 0.2s;
+  font-size: 13px;
+}
+.project-link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  transform: scale(1.1);
+}
+.project-duration {
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 10px;
+  display: flex; align-items: center; gap: 5px;
+}
 
-    .section-icon {
-        font-size: 1.5rem;
-        color: #4a5568;
-    }
+/* Compteur */
+.projects-count {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 20px;
+}
+.projects-count span {
+  color: var(--accent);
+  font-weight: 600;
+}
 
-    .card-hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* ── BOUTONS PROJET (Annexes / Documentation) ── */
+.project-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  flex-wrap: wrap;
+}
+.btn-annexe, .btn-doc {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid;
+}
+.btn-annexe {
+  background: rgba(41,151,255,0.08);
+  border-color: rgba(41,151,255,0.25);
+  color: var(--accent);
+}
+.btn-annexe:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-doc {
+  background: rgba(48,209,88,0.08);
+  border-color: rgba(48,209,88,0.25);
+  color: var(--accent2);
+}
+.btn-doc:hover {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #fff;
+}
 
-    .card-hover:hover {
-        transform: scale(1.02);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
+/* ── TAG ENTREPRISE ── */
+.tag-company { background: rgba(255,200,50,0.12); color: #f5a623; border-radius: 20px; }
+
+/* ── CTA TABLEAU DE SYNTHÈSE ── */
+.cta-synthese {
+  text-align: center;
+  padding: 48px 0 24px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+.cta-synthese p {
+  font-size: 14px;
+  color: var(--text3);
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+.btn-synthese {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid rgba(41,151,255,0.4);
+  background: rgba(41,151,255,0.08);
+  color: var(--accent);
+}
+.btn-synthese:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
