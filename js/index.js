@@ -64,3 +64,15 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCertif();
 });
 
+// ── SCROLL TO TOP ──
+const scrollBtn = document.getElementById('scrollTopBtn');
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+

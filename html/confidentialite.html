@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de confidentialité — Nedj Belloum</title>
+  <title>Politique de confidentialit&eacute; &mdash; Nedj Belloum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -17,24 +18,29 @@
       <li><a href="../index.html">Accueil</a></li>
       <li><a href="projets.html">Projets</a></li>
       <li><a href="entreprise.html">Entreprise</a></li>
-      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="competences.html">Comp&eacute;tences</a></li>
       <li><a href="veille.html">Veille</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </div>
   </div>
 </nav>
 <section style="max-width:800px;margin:120px auto;padding:0 22px;">
-  <p class="section-label">Légal</p>
-  <h1 class="section-title">Politique de<br>confidentialité.</h1>
+  <p class="section-label">L&eacute;gal</p>
+  <h1 class="section-title">Politique de<br>confidentialit&eacute;.</h1>
   <div style="font-size:15px;color:var(--text2);line-height:1.8;font-weight:300;">
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Données collectées</h2>
-    <p>Ce site ne collecte aucune donnée personnelle. Il ne dispose d'aucun formulaire de création de compte ni de système de tracking publicitaire.</p>
+    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Donn&eacute;es collect&eacute;es</h2>
+    <p>Ce site ne collecte aucune donn&eacute;e personnelle. Il ne dispose d'aucun formulaire de cr&eacute;ation de compte ni de syst&egrave;me de tracking publicitaire.</p>
     <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Cookies</h2>
-    <p>Ce site utilise uniquement un cookie de préférence de thème (clair/sombre), stocké localement dans votre navigateur. Aucun cookie tiers n'est utilisé.</p>
+    <p>Ce site utilise uniquement un cookie de pr&eacute;f&eacute;rence de th&egrave;me (clair/sombre), stock&eacute; localement dans votre navigateur. Aucun cookie tiers n'est utilis&eacute;.</p>
     <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Formulaire de contact</h2>
-    <p>Le formulaire de contact génère un lien mailto. Aucune donnée n'est transmise à un serveur tiers. Les informations saisies sont uniquement utilisées pour vous permettre d'envoyer un e-mail directement.</p>
+    <p>Le formulaire de contact g&eacute;n&egrave;re un lien mailto. Aucune donn&eacute;e n'est transmise &agrave; un serveur tiers. Les informations saisies sont uniquement utilis&eacute;es pour vous permettre d'envoyer un e-mail directement.</p>
     <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Vos droits</h2>
-    <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour toute demande : <a href="contact.html" style="color:var(--accent);">page Contact</a>.</p>
+    <p>Conform&eacute;ment au RGPD, vous disposez d'un droit d'acc&egrave;s, de rectification et de suppression de vos donn&eacute;es. Pour toute demande : <a href="contact.html" style="color:var(--accent);">page Contact</a>.</p>
   </div>
 </section>
 <footer>
@@ -43,20 +49,33 @@
       <a href="../index.html">Accueil</a>
       <a href="projets.html">Projets</a>
       <a href="entreprise.html">Entreprise</a>
-      <a href="competences.html">Compétences</a>
+      <a href="competences.html">Comp&eacute;tences</a>
       <a href="veille.html">Veille</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="footer-links" style="margin-top:10px;">
-      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="mentions-legales.html">Mentions l&eacute;gales</a>
       <a href="plan-site.html">Plan du site</a>
-      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="confidentialite.html">Politique de confidentialit&eacute;</a>
     </div>
-    <p class="footer-copy">© 2025 Nedj Belloum — Tous droits réservés</p>
+    <p class="footer-copy">&copy; 2026 Nedj Belloum &mdash; Tous droits r&eacute;serv&eacute;s</p>
   </div>
 </footer>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="../js/particles-init.js"></script>
+
+  <button class="scroll-top" id="scrollTopBtn" title="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('visible', window.scrollY > 300);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
-

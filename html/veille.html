@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/veille.css">
 </head>
@@ -30,6 +31,9 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:10px;">
+        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
         <button class="theme-toggle" id="themeToggle" title="Changer le thème">
           <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -118,6 +122,31 @@
     </div>
   </section>
 
+  <!-- FRÉQUENCE DE VEILLE -->
+  <section id="frequence">
+    <p class="section-label">Fréquence de veille</p>
+    <h2 class="section-title">Rythme<br>&amp; méthode.</h2>
+
+    <div class="frequence-card">
+      <div class="frequence-content">
+        <p>Ma veille technologique est réalisée <strong>2 à 3 fois par semaine</strong>,
+        de manière régulière et structurée, sur les trois axes identifiés :
+        la détection intelligente des menaces, les attaques adversariales émergentes
+        et les stratégies de défense autonome Zero Trust.</p>
+        <p>Je m'appuie principalement sur <strong>Feedly</strong> pour agréger et
+        consulter les flux RSS de mes sources spécialisées (ANSSI, ENISA, Fortinet,
+        Splunk, MIT Technology Review), et sur <strong>Google Alerts</strong> pour
+        recevoir des notifications ciblées sur les mots-clés liés à l'IA et à
+        la cybersécurité. Cette combinaison me permet de rester informé en continu
+        sans surcharge d'information.</p>
+      </div>
+      <div class="frequence-badges">
+        <span class="frequence-badge"><i class="fa-solid fa-calendar-check"></i> 2-3 fois / semaine</span>
+        <span class="frequence-badge"><i class="fa-solid fa-rss"></i> Feedly</span>
+        <span class="frequence-badge"><i class="fa-brands fa-google"></i> Google Alerts</span>
+      </div>
+    </div>
+  </section>
 
   <div class="divider"></div>
 
@@ -329,9 +358,13 @@
           <a href="plan-site.html">Plan du site</a>
           <a href="confidentialite.html">Politique de confidentialité</a>
         </div>
-        <p class="footer-copy">© 2025 Nedj Belloum — Tous droits réservés</p>
+        <p class="footer-copy">&copy; 2026 Nedj Belloum &mdash; Tous droits r&eacute;serv&eacute;s</p>
       </div>
     </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" title="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 
     <script src="../js/veille.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>

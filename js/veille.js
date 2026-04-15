@@ -41,8 +41,20 @@ document.querySelectorAll('.theme-card').forEach((card, i) => {
   observer.observe(card);
 });
 
-// ── MARQUEE OUTILS (géré en CSS pur via animation marqueeScroll) ──
-// Pause au survol gérée via CSS hover rule dans veille.css
+// ── MARQUEE OUTILS (g&eacute;r&eacute; en CSS pur via animation marqueeScroll) ──
+// Pause au survol g&eacute;r&eacute;e via CSS hover rule dans veille.css
+
+// ── SCROLL TO TOP ──
+const scrollBtn = document.getElementById('scrollTopBtn');
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 
 
 

@@ -230,6 +230,52 @@
   line-height: 1.8;
 }
 
+/* ── FR&Eacute;QUENCE DE VEILLE ── */
+.frequence-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 36px 32px;
+}
+.frequence-content p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.frequence-content p strong {
+  color: var(--text);
+}
+.frequence-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.frequence-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(41,151,255,0.08);
+  border: 1px solid rgba(41,151,255,0.25);
+  border-radius: 20px;
+  padding: 8px 16px;
+  transition: all 0.2s;
+}
+.frequence-badge:hover {
+  background: rgba(41,151,255,0.15);
+  border-color: var(--accent);
+}
+.frequence-badge i {
+  font-size: 14px;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .themes-grid { grid-template-columns: 1fr; }

@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentions légales — Nedj Belloum</title>
+  <title>Mentions l&eacute;gales &mdash; Nedj Belloum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -17,24 +18,29 @@
       <li><a href="../index.html">Accueil</a></li>
       <li><a href="projets.html">Projets</a></li>
       <li><a href="entreprise.html">Entreprise</a></li>
-      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="competences.html">Comp&eacute;tences</a></li>
       <li><a href="veille.html">Veille</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+    </div>
   </div>
 </nav>
 <section style="max-width:800px;margin:120px auto;padding:0 22px;">
-  <p class="section-label">Légal</p>
-  <h1 class="section-title">Mentions<br>légales.</h1>
+  <p class="section-label">L&eacute;gal</p>
+  <h1 class="section-title">Mentions<br>l&eacute;gales.</h1>
   <div style="font-size:15px;color:var(--text2);line-height:1.8;font-weight:300;">
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Éditeur du site</h2>
-    <p>Nedj Belloum — Étudiant BTS SIO SISR<br>Nice, France</p>
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Hébergement</h2>
-    <p>Ce site est hébergé sur GitHub Pages.<br>GitHub Inc. — 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Propriété intellectuelle</h2>
-    <p>L'ensemble du contenu de ce site (textes, images, code) est la propriété de Nedj Belloum. Toute reproduction sans autorisation expresse est interdite.</p>
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Responsabilité</h2>
-    <p>Ce portfolio est à vocation pédagogique et professionnelle. Les informations présentées sont fournies à titre indicatif et peuvent être modifiées sans préavis.</p>
+    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">&Eacute;diteur du site</h2>
+    <p>Nedj Belloum &mdash; &Eacute;tudiant BTS SIO SISR<br>Nice, France</p>
+    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">H&eacute;bergement</h2>
+    <p>Ce site est h&eacute;berg&eacute; sur GitHub Pages.<br>GitHub Inc. &mdash; 88 Colin P Kelly Jr St, San Francisco, CA 94107, &Eacute;tats-Unis.</p>
+    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Propri&eacute;t&eacute; intellectuelle</h2>
+    <p>L'ensemble du contenu de ce site (textes, images, code) est la propri&eacute;t&eacute; de Nedj Belloum. Toute reproduction sans autorisation expresse est interdite.</p>
+    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Responsabilit&eacute;</h2>
+    <p>Ce portfolio est &agrave; vocation p&eacute;dagogique et professionnelle. Les informations pr&eacute;sent&eacute;es sont fournies &agrave; titre indicatif et peuvent &ecirc;tre modifi&eacute;es sans pr&eacute;avis.</p>
   </div>
 </section>
 <footer>
@@ -43,20 +49,34 @@
       <a href="../index.html">Accueil</a>
       <a href="projets.html">Projets</a>
       <a href="entreprise.html">Entreprise</a>
-      <a href="competences.html">Compétences</a>
+      <a href="competences.html">Comp&eacute;tences</a>
       <a href="veille.html">Veille</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="footer-links" style="margin-top:10px;">
-      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="mentions-legales.html">Mentions l&eacute;gales</a>
       <a href="plan-site.html">Plan du site</a>
-      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="confidentialite.html">Politique de confidentialit&eacute;</a>
     </div>
-    <p class="footer-copy">© 2025 Nedj Belloum — Tous droits réservés</p>
+    <p class="footer-copy">&copy; 2026 Nedj Belloum &mdash; Tous droits r&eacute;serv&eacute;s</p>
   </div>
 </footer>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="../js/particles-init.js"></script>
+
+  <button class="scroll-top" id="scrollTopBtn" title="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Scroll to top
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('visible', window.scrollY > 300);
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
-

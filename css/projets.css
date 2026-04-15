@@ -92,11 +92,28 @@
   transition: all 0.2s;
   font-size: 13px;
 }
+.project-link .project-link-hover {
+  display: none;
+}
+.project-link:hover .fa-arrow-up-right-from-square {
+  display: none;
+}
+.project-link:hover .project-link-hover {
+  display: inline;
+}
 .project-link:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: white;
   transform: scale(1.1);
+}
+.project-link[data-icon="github"]:hover {
+  background: #333;
+  border-color: #333;
+}
+.project-link[data-icon="globe"]:hover {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 .project-duration {
   font-size: 11px;
@@ -166,6 +183,13 @@
   padding: 48px 0 24px;
   border-top: 1px solid var(--border);
   margin-top: 40px;
+}
+.cta-synthese-top {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 22px 32px;
+  border-top: none;
+  margin-top: 0;
 }
 .cta-synthese p {
   font-size: 14px;

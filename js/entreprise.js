@@ -40,3 +40,15 @@ document.querySelectorAll('.mission-card').forEach((card, i) => {
   card.style.transitionDelay = (i * 0.06) + 's';
   observer.observe(card);
 });
+
+// ── SCROLL TO TOP ──
+const scrollBtn = document.getElementById('scrollTopBtn');
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+

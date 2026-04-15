@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets.css">
 </head>
@@ -30,6 +31,9 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:10px;">
+        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
         <button class="theme-toggle" id="themeToggle" title="Changer le thème">
           <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -60,6 +64,14 @@
 
   <div class="divider"></div>
 
+  <!-- CTA Tableau de synthèse -->
+  <div class="cta-synthese cta-synthese-top">
+    <p>Retrouvez l’ensemble de mes projets référencés dans le tableau de synthèse BTS SIO.</p>
+    <a href="../annexes/Tableau de synthèse - Epreuve E4 - BTS SIO 2026.pdf" target="_blank" class="btn-synthese">
+      Télécharger le tableau de synthèse
+    </a>
+  </div>
+
   <!-- PROJETS -->
   <section id="projets">
     <!-- Filtres -->
@@ -80,7 +92,7 @@
 
       <!-- Active Directory -->
       <div class="project-card" data-cat="reseau">
-        <a href="https://github.com/delcoco95/AD-Windows-Server" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/delcoco95/AD-Windows-Server" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-network">Réseau</span>
         <div class="project-duration">⏱ 1 jour</div>
         <div class="project-title">Active Directory — Contrôleur de domaine</div>
@@ -101,7 +113,7 @@
 
       <!-- PowerShell -->
       <div class="project-card" data-cat="automatisation">
-        <a href="https://github.com/Mediaschool-BTS-SISR-2025/Nedj_PS_1" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/Mediaschool-BTS-SISR-2025/Nedj_PS_1" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-network">Automatisation</span>
         <div class="project-duration">⏱ 22 jours</div>
         <div class="project-title">PowerShell — Déploiement automatisé</div>
@@ -121,7 +133,7 @@
 
       <!-- ClassCord -->
       <div class="project-card" data-cat="securite">
-        <a href="https://github.com/delcoco95/Classcord-Project" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/delcoco95/Classcord-Project" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-security">Sécurité</span>
         <div class="project-duration">⏱ 5 jours</div>
         <div class="project-title">ClassCord — Messagerie sécurisée</div>
@@ -142,7 +154,7 @@
 
       <!-- Prometheus + Grafana -->
       <div class="project-card" data-cat="reseau">
-        <a href="https://github.com/delcoco95/RP-Supervision-Infra" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/delcoco95/RP-Supervision-Infra" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-network">Supervision</span>
         <div class="project-duration">⏱ 2 jours</div>
         <div class="project-title">Prometheus + Grafana — Supervision réseau</div>
@@ -163,7 +175,7 @@
 
       <!-- Sécurisation Linux -->
       <div class="project-card" data-cat="securite">
-        <a href="https://github.com/delcoco95/Securite_Serveur_Mediaschool" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/delcoco95/Securite_Serveur_Mediaschool" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-security">Sécurité</span>
         <div class="project-duration">⏱ 23 jours</div>
         <div class="project-title">Sécurisation serveur Linux — Mediaschool</div>
@@ -186,7 +198,7 @@
 
       <!-- Infrastructure IRIS -->
       <div class="project-card" data-cat="securite">
-        <a href="https://github.com/delcoco95/infrastructure-iris" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/delcoco95/infrastructure-iris" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-security">Infrastructure</span>
         <div class="project-duration">⏱ 5 jours</div>
         <div class="project-title">Infrastructure réseau — École IRIS Nice</div>
@@ -207,7 +219,7 @@
 
       <!-- PRA/PCRA -->
       <div class="project-card" data-cat="reseau">
-        <a href="https://github.com/delcoco95/PRA-PCRA---backup-" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/delcoco95/PRA-PCRA---backup-" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-network">Continuité</span>
         <div class="project-duration">⏱ 20 jours</div>
         <div class="project-title">PRA/PCRA — Plan de Reprise d'Activité</div>
@@ -228,7 +240,7 @@
 
       <!-- GLPI -->
       <div class="project-card" data-cat="reseau">
-        <a href="https://github.com/delcoco95/GLPI" target="_blank" class="project-link">↗</a>
+        <a href="https://github.com/delcoco95/GLPI" target="_blank" class="project-link" data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-brands fa-github project-link-hover"></i></a>
         <span class="project-tag tag-network">ITSM</span>
         <div class="project-duration">⏱ 5 jours</div>
         <div class="project-title">GLPI — Gestion de parc informatique</div>
@@ -248,7 +260,7 @@
 
       <!-- CineZone -->
       <div class="project-card" data-cat="web">
-        <a href="https://walo2428.github.io/Cine_pro/index.html" target="_blank" class="project-link">↗</a>
+        <a href="https://walo2428.github.io/Cine_pro/index.html" target="_blank" class="project-link" data-icon="globe"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-solid fa-globe project-link-hover"></i></a>
         <span class="project-tag tag-web">Web</span>
         <div class="project-duration">⏱ En cours</div>
         <div class="project-title">CineZone — Plateforme cinéma</div>
@@ -267,7 +279,7 @@
 
       <!-- BookAuto -->
       <div class="project-card" data-cat="web">
-        <a href="https://bookauto-delcocos-projects.vercel.app/" target="_blank" class="project-link">↗</a>
+        <a href="https://bookauto-delcocos-projects.vercel.app/" target="_blank" class="project-link" data-icon="globe"><i class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-solid fa-globe project-link-hover"></i></a>
         <span class="project-tag tag-web">Web</span>
         <div class="project-duration">⏱ En cours</div>
         <div class="project-title">BookAuto — Plateforme web</div>
@@ -366,14 +378,6 @@
 
     </div><!-- /projects-grid -->
 
-    <!-- CTA Tableau de synthèse -->
-    <div class="cta-synthese">
-      <p>Retrouvez l'ensemble de mes projets référencés dans le tableau de synthèse BTS SIO.</p>
-      <a href="../annexes/Tableau de synthèse - Epreuve E4 - BTS SIO 2026.pdf" target="_blank" class="btn-synthese">
-        Télécharger le tableau de synthèse
-      </a>
-    </div>
-
   </section>
 
   <!-- FOOTER -->
@@ -394,9 +398,13 @@
         <a href="plan-site.html">Plan du site</a>
         <a href="confidentialite.html">Politique de confidentialité</a>
       </div>
-      <p class="footer-copy">© 2025 Nedj Belloum — Tous droits réservés</p>
+      <p class="footer-copy">© 2026 Nedj Belloum — Tous droits réservés</p>
     </div>
   </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" title="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 
   <script src="../js/projets.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
