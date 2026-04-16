@@ -71,4 +71,26 @@ if (scrollBtn) {
   });
 }
 
+// ── INFOBULLES DES PROJETS ──
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.project-info-btn');
+  // Fermer toutes les infobulles (sauf celle qu'on vient de cliquer)
+  document.querySelectorAll('.project-tooltip.show-tooltip').forEach(tooltip => {
+    if (!btn || btn.nextElementSibling !== tooltip) {
+      tooltip.classList.remove('show-tooltip');
+    }
+  });
+  document.querySelectorAll('.project-info-btn.active').forEach(b => {
+    if (b !== btn) b.classList.remove('active');
+  });
 
+  // Si on a cliqué sur un bouton d'info, basculer son état
+  if (btn) {
+    e.preventDefault();
+    const tooltip = btn.nextElementSibling;
+    if (tooltip && tooltip.classList.contains('project-tooltip')) {
+      tooltip.classList.toggle('show-tooltip');
+      btn.classList.toggle('active');
+    }
+  }
+});

@@ -115,6 +115,85 @@
   background: var(--accent);
   border-color: var(--accent);
 }
+
+/* ── BOUTON INFO & INFOBULLE ── */
+.project-info-btn {
+  position: absolute;
+  top: 20px; right: 56px; /* A côté du bouton github/link */
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text3);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+  z-index: 5;
+}
+.project-info-btn:hover, .project-info-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.project-tooltip {
+  position: absolute;
+  top: 55px; /* En dessous des boutons */
+  right: 20px;
+  width: calc(100% - 40px);
+  max-width: 280px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+  z-index: 20;
+  text-align: left;
+  pointer-events: none;
+}
+.project-tooltip.show-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.tooltip-section {
+  margin-bottom: 12px;
+}
+.tooltip-section:last-child {
+  margin-bottom: 0;
+}
+.tooltip-section h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tooltip-section p {
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.4;
+  margin: 0;
+}
+.tooltip-section ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.4;
+}
+.tooltip-section li {
+  margin-bottom: 2px;
+}
+
 .project-duration {
   font-size: 11px;
   color: var(--text3);
