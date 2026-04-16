@@ -115,11 +115,15 @@
   background: var(--accent);
   border-color: var(--accent);
 }
+.project-link[data-icon="gantt"]:hover {
+  background: var(--accent2); /* ou n'importe quelle couleur souhaitée pour Gantt */
+  border-color: var(--accent2);
+}
 
 /* ── BOUTON INFO & INFOBULLE ── */
 .project-info-btn {
   position: absolute;
-  top: 20px; right: 56px; /* A côté du bouton github/link */
+  top: 20px; right: 56px; /* Position par défaut (à côté du lien) */
   width: 28px; height: 28px;
   border-radius: 50%;
   border: 1px solid var(--border2);

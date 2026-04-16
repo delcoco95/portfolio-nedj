@@ -75,8 +75,9 @@ if (scrollBtn) {
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.project-info-btn');
   // Fermer toutes les infobulles (sauf celle qu'on vient de cliquer)
+  const currentTooltip = btn ? btn.parentElement.querySelector('.project-tooltip') : null;
   document.querySelectorAll('.project-tooltip.show-tooltip').forEach(tooltip => {
-    if (!btn || btn.nextElementSibling !== tooltip) {
+    if (tooltip !== currentTooltip) {
       tooltip.classList.remove('show-tooltip');
     }
   });
@@ -87,10 +88,52 @@ document.addEventListener('click', (e) => {
   // Si on a cliqué sur un bouton d'info, basculer son état
   if (btn) {
     e.preventDefault();
-    const tooltip = btn.nextElementSibling;
-    if (tooltip && tooltip.classList.contains('project-tooltip')) {
-      tooltip.classList.toggle('show-tooltip');
+    if (currentTooltip) {
+      currentTooltip.classList.toggle('show-tooltip');
       btn.classList.toggle('active');
     }
   }
 });
+
+// ── MODALE PROJETS ENTREPRISE ──
+const entModal = document.getElementById('entProjectModal');
+const closeEntModal = document.getElementById('closeEntModal');
+
+if (entModal && closeEntModal) {
+  // Ouvrir la modale
+  // Ouvrir la modale
+  document.addEventListener('click', (e) => {
+    const detailsBtn = e.target.closest('.project-details-btn');
+
+    if (detailsBtn) {
+      e.preventDefault();
+      const targetPanel = detailsBtn.getAttribute('data-panel');
+      showEntTab(targetPanel);
+      entModal.classList.add('show');
+    }
+  });
+
+  // Fermer la modale
+  closeEntModal.addEventListener('click', () => {
+    entModal.classList.remove('show');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === entModal) {
+      entModal.classList.remove('show');
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && entModal.classList.contains('show')) {
+      entModal.classList.remove('show');
+    }
+  });
+
+  function showEntTab(id) {
+    document.querySelectorAll('.ent-panel').forEach(p => {
+      p.classList.toggle('active', p.id === 'ent-panel-' + id);
+    });
+  }
+}
+
