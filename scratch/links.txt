@@ -1,0 +1,18 @@
+32: <li><a href="../annexes/Tableau%20de%20synth%C3%A8se%20-%20Epreuve%20E4%20-%20BTS%20SIO%202026.pdf" target="_blank">Synthèse</a></li>
+57: <a href="../annexes/Tableau%20de%20synth%C3%A8se%20-%20Epreuve%20E4%20-%20BTS%20SIO%202026.pdf" target="_blank"
+74: <a href="../annexes/Tableau%20de%20synth%C3%A8se%20-%20Epreuve%20E4%20-%20BTS%20SIO%202026.pdf" target="_blank" class="btn-synthese">
+134: <a href="../annexes/N%C2%B01%20-%20Cinezone%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎 Annexes</a>
+177: <a href="../annexes/N%C2%B02%20-%20Menu%20Powershell%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎 Annexes</a>
+223: <a href="../annexes/N%C2%B03%20-%20ClassCord%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎 Annexes</a>
+269: <a href="../annexes/N%C2%B04%20-%20AD%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎 Annexes</a>
+314: <a href="../annexes/N%C2%B05%20-%20Supervision%20Infra%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎 Annexes</a>
+361: <a href="../annexes/MigrationOS%20-%20Epreuve%20E5%20-%20BTS%20SIO.pdf" target="_blank" class="btn-annexe"
+407: <a href="../annexes/N%C2%B06%20-%20GLPI%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎 Annexes</a>
+452: <a href="../annexes/N%C2%B07%20-%20Securisation%20Linux%20multi-services%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎
+500: <a href="../annexes/OneDrive%20-%20Epreuve%20E5%20-%20BTS%20SIO.pdf" target="_blank" class="btn-annexe"
+547: <a href="../annexes/GestionParc%20-%20Epreuve%20E5%20-%20BTS%20SIO.pdf" target="_blank" class="btn-annexe"
+596: <a href="../annexes/ListesDistribution%20-%20Epreuve%20E5%20-%20BTS%20SIO.pdf" target="_blank" class="btn-annexe"
+642: <a href="../annexes/RP01%20-%20Infra%20Reseau%20Securise%20-%20Annexes%207.pdf" target="_blank"
+693: <a href="../annexes/RP02%20-%20Conception%20PRA_PCA%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎
+742: <a href="../annexes/%23" class="btn-annexe" title="À compléter">📎 Annexes</a>
+1211: <a href="../annexes/Tableau%20de%20synth%C3%A8se%20-%20Epreuve%20E4%20-%20BTS%20SIO%202026.pdf" target="_blank">Synthèse</a>
