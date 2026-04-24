@@ -22,6 +22,22 @@
 }
 
 .ent-modal-content {
+  --ent-bg: var(--bg);
+  --ent-bg2: var(--card);
+  --ent-bg3: var(--card-hover);
+  --ent-border: var(--border);
+  --ent-border2: var(--border2);
+  --ent-text: var(--text);
+  --ent-muted: var(--text3);
+  --ent-accent: var(--accent);
+  --ent-accent2: var(--accent2);
+  --ent-green: var(--accent2); /* using accent2 which is green */
+  --ent-amber: #ff9f0a; /* warning color in apple style */
+  --ent-blue: var(--accent);
+  --ent-purple: #bf5af2;
+  --ent-radius: 12px;
+  --ent-radius-lg: 16px;
+
   background-color: var(--ent-bg); /* Use variable for better harmony */
   margin: 8% auto 50px; /* Plus d'espace au dessus (8% au lieu de 5%) */
   padding: 0;
@@ -29,8 +45,8 @@
   max-width: 900px; /* Réduction de 1100px à 900px */
   border-radius: 16px;
   position: relative;
-  border: 1px solid var(--border2);
-  color: var(--text);
+  border: 1px solid var(--ent-border2);
+  color: var(--ent-text);
   font-family: 'Inter', sans-serif;
   box-shadow: 0 10px 40px rgba(0,0,0,0.8);
 }
@@ -48,26 +64,11 @@
   transition: color 0.2s;
 }
 .ent-modal-close:hover {
-  color: #fff;
+  color: var(--ent-text);
 }
 
 /* Variables from the provided html, scoped logically */
 #entModalBody {
-  --ent-bg: var(--bg);
-  --ent-bg2: var(--card);
-  --ent-bg3: var(--card-hover);
-  --ent-border: var(--border);
-  --ent-border2: var(--border2);
-  --ent-text: var(--text);
-  --ent-muted: var(--text3);
-  --ent-accent: var(--accent);
-  --ent-accent2: var(--accent2);
-  --ent-green: var(--accent2); /* using accent2 which is green */
-  --ent-amber: #ff9f0a; /* warning color in apple style */
-  --ent-blue: var(--accent);
-  --ent-purple: #bf5af2;
-  --ent-radius: 12px;
-  --ent-radius-lg: 16px;
   padding: 10px 40px 40px; /* Padding global pour harmoniser le contenu géré ensemble */
 }
 
