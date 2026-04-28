@@ -1,0 +1,119 @@
+ 
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Épreuve E6 - Administration des systèmes et des réseaux (option SISR)  
+ANNEXE 7-1-A : Fiche descriptive de réalisation professionnelle (recto) 
+ 
+DESCRIPTION D’UNE RÉALISATION PROFESSIONNELLE N° réalisation : 1 
+Nom, prénom : Belloum Nedjmeddine N° candidat : 
+Épreuve ponctuelle  Contrôle en cours de formation  Date : 24/04/2026 
+Organisation support de la réalisation professionnelle 
+Mediaschool IRIS -Nice 
+Intitulé de la réalisation professionnelle :  
+Conception, installation et sécurisation d'une infrastructure réseau 
+Période de réalisation : 23/02/2026 au 24/04/2026 Lieu : Mediaschool – IRIS Nice  
+Modalité :   Seul(e)    En équipe 
+Compétences travaillées 
+  Concevoir une solution d’infrastructure réseau 
+  Installer, tester et déployer une solution d’infrastructure réseau 
+  Exploiter, dépanner et superviser une solution d’infrastructure réseau 
+Conditions de réalisation1 (ressources fournies, résultats attendus) 
+Ressources :  
+● Appel d'offre IRIS-NICE-RP01 fourni par Yan Bourquard (Responsable Technique) 
+● Matériel Cisco disponible : ISR 1941W (RT2-IRIS), Catalyst 2960-S (SW2-IRIS), AP C9105AXI-E 
+● Environnement de test : 2 VMs Vagrant/VirtualBox (Windows Server 2022 + Ubuntu 22.04)  
+● Accès Internet pour téléchargement des outils et mises à jour 
+Résultats attendus :  
+● Infrastructure réseau segmentée en 6 VLANs opérationnelle sur matériel Cisco réel  
+● Authentification 802.1X individuelle — NPS/RADIUS + Active Directory Windows Server 2022 
+● Attribution dynamique des VLANs selon le profil AD (Étudiants/Profs/Admin/Invités/Quarantaine)  
+● 9 services Docker opérationnels : GLPI, Nextcloud, Grafana, Prometheus, WireGuard, ClamAV…  
+● GPO de sécurité, Password Policies et supervision Prometheus/Grafana actifs 
+Description des ressources documentaires, matérielles et logicielles utilisées2 
+Ressources documentaires :  
+● Documentation Cisco IOS — Catalyst 2960-S, ISR 1941W 
+● Documentation Microsoft NPS/RADIUS et Active Directory Domain Services  
+● Recommandations ANSSI — sécurisation routeurs et commutateurs 
+● Appel d'offre IRIS-NICE-RP01 
+Matérielles et logicielles utilisées :  
+● Cisco ISR 1941W (RT2-IRIS) — Routeur principal (routage inter-VLAN, NAT, ACL) 
+● Cisco Catalyst 2960-S (SW2-IRIS) — Switch 48 ports (802.1X, 6 VLANs, trunk) 
+● Cisco C9105AXI-E — Point d'accès Wi-Fi (WPA2-Enterprise 802.1X) 
+● DC-IRIS-01 : Windows Server 2022 Standard — AD DS, DNS, DHCP, NPS (RADIUS) — 4 Go RAM 
+● SRV-LINUX-IRIS : Ubuntu 22.04 LTS — Docker Compose, 9 services — 2 Go RAM 
+Modalités d’accès aux productions3 et à leur documentation4 
+● GitHub : https://github.com/delcoco95/infrastructure-iris 
+● Portfolio : https://delcoco95.github.io/portfolio-nedj/ 
+● Maquette démontrable : vagrant up → services démarrés automatiquement via provisioning 
+ 
+1 En référence aux conditions de réalisation et ressources nécessaires du bloc « Administration des systèmes et des réseaux » prévues 
+dans le référentiel de certification du BTS SIO. 
+2 Les réalisations professionnelles sont élaborées dans un environnement technologique conforme à l’annexe II.E du référentiel du BTS 
+SIO. 
+3 Conformément au référentiel du BTS SIO «  Dans tous les cas, les candidats doivent se munir des outils et ressources techniques 
+nécessaires au déroulement de l’épreuve. Ils sont seuls responsables de la disponibilité et de la mise en œuvre de ces outils et ressources. 
+La circulaire nationale d’organisation précise les conditions matérielles de déroulement des interrogations et les pénalités à appliquer aux 
+candidats qui ne se seraient pas munis des éléments nécessaires au déroulement de l’épreuve. ». 
+4 Lien vers la documentation complète, précisant et décrivant, si cela n’a été fait au verso de la fiche, la réalisation, par exemples schéma 
+complet de réseau mis en place et configurations des services. 
+
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Épreuve E6 - Administration des systèmes et des réseaux (option SISR)  
+ANNEXE 7-1-A : Fiche descriptive de réalisation professionnelle  
+(verso, éventuellement pages suivantes) 
+ 
+Descriptif de la réalisation professionnelle, y compris les productions réalisées et schémas explicatifs 
+ 
+Objectif : 
+Réponse à l'appel d'offre IRIS-NICE-RP01 pour la conception et le déploiement d'une infrastructure réseau sécurisée 
+complète pour l'école IRIS Nice. L'infrastructure existante était un réseau plat sans segmentation, authentification ni 
+supervision. En tant que chef de projet, j'ai coordonné une équipe de 3 personnes sur 8 semaines. 
+ 
+Ce qui a été réalisé : 
+1. Configuration Cisco (matériel physique) : 
+● Routeur ISR 1941W (RT2-IRIS — 192.168.50.1) : routage inter-VLAN (Router-on-a-Stick), 6 sous-interfaces, ACL 
+étendues inter-VLAN, NAT vers Internet, SSH v2, syslog 
+● Switch Catalyst 2960-S (SW2-IRIS — 192.168.50.2) : 6 VLANs, trunk Gi0/1, dot1x sur tous les ports, Guest VLAN 
+40, VLAN 99 quarantaine, port-security 
+● AP Cisco C9105AXI-E (AP2-IRIS — 192.168.50.24) : SSID IRIS-SECURE, WPA2-Enterprise adossé à 
+NPS/RADIUS  
+ 
+2. Serveur DC-IRIS-01 — Windows Server 2022 (192.168.50.10) : 
+● Active Directory Domain Services : forêt `mediaschool.local`, 5 OUs (SISR, SLAM, Professeurs, Admin, Invités), 
+20+ utilisateurs test 
+● DNS intégré à l'AD — résolution interne et externe 
+● DHCP : 6 scopes avec plages dédiées par VLAN (VLAN 10 → 20 → 30 → 40 → 50 → 99) 
+● NPS (Network Policy Server / RADIUS) : 3 clients RADIUS (SW2-IRIS, RT2-IRIS, AP-IRIS), 6 politiques réseau 
+avec assignation VLAN automatique. 
+● GPO : verrouillage de session (10 min), SMB Signing, pare-feu Windows actif, Password Policies différenciées par 
+groupe 
+● Provisioning automatisé par 6 scripts PowerShell séquentiels (~700 lignes) : install_roles → configure_ad → 
+configure_dhcp → configure_nps → configure_users → configure_gpo 
+ 
+3. Serveur SRV-LINUX-IRIS — Ubuntu 22.04 (192.168.50.20) : 
+● 9 services Docker via docker-compose.yml : GLPI (parc + tickets), Nextcloud (stockage pédagogique), Grafana, 
+Prometheus, cAdvisor, Node Exporter, WireGuard (wg-easy), ClamAV, Portainer 
+● Stack monitoring : Prometheus scrape toutes les 15s, Grafana dashboards CPU/RAM/réseau/Docker 
+● VPN WireGuard : tunnel administration distante via VLAN 50 
+ 
+4. Tests et validation : 
+● 6 scopes DHCP actifs et distribués 
+● 3 clients RADIUS configurés, 6 politiques NPS actives 
+● 9 services Docker opérationnels 
+● Communication DC-IRIS ↔ SRV-LINUX < 2 ms de latence 
+● 22 tests validés en environnement lab 
+ 
+5. Documentation livrée : 
+● 10 documents Markdown : plan de tests (T-01 à T-53), procédures, doc technique, schéma réseau complet, 
+benchmark 9 technologies, credentials lab. 
+ 
+Compétences mobilisées : 
+• Configuration Cisco IOS : VLANs, dot1x 802.1X, ACL étendues, DHCP, SSH, trunk 
+• Administration Windows Server 2022 : AD DS, NPS/RADIUS, DHCP, DNS, GPO 
+• Scripting PowerShell : automatisation complète du provisioning (6 scripts) 
+• Administration Linux Ubuntu 22.04 : Docker Compose, UFW, systemd, réseau 
+• Supervision : Prometheus, Grafana, cAdvisor, Node Exporter 
+• Sécurité réseau : 802.1X WPA2-Enterprise, ACL, port-security, VPN WireGuard 
+• Gestion de projet : chef de projet en équipe de 3, documentation technique 
+ 
+ 
+

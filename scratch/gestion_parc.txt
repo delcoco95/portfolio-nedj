@@ -1,0 +1,96 @@
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 1 / 3 
+ 
+Groupe Ragni 
+Direction des Systemes d'Information 
+ANNEXE — PROJET 3 
+GESTION DE PARC & INVENTAIRE 
+ 
+Document Annexe Projet 3 — Rapport d'alternance 
+Auteur Nedj Belloum 
+Role Alternant Technicien Support Informatique 
+Entreprise Groupe Ragni 
+Periode 03 novembre 2025 – 03 decembre 2025 
+Contexte Mise a jour de l'inventaire complet du parc informatique dans 
+Cockpit 
+Methode Agile — Sprints hebdomadaires 
+Outils Jira / Excel 
+ 
+Note confidentialite : Pour des raisons de confidentialite et de securite, toutes les donnees 
+presentes dans ce document (noms d'utilisateurs, adresses IP, noms de serveurs, volumes, 
+numeros de serie) sont fictives et ne representent pas les donnees reelles de l'entreprise. 
+  
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 2 / 3 
+1. DESCRIPTION DU BESOIN 
+ 
+1.1 Problematique 
+Environ 50 materiels (fictif) n'etaient pas references dans l'outil de gestion de parc Cockpit. 
+Cette absence de suivi generait des risques importants : vols non detectes, garanties 
+inconnues, localisation impossible, audit irrealisable et mauvaise gestion des renouvellements. 
+ 
+1.2 Contexte 
+Outil de gestion Cockpit (GLPI-like) 
+Materiels manquants ~50 materiels non references (fictif) : PC, ecrans, claviers, 
+souris, imprimantes 
+Risques identifies Vol non detecte, perte de garantie, audit impossible, mauvaise 
+anticipation des renouvellements 
+Objectif Inventaire exhaustif et fiable a 100 % dans Cockpit 
+ 
+2. PLANNING ET DUREE DU PROJET  
+ 
+Date de debut 03 novembre 2025 
+Date de fin 03 decembre 2025 
+Duree totale 1 mois — 4 sprints hebdomadaires 
+Chef de projet Nedj Belloum 
+Methode Agile — Sprints hebdomadaires — Jira 
+ 
+3. PLANIFICATION DES TACHES — SPRINTS 
+ 
+Sprint Période Objectifs / Livrables 
+Sprint 1 3 – 9 nov. 2025 Extraction de l'inventaire Cockpit existant — 
+recensement physique — identification des ecarts 
+(~50 materiels manquants) 
+Sprint 2 10 – 16 nov. 2025 Deploiement de l'agent Cockpit sur les PC/laptops 
+manquants — verification de la remontee 
+automatique 
+Sprint 3 17 – 23 nov. 2025 Saisie manuelle des peripheriques (ecrans, claviers, 
+souris, imprimantes) : modele, numero de serie, 
+localisation 
+Sprint 4 24 nov. – 3 dec. 2025 Tests de validation — controle croise inventaire 
+physique vs Cockpit — cloture et rapport final 
+ 
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 3 / 3 
+4. TYPES DE MATERIELS TRAITES 
+ 
+Type de materiel Methode Informations collectees 
+PC / Laptop Agent Cockpit (auto) Modele, OS, RAM, CPU, SN, IP, 
+utilisateur affecte 
+Ecran / Moniteur Saisie manuelle Marque, modele, SN, localisation 
+Clavier / Souris Saisie manuelle Marque, modele, SN 
+Imprimante Agent + saisie manuelle Modele, SN, IP, localisation, file d'attente 
+ 
+5. TESTS DE VALIDATION 
+ 
+Critère de validation Résultat attendu 
+Completude inventaire Chaque materiel physique a une fiche dans Cockpit 
+Remontee agent PC Modele, OS, RAM, CPU, SN, IP correctement remontes 
+Peripheriques Marque, modele, SN, localisation renseignes manuellement 
+Affectation utilisateur Chaque materiel lie a un utilisateur ou un site 
+Absence de doublon Aucun materiel en double dans l'inventaire Cockpit 
+Garanties renseignees Dates de garantie saisies pour les materiels concernes 
+ 
+6. BILAN 
+ 
+Materiels ajoutes ~50 (donnee fictive) 
+Agents deployes ~35 agents Cockpit installes sur des PC (fictif) 
+Saisies manuelles ~15 peripheriques saisis manuellement (fictif) 
+Statut final TERMINE — Parc informatique identifie a 100 % 
+ 
+Note confidentialite : Les chiffres (nombre de materiels, IP, numeros de serie) sont entierement 
+fictifs pour des raisons de securite. 
+ 
+

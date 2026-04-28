@@ -1,0 +1,111 @@
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 1 / 4 
+ 
+Groupe Ragni 
+Direction des Systemes d'Information 
+ANNEXE — PROJET 4 
+INTERFACE LISTES DE DISTRIBUTION 
+ 
+Document Annexe Projet 4 — Rapport d'alternance 
+Auteur Nedj Belloum 
+Role Alternant Technicien Support Informatique 
+Entreprise Groupe Ragni 
+Periode Novembre 2025 – Janvier 2026 
+Contexte Developpement et deploiement d'une interface web pour 
+consulter les listes de distribution M365 via Outlook (GPO) 
+Methode Agile — Sprints hebdomadaires 
+Outils Jira / Excel 
+ 
+Note confidentialite : Pour des raisons de confidentialite et de securite, toutes les donnees 
+presentes dans ce document (noms d'utilisateurs, adresses IP, noms de serveurs, volumes, 
+numeros de serie) sont fictives et ne representent pas les donnees reelles de l'entreprise. 
+  
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 2 / 4 
+1. DESCRIPTION DU BESOIN 
+ 
+1.1 Problematique 
+Les utilisateurs ne pouvaient pas consulter le contenu (membres, adresses) des listes de 
+distribution Microsoft 365 directement depuis Outlook, qu'il s'agisse de listes dynamiques ou 
+standard. Cette opacite generait des sollicitations repetees aupres de l'equipe informatique. 
+ 
+1.2 Solution retenue 
+Solution Interface web interne developpee en HTML/CSS/JavaScript 
+Hebergement IIS (Internet Information Services) sur Windows Server interne 
+Domaine local Nom de domaine local dedie (ex. : lists.ragni.local — fictif) 
+Source de donnees Microsoft Graph API / Azure AD (listes dynamiques et 
+standard M365) 
+Deploiement Integration dans Outlook pour tous les collaborateurs via une 
+GPO 
+Benefice Acces autonome aux listes de distribution sans solliciter 
+l'equipe IT 
+ 
+2. PLANNING ET DUREE DU PROJET  
+ 
+Periode estimee Novembre 2025 – Janvier 2026 
+Chef de projet Nedj Belloum 
+Technologies HTML / CSS / JavaScript — IIS — Active Directory / GPO — 
+Microsoft Graph API 
+Methode Agile — Sprints hebdomadaires — Jira 
+ 
+3. PLANIFICATION DES TACHES — SPRINTS 
+ 
+Sprint Période Objectifs / Livrables 
+Sprint 1 Semaine 1 Analyse du besoin — recueil des exigences 
+utilisateurs et techniques — maquettage 
+Sprint 2 Semaine 2 Developpement de l'interface web (listing listes, 
+recherche, affichage membres) 
+Sprint 3 Semaine 3 Creation du nom de domaine local — configuration 
+IIS — test d'hebergement local 
+Sprint 4 Semaine 4 Verification de l'acces depuis les postes utilisateurs 
+— corrections eventuelles 
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 3 / 4 
+Sprint 5 Semaine 5 Creation de la GPO — integration de l'interface dans 
+Outlook — deploiement progressif 
+Sprint 6 Semaine 6 Tests de validation complets — recette utilisateur — 
+cloture projet 
+ 
+4. ARCHITECTURE DE LA SOLUTION  
+ 
+# Composant Description 
+1 Interface web Application HTML/CSS/JS — affichage et recherche des listes 
+de distribution et de leurs membres 
+2 Serveur IIS Hebergement local sur Windows Server (IIS) — accessible 
+depuis le reseau interne uniquement 
+3 DNS interne Enregistrement A dans le DNS Active Directory : 
+lists.ragni.local -> IP serveur IIS (donnees fictives) 
+4 Microsoft Graph API Microsoft utilisee pour interroger Azure AD et recuperer 
+les listes dynamiques et standard M365 
+5 GPO Outlook Strategie de groupe deployee sur l'OU utilisateurs pour 
+integrer l'interface directement dans Outlook 
+ 
+5. TESTS DE VALIDATION 
+ 
+Critère de validation Résultat attendu 
+Affichage interface Interface chargee correctement dans Outlook et navigateur 
+Listes dynamiques Membres des listes dynamiques M365 affiches correctement 
+Listes standard Membres des listes standard M365 affiches correctement 
+Recherche Filtrage en temps reel fonctionnel (nom de liste, membre) 
+GPO Outlook Onglet/lien visible dans Outlook sur tous les postes testes 
+Multi-profils Fonctionnel pour utilisateurs standards et administrateurs 
+Performance Temps de chargement < 3 secondes sur le reseau interne 
+Securite acces Interface inaccessible depuis l'exterieur du reseau 
+ 
+6. BILAN 
+ 
+Postes deployes Tous les postes du domaine (fictif) 
+Listes affichees Listes dynamiques et standard — toutes categories M365 
+Retour utilisateurs Retour positif — autonomie accrue — moins de sollicitations IT 
+(fictif) 
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 4 / 4 
+Statut final TERMINE — Interface deployee et fonctionnelle 
+ 
+Note confidentialite : Les URL, adresses IP, noms de domaine (lists.ragni.local) et identifiants 
+Azure AD mentionnes sont fictifs. 
+ 
+

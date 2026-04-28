@@ -36,7 +36,6 @@
   background: var(--border);
   border: 1px solid var(--border);
   border-radius: 18px;
-  overflow: hidden;
 }
 .project-card {
   background: var(--card);

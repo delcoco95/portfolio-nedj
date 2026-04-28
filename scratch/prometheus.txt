@@ -1,0 +1,109 @@
+ 
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Administration des systèmes et des réseaux (option SISR)  
+ 
+DESCRIPTION D’UNE RÉALISATION PROFESSIONNELLE N° réalisation : 5 
+Nom, prénom : Belloum Nedjmeddine N° candidat : 
+Épreuve ponctuelle  Contrôle en cours de formation  Date : 10 / 09 / 2025 
+Organisation support de la réalisation professionnelle 
+Mediaschool IRIS - Nice 
+Intitulé de la réalisation professionnelle :  
+Supervision d'infrastructure réseau avec Prometheus, Grafana et alertes mail  
+Période de réalisation : 09/09/2025 au 10/09/2025 Lieu : Mediaschool – IRIS Nice  
+Modalité :   Seul(e)    En équipe 
+Compétences travaillées 
+  Concevoir une solution d’infrastructure réseau 
+  Installer, tester et déployer une solution d’infrastructure réseau 
+  Exploiter, dépanner et superviser une solution d’infrastructure réseau 
+Conditions de réalisation1 (ressources fournies, résultats attendus) 
+ 
+Ressources : Un environnement de virtualisation (VirtualBox) pour déployer les machines nécessaires  +  
+cahier des charges. 
+ 
+Résultats attendus : Production d’un environnement opérationnel et documenté. 
+ 
+ 
+ 
+Description des ressources documentaires, matérielles et logicielles utilisées2 
+ 
+Ressources documentaires : Documentation officielle Microsoft (cmdlets PowerShell telles que Install -
+WindowsFeature, New-ADUser, Get-Service, etc.). 
+Documentation officielle des outils utilisés (Prometheus, Grafana, Node Exporter, Postfix…).  
+ 
+Matérielles et logicielles utilisées : VirtualBox pour la virtualisation des environnements de test. 
+ 
+Machines virtuelles Debian, Prometheus, Alertmanager, Node Exporter, Grafana pour la partie supervision.  
+ 
+Postfix + Gmail pour le routage des alertes par mail. 
+ 
+ 
+Modalités d’accès aux productions3 et à leur documentation4 
+ 
+Lien du repositories contenant le README et le projet : Documentation 
+ 
+ 
+ 
+1 En référence aux conditions de réalisation et ressources nécessaires du bloc « Administration des systèmes et des réseaux » prévues 
+dans le référentiel de certification du BTS SIO. 
+2 Les réalisations professionnelles sont élaborées dans un environnement technologique conforme à l’annexe II.E du référentiel du BTS 
+SIO. 
+3 Conformément au référentiel du BTS SIO «  Dans tous les cas, les candidats doivent se munir des outils et ressources techniques 
+nécessaires au déroulement de l’épreuve. Ils sont seuls responsables de la disponibilité et de la mise en œuvre de ces outils et ressources. 
+La circulaire nationale d’organisation précise les conditions matérielles de déroulement des interrogations et les pénalités à appliquer aux 
+candidats qui ne se seraient pas munis des éléments nécessaires au déroulement de l’épreuve.  ». Les éléments nécessaires peuvent 
+être un identifiant, un mot de passe, une adresse réticulaire (URL) d’un espace de stockage et de la présentation de l’organisation du 
+stockage. 
+4 Lien vers la documentation complète, précisant et décrivant, si cela n’a été fait au verso de la fiche, la réalisation, par exemples schéma 
+complet de réseau mis en place et configurations des services. 
+
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Administration des systèmes et des réseaux (option SISR)  
+ 
+Descriptif de la réalisation professionnelle, y compris les productions réalisées et schémas explicatifs 
+ 
+1. Installation & configuration de Node Exporter 
+• Installation de Node Exporter (v1.8.1) sur les deux machines. 
+• Création d’un utilisateur dédié et d’un service systemd pour l’exécuter. 
+• Vérification de l’exposition des métriques via http://localhost:9100/metrics.  
+2. Mise en place de Prometheus 
+• Installation de Prometheus (v2.54.1) et création des répertoires système.  
+• Configuration du fichier prometheus.yml (scrape interval 15s, ajout des cibles 192.168.100.10 et .11).  
+• Création d’un service systemd pour assurer le démarrage automatique.  
+3. Installation et configuration d’Alertmanager 
+• Installation d’Alertmanager (v0.27.0). 
+• Configuration du routage SMTP via Postfix dans alertmanager.yml. 
+• Mise en place des règles d’alerte (alerts.yml) : 
+o InstanceDown : machine ou service non accessible. 
+o HighCPUUsage : processeur > 80 % pendant plus de 2 min. 
+4. Mise en place de Grafana 
+• Installation de Grafana et activation du service grafana-server. 
+• Accès configuré via NAT (http://192.168.56.1:2300). 
+• Création d’un dashboard complet : CPU, RAM, disque, réseau. 
+5. Configuration des alertes mail (Postfix + Gmail) 
+• Installation et configuration du relai SMTP Gmail dans Postfix. 
+• Sécurisation via SASL + TLS. 
+• Test d’envoi et validation du fonctionnement. 
+6. Tests & validation 
+• Simulation de panne de Node Exporter → alerte InstanceDown reçue par mail.  
+• Simulation d’une forte charge CPU → alerte HighCPUUsage déclenchée.  
+• Vérification du bon fonctionnement de la chaîne : Node Exporter → Prometheus → Alertmanager → 
+Mail + Dashboard Grafana. 
+ 
+ 
+ 
+Compétences mobilisées : 
+• Administration. 
+• Automatisation des tâches systèmes. 
+• Documentation technique. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

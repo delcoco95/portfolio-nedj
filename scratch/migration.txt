@@ -1,0 +1,101 @@
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 1 / 3 
+ 
+Groupe Ragni 
+Direction des Systemes d'Information 
+ANNEXE — PROJET 1 
+MIGRATION WINDOWS 10 VERS WINDOWS 11 
+ 
+Document Annexe Projet 1 — Rapport d'alternance 
+Auteur Nedj Belloum 
+Role Alternant Technicien Support Informatique 
+Entreprise Groupe Ragni 
+Periode 15 septembre 2025 – 15 octobre 2025 
+Contexte Mise a niveau du parc suite a la fin de support securite 
+Windows 10 
+Methode Agile — Sprints hebdomadaires 
+Outils Jira / Excel 
+ 
+Note confidentialite : Pour des raisons de confidentialite et de securite, toutes les donnees 
+presentes dans ce document (noms d'utilisateurs, adresses IP, noms de serveurs, volumes, 
+numeros de serie) sont fictives et ne representent pas les donnees reelles de l'entreprise. 
+  
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 2 / 3 
+1. DESCRIPTION DU BESOIN 
+ 
+1.1 Problematique 
+Microsoft a annonce la fin du support de Windows 10 au 14 octobre 2025. Au-dela de cette 
+date, aucun correctif de securite n'est publie, exposant l'entreprise a des vulnerabilites critiques 
+non corrigees et a des risques de non-conformite reglementaire. 
+ 
+1.2 Contexte 
+Systeme actuel Windows 10 — fin de support octobre 2025 
+Systeme cible Windows 11 
+Perimetre Ensemble du parc utilisateurs (~48 postes — donnee fictive) 
+Risque identifie Absence de mises a jour de securite, vulnerabilites non 
+corrigees, risque de compromission 
+Objectif 100 % des postes compatibles migres avant le 15 octobre 
+2025 
+ 
+2. PLANNING ET DUREE DU PROJET  
+ 
+Date de debut 15 septembre 2025 
+Date de fin 15 octobre 2025 
+Duree totale 1 mois — 4 sprints hebdomadaires 
+Chef de projet Nedj Belloum 
+Mode de travail Methode Agile — sprints hebdomadaires planifies dans Jira 
+ 
+3. PLANIFICATION DES TACHES — SPRINTS 
+ 
+Sprint Période Objectifs / Livrables 
+Sprint 1 15 – 21 sept. 2025 Audit de compatibilite : verification modele PC, RAM, 
+stockage, TPM 2.0, Secure Boot — classement 
+compatible / incompatible 
+Sprint 2 22 – 28 sept. 2025 Planification des interventions par utilisateur — 
+creation des creneaux — communication aux equipes 
+Sprint 3 29 sept. – 5 oct. 2025 Interventions sur les postes — deploiement Windows 
+11 (lot 1 et lot 2) 
+Sprint 4 6 – 15 oct. 2025 Tests de validation post-migration — verification des 
+logiciels metier — cloture projet 
+ 
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 3 / 3 
+4. CRITERES DE COMPATIBILITE VERIFIES  
+ 
+Critere Valeur minimale Outil de verification 
+Processeur Intel 8e gen. / AMD Ryzen 
+2000+ 
+msinfo32 / CPU-Z 
+RAM 4 Go minimum (8 Go 
+recommande) 
+msinfo32 
+Stockage 64 Go libres minimum Explorateur de fichiers 
+TPM Version 2.0 active tpm.msc 
+Secure Boot Active dans le BIOS/UEFI BIOS 
+Carte graphique DirectX 12 / WDDM 2.x dxdiag 
+ 
+5. TESTS DE VALIDATION 
+ 
+Critère de validation Résultat attendu 
+Demarrage Windows 11 Demarrage sans erreur, affichage du bureau 
+Ouverture de session Connexion au domaine Active Directory OK 
+Logiciels metier Tous les logiciels critiques ouverts et fonctionnels 
+Reseau / Partages Acces LAN, partages reseau et Internet operationnels 
+Impression Test d'impression reussi depuis chaque poste 
+Windows Update Aucune mise a jour critique manquante 
+VPN Connexion VPN fonctionnelle (si applicable) 
+ 
+6. BILAN 
+ 
+Postes migres 48 / 48 (donnee fictive) 
+Postes incompatibles 3 postes remplaces suite a incompatibilite materielle (fictif) 
+Incidents post-mig. 2 incidents mineurs resolus (pilote imprimante, logiciel legacy) 
+— fictif 
+Statut final TERMINE — Objectif atteint avant echeance 
+ 
+Note confidentialite : Les chiffres (nombre de postes, incidents) sont entierement fictifs. 
+ 
+

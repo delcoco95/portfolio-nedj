@@ -1,0 +1,121 @@
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 1 / 4 
+ 
+Groupe Ragni 
+Direction des Systemes d'Information 
+ANNEXE — PROJET 2 
+MIGRATION ONEDRIVE & CLOUD 
+ 
+Document Annexe Projet 2 — Rapport d'alternance 
+Auteur Nedj Belloum 
+Role Alternant Technicien Support Informatique 
+Entreprise Groupe Ragni 
+Periode 10 novembre 2025 – 25 janvier 2026 
+Contexte Migration des dossiers personnels du serveur de fichiers vers 
+OneDrive M365 
+Methode Agile — Sprints hebdomadaires 
+Outils Jira / Excel 
+ 
+Note confidentialite : Pour des raisons de confidentialite et de securite, toutes les donnees 
+presentes dans ce document (noms d'utilisateurs, adresses IP, noms de serveurs, volumes, 
+numeros de serie) sont fictives et ne representent pas les donnees reelles de l'entreprise. 
+  
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 2 / 4 
+1. DESCRIPTION DU BESOIN 
+ 
+1.1 Problematique 
+Le serveur de fichiers etait sature par les dossiers personnels des utilisateurs (environ 5 To — 
+fictif). Les utilisateurs ne pouvaient plus enregistrer de nouveaux fichiers, generant des 
+blocages quotidiens et une perte de productivite. 
+ 
+1.2 Solution retenue 
+Probleme Serveur de fichiers sature (~5 To de dossiers personnels — 
+fictif) 
+Solution Migration de chaque dossier personnel vers le OneDrive 
+individuel (1 To / utilisateur via M365) 
+Gain attendu Liberation de ~5 To sur le serveur de fichiers (donnee fictive) 
+Outil choisi SharePoint Migration Tool (SPMT) — installe sur le serveur de 
+fichiers 
+Suivi Jira (planification sprints) + Tableau Excel (suivi utilisateur par 
+utilisateur) 
+ 
+2. PLANNING ET DUREE DU PROJET  
+ 
+Date de debut 10 novembre 2025 
+Date de fin 25 janvier 2026 
+Duree totale ~11 semaines — 11 sprints hebdomadaires 
+Chef de projet Nedj Belloum 
+Outils de suivi Jira (sprints) + Excel (tableau de bord migration) 
+ 
+3. PLANIFICATION DES TACHES — SPRINTS 
+ 
+Sprint Période Objectifs / Livrables 
+Sprint 1 10 – 16 nov. 2025 Inventaire des utilisateurs impactes — priorisation par 
+volume et criticite metier 
+Sprint 2 17 – 23 nov. 2025 Benchmark des outils de migration — selection de 
+SPMT — demande de droits Administrateur OneDrive 
+Sprint 3 24 – 30 nov. 2025 Installation de SPMT sur le serveur de fichiers — 
+configuration — test sur dossier de l'alternant (N. 
+Belloum) 
+Sprint 4 1 – 7 dec. 2025 Migration lot 1 : utilisateurs prioritaires (gros volumes) 
+Sprint 5 8 – 14 dec. 2025 Migration lot 2 
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 3 / 4 
+Sprint 6 15 – 21 dec. 2025 Migration lot 3 
+Sprint 7 5 – 11 jan. 2026 Migration lot 4 
+Sprint 8 12 – 18 jan. 2026 Migration lot 5 — verification integrite des fichiers 
+migres 
+Sprint 9 19 – 25 jan. 2026 Cloture : nettoyage serveur, communication finale, 
+archivage 
+ 
+4. BENCHMARK OUTIL — SPMT 
+ 
+Avant de lancer le projet, un benchmark a ete realise pour choisir l'outil de migration le plus 
+adapte. 
+ 
+Outil Integration M365 Migration en 
+masse 
+Retenu 
+SharePoint Migration Tool 
+(SPMT) 
+Native Oui OUI 
+Mover (Microsoft) Bonne Oui Non 
+RoboCopy (manuel) Aucune Non Non 
+ 
+5. TABLEAU DE SUIVI (EXTRAIT FICTIF)  
+ 
+Le suivi de la migration a ete realise dans un tableau Excel, mis a jour apres chaque lot. 
+ 
+Utilisateur Volume estime Statut Date migration 
+jean.dupont@ragni.fr 45 Go Migre 08/12/2025 
+marie.martin@ragni.fr 120 Go Migre 15/12/2025 
+pierre.durand@ragni.fr 78 Go Migre 05/01/2026 
+sophie.leclerc@ragni.fr 200 Go Migre 12/01/2026 
+lucas.renard@ragni.fr 35 Go Migre 18/01/2026 
+ 
+Note confidentialite : Toutes les adresses mail, volumes et dates ci-dessus sont fictifs. Le 
+tableau reel etait maintenu dans Excel. 
+ 
+6. TESTS DE VALIDATION 
+ 
+Critère de validation Résultat attendu 
+Integrite des fichiers Tous les fichiers presents dans OneDrive, sans corruption 
+
+Groupe Ragni  |  Nedj Belloum  |  Alternant Technicien Support Informatique 
+Document confidentiel — Groupe Ragni     |     Page 4 / 4 
+Arborescence preservee L'arborescence de dossiers est identique a la source 
+Acces utilisateur L'utilisateur peut acceder a ses fichiers depuis OneDrive 
+Espace libere serveur Espace recupere sur le serveur de fichiers confirme 
+Rapport SPMT Aucune erreur critique dans les journaux de migration SPMT 
+ 
+7. BILAN 
+ 
+Utilisateurs migres Tous les utilisateurs cibles (donnee fictive) 
+Espace libere serveur ~5 To (donnee fictive) 
+Incidents rencontres Quelques fichiers verrouilles resolus manuellement (fictif) 
+Statut final TERMINE — Serveur de fichiers desature 
+ 
+

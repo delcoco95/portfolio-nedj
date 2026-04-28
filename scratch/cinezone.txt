@@ -1,0 +1,94 @@
+ 
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Administration des systèmes et des réseaux 
+ 
+DESCRIPTION D’UNE RÉALISATION PROFESSIONNELLE N° réalisation : 1 
+Nom, prénom : Belloum Nedjmeddine N° candidat : 
+Épreuve ponctuelle  Contrôle en cours de formation  Date : 25/06/2025 
+Organisation support de la réalisation professionnelle 
+Mediaschool IRIS - Nice 
+Intitulé de la réalisation professionnelle :  
+Déploiement et sécurisation d’un projet web — CineZone 
+Période de réalisation : 14/05/2025 au 25/06/2025 Lieu : Mediaschool – IRIS Nice  .........................................  
+Modalité :   Seul(e)    En équipe 
+Compétences travaillées 
+  Concevoir une solution d’infrastructure réseau 
+  Installer, tester et déployer une solution d’infrastructure réseau 
+  Exploiter, dépanner et superviser une solution d’infrastructure réseau 
+Conditions de réalisation1 (ressources fournies, résultats attendus) 
+ 
+Ressources : Cahier des charges fourni (PDF), avec spécifications techniques et fonctionnelles.  
+API TMDB (The Movie Database) gratuite, accessible via clé personnelle. 
+Poste de test local (VM Debian pour le déploiement). 
+Répartition SLAM/SISR : binôme de 1 développeur + 1 administrateur. 
+ 
+Résultats attendus : Application web responsive sans backend : Recherche et affichage de films depuis 
+TMDB, Gestion de favoris via localStorage, Déploiement de l’application sur un serveur web local sécurisé 
+(Apache). 
+ 
+Description des ressources documentaires, matérielles et logicielles utilisées2 
+ 
+Ressources documentaires : Documentation TMDB : https://developer.themoviedb.org  
+Références JavaScript : fetch, DOM, localStorage 
+Tutoriels d'installation Apache sur Debian 
+ 
+Matérielles et logicielles utilisées : Serveur local sous Linux  
+SLAM : HTML / CSS / JavaScript - Intégration d’API REST - Responsive design (Flexbox/Grid) 
+SISR : Serveur web Apache ou Nginx  - Configuration réseau (pare-feu, DNS local) - Sécurité (accès restreint) - 
+Supervision réseau légère 
+ 
+Modalités d’accès aux productions3 et à leur documentation4 
+ 
+Lien du repositories contenant le README et le projet : Documentation et réalisation du projet. 
+Accès via http://<IP_locale>/cinezone 
+ 
+ 
+1 En référence aux conditions de réalisation et ressources nécessaires du bloc « Administration des systèmes et des réseaux » prévues 
+dans le référentiel de certification du BTS SIO. 
+2 Les réalisations professionnelles sont élaborées dans un environnement technologique conforme à l’annexe II.E du référentiel du BTS 
+SIO. 
+3 Conformément au référentiel du BTS SIO «  Dans tous les cas, les candidats doivent se munir des outils et ressources techniques 
+nécessaires au déroulement de l’épreuve. Ils sont seuls responsables de la disponibilité et de la mise en œuvre de ces outils et ressources. 
+La circulaire nationale d’organisation précise les conditions matérielles de déroulement des interrogations et les pénalités à appliquer aux 
+candidats qui ne se seraient pas munis des éléments nécessaires au déroulement de l’épreuve.  ». Les éléments nécessaires peuvent 
+être un identifiant, un mot de passe, une adresse réticulaire (URL) d’un espace de stockage et de la présentation de l’organisation du 
+stockage. 
+4 Lien vers la documentation complète, précisant et décrivant, si cela n’a été fait au verso de la fiche, la réalisation, par exemples schéma 
+complet de réseau mis en place et configurations des services. 
+
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Administration des systèmes et des réseaux   
+ 
+Descriptif de la réalisation professionnelle, y compris les productions réalisées et schémas explicatifs 
+ 
+ 
+Nom du projet : CineZone – Portail local de consultation de films 
+Binôme : SLAM (interface + logique) / SISR (déploiement + sécurisation) 
+ 
+✔ Fonctionnalités (SLAM) : 
+Recherche de films via TMDB 
+Affichage dynamique : affiche, titre, note, acteurs 
+Favoris stockés en localStorage 
+Responsive Design : grilles adaptatives, thème sombre/clair, loader 
+ 
+🛠 Fonctionnalités (SISR) : 
+Déploiement local dans /var/www/cinezone (Apache) 
+Accès en réseau local via IP 
+ 
+ 
+Application web fonctionnelle 
+ 
+Dossier compressé : code + documentation 
+ 
+Version opérationnelle sur serveur local 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

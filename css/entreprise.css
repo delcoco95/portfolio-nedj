@@ -69,9 +69,7 @@
   flex-shrink: 0;
   margin-top: 6px;
 }
-.mission-icon i {
-  color: var(--accent);
-}
+
 
 /* ── MISSIONS GRID ── */
 .missions-intro {
@@ -102,11 +100,7 @@
 }
 .mission-card:hover { background: var(--card-hover); }
 .mission-card.visible { opacity: 1; transform: translateY(0); }
-.mission-icon {
-  font-size: 22px;
-  margin-bottom: 12px;
-  display: block;
-}
+
 .mission-title {
   font-size: 16px;
   font-weight: 600;
@@ -202,4 +196,39 @@
 @media (max-width: 768px) {
   .company-header { grid-template-columns: 1fr; gap: 20px; }
   .missions-grid { grid-template-columns: 1fr; }
+}
+
+/* ── RAGNI LOGO ── */
+.ragni-logo-hero {
+  max-width: 180px;
+  height: auto;
+  filter: brightness(0); /* Noir en mode clair */
+  transition: filter 0.4s ease;
+  image-rendering: -webkit-optimize-contrast; /* Améliore la netteté sur les navigateurs webkit */
+  image-rendering: crisp-edges;
+}
+[data-theme="dark"] .ragni-logo-hero {
+  filter: brightness(0) invert(1); /* Blanc en mode sombre */
+}
+
+/* ── MISSION GRAPHIC ── */
+.mission-graphic {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: hsla(var(--hue), 80%, 60%, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsla(var(--hue), 80%, 60%, 0.2);
+  overflow: hidden;
+}
+.mission-orb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: hsla(var(--hue), 80%, 60%, 1);
+  box-shadow: 0 0 20px hsla(var(--hue), 80%, 60%, 0.8), 0 0 40px hsla(var(--hue), 80%, 60%, 0.5);
 }

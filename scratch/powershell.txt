@@ -1,0 +1,98 @@
+ 
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Administration des systèmes et des réseaux (option SISR)  
+ 
+DESCRIPTION D’UNE RÉALISATION PROFESSIONNELLE N° réalisation : 2 
+Nom, prénom : Belloum Nedjmeddine N° candidat : 
+Épreuve ponctuelle  Contrôle en cours de formation  Date : 13/06/2025 
+Organisation support de la réalisation professionnelle 
+Mediaschool IRIS - Nice 
+Intitulé de la réalisation professionnelle :  
+Automatisation du déploiement de services Windows Server 2022 via un menu PowerShell interactif  
+Période de réalisation : 23/05/2025 au 13/06/2025 Lieu : Mediaschool – IRIS Nice  .........................................  
+Modalité :   Seul(e)    En équipe 
+Compétences travaillées 
+  Concevoir une solution d’infrastructure réseau 
+  Installer, tester et déployer une solution d’infrastructure réseau 
+  Exploiter, dépanner et superviser une solution d’infrastructure réseau 
+Conditions de réalisation1 (ressources fournies, résultats attendus) 
+ 
+Ressources : Un cahier des charges simple précisant l’objectif : automatiser la configuration de rôles Windows 
+Server 2022 via un menu PowerShell. Un environnement de test en machine virtuelle (VM Windows Server 
+2022). 
+ 
+Résultats attendus : Script PowerShell  avec menu interactif qui permet le déploiement et configuration des 
+services réseau requis (par exemple, Active Directory, DHCP, DNS) sur Windows Serveur. Documentation 
+détaillée des procédures d’installation et de configuration. 
+ 
+ 
+ 
+Description des ressources documentaires, matérielles et logicielles utilisées2 
+ 
+Ressources documentaires : Documentation Microsoft officielle sur les cmdlets PowerShell (ex. Install-
+WindowsFeature, New-ADUser). Tutoriels sur l’interface utilisateur en PowerShell 
+ 
+Matérielles et logicielles utilisées : Visual Studio Code, VirtualBox, Windows Server 2022, PowerShell, 
+Réseau local (NAT). 
+ 
+ 
+ 
+Modalités d’accès aux productions3 et à leur documentation4 
+ 
+Lien du repositories contenant le README et le projet : Documentation et réalisation du projet. 
+ 
+ 
+ 
+1 En référence aux conditions de réalisation et ressources nécessaires du bloc « Administration des systèmes et des réseaux » prévues 
+dans le référentiel de certification du BTS SIO. 
+2 Les réalisations professionnelles sont élaborées dans un environnement technologique conforme à l’annexe II.E du référentiel du BTS 
+SIO. 
+3 Conformément au référentiel du BTS SIO «  Dans tous les cas, les candidats doivent se munir des outils et ressources techniques 
+nécessaires au déroulement de l’épreuve. Ils sont seuls responsables de la disponibilité et de la mise en œuvre de ces outils et ressources. 
+La circulaire nationale d’organisation précise les conditions matérielles de déroulement des interrogations et les pénalités à appliquer aux 
+candidats qui ne se seraient pas munis des éléments nécessaires au déroulement de l’épreuve.  ». Les éléments nécessaires peuvent 
+être un identifiant, un mot de passe, une adresse réticulaire (URL) d’un espace de stockage et de la présentation de l’organisation du 
+stockage. 
+4 Lien vers la documentation complète, précisant et décrivant, si cela n’a été fait au verso de la fiche, la réalisation, par exemples schéma 
+complet de réseau mis en place et configurations des services. 
+
+BTS SERVICES INFORMATIQUES AUX ORGANISATIONS SESSION 2026 
+Administration des systèmes et des réseaux (option SISR)  
+ 
+Descriptif de la réalisation professionnelle, y compris les productions réalisées et schémas explicatifs 
+ 
+ 
+Faciliter le travail des techniciens systèmes en automatisant les configurations courantes sur Windows Server 
+2022 grâce à un menu PowerShell interactif. 
+ 
+[1] Renommer le serveur. 
+[2] Configuration IP. 
+[3] Installation des rôles : AD, DHCP, DNS. 
+[4] Configuration de l’Active Directory. 
+[5] Configuration du DNS. 
+[6] Configuration du DHCP. 
+[7] Création des Unité d’Organisation sur AD. 
+[8] Création de Groupe sur AD. 
+[9] Création des Utilisateurs sur AD. 
+[10] Import CSV. 
+[11] Quitter. 
+ 
+ 
+ 
+Compétences mobilisées : 
+• Script PowerShell avancé (menus, conditions, fonctions). 
+• Administration Windows Server. 
+• Automatisation des tâches systèmes. 
+• Documentation technique. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
