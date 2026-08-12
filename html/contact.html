@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Portfolio Nedj Belloum</title>
   <meta name="description"
-    content="Contactez Nedj Belloum, technicien support informatique disponible en alternance. LinkedIn, GitHub, CV.">
+    content="Contactez Nedj Belloum, Administrateur Systèmes & Réseaux Junior, pour une collaboration, une mission ou une opportunité professionnelle. LinkedIn, GitHub, CV.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,10 +25,7 @@
       <ul class="nav-links">
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="projets.html">Projets</a></li>
-        <li><a href="entreprise.html">Entreprise</a></li>
         <li><a href="competences.html">Compétences</a></li>
-        <li><a href="veille.html">Veille</a></li>
-        <li><a href="../annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank">Synthèse</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:10px;">
@@ -50,11 +47,7 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="../index.html" onclick="closeMobileNav()">Accueil</a>
     <a href="projets.html" onclick="closeMobileNav()">Projets</a>
-    <a href="entreprise.html" onclick="closeMobileNav()">Entreprise</a>
     <a href="competences.html" onclick="closeMobileNav()">Compétences</a>
-    <a href="veille.html" onclick="closeMobileNav()">Veille</a>
-    <a href="../annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank"
-      onclick="closeMobileNav()">Synthèse</a>
     <a href="contact.html" class="active" onclick="closeMobileNav()">Contact</a>
   </div>
 
@@ -62,6 +55,8 @@
   <div class="page-hero" style="text-align:center; margin: 0 auto;">
     <div class="page-hero-tag">Contact</div>
     <h1>Travaillons<br>ensemble.</h1>
+    <p style="text-align:center; max-width: 600px; margin-left: auto; margin-right: auto;">Disponible pour une mission, un besoin ponctuel ou une opportunité en administration systèmes, réseaux, cloud
+      ou sécurité. Décrivez votre projet, je vous réponds rapidement.</p>
   </div>
 
   <div class="divider"></div>
@@ -99,8 +94,8 @@
 
       <!-- Formulaire de contact -->
       <div class="contact-form-wrap">
-        <div class="form-title">M'envoyer un message</div>
-        <div class="form-sub">Réponse sous 24h en général.</div>
+        <div class="form-title">Discuter de votre projet</div>
+        <div class="form-sub">Décrivez votre besoin, je vous réponds sous 24h en général.</div>
         <form id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
@@ -121,11 +116,11 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="subject">Objet</label>
-            <input type="text" id="subject" name="subject" class="form-input" placeholder="Proposition d'alternance...">
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="Mission, projet, opportunité...">
           </div>
           <div class="form-group">
             <label class="form-label" for="messageText">Message</label>
-            <textarea id="messageText" name="message" class="form-textarea" placeholder="Bonjour Nedj, ..."></textarea>
+            <textarea id="messageText" name="message" class="form-textarea" placeholder="Bonjour Nedj, je vous contacte au sujet de..."></textarea>
           </div>
           <button type="submit" class="form-submit" id="form-submit">Envoyer le message →</button>
           <div class="form-message success" id="formSuccess">
@@ -143,10 +138,7 @@
       <div class="footer-links">
         <a href="../index.html">Accueil</a>
         <a href="projets.html">Projets</a>
-        <a href="entreprise.html">Entreprise</a>
         <a href="competences.html">Compétences</a>
-        <a href="veille.html">Veille</a>
-        <a href="../annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank">Synthèse</a>
         <a href="contact.html">Contact</a>
         <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
         <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
@@ -167,6 +159,7 @@
   <script src="../js/contact.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="../js/particles-init.js"></script>
+  <script src="../js/click-spark.js"></script>
 </body>
 
 </html>

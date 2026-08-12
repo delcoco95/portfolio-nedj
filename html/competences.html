@@ -22,10 +22,7 @@
     <ul class="nav-links">
       <li><a href="../index.html">Accueil</a></li>
       <li><a href="projets.html">Projets</a></li>
-      <li><a href="entreprise.html">Entreprise</a></li>
       <li><a href="competences.html" class="active">Comp&eacute;tences</a></li>
-      <li><a href="veille.html">Veille</a></li>
-      <li><a href="../annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank">Synthèse</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:10px;">
@@ -46,10 +43,7 @@
 <div class="mobile-nav" id="mobileNav">
   <a href="../index.html" onclick="closeMobileNav()">Accueil</a>
   <a href="projets.html" onclick="closeMobileNav()">Projets</a>
-  <a href="entreprise.html" onclick="closeMobileNav()">Entreprise</a>
   <a href="competences.html" class="active" onclick="closeMobileNav()">Comp&eacute;tences</a>
-  <a href="veille.html" onclick="closeMobileNav()">Veille</a>
-  <a href="../annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank" onclick="closeMobileNav()">Synthèse</a>
   <a href="contact.html" onclick="closeMobileNav()">Contact</a>
 </div>
 
@@ -57,185 +51,98 @@
 <div class="page-hero">
   <div class="page-hero-tag">Savoir-faire</div>
   <h1>Comp&eacute;tences<br>techniques.</h1>
-  <p>Acquises en alternance chez Groupe Ragni, en stage chez R&eacute;sistex et dans mes projets de formation BTS SIO SISR.</p>
+  <p>Acquises en situation professionnelles et dans mes projets de formation.</p>
 </div>
 
 <div class="divider"></div>
 
 <!-- COMP&Eacute;TENCES TECHNIQUES -->
-<section id="comp&eacute;tences">
-  <p class="section-label">Comp&eacute;tences principales</p>
-  <h2 class="section-title">Savoir-faire<br>valid&eacute;s.</h2>
-  <p class="section-sub">Comp&eacute;tences valid&eacute;es durant mon alternance, mon stage et mes projets de formation.</p>
+<!-- COMPÉTENCES TECHNIQUES -->
+<section id="compétences">
+  <p class="section-label">Compétences principales</p>
+  <h2 class="section-title">Savoir-faire<br>validés.</h2>
+  <p class="section-sub">Compétences techniques clés validées en situation professionnelle et dans mes projets.</p>
 
-  <div class="skills-bento">
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-brands fa-windows"></i></span>
-      <div class="skill-name">Syst&egrave;mes Windows</div>
-      <div class="skill-tags">
+  <div class="skills-dashboard" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <div class="skill-panel" style="--panel-hue:210;">
+      <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <div class="skill-panel-icon"><i class="fa-solid fa-server"></i></div>
+        <div>
+          <div class="skill-panel-title">Systèmes & Cloud</div>
+        </div>
+      </div>
+      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;">
         <span class="tech-pill">Windows 10/11</span>
-        <span class="tech-pill">Server 2022</span>
-        <span class="tech-pill">D&eacute;ploiement</span>
-        <span class="tech-pill">Maintenance</span>
+        <span class="tech-pill">Windows Server</span>
+        <span class="tech-pill">Active Directory</span>
+        <span class="tech-pill">Microsoft 365 (Entra ID, Exchange, SharePoint)</span>
+        <span class="tech-pill">Virtualisation (Hyper-V, Docker)</span>
+        <span class="tech-pill">GPO</span>
       </div>
-      <div class="skill-source">Alternance Groupe Ragni / BTS SIO</div>
     </div>
 
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-sitemap"></i></span>
-      <div class="skill-name">Active Directory</div>
-      <div class="skill-tags">
-        <span class="tech-pill">Utilisateurs &amp; groupes</span>
-        <span class="tech-pill">OU &amp; GPO</span>
-        <span class="tech-pill">DNS</span>
-        <span class="tech-pill">Scripts</span>
+    <div class="skill-panel" style="--panel-hue:350;">
+      <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <div class="skill-panel-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <div class="skill-panel-title">Réseau & Sécurité</div>
+        </div>
       </div>
-      <div class="skill-source">Alternance Groupe Ragni / BTS SIO</div>
-    </div>
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-cloud"></i></span>
-      <div class="skill-name">Cloud Microsoft</div>
-      <div class="skill-tags">
-        <span class="tech-pill">Exchange Online</span>
-        <span class="tech-pill">OneDrive</span>
-        <span class="tech-pill">SharePoint</span>
-        <span class="tech-pill">Entra ID</span>
-        <span class="tech-pill">Azure</span>
-      </div>
-      <div class="skill-source">Alternance Groupe Ragni</div>
-    </div>
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-headset"></i></span>
-      <div class="skill-name">Support IT N1/N2</div>
-      <div class="skill-tags">
-        <span class="tech-pill">Helpdesk</span>
-        <span class="tech-pill">Tickets Cockpit</span>
-        <span class="tech-pill">Diagnostic</span>
-        <span class="tech-pill">TeamViewer</span>
-      </div>
-      <div class="skill-source">Alternance Groupe Ragni</div>
-    </div>
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-network-wired"></i></span>
-      <div class="skill-name">Expertise R&eacute;seaux &amp; Connectivit&eacute;</div>
-      <div class="skill-tags">
-        <span class="tech-pill">Switchs</span>
-        <span class="tech-pill">Routeurs</span>
-        <span class="tech-pill">Bornes Wi-Fi (AP)</span>
+      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;">
+        <span class="tech-pill">Switchs/Routeurs (Cisco)</span>
         <span class="tech-pill">VLAN</span>
-      </div>
-      <div class="skill-source">BTS SIO / Projets</div>
-    </div>
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-shield-halved"></i></span>
-      <div class="skill-name">R&eacute;seau &amp; S&eacute;curit&eacute;</div>
-      <div class="skill-tags">
         <span class="tech-pill">Fortinet</span>
-        <span class="tech-pill">VPN</span>
+        <span class="tech-pill">VPN (WireGuard)</span>
+        <span class="tech-pill">Wi-Fi Entreprise</span>
         <span class="tech-pill">PSSI</span>
-        <span class="tech-pill">Wi-Fi entreprise</span>
-        <span class="tech-pill">DHCP</span>
       </div>
-      <div class="skill-source">Alternance / BTS SIO</div>
     </div>
 
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-cubes"></i></span>
-      <div class="skill-name">Virtualisation</div>
-      <div class="skill-tags">
-        <span class="tech-pill">VirtualBox</span>
-        <span class="tech-pill">Hyper-V</span>
-        <span class="tech-pill">Vagrant</span>
-        <span class="tech-pill">Docker</span>
+    <div class="skill-panel" style="--panel-hue:35;">
+      <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <div class="skill-panel-icon"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <div class="skill-panel-title">Support & Exploitation</div>
+        </div>
       </div>
-      <div class="skill-source">BTS SIO / Projets</div>
-    </div>
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-industry"></i></span>
-      <div class="skill-name">Applications m&eacute;tiers</div>
-      <div class="skill-tags">
-        <span class="tech-pill">SolidWorks</span>
-        <span class="tech-pill">PDM</span>
-        <span class="tech-pill">BOX Sync</span>
-        <span class="tech-pill">Cegid</span>
-      </div>
-      <div class="skill-source">Alternance Groupe Ragni</div>
-    </div>
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-database"></i></span>
-      <div class="skill-name">Sauvegardes</div>
-      <div class="skill-tags">
-        <span class="tech-pill">Veeam Backup</span>
-        <span class="tech-pill">Tersedia Cloud</span>
-        <span class="tech-pill">BorgBackup</span>
-        <span class="tech-pill">Restauration</span>
-      </div>
-      <div class="skill-source">Alternance Groupe Ragni / BTS SIO</div>
-    </div>
-
-    <div class="skill-card">
-      <span class="skill-icon"><i class="fa-solid fa-file-lines"></i></span>
-      <div class="skill-name">Documentation &amp; Projets</div>
-      <div class="skill-tags">
-        <span class="tech-pill">Proc&eacute;dures IT</span>
+      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;">
+        <span class="tech-pill">Support N1/N2</span>
+        <span class="tech-pill">Sauvegardes (Veeam, BorgBackup)</span>
+        <span class="tech-pill">Procédures IT</span>
+        <span class="tech-pill">Gestion de Parc (GLPI, Cockpit)</span>
         <span class="tech-pill">Documentation technique</span>
-        <span class="tech-pill">PSSI</span>
       </div>
-      <div class="skill-source">Alternance Groupe Ragni / BTS SIO</div>
     </div>
-
   </div>
-
 </section>
+
+
 
 <div class="divider"></div>
 
-<!-- GESTION DU PATRIMOINE -->
-<section id="patrimoine">
-  <p class="section-label">Patrimoine informatique</p>
-  <h2 class="section-title">Gestion<br>&amp; continuit&eacute;.</h2>
-  <p class="section-sub">Au-del&agrave; des comp&eacute;tences techniques, voici comment j'ai g&eacute;r&eacute; concr&egrave;tement le patrimoine informatique en alternance et en formation.</p>
+<!-- ENVIRONNEMENT -->
+<section id="environnement">
+  <p class="section-label">Environnement</p>
+  <h2 class="section-title">Outils<br>&amp; technologies.</h2>
+  <p class="section-sub">Stack technique utilis&eacute;e au quotidien en situation professionnelle et en formation.</p>
 
-  <div class="patrimoine-grid">
-
-    <div class="patrimoine-card">
-      <div class="patrimoine-title"><i class="fa-solid fa-chart-line" style="color:var(--accent)"></i> Inventaire &amp; Parc (Cockpit / GLPI)</div>
-      <ul class="patrimoine-list">
-        <li>D&eacute;ploiement des agents Cockpit sur les postes</li>
-        <li>Inventaire mat&eacute;riel et logiciel automatis&eacute;</li>
-        <li>Suivi du parc informatique et &eacute;quipements</li>
-        <li>Utilisation de GLPI pour les tickets et le mat&eacute;riel</li>
-        <li>Pr&eacute;paration du budget IT (renouvellement du parc)</li>
-      </ul>
-    </div>
-
-    <div class="patrimoine-card">
-      <div class="patrimoine-title"><i class="fa-solid fa-database" style="color:var(--accent)"></i> Sauvegardes &amp; Continuit&eacute; (Tersedia Cloud)</div>
-      <ul class="patrimoine-list">
-        <li>Suivi des sauvegardes quotidiennes des serveurs</li>
-        <li>Gestion des sauvegardes mensuelles externalis&eacute;es</li>
-        <li>Tests de restauration de fichiers et volumes</li>
-        <li>Analyse des alertes et incidents de sauvegarde</li>
-      </ul>
-    </div>
-
-    <div class="patrimoine-card">
-      <div class="patrimoine-title"><i class="fa-solid fa-desktop" style="color:var(--accent)"></i> Virtualisation &amp; Environnements de test</div>
-      <ul class="patrimoine-list">
-        <li>Cr&eacute;ation de machines virtuelles (VM)</li>
-        <li>Utilisation de VirtualBox et Hyper-V</li>
-        <li>Tests Windows Server 2022, AD, GPO</li>
-        <li>Laboratoires pour mont&eacute;e en comp&eacute;tences</li>
-      </ul>
-    </div>
-
+  <div class="tools-grid">
+    <span class="tool-badge" data-tooltip="Serveur Windows pour la gestion centralis&eacute;e du domaine"><i class="fa-brands fa-windows"></i> Windows Server</span>
+    <span class="tool-badge" data-tooltip="Annuaire d'entreprise pour la gestion des utilisateurs et groupes"><i class="fa-solid fa-sitemap"></i> Active Directory</span>
+    <span class="tool-badge" data-tooltip="Gestion des identit&eacute;s cloud Microsoft"><i class="fa-solid fa-cloud"></i> Entra ID / Azure AD</span>
+    <span class="tool-badge" data-tooltip="Solution de sauvegarde externalis&eacute;e"><i class="fa-solid fa-box"></i> Tersedia Cloud</span>
+    <span class="tool-badge" data-tooltip="Pare-feu et s&eacute;curit&eacute; r&eacute;seau p&eacute;rim&eacute;trique"><i class="fa-solid fa-shield-halved"></i> Fortinet</span>
+    <span class="tool-badge" data-tooltip="Protection endpoint et antivirus centralis&eacute;"><i class="fa-solid fa-shield"></i> Sophos</span>
+    <span class="tool-badge" data-tooltip="Suite bureautique cloud Microsoft"><i class="fa-brands fa-microsoft"></i> Office 365</span>
+    <span class="tool-badge" data-tooltip="Stockage et partage de fichiers cloud"><i class="fa-solid fa-cloud-arrow-up"></i> OneDrive</span>
+    <span class="tool-badge" data-tooltip="Automatisation et scripting d'administration"><i class="fa-solid fa-terminal"></i> PowerShell</span>
+    <span class="tool-badge" data-tooltip="Sauvegarde et restauration des machines virtuelles"><i class="fa-solid fa-database"></i> Veeam Backup</span>
+    <span class="tool-badge" data-tooltip="Outil de gestion de parc et suivi des tickets"><i class="fa-solid fa-chart-line"></i> Cockpit</span>
+    <span class="tool-badge" data-tooltip="Prise en main &agrave; distance pour le support"><i class="fa-solid fa-desktop"></i> TeamViewer</span>
+    <span class="tool-badge" data-tooltip="Analyse et capture de trames r&eacute;seau"><i class="fa-solid fa-magnifying-glass"></i> Wireshark</span>
+    <span class="tool-badge" data-tooltip="Terminal avanc&eacute; pour connexions SSH et RDP"><i class="fa-solid fa-server"></i> MobaXterm</span>
+    <span class="tool-badge" data-tooltip="Gestion des appareils mobiles et postes (MDM)"><i class="fa-solid fa-mobile-screen"></i> Intune</span>
+    <span class="tool-badge" data-tooltip="Serveur web Microsoft pour h&eacute;bergement intranet"><i class="fa-solid fa-globe"></i> IIS</span>
   </div>
 </section>
 
@@ -245,10 +152,7 @@
     <div class="footer-links">
       <a href="../index.html">Accueil</a>
       <a href="projets.html">Projets</a>
-      <a href="entreprise.html">Entreprise</a>
       <a href="competences.html">Comp&eacute;tences</a>
-      <a href="veille.html">Veille</a>
-      <a href="../annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank">Synthèse</a>
       <a href="contact.html">Contact</a>
       <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
       <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
@@ -269,5 +173,6 @@
 <script src="../js/competences.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="../js/particles-init.js"></script>
+  <script src="../js/click-spark.js"></script>
 </body>
 </html>

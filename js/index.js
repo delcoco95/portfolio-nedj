@@ -64,7 +64,29 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCertif();
 });
 
-// ── SCROLL TO TOP ──
+// ── COMPANY INFO POPOVERS ──
+document.querySelectorAll('.info-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const target = document.getElementById(btn.dataset.infoTarget);
+    const isOpen = target.classList.contains('open');
+    document.querySelectorAll('.company-popover.open').forEach(p => p.classList.remove('open'));
+    if (!isOpen) target.classList.add('open');
+  });
+});
+document.querySelectorAll('.company-popover-close').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    btn.closest('.company-popover').classList.remove('open');
+  });
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.company-popover') && !e.target.closest('.info-btn')) {
+    document.querySelectorAll('.company-popover.open').forEach(p => p.classList.remove('open'));
+  }
+});
+
+
 const scrollBtn = document.getElementById('scrollTopBtn');
 if (scrollBtn) {
   window.addEventListener('scroll', () => {

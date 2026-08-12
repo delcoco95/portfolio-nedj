@@ -193,6 +193,7 @@ nav {
 .page-hero p {
   font-size: 18px;
   font-weight: 300;
+  font-style: normal;
   color: var(--text2);
   max-width: 560px;
   line-height: 1.6;
@@ -273,6 +274,9 @@ section {
 .tag-network { background: rgba(41,151,255,0.1); color: var(--accent); }
 .tag-web { background: rgba(48,209,88,0.1); color: var(--accent2); }
 .tag-security { background: rgba(255,55,95,0.1); color: var(--accent3); }
+.tag-cloud { background: rgba(175,82,222,0.1); color: #af52de; }
+.tag-systems { background: rgba(255,159,10,0.1); color: #ff9f0a; }
+.tag-automation { background: rgba(90,200,250,0.1); color: #5ac8fa; }
 
 /* ── FOOTER ── */
 footer {

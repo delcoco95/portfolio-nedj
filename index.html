@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nedj Belloum — Administrateur Systèmes & Réseaux Junior</title>
   <meta name="description"
-    content="Portfolio de Nedj Belloum, futur Administrateur Infrastructure Réseaux. BTS SIO SISR — Nice, France.">
+    content="Portfolio de Nedj Belloum, Administrateur Systèmes & Réseaux Junior, en Bachelor Administrateur Infrastructures Sécurisées (AIS) — Nice, France.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,10 +25,7 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="html/projets.html">Projets</a></li>
-        <li><a href="html/entreprise.html">Entreprise</a></li>
         <li><a href="html/competences.html">Compétences</a></li>
-        <li><a href="html/veille.html">Veille</a></li>
-        <li><a href="annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank">Synthèse</a></li>
         <li><a href="html/contact.html">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:10px;">
@@ -50,10 +47,7 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html" class="active" onclick="closeMobileNav()">Accueil</a>
     <a href="html/projets.html" onclick="closeMobileNav()">Projets</a>
-    <a href="html/entreprise.html" onclick="closeMobileNav()">Entreprise</a>
     <a href="html/competences.html" onclick="closeMobileNav()">Compétences</a>
-    <a href="html/veille.html" onclick="closeMobileNav()">Veille</a>
-    <a href="annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank" onclick="closeMobileNav()">Synthèse</a>
     <a href="html/contact.html" onclick="closeMobileNav()">Contact</a>
   </div>
 
@@ -62,11 +56,9 @@
     <div class="hero-glow"></div>
     <div>
       <h1 class="hero-name">Nedj Belloum</h1>
-      <p class="hero-sub"><strong>Administrateur Systèmes & Réseaux Junior</strong><br>BTS SIO – SISR · Nice,
-        France
-      </p>
+      <p class="hero-sub"><strong>Administrateur Systèmes & Réseaux Junior</strong></p>
       <div class="hero-cta">
-        <a href="html/projets.html" class="btn-primary">Voir mes projets ↓</a>
+        <a href="#experiences" class="btn-primary">Voir mes expériences ↓</a>
         <a href="img/CV_Nedj_Belloum_.pdf" target="_blank" class="btn-secondary">Télécharger le CV</a>
       </div>
     </div>
@@ -84,17 +76,16 @@
     <h2 class="section-title">Passionné par<br>l'infrastructure IT.</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>4 ans d'expérience dans le <strong>transport et la logistique</strong>. Autonome, organisé et doté d'un fort
-          esprit d'équipe, je sais allier analyse, sens du service et rigueur opérationnelle.</p>
-        <p>Actuellement en <strong>BTS SIO option SISR</strong>, je me spécialise dans l'administration des systèmes,
-          des réseaux et la cybersécurité. Je me forme également à la <strong>sécurité cloud</strong> pour renforcer mes
-          compétences.</p>
+        <p>Avec 1 an d'expérience en IT et 4 ans d'expérience dans le <strong>transport et la logistique</strong>, j'ai
+          développé un profil polyvalent combinant compétences techniques, rigueur et sens du service.</p>
+        <p>Actuellement en <strong>Bachelor Administrateur Infrastructures Sécurisées (AIS)</strong>, je me spécialise
+          dans l'administration des systèmes et réseaux, le cloud et la cybersécurité.</p>
         <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="btn-secondary"
           style="margin-top:8px;">LinkedIn →</a>
       </div>
       <div class="about-stats">
         <div class="stat-box">
-          <div class="stat-num">4+</div>
+          <div class="stat-num">+5</div>
           <div class="stat-desc">Années d'expérience professionnelle</div>
         </div>
         <div class="stat-box">
@@ -102,12 +93,12 @@
           <div class="stat-desc">Projets réseaux & systèmes</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">3</div>
+          <div class="stat-num">4</div>
           <div class="stat-desc">Certifications obtenues</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">2026</div>
-          <div class="stat-desc">Diplôme BTS SIO prévu</div>
+          <div class="stat-num">2027</div>
+          <div class="stat-desc">Diplôme Bachelor AIS prévu</div>
         </div>
       </div>
     </div>
@@ -123,38 +114,44 @@
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">Sep. 2025 — Sep. 2026</div>
+        <div class="timeline-date">Sep. 2025 — Sep. 2027</div>
         <div class="timeline-title">Technicien Support Informatique</div>
         <div class="timeline-company"><a href="https://www.ragni.com/" target="_blank">Groupe Ragni</a> · Alternance —
-          <a href="html/entreprise.html">Voir la page entreprise →</a>
+          <button type="button" class="info-btn" data-info-target="infoRagni">+ d'info</button>
         </div>
         <div class="timeline-desc">Gestion du parc informatique, support technique N1/N2, déploiement d'infrastructures
           Windows, administration Active Directory et Microsoft 365.</div>
+
+        <div class="company-popover" id="infoRagni">
+          <button type="button" class="company-popover-close" aria-label="Fermer">✕</button>
+          <p class="company-popover-desc">Entreprise française opérant à l'international, spécialisée dans la
+            conception et la fabrication de luminaires pour l'éclairage public et la mise en valeur des espaces
+            extérieurs.</p>
+          <ul class="company-popover-meta">
+            <li><span class="meta-dot"></span>Site : Cagnes-sur-Mer</li>
+            <li><span class="meta-dot"></span>Équipe IT : Support & Projets</li>
+            <li><span class="meta-dot"></span>Secteur : Éclairage / Industrie</li>
+          </ul>
+        </div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-date">Juil. — Août 2025</div>
         <div class="timeline-title">Assistant Administrateur Système & Réseau</div>
-        <div class="timeline-company"><a href="https://www.resistex-sa.com/" target="_blank">Resistex</a> · Stage</div>
-        <div class="timeline-desc">Supervision des réseaux, maintenance des systèmes, optimisation IT. <a
-            href="img\Rapport de stage RESISTEX.pdf" target="_blank">Note
-            de synthèse →</a></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2023 — 2024</div>
-        <div class="timeline-title">Associé Auto</div>
-        <div class="timeline-company">MSCAR · Auto-entreprise</div>
-        <div class="timeline-desc">Élaboration de projet, gestion des véhicules d'occasion, suivi des ventes et de la
-          clientèle.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot" style="background:var(--text3);box-shadow:none;"></div>
-        <div class="timeline-date">2021 — 2024</div>
-        <div class="timeline-title">Agent de Support Dispatcher</div>
-        <div class="timeline-company"><a href="https://www.pickup.fr" target="_blank">Pickup</a> · CDI</div>
-        <div class="timeline-desc">Coordination des tournées de livraison, support technique, résolution des incidents
-          logistiques.</div>
+        <div class="timeline-company"><a href="https://www.resistex-sa.com/" target="_blank">Resistex</a> · Stage —
+          <button type="button" class="info-btn" data-info-target="infoResistex">+ d'info</button>
+        </div>
+        <div class="timeline-desc">Supervision des réseaux, maintenance des systèmes, optimisation IT.</div>
+
+        <div class="company-popover" id="infoResistex">
+          <button type="button" class="company-popover-close" aria-label="Fermer">✕</button>
+          <p class="company-popover-desc">Déploiement d'un nouveau serveur physique et migration complète des données
+            depuis l'ancien environnement, avec remplacement des bornes Wi-Fi défectueuses pour fiabiliser le réseau.<br><br><a href="img/Rapport de stage RESISTEX.pdf" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;display:inline-block;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">Note de synthèse →</a></p>
+          <ul class="company-popover-meta">
+            <li><span class="meta-dot"></span>Site : Saint-André-de-la-Roche</li>
+            <li><span class="meta-dot"></span>Équipe IT : Système & Réseau</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -184,6 +181,36 @@
         <div class="cert-name">Fortinet — NSE 1 & 2</div>
         <div class="cert-desc">Reconnaissance des attaques : phishing, ransomware, politiques d'accès.</div>
       </div>
+      <div class="cert-card">
+        <img src="img/microsoft.svg" alt="Microsoft" class="cert-logo cert-logo-color">
+        <div class="cert-name">Microsoft — AZ-900</div>
+        <div class="cert-desc">Notions fondamentales du cloud Azure : services, sécurité, conformité et tarification.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CTA COMMERCIAL -->
+  <section id="cta-commercial">
+    <div class="cta-commercial">
+      <h2 class="cta-commercial-title">Un projet IT en tête ?</h2>
+      <p class="cta-commercial-text">Je suis disponible pour échanger autour de vos besoins en administration
+        systèmes, réseaux, cloud ou sécurité — que ce soit pour une mission ponctuelle, un renfort d'équipe ou un
+        besoin de support et d'optimisation IT.</p>
+      <div class="cta-commercial-tags">
+        <span class="cta-tag">Administration systèmes</span>
+        <span class="cta-tag">Réseaux</span>
+        <span class="cta-tag">Automatisation & PowerShell</span>
+        <span class="cta-tag">Microsoft 365</span>
+        <span class="cta-tag">Power Automate</span>
+        <span class="cta-tag">Cloud</span>
+        <span class="cta-tag">Sécurité des infrastructures</span>
+        <span class="cta-tag">Support / Optimisation IT</span>
+      </div>
+      <div class="cta-commercial-btn-wrap">
+        <a href="html/contact.html" class="btn-primary">Parlons de votre projet</a>
+      </div>
     </div>
   </section>
 
@@ -193,10 +220,7 @@
       <div class="footer-links">
         <a href="index.html">Accueil</a>
         <a href="html/projets.html">Projets</a>
-        <a href="html/entreprise.html">Entreprise</a>
         <a href="html/competences.html">Compétences</a>
-        <a href="html/veille.html">Veille</a>
-        <a href="annexes/Tableau de synthèse - Epreuve E5 - BTS SIO 2026.pdf" target="_blank">Synthèse</a>
         <a href="html/contact.html">Contact</a>
         <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
         <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
@@ -228,6 +252,7 @@
   <script src="js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="js/particles-init.js"></script>
+  <script src="js/click-spark.js"></script>
 </body>
 
 </html>
