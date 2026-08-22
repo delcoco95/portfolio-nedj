@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comp&eacute;tences &mdash; Portfolio Nedj Belloum</title>
-  <meta name="description" content="Comp&eacute;tences techniques de Nedj Belloum : syst&egrave;mes Windows, Active Directory, Cloud M365, r&eacute;seau et s&eacute;curit&eacute;, virtualisation.">
+  <title>Compétences — Portfolio Nedj Belloum</title>
+  <meta name="description" content="Compétences techniques de Nedj Belloum : administration système Windows & Linux, Cloud Microsoft 365, réseau & sécurité, automatisation PowerShell, gestion de projet IT.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,14 +22,14 @@
     <ul class="nav-links">
       <li><a href="../index.html">Accueil</a></li>
       <li><a href="projets.html">Projets</a></li>
-      <li><a href="competences.html" class="active">Comp&eacute;tences</a></li>
+      <li><a href="competences.html" class="active">Compétences</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:10px;">
-      <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" class="nav-linkedin" title="LinkedIn">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
-      <button class="theme-toggle" id="themeToggle" title="Changer le th&egrave;me">
+      <button class="theme-toggle" id="themeToggle" title="Changer le thème">
         <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 3a9 9 0 100 18A9 9 0 0012 3zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"/>
         </svg>
@@ -43,44 +43,96 @@
 <div class="mobile-nav" id="mobileNav">
   <a href="../index.html" onclick="closeMobileNav()">Accueil</a>
   <a href="projets.html" onclick="closeMobileNav()">Projets</a>
-  <a href="competences.html" class="active" onclick="closeMobileNav()">Comp&eacute;tences</a>
+  <a href="competences.html" class="active" onclick="closeMobileNav()">Compétences</a>
   <a href="contact.html" onclick="closeMobileNav()">Contact</a>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-tag">Savoir-faire</div>
-  <h1>Comp&eacute;tences<br>techniques.</h1>
-  <p>Acquises en situation professionnelles et dans mes projets de formation.</p>
+  <h1>Compétences<br>techniques.</h1>
+  <p>Acquises en situation professionnelle et consolidées à travers des projets de formation exigeants.</p>
 </div>
 
 <div class="divider"></div>
 
-<!-- COMP&Eacute;TENCES TECHNIQUES -->
-<!-- COMPÉTENCES TECHNIQUES -->
-<section id="compétences">
-  <p class="section-label">Compétences principales</p>
+<!-- COMPÉTENCES PAR DOMAINES -->
+<section id="competences">
+  <p class="section-label">Domaines d'expertise</p>
   <h2 class="section-title">Savoir-faire<br>validés.</h2>
-  <p class="section-sub">Compétences techniques clés validées en situation professionnelle et dans mes projets.</p>
+  <p class="section-sub">Compétences techniques clés, organisées par domaine et illustrées par des projets concrets.</p>
 
-  <div class="skills-dashboard" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+  <div class="skills-dashboard">
+
+    <!-- 1. Administration système -->
     <div class="skill-panel" style="--panel-hue:210;">
       <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
         <div class="skill-panel-icon"><i class="fa-solid fa-server"></i></div>
         <div>
-          <div class="skill-panel-title">Systèmes & Cloud</div>
+          <div class="skill-panel-title">Administration système</div>
         </div>
       </div>
-      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;">
-        <span class="tech-pill">Windows 10/11</span>
-        <span class="tech-pill">Windows Server</span>
-        <span class="tech-pill">Active Directory</span>
-        <span class="tech-pill">Microsoft 365 (Entra ID, Exchange, SharePoint)</span>
-        <span class="tech-pill">Virtualisation (Hyper-V, Docker)</span>
-        <span class="tech-pill">GPO</span>
+      <div class="skill-items">
+        <div class="skill-item">
+          <span class="skill-name">Windows Server 2022</span>
+          <span class="skill-context">Déploiement et administration en entreprise et en lab</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Active Directory & GPO</span>
+          <span class="skill-context">Gestion d'annuaires, stratégies de sécurité, déploiement d'applications</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Linux (Ubuntu, Debian)</span>
+          <span class="skill-context">Administration, durcissement, services réseau</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Virtualisation (Hyper-V, Docker)</span>
+          <span class="skill-context">Conteneurisation et orchestration de services</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Sauvegardes (Veeam, BorgBackup)</span>
+          <span class="skill-context">PRA/PCA, sauvegardes chiffrées et immuables</span>
+        </div>
+      </div>
+      <div class="skill-project-link">
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Voir : <a href="projets.html#project-migration-os">Migration OS & Inventaire</a>, <a href="projets.html#project-pra-pca">PRA/PCA</a></span>
       </div>
     </div>
 
+    <!-- 2. Cloud & Microsoft 365 -->
+    <div class="skill-panel" style="--panel-hue:270;">
+      <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <div class="skill-panel-icon"><i class="fa-solid fa-cloud"></i></div>
+        <div>
+          <div class="skill-panel-title">Cloud & Microsoft 365</div>
+        </div>
+      </div>
+      <div class="skill-items">
+        <div class="skill-item">
+          <span class="skill-name">OneDrive & SharePoint</span>
+          <span class="skill-context">Migration de 5 To, gestion des droits, SPMT</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Exchange Online</span>
+          <span class="skill-context">Listes de distribution, boîtes partagées</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Entra ID (Azure AD)</span>
+          <span class="skill-context">Gestion des identités cloud, synchronisation</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Intune (MDM)</span>
+          <span class="skill-context">Gestion des postes et appareils mobiles</span>
+        </div>
+      </div>
+      <div class="skill-project-link">
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Voir : <a href="projets.html#project-migration-cloud">Migration Cloud 5 To</a>, <a href="projets.html#project-listes-diffusion">Interface Listes M365</a></span>
+      </div>
+    </div>
+
+    <!-- 3. Réseau & Sécurité -->
     <div class="skill-panel" style="--panel-hue:350;">
       <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
         <div class="skill-panel-icon"><i class="fa-solid fa-shield-halved"></i></div>
@@ -88,35 +140,100 @@
           <div class="skill-panel-title">Réseau & Sécurité</div>
         </div>
       </div>
-      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;">
-        <span class="tech-pill">Switchs/Routeurs (Cisco)</span>
-        <span class="tech-pill">VLAN</span>
-        <span class="tech-pill">Fortinet</span>
-        <span class="tech-pill">VPN (WireGuard)</span>
-        <span class="tech-pill">Wi-Fi Entreprise</span>
-        <span class="tech-pill">PSSI</span>
-      </div>
-    </div>
-
-    <div class="skill-panel" style="--panel-hue:35;">
-      <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
-        <div class="skill-panel-icon"><i class="fa-solid fa-headset"></i></div>
-        <div>
-          <div class="skill-panel-title">Support & Exploitation</div>
+      <div class="skill-items">
+        <div class="skill-item">
+          <span class="skill-name">Cisco IOS (switchs, routeurs)</span>
+          <span class="skill-context">Configuration VLAN, routage inter-VLAN sur matériel réel</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">802.1X / NPS RADIUS</span>
+          <span class="skill-context">Contrôle d'accès réseau par certificat</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">VPN (WireGuard)</span>
+          <span class="skill-context">Accès distant sécurisé, tunnels chiffrés</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Fortinet (FortiGate)</span>
+          <span class="skill-context">Pare-feu périmétrique, filtrage réseau</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Haute disponibilité (DRBD, Keepalived)</span>
+          <span class="skill-context">Failover automatique, réplication synchrone</span>
         </div>
       </div>
-      <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;">
-        <span class="tech-pill">Support N1/N2</span>
-        <span class="tech-pill">Sauvegardes (Veeam, BorgBackup)</span>
-        <span class="tech-pill">Procédures IT</span>
-        <span class="tech-pill">Gestion de Parc (GLPI, Cockpit)</span>
-        <span class="tech-pill">Documentation technique</span>
+      <div class="skill-project-link">
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Voir : <a href="projets.html#project-infra-iris">Infrastructure IRIS 802.1X</a>, <a href="projets.html#project-pra-pca">PRA/PCA</a></span>
       </div>
     </div>
+
+    <!-- 4. Automatisation & Scripting -->
+    <div class="skill-panel" style="--panel-hue:175;">
+      <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <div class="skill-panel-icon"><i class="fa-solid fa-terminal"></i></div>
+        <div>
+          <div class="skill-panel-title">Automatisation & Scripting</div>
+        </div>
+      </div>
+      <div class="skill-items">
+        <div class="skill-item">
+          <span class="skill-name">PowerShell</span>
+          <span class="skill-context">Scripts d'administration, Graph API, provisioning M365</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Bash</span>
+          <span class="skill-context">Automatisation Linux, déploiement de services</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Vagrant</span>
+          <span class="skill-context">Provisioning d'environnements de lab reproductibles</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Docker & Docker Compose</span>
+          <span class="skill-context">Conteneurisation et orchestration de services</span>
+        </div>
+      </div>
+      <div class="skill-project-link">
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Voir : <a href="projets.html#project-migration-cloud">Migration Cloud (Graph API)</a>, <a href="projets.html#project-pra-pca">PRA/PCA (Vagrant + Docker)</a></span>
+      </div>
+    </div>
+
+    <!-- 5. Gestion de projet & Outils -->
+    <div class="skill-panel" style="--panel-hue:35;">
+      <div class="skill-panel-header" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <div class="skill-panel-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <div>
+          <div class="skill-panel-title">Gestion de projet & Outils</div>
+        </div>
+      </div>
+      <div class="skill-items">
+        <div class="skill-item">
+          <span class="skill-name">Jira</span>
+          <span class="skill-context">Suivi de projet agile, sprints hebdomadaires</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Git & GitHub</span>
+          <span class="skill-context">Versioning, collaboration, documentation technique</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Documentation technique</span>
+          <span class="skill-context">Procédures IT, guides d'exploitation, livrables</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Support N1/N2</span>
+          <span class="skill-context">Diagnostic, résolution, accompagnement utilisateurs</span>
+        </div>
+      </div>
+      <div class="skill-project-link">
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Voir : <a href="projets.html">Tous les projets</a> (méthodologie agile appliquée)</span>
+      </div>
+    </div>
+
   </div>
 </section>
-
-
 
 <div class="divider"></div>
 
@@ -124,25 +241,25 @@
 <section id="environnement">
   <p class="section-label">Environnement</p>
   <h2 class="section-title">Outils<br>&amp; technologies.</h2>
-  <p class="section-sub">Stack technique utilis&eacute;e au quotidien en situation professionnelle et en formation.</p>
+  <p class="section-sub">Stack technique utilisée au quotidien en situation professionnelle et en formation.</p>
 
   <div class="tools-grid">
-    <span class="tool-badge" data-tooltip="Serveur Windows pour la gestion centralis&eacute;e du domaine"><i class="fa-brands fa-windows"></i> Windows Server</span>
+    <span class="tool-badge" data-tooltip="Serveur Windows pour la gestion centralisée du domaine"><i class="fa-brands fa-windows"></i> Windows Server</span>
     <span class="tool-badge" data-tooltip="Annuaire d'entreprise pour la gestion des utilisateurs et groupes"><i class="fa-solid fa-sitemap"></i> Active Directory</span>
-    <span class="tool-badge" data-tooltip="Gestion des identit&eacute;s cloud Microsoft"><i class="fa-solid fa-cloud"></i> Entra ID / Azure AD</span>
-    <span class="tool-badge" data-tooltip="Solution de sauvegarde externalis&eacute;e"><i class="fa-solid fa-box"></i> Tersedia Cloud</span>
-    <span class="tool-badge" data-tooltip="Pare-feu et s&eacute;curit&eacute; r&eacute;seau p&eacute;rim&eacute;trique"><i class="fa-solid fa-shield-halved"></i> Fortinet</span>
-    <span class="tool-badge" data-tooltip="Protection endpoint et antivirus centralis&eacute;"><i class="fa-solid fa-shield"></i> Sophos</span>
-    <span class="tool-badge" data-tooltip="Suite bureautique cloud Microsoft"><i class="fa-brands fa-microsoft"></i> Office 365</span>
-    <span class="tool-badge" data-tooltip="Stockage et partage de fichiers cloud"><i class="fa-solid fa-cloud-arrow-up"></i> OneDrive</span>
+    <span class="tool-badge" data-tooltip="Gestion des identités cloud Microsoft"><i class="fa-solid fa-cloud"></i> Entra ID / Azure AD</span>
+    <span class="tool-badge" data-tooltip="Pare-feu et sécurité réseau périmétrique"><i class="fa-solid fa-shield-halved"></i> Fortinet</span>
+    <span class="tool-badge" data-tooltip="Protection endpoint et antivirus centralisé"><i class="fa-solid fa-shield"></i> Sophos</span>
+    <span class="tool-badge" data-tooltip="Suite bureautique cloud Microsoft"><i class="fa-brands fa-microsoft"></i> Microsoft 365</span>
+    <span class="tool-badge" data-tooltip="Stockage et partage de fichiers cloud"><i class="fa-solid fa-cloud-arrow-up"></i> OneDrive / SharePoint</span>
     <span class="tool-badge" data-tooltip="Automatisation et scripting d'administration"><i class="fa-solid fa-terminal"></i> PowerShell</span>
     <span class="tool-badge" data-tooltip="Sauvegarde et restauration des machines virtuelles"><i class="fa-solid fa-database"></i> Veeam Backup</span>
-    <span class="tool-badge" data-tooltip="Outil de gestion de parc et suivi des tickets"><i class="fa-solid fa-chart-line"></i> Cockpit</span>
-    <span class="tool-badge" data-tooltip="Prise en main &agrave; distance pour le support"><i class="fa-solid fa-desktop"></i> TeamViewer</span>
-    <span class="tool-badge" data-tooltip="Analyse et capture de trames r&eacute;seau"><i class="fa-solid fa-magnifying-glass"></i> Wireshark</span>
-    <span class="tool-badge" data-tooltip="Terminal avanc&eacute; pour connexions SSH et RDP"><i class="fa-solid fa-server"></i> MobaXterm</span>
+    <span class="tool-badge" data-tooltip="Outil de gestion de parc et suivi des tickets"><i class="fa-solid fa-chart-line"></i> Cockpit ITSM</span>
+    <span class="tool-badge" data-tooltip="Analyse et capture de trames réseau"><i class="fa-solid fa-magnifying-glass"></i> Wireshark</span>
     <span class="tool-badge" data-tooltip="Gestion des appareils mobiles et postes (MDM)"><i class="fa-solid fa-mobile-screen"></i> Intune</span>
-    <span class="tool-badge" data-tooltip="Serveur web Microsoft pour h&eacute;bergement intranet"><i class="fa-solid fa-globe"></i> IIS</span>
+    <span class="tool-badge" data-tooltip="Serveur web Microsoft pour hébergement intranet"><i class="fa-solid fa-globe"></i> IIS</span>
+    <span class="tool-badge" data-tooltip="Conteneurisation et orchestration de services"><i class="fa-brands fa-docker"></i> Docker</span>
+    <span class="tool-badge" data-tooltip="Suivi de projet agile et gestion des sprints"><i class="fa-solid fa-list-check"></i> Jira</span>
+    <span class="tool-badge" data-tooltip="Versioning et collaboration"><i class="fa-brands fa-github"></i> Git / GitHub</span>
   </div>
 </section>
 
@@ -152,17 +269,17 @@
     <div class="footer-links">
       <a href="../index.html">Accueil</a>
       <a href="projets.html">Projets</a>
-      <a href="competences.html">Comp&eacute;tences</a>
+      <a href="competences.html">Compétences</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank">LinkedIn</a>
       <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
     </div>
     <div class="footer-links" style="margin-top:10px;">
-      <a href="mentions-legales.html">Mentions l&eacute;gales</a>
+      <a href="mentions-legales.html">Mentions légales</a>
       <a href="plan-site.html">Plan du site</a>
-      <a href="confidentialite.html">Politique de confidentialit&eacute;</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
     </div>
-    <p class="footer-copy">&copy; 2026 Nedj Belloum &mdash; Tous droits r&eacute;serv&eacute;s</p>
+    <p class="footer-copy">© 2026 Nedj Belloum — Tous droits réservés</p>
   </div>
 </footer>
 

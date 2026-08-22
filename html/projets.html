@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projets — Portfolio Nedj Belloum</title>
   <meta name="description"
-    content="Projets techniques de Nedj Belloum : Active Directory, PowerShell, Docker, supervision réseau, sécurité Linux et plus.">
+    content="Projets IT de Nedj Belloum : migration cloud, infrastructure réseau sécurisée, PRA/PCA, interfaces métier et automatisation PowerShell.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:10px;">
-        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" class="nav-linkedin" title="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
         <button class="theme-toggle" id="themeToggle" title="Changer le thème">
@@ -55,731 +55,404 @@
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="page-hero-tag">Réalisations</div>
-    <h1>Projets<br>techniques.</h1>
-    <p>Projets issus de ma formation BTS SIO SISR, de mon alternance et de mes initiatives personnelles.</p>
+    <h1>Projets &<br>réalisations.</h1>
+    <p>Chaque projet présenté ici retrace une démarche complète : du besoin identifié à la solution livrée, en contexte professionnel ou de formation.</p>
+    <div class="project-nav-buttons">
+      <a href="#project-migration-os" class="project-nav-btn">Migration OS & Inventaire</a>
+      <a href="#project-migration-cloud" class="project-nav-btn">Migration Cloud 5 To</a>
+      <a href="#project-listes-diffusion" class="project-nav-btn">Listes de Distribution M365</a>
+      <a href="#project-infra-iris" class="project-nav-btn">Infrastructure IRIS 802.1X</a>
+      <a href="#project-pra-pca" class="project-nav-btn">PRA/PCA & Haute Disponibilité</a>
+    </div>
   </div>
 
   <div class="divider"></div>
 
-
-
-  <!-- PROJETS -->
+  <!-- PROJETS — CASE STUDIES -->
   <section id="projets">
-    <!-- Filtres -->
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">Tous <span id="totalCount"></span></button>
-      <button class="filter-btn" data-filter="reseau">Réseau</button>
-      <button class="filter-btn" data-filter="securite">Sécurité</button>
-      <button class="filter-btn" data-filter="web">Web</button>
-      <button class="filter-btn" data-filter="automatisation">Automatisation</button>
-      <button class="filter-btn" data-filter="cloud">Cloud</button>
-      <button class="filter-btn" data-filter="systemes">Systèmes</button>
-      <button class="filter-btn" data-filter="entreprise">Entreprise</button>
-    </div>
 
-    <p class="projects-count"><span id="displayCount"></span> projet(s) affiché(s)</p>
+    <div class="case-studies">
 
-    <div class="projects-grid" id="projectsGrid">
-      <!-- CineZone -->
-      <div class="project-card" data-cat="web">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Créer une vitrine en ligne de gestion de catalogue de films dynamique pour les utilisateurs finaux.</p>
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <!-- PROJET 1 — Migration OS + Gestion de parc (Entreprise) -->
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <article class="case-study" id="project-migration-os">
+        <span class="case-number">01</span>
+
+        <div class="case-header">
+          <div class="case-context-tag tag-enterprise">
+            Entreprise · Alternance — Groupe Ragni
           </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Conception maquette, intégration Front-End (HTML/CSS/JS) et consommation d'une API REST pour afficher
-              dynamiquement les données.</p>
+          <h2 class="case-title">Pilotage de la migration OS et inventaire du parc informatique</h2>
+          <p class="case-subtitle">Mise en conformité des postes utilisateurs Windows 10 → 11 et fiabilisation de l'inventaire IT pour le budget annuel.</p>
+        </div>
+
+        <div class="case-meta">
+          <div class="case-meta-card">
+            <div class="case-meta-label">Période</div>
+            <div class="case-meta-value">Sep. — Déc. 2025</div>
           </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Rôle</div>
+            <div class="case-meta-value">Technicien IT / Chef de projet opérationnel</div>
+          </div>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Méthodologie</div>
+            <div class="case-meta-value">Agile (sprints hebdo) · Jira · Excel</div>
+          </div>
+        </div>
+
+        <div class="case-content">
+          <div class="case-section">
+            <div class="case-section-title">Contexte & Problème</div>
+            <p>Avec la fin du support de sécurité de Windows 10, le parc informatique du Groupe Ragni présentait un risque de conformité. En parallèle, ~50 équipements n'étaient pas référencés dans l'outil ITSM, rendant la planification budgétaire IT imprécise.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Approche & Méthodologie</div>
             <ul>
-              <li><strong>[B1.3]</strong> Participer à l’évolution d’un site Web exploitant les données de l’organisation.<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Intégration de l'API REST TMDB pour alimenter dynamiquement le catalogue.</span></li>
-              <li><strong>[B1.4]</strong> Analyser les objectifs et les modalités d’organisation d’un projet<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Rédaction du cahier des charges et planification du développement en binôme.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Installation et configuration du serveur web Apache pour héberger l'application.</span></li>
+              <li>Audit matériel complet pour identifier les postes compatibles Win11</li>
+              <li>Planification en 4 sprints hebdomadaires avec suivi Jira</li>
+              <li>Déploiement pilote → validation → migration en masse</li>
+              <li>Inventaire terrain + déploiement agent Cockpit en parallèle</li>
+            </ul>
+          </div>
+          <div class="case-section full-width">
+            <div class="case-section-title">Solution technique</div>
+            <p>Migration progressive de plus de 10 postes vers Windows 11, avec rédaction d'une procédure de migration détaillée pour le support IT. En parallèle, déploiement des agents Cockpit sur les postes non référencés, saisie manuelle des périphériques (modèle, n° de série) et fiabilisation de l'inventaire complet dans la plateforme ITSM.</p>
+          </div>
+          <div class="case-section section-results full-width">
+            <div class="case-section-title">Résultats & Impact</div>
+            <ul>
+              <li>Parc migré et conforme aux exigences de sécurité Microsoft</li>
+              <li>Procédure de migration opérationnelle, réutilisable par le support</li>
+              <li>~50 équipements manquants intégrés à l'inventaire ITSM</li>
+              <li>Base fiable pour la planification du budget IT 2026</li>
+              <li>Montée en compétence : gestion de projet en contexte industriel, suivi Jira</li>
             </ul>
           </div>
         </div>
-        <a href="https://walo2428.github.io/Cine_pro/index.html" target="_blank" class="project-link"
-          data-icon="globe"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-solid fa-globe project-link-hover"></i></a>
-        <span class="project-tag tag-web">Web</span>
-        <div class="project-duration">⏱ 40 jours</div>
-        <div class="project-title">CineZone — Plateforme cinéma</div>
-        <div class="project-desc">Application web de gestion et consultation de films : catalogue, recherche avancée et
-          interface utilisateur moderne.</div>
-        <div class="project-tech">
-          <span class="tech-pill">HTML/CSS</span>
-          <span class="tech-pill">JavaScript</span>
-          <span class="tech-pill">API REST</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/N%C2%B01%20-%20Cinezone%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎
-            Annexes</a>
-          <a href="../documentation/03_CineZone.pdf" target="_blank" class="btn-doc">📄 Documentation</a>
-        </div>
-      </div>
 
-      <!-- PowerShell -->
-      <div class="project-card" data-cat="automatisation">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Gagner en efficacité et réduire les erreurs humaines lors du déploiement répétitif de serveurs.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Développement d'un menu interactif en PowerShell pour l'automatisation complète de la configuration
-              (rôles, IP, jonction au domaine).</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B1.1]</strong> Exploiter des référentiels, normes et standards adoptés par le prestataire informatique<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Écriture du script selon les standards Microsoft avec l'utilisation des cmdlets officiels.</span></li>
-              <li><strong>[B1.1]</strong> Gérer des sauvegardes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Création de snapshots de la machine virtuelle Windows Server avant chaque test.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Automatisation de l'installation et de la configuration des rôles AD DS, DNS et DHCP.</span></li>
-              <li><strong>[B1.6]</strong> Mettre en place son environnement d’apprentissage personnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Déploiement du laboratoire de test sous VirtualBox et utilisation de VS Code.</span></li>
-              <li><strong>[B1.6]</strong> Développer son projet professionnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Rédaction de la documentation d'exploitation pour le support informatique.</span></li>
-            </ul>
-          </div>
-        </div>
-        <a href="https://github.com/Mediaschool-BTS-SISR-2025/Nedj_PS_1" target="_blank" class="project-link"
-          data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-network">Automatisation</span>
-        <div class="project-duration">⏱ 22 jours</div>
-        <div class="project-title">PowerShell — Déploiement automatisé</div>
-        <div class="project-desc">Menu interactif PowerShell automatisant le déploiement complet d'un Windows Server
-          2022.</div>
-        <div class="project-tech">
-          <span class="tech-pill">PowerShell</span>
-          <span class="tech-pill">Windows Server 2022</span>
-          <span class="tech-pill">AD DS</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/N%C2%B02%20-%20Menu%20Powershell%20-%20Annexes%207.pdf" target="_blank"
-            class="btn-annexe">📎 Annexes</a>
-          <a href="../documentation/02_PowerShell_WindowsServer.pdf" target="_blank" class="btn-doc">📄
-            Documentation</a>
-        </div>
-      </div>
-
-      <!-- ClassCord -->
-      <div class="project-card" data-cat="securite">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Disposer d'une plateforme de messagerie instantanée sécurisée, isolée et chiffrée pour les étudiants.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Développement en Python avec base SQLite, authentification SHA-256, conteneurisation via Docker et
-              sécurisation UFW.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B3]</strong> Gérer les accès et les privilèges appropriés<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration du hachage SHA-256 des mots de passe et gestion des droits d'accès.</span></li>
-              <li><strong>[B1.2]</strong> Traiter des demandes concernant les services réseau et système, applicatifs<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Conteneurisation de l'application sous Docker et sécurisation des ports via UFW.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Mise en production du serveur de messagerie Python et de sa base SQLite.</span></li>
-            </ul>
-          </div>
-        </div>
-        <a href="https://github.com/delcoco95/Classcord-Project" target="_blank" class="project-link"
-          data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-security">Sécurité</span>
-        <div class="project-duration">⏱ 5 jours</div>
-        <div class="project-title">ClassCord — Messagerie sécurisée</div>
-        <div class="project-desc">Serveur Python multi-clients avec auth SHA-256, canaux de discussion et
-          conteneurisation Docker.</div>
-        <div class="project-tech">
-          <span class="tech-pill">Python</span>
-          <span class="tech-pill">Docker</span>
-          <span class="tech-pill">SQLite</span>
-          <span class="tech-pill">UFW</span>
-          <span class="tech-pill">Debian</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/N%C2%B03%20-%20ClassCord%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎
-            Annexes</a>
-          <a href="../documentation/04_ClassCord.pdf" target="_blank" class="btn-doc">📄 Documentation</a>
-        </div>
-      </div>
-
-      <!-- Active Directory -->
-      <div class="project-card" data-cat="reseau">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Centraliser la gestion des identités, sécuriser les accès réseau et appliquer des stratégies globales via
-              GPO.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Installation sur Windows Server 2022, création de l'arborescence (OUs), gestion des utilisateurs et
-              configuration des rôles (DNS, DHCP).</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B1.1]</strong> Recenser et identifier les ressources numériques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Structuration de l'annuaire avec la création des Unités Organisationnelles (OUs).</span></li>
-              <li><strong>[B3]</strong> Gérer les accès et les privilèges appropriés<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Application des stratégies de sécurité via GPO pour restreindre les accès utilisateurs.</span></li>
-              <li><strong>[B1.1]</strong> Gérer des sauvegardes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration de la sauvegarde de l'état du système (System State) du contrôleur.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Installation et paramétrage du contrôleur de domaine avec les rôles DNS et DHCP.</span></li>
-              <li><strong>[B1.6]</strong> Développer son projet professionnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Renforcement des compétences pratiques en administration système Microsoft.</span></li>
-            </ul>
-          </div>
-        </div>
-        <a href="https://github.com/delcoco95/AD-Windows-Server" target="_blank" class="project-link"
-          data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-network">Réseau</span>
-        <div class="project-duration">⏱ 1 jour</div>
-        <div class="project-title">Active Directory — Contrôleur de domaine</div>
-        <div class="project-desc">Déploiement d'un annuaire centralisé avec gestion des utilisateurs, OUs et GPO sur
-          domaine virtualisé.</div>
-        <div class="project-tech">
-          <span class="tech-pill">Windows Server 2022</span>
-          <span class="tech-pill">AD DS</span>
-          <span class="tech-pill">DNS</span>
-          <span class="tech-pill">DHCP</span>
-          <span class="tech-pill">VirtualBox</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/N%C2%B04%20-%20AD%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎 Annexes</a>
-          <a href="../documentation/01_Active_Directory.pdf" target="_blank" class="btn-doc">📄 Documentation</a>
-        </div>
-      </div>
-
-      <!-- Prometheus + Grafana -->
-      <div class="project-card" data-cat="reseau">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Avoir une visibilité en temps réel sur l'état des serveurs et être alerté immédiatement en cas de panne.
-            </p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Mise en place de Prometheus pour la collecte, Grafana pour les dashboards visuels et Alertmanager pour
-              l'envoi de mails.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B1.1]</strong> Recenser et identifier les ressources numériques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Déploiement des exporters Node pour remonter les métriques des serveurs cibles.</span></li>
-              <li><strong>[B2]</strong> Évaluer, maintenir et améliorer la qualité d’un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration de tableaux de bord Grafana pour superviser la disponibilité en temps réel.</span></li>
-              <li><strong>[B1.2]</strong> Collecter, suivre et orienter des demandes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Paramétrage d'Alertmanager pour l'envoi automatique d'alertes mail via Postfix.</span></li>
-              <li><strong>[B1.5]</strong> Réaliser les tests d’intégration et d’acceptation d’un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Simulation d'une panne de service pour valider la réception effective de l'alerte.</span></li>
-              <li><strong>[B1.6]</strong> Développer son projet professionnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Rédaction d'un guide complet d'installation et d'exploitation de la supervision.</span></li>
-            </ul>
-          </div>
-        </div>
-        <a href="https://github.com/delcoco95/RP-Supervision-Infra" target="_blank" class="project-link"
-          data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-network">Supervision</span>
-        <div class="project-duration">⏱ 2 jours</div>
-        <div class="project-title">Prometheus + Grafana — Supervision réseau</div>
-        <div class="project-desc">Chaîne de supervision complète : métriques, dashboards Grafana et alertes automatiques
-          par mail.</div>
-        <div class="project-tech">
-          <span class="tech-pill">Prometheus</span>
-          <span class="tech-pill">Grafana</span>
-          <span class="tech-pill">Alertmanager</span>
-          <span class="tech-pill">Postfix</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/N%C2%B05%20-%20Supervision%20Infra%20-%20Annexes%207.pdf" target="_blank"
-            class="btn-annexe">📎 Annexes</a>
-          <a href="../documentation/05_Supervision_Prometheus_Grafana.pdf" target="_blank" class="btn-doc">📄
-            Documentation</a>
-        </div>
-      </div>
-
-      <!-- Migration Windows 10 → 11 (Entreprise Ragni) -->
-      <div class="project-card" data-cat="entreprise systemes">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <a href="#" class="project-link project-details-btn" data-panel="win11" data-icon="gantt"
-          aria-label="Gestion de projet">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          <i class="fa-solid fa-chart-gantt project-link-hover"></i>
-        </a>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Mettre en conformité les postes utilisateurs vers le dernier OS Microsoft tout en maîtrisant la gestion
-              des licences MS.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Bilan matériel du parc, tests de validation applicative, déploiement progressif (10aine de postes), et
-              création de la documentation d'exploitation (Guide de migration) à destination du support IT.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B1.1]</strong> Recenser et identifier les ressources numériques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Audit matériel du parc informatique pour identifier les postes compatibles Windows 11.</span></li>
-              <li><strong>[B1.2]</strong> Traiter des demandes concernant les services réseau et système, applicatifs<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Résolution des échecs de mise à niveau et accompagnement des utilisateurs.</span></li>
-            </ul>
-          </div>
-        </div>
-        <span class="project-tag tag-company">Entreprise</span>
-        <div class="project-duration">⏱ Alternance</div>
-        <div class="project-title">Migration Windows 10 → 11</div>
-        <div class="project-desc">Migration de Windows 10 vers 11 sur les postes utilisateurs, rédaction d'une procédure
-          détaillée et résolution des cas d'échec.</div>
-        <div class="project-tech">
+        <div class="case-tech">
           <span class="tech-pill">Windows 11</span>
-          <span class="tech-pill">Groupe Ragni</span>
+          <span class="tech-pill">Cockpit (ITSM)</span>
+          <span class="tech-pill">Jira</span>
+          <span class="tech-pill">Excel</span>
           <span class="tech-pill">Procédure IT</span>
         </div>
-        <div class="project-actions">
-          <a href="../annexes/MigrationOS - Epreuve E5 - BTS SIO.pdf" target="_blank" class="btn-annexe"
-            title="À compléter">📎
-            Annexes</a>
-          <a href="../documentation/DOC_Migration_Windows10_Windows11.pdf" target="_blank" class="btn-doc"
-            title="À compléter">📄
-            Documentation</a>
-        </div>
-      </div>
 
-      <!-- GLPI -->
-      <div class="project-card" data-cat="reseau">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Centraliser le système de ticketing (Helpdesk) et obtenir un inventaire précis du parc informatique.</p>
+        <div class="case-actions">
+          <a href="#" class="btn-project-details project-details-btn" data-panel="win11">Suivi projet — Migration OS</a>
+          <a href="#" class="btn-project-details project-details-btn" data-panel="parc">Suivi projet — Inventaire</a>
+          <a href="../documentation/DOC_Migration_Windows10_Windows11.pdf" target="_blank" class="btn-doc">Documentation Migration</a>
+          <a href="../documentation/DOC_Gestion_Parc_Inventaire_Cockpit.pdf" target="_blank" class="btn-doc">Documentation Inventaire</a>
+        </div>
+      </article>
+
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <!-- PROJET 2 — Migration OneDrive & Cloud (Entreprise)     -->
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <article class="case-study" id="project-migration-cloud">
+        <span class="case-number">02</span>
+
+        <div class="case-header">
+          <div class="case-context-tag tag-enterprise">
+            Entreprise · Alternance — Groupe Ragni
           </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Déploiement LAMP sur Debian, installation de GLPI et déploiement d'agents d'inventaire automatisés sur
-              les postes cibles.</p>
+          <h2 class="case-title">Migration de 5 To de données vers le cloud Microsoft 365</h2>
+          <p class="case-subtitle">Modernisation de l'infrastructure de stockage : du serveur de fichiers local vers OneDrive, en 10 semaines.</p>
+        </div>
+
+        <div class="case-meta">
+          <div class="case-meta-card">
+            <div class="case-meta-label">Période</div>
+            <div class="case-meta-value">Nov. 2025 — Jan. 2026</div>
           </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Rôle</div>
+            <div class="case-meta-value">Technicien IT / Responsable migration</div>
+          </div>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Méthodologie</div>
+            <div class="case-meta-value">Sprints itératifs · Jira · SPMT</div>
+          </div>
+        </div>
+
+        <div class="case-content">
+          <div class="case-section">
+            <div class="case-section-title">Contexte & Problème</div>
+            <p>Les serveurs de fichiers locaux du Groupe Ragni étaient saturés (~5 To) et ne répondaient plus aux besoins de mobilité des collaborateurs. La direction IT a décidé de migrer vers OneDrive (1 To/utilisateur) pour libérer de l'espace et centraliser les données dans le cloud Microsoft 365.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Approche & Méthodologie</div>
             <ul>
-              <li><strong>[B1.1]</strong> Recenser et identifier les ressources numériques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Déploiement des agents GLPI sur les postes clients pour l'inventaire matériel automatisé.</span></li>
-              <li><strong>[B1.2]</strong> Collecter, suivre et orienter des demandes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration du module de ticketing pour centraliser les demandes de support.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Installation de la pile LAMP sous Debian et déploiement de la solution GLPI.</span></li>
-              <li><strong>[B1.6]</strong> Développer son projet professionnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Appropriation des bonnes pratiques ITIL via la configuration de l'outil ITSM.</span></li>
+              <li>Identification et priorisation des utilisateurs concernés</li>
+              <li>Benchmark des outils de migration → sélection de SPMT</li>
+              <li>Demande et obtention des droits admin OneDrive</li>
+              <li>Migration pilote, puis déploiement par vagues successives</li>
+              <li>Suivi des anomalies et accompagnement des utilisateurs</li>
+            </ul>
+          </div>
+          <div class="case-section full-width">
+            <div class="case-section-title">Solution technique</div>
+            <p>Utilisation de SharePoint Migration Tool (SPMT) pour le transfert des données. Organisation de la migration en sprints : cartographie des données, tests de validation, puis déploiement progressif par groupes d'utilisateurs. Scripts PowerShell via Graph API pour l'automatisation de certaines tâches de provisioning et de contrôle post-migration.</p>
+          </div>
+          <div class="case-section section-results full-width">
+            <div class="case-section-title">Résultats & Impact</div>
+            <ul>
+              <li>~5 To libérés sur les serveurs de fichiers locaux</li>
+              <li>Données accessibles en mobilité pour l'ensemble des collaborateurs</li>
+              <li>Documentation de la méthodologie de migration réutilisable</li>
+              <li>Réduction de la charge de maintenance sur l'infrastructure locale</li>
+              <li>Montée en compétence : PowerShell + Graph API, gestion du changement</li>
             </ul>
           </div>
         </div>
-        <a href="https://github.com/delcoco95/GLPI" target="_blank" class="project-link" data-icon="github"><i
-            class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-network">ITSM</span>
-        <div class="project-duration">⏱ 5 jours</div>
-        <div class="project-title">GLPI — Gestion de parc informatique</div>
-        <div class="project-desc">Installation GLPI sur Debian avec agent d'inventaire automatique pour gestion
-          centralisée du parc.</div>
-        <div class="project-tech">
-          <span class="tech-pill">GLPI</span>
-          <span class="tech-pill">Debian</span>
-          <span class="tech-pill">Apache2</span>
-          <span class="tech-pill">MariaDB</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/N%C2%B06%20-%20GLPI%20-%20Annexes%207.pdf" target="_blank" class="btn-annexe">📎
-            Annexes</a>
-          <a href="../documentation/06_GLPI.pdf" target="_blank" class="btn-doc">📄 Documentation</a>
-        </div>
-      </div>
 
-      <!-- Sécurisation Linux -->
-      <div class="project-card" data-cat="securite">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Fournir une infrastructure Linux robuste, protégée contre les intrusions et accessible via VPN.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Durcissement d'Ubuntu Server, gestion des identités (OpenLDAP), accès distants sécurisés (WireGuard) et
-              antivirus en conteneur.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B3]</strong> Gérer les accès et les privilèges appropriés<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration de l'authentification centralisée via OpenLDAP.</span></li>
-              <li><strong>[B2]</strong> Administrer sur site et à distance des éléments d’une infrastructure<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Application des règles de durcissement système pour garantir la disponibilité.</span></li>
-              <li><strong>[B3]</strong> Prévenir les attaques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Déploiement et configuration du VPN WireGuard pour l'accès distant sécurisé.</span></li>
-              <li><strong>[B3]</strong> Identifier les menaces et mettre en oeuvre les défenses appropriées<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Mise en place de l'antivirus ClamAV sous forme de conteneur Docker.</span></li>
-              <li><strong>[B1.4]</strong> Analyser les objectifs et les modalités d’organisation d’un projet<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Définition de l'architecture cible et automatisation du déploiement avec Vagrant.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Déploiement final de l'infrastructure Linux multi-services sécurisée.</span></li>
-              <li><strong>[B3]</strong> Mettre en oeuvre et vérifier la conformité d'une infrastructure à un référentiel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Application des recommandations de sécurité issues des CIS Benchmarks.</span></li>
-              <li><strong>[B1.6]</strong> Développer son projet professionnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Approfondissement technique sur la sécurisation d'environnements Linux en production.</span></li>
-            </ul>
-          </div>
-        </div>
-        <a href="https://github.com/delcoco95/Securite_Serveur_Mediaschool" target="_blank" class="project-link"
-          data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-security">Sécurité</span>
-        <div class="project-duration">⏱ 23 jours</div>
-        <div class="project-title">Sécurisation serveur Linux — Mediaschool</div>
-        <div class="project-desc">Déploiement Vagrant d'un Ubuntu sécurisé : OpenLDAP, WireGuard VPN, ClamAV en
-          conteneurs Docker.</div>
-        <div class="project-tech">
-          <span class="tech-pill">Ubuntu</span>
-          <span class="tech-pill">Docker</span>
-          <span class="tech-pill">Vagrant</span>
-          <span class="tech-pill">WireGuard</span>
-          <span class="tech-pill">OpenLDAP</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/N%C2%B07%20-%20Securisation%20Linux%20multi-services%20-%20Annexes%207.pdf"
-            target="_blank" class="btn-annexe">📎
-            Annexes</a>
-          <a href="../documentation/07_Securite_Serveur_Mediaschool.pdf" target="_blank" class="btn-doc">📄
-            Documentation</a>
-        </div>
-      </div>
-
-      <!-- Migration OneDrive -->
-      <div class="project-card" data-cat="entreprise cloud">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <a href="#" class="project-link project-details-btn" data-panel="onedrive" data-icon="gantt"
-          aria-label="Gestion de projet">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          <i class="fa-solid fa-chart-gantt project-link-hover"></i>
-        </a>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Migrer les serveurs de fichiers historiques locaux vers le cloud pour moderniser l'infrastructure tout en
-              libérant de l'espace (~5 To) au groupe.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Mise en place de PowerShell via Graph API, organisation en sprints de migration, documentation des plans
-              d'action et suivi des anomalies de la part des utilisateurs.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B1.1]</strong> Recenser et identifier les ressources numériques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Audit et cartographie des 5 To de données présentes sur les serveurs de fichiers locaux.</span></li>
-              <li><strong>[B1.2]</strong> Collecter, suivre et orienter des demandes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Assistance de niveau 1 aux utilisateurs et traitement des tickets liés à la migration.</span></li>
-            </ul>
-          </div>
-        </div>
-        <span class="project-tag tag-company">Entreprise</span>
-        <div class="project-duration">⏱ Alternance</div>
-        <div class="project-title">Migration OneDrive & Cloud</div>
-        <div class="project-desc">Migration des données serveur vers OneDrive, accompagnement utilisateurs et libération
-          de ~5 To d'espace disque sur serveur.</div>
-        <div class="project-tech">
+        <div class="case-tech">
           <span class="tech-pill">OneDrive</span>
           <span class="tech-pill">Microsoft 365</span>
-          <span class="tech-pill">Serveur de fichiers</span>
-          <span class="tech-pill">Groupe Ragni</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/OneDrive - Epreuve E5 - BTS SIO.pdf" target="_blank" class="btn-annexe"
-            title="À compléter">📎 Annexes</a>
-          <a href="../documentation/DOC_Migration_OneDrive_Cloud.pdf" target="_blank" class="btn-doc"
-            title="À compléter">📄
-            Documentation</a>
-        </div>
-      </div>
-
-      <!-- Gestion de parc -->
-      <div class="project-card" data-cat="entreprise systemes">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <a href="#" class="project-link project-details-btn" data-panel="parc" data-icon="gantt"
-          aria-label="Gestion de projet">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          <i class="fa-solid fa-chart-gantt project-link-hover"></i>
-        </a>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Inventorier tout le matériel informatique pour obtenir une base solide via la gestion IT et planifier les
-              budgets annuels avec précision.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Saisie via des agents Cockpit remontant sur la solution ITSM; nettoyage et conformité des données pour
-              les audits financiers internes.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B1.1]</strong> Recenser et identifier les ressources numériques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Saisie et vérification des équipements informatiques pour fiabiliser l'inventaire global.</span></li>
-              <li><strong>[B1.2]</strong> Collecter, suivre et orienter des demandes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Correction des anomalies de remontée d'inventaire dans la plateforme ITSM (Cockpit).</span></li>
-            </ul>
-          </div>
-        </div>
-        <span class="project-tag tag-company">Entreprise</span>
-        <div class="project-duration">⏱ Alternance</div>
-        <div class="project-title">Gestion de parc & Inventaire</div>
-        <div class="project-desc">Installation des agents Cockpit, inventaire complet du parc IT et préparation des
-          données pour le budget IT 2026.</div>
-        <div class="project-tech">
-          <span class="tech-pill">Cockpit</span>
-          <span class="tech-pill">Microsoft Excel</span>
-          <span class="tech-pill">Groupe Ragni</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/GestionParc%20-%20Epreuve%20E5%20-%20BTS%20SIO.pdf" target="_blank" class="btn-annexe"
-            title="À compléter">📎
-            Annexes</a>
-          <a href="../documentation/DOC_Gestion_Parc_Inventaire_Cockpit.pdf" target="_blank" class="btn-doc"
-            title="À compléter">📄 Documentation</a>
-        </div>
-      </div>
-
-      <!-- Interface Listes de diffusion -->
-      <div class="project-card" data-cat="entreprise web cloud">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <a href="#" class="project-link project-details-btn" data-panel="dl" data-icon="gantt"
-          aria-label="Gestion de projet">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          <i class="fa-solid fa-chart-gantt project-link-hover"></i>
-        </a>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Décentraliser aux responsables d'équipes la gestion des membres de leurs listes de diffusion afin
-              d'alléger la charge du support IT niveau 1.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Développement Front End d'une interface connectée à Microsoft 365, et l'intégration via des GPO au niveau
-              de la messagerie Outlook et d'Intranet.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li><strong>[B1.2]</strong> Collecter, suivre et orienter des demandes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Décentralisation de la gestion des listes pour réduire les sollicitations du support niveau 1.</span></li>
-              <li><strong>[B1.2]</strong> Traiter des demandes concernant les applications<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Automatisation du déploiement des raccourcis web vers l'interface via GPO Active Directory.</span></li>
-              <li><strong>[B1.3]</strong> Participer à la valorisation de l’image de l’organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Conception d'une interface utilisateur intuitive reprenant la charte graphique de l'entreprise.</span></li>
-              <li><strong>[B1.4]</strong> Analyser les objectifs et les modalités d’organisation d’un projet<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Étude de faisabilité et choix des technologies pour l'interaction avec Microsoft 365.</span></li>
-              <li><strong>[B1.4]</strong> Planifier les activités<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Organisation du déploiement par phases successives selon les différents services.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Hébergement de l'interface web sur le serveur IIS de production.</span></li>
-            </ul>
-          </div>
-        </div>
-        <span class="project-tag tag-company">Entreprise</span>
-        <div class="project-duration">⏱ Alternance</div>
-        <div class="project-title">Interface Listes de Diffusion O365</div>
-        <div class="project-desc">Interface web pour gérer les listes de distribution M365, intégrée par GPO dans le
-          navigateur et dans Outlook.</div>
-        <div class="project-tech">
-          <span class="tech-pill">HTML/CSS/JS</span>
-          <span class="tech-pill">Microsoft 365</span>
-          <span class="tech-pill">GPO</span>
-          <span class="tech-pill">Tâche planifiée</span>
+          <span class="tech-pill">SPMT</span>
           <span class="tech-pill">PowerShell</span>
-          <span class="tech-pill">Groupe Ragni</span>
+          <span class="tech-pill">Graph API</span>
+          <span class="tech-pill">Jira</span>
         </div>
-        <div class="project-actions">
-          <a href="../annexes/ListesDistribution%20-%20Epreuve%20E5%20-%20BTS%20SIO.pdf" target="_blank"
-            class="btn-annexe" title="À compléter">📎
-            Annexes</a>
-          <a href="../documentation/Interface_Listes_Distribution_O365.pdf" target="_blank" class="btn-doc"
-            title="À compléter">📄
-            Documentation</a>
-        </div>
-      </div>
 
-      <!-- Infrastructure IRIS -->
-      <div class="project-card" data-cat="securite">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Concevoir et segmenter le réseau d'une école avec un accès Wi-Fi sécurisé par authentification forte.</p>
+        <div class="case-actions">
+          <a href="#" class="btn-project-details project-details-btn" data-panel="onedrive">Suivi projet</a>
+          <a href="../documentation/DOC_Migration_OneDrive_Cloud.pdf" target="_blank" class="btn-doc">Documentation</a>
+          <a href="../annexes/OneDrive - Epreuve E5 - BTS SIO.pdf" target="_blank" class="btn-annexe">Annexes</a>
+        </div>
+      </article>
+
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <!-- PROJET 3 — Interface Listes de Diffusion (Entreprise)  -->
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <article class="case-study" id="project-listes-diffusion">
+        <span class="case-number">03</span>
+
+        <div class="case-header">
+          <div class="case-context-tag tag-enterprise">
+            Entreprise · Alternance — Groupe Ragni
           </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Configuration de switchs Cisco (VLANs), déploiement de NPS RADIUS lié à l'Active Directory (802.1X) pour
-              le
-              contrôle d'accès réseau.</p>
+          <h2 class="case-title">Interface web de gestion des listes de distribution Microsoft 365</h2>
+          <p class="case-subtitle">Développement et déploiement d'un outil interne pour décentraliser la gestion des listes de diffusion auprès des responsables d'équipes.</p>
+        </div>
+
+        <div class="case-meta">
+          <div class="case-meta-card">
+            <div class="case-meta-label">Période</div>
+            <div class="case-meta-value">Fév. 2026 (2 semaines)</div>
           </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Rôle</div>
+            <div class="case-meta-value">Développeur front-end / Administrateur système</div>
+          </div>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Méthodologie</div>
+            <div class="case-meta-value">2 sprints · Jira · Déploiement GPO</div>
+          </div>
+        </div>
+
+        <div class="case-content">
+          <div class="case-section">
+            <div class="case-section-title">Contexte & Problème</div>
+            <p>Les responsables d'équipes ne pouvaient ni consulter ni modifier les membres de leurs listes de distribution M365. Chaque modification passait par un ticket au support IT, générant une charge récurrente sur le niveau 1 et des délais pour les utilisateurs.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Approche & Méthodologie</div>
             <ul>
-              <li><strong>[B1.1]</strong> Recenser et identifier les ressources numériques<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Audit des équipements matériels et élaboration du plan d'adressage IP du réseau segmenté.</span></li>
-              <li><strong>[B3]</strong> Gérer les accès et les privilèges appropriés<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Déploiement du protocole 802.1X couplé à NPS et AD pour le contrôle d'accès réseau sécurisé.</span></li>
-              <li><strong>[B1.1]</strong> Gérer des sauvegardes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Sauvegarde systématique des fichiers de configuration (startup-config) des switchs Cisco.</span></li>
-              <li><strong>[B2]</strong> Installer et configurer des éléments d’infrastructure<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration des VLANs et du routage inter-VLAN sur les commutateurs Cisco.</span></li>
-              <li><strong>[B1.2]</strong> Traiter des demandes concernant les applications<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Paramétrage du serveur NPS Radius pour traiter les demandes d'authentification.</span></li>
-              <li><strong>[B1.4]</strong> Analyser les objectifs et les modalités d’organisation d’un projet<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Conception du schéma réseau logique et physique répondant au cahier des charges de l'école.</span></li>
-              <li><strong>[B1.4]</strong> Planifier les activités<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Planification chronologique des interventions (brassage, configuration, déploiement des serveurs).</span></li>
-              <li><strong>[B1.4]</strong> Évaluer les indicateurs de suivi d’un projet et analyser les écarts<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Réalisation de tests de connectivité et correction des règles de sécurité bloquantes.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Raccordement des équipements et mise en production globale du réseau local.</span></li>
-              <li><strong>[B1.6]</strong> Développer son projet professionnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Mise en pratique des compétences de commutation et routage sur du matériel Cisco physique.</span></li>
+              <li>Étude de faisabilité et choix techniques (API M365, hébergement IIS)</li>
+              <li>Sprint 1 : développement de l'interface + hébergement local</li>
+              <li>Sprint 2 : déploiement GPO Outlook + tests + documentation</li>
+              <li>Intégration dans la charte graphique de l'entreprise</li>
+            </ul>
+          </div>
+          <div class="case-section full-width">
+            <div class="case-section-title">Solution technique</div>
+            <p>Interface web (HTML/CSS/JS) connectée à Microsoft 365 via PowerShell et tâches planifiées pour la synchronisation des données. Hébergement sur le serveur IIS de production. Déploiement automatisé via GPO Active Directory : ajout d'un raccourci dans le navigateur et intégration directe dans Outlook pour un accès contextuel.</p>
+          </div>
+          <div class="case-section section-results full-width">
+            <div class="case-section-title">Résultats & Impact</div>
+            <ul>
+              <li>Autonomie des responsables d'équipes pour gérer leurs listes</li>
+              <li>Réduction significative des tickets de niveau 1 liés aux listes</li>
+              <li>Interface conforme à la charte graphique, adoptée sans formation</li>
+              <li>Déploiement transparent via GPO, zéro intervention manuelle</li>
+              <li>Montée en compétence : dev web en contexte entreprise, GPO, IIS, API M365</li>
             </ul>
           </div>
         </div>
-        <a href="https://github.com/delcoco95/infrastructure-iris" target="_blank" class="project-link"
-          data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-security">Infrastructure</span>
-        <div class="project-duration">⏱ 60 jours</div>
-        <div class="project-title">Infrastructure réseau — École IRIS Nice</div>
-        <div class="project-desc">Infrastructure segmentée avec auth 802.1X via NPS Radius + Active Directory sur
-          matériel Cisco
-          réel.</div>
-        <div class="project-tech">
+
+        <div class="case-tech">
+          <span class="tech-pill">HTML / CSS / JS</span>
+          <span class="tech-pill">Microsoft 365</span>
+          <span class="tech-pill">PowerShell</span>
+          <span class="tech-pill">IIS</span>
+          <span class="tech-pill">GPO Active Directory</span>
+          <span class="tech-pill">Tâche planifiée</span>
+        </div>
+
+        <div class="case-actions">
+          <a href="#" class="btn-project-details project-details-btn" data-panel="dl">Suivi projet</a>
+          <a href="../documentation/Interface_Listes_Distribution_O365.pdf" target="_blank" class="btn-doc">Documentation</a>
+          <a href="../annexes/ListesDistribution - Epreuve E5 - BTS SIO.pdf" target="_blank" class="btn-annexe">Annexes</a>
+        </div>
+      </article>
+
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <!-- PROJET 4 — Infrastructure réseau IRIS (École)          -->
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <article class="case-study" id="project-infra-iris">
+        <span class="case-number">04</span>
+
+        <div class="case-header">
+          <div class="case-context-tag tag-school">
+            Projet de formation · 60 jours
+          </div>
+          <h2 class="case-title">Conception d'une infrastructure réseau sécurisée avec authentification 802.1X</h2>
+          <p class="case-subtitle">Architecture réseau segmentée pour un établissement scolaire, avec contrôle d'accès Wi-Fi par certificat sur matériel Cisco réel.</p>
+        </div>
+
+        <div class="case-meta">
+          <div class="case-meta-card">
+            <div class="case-meta-label">Durée</div>
+            <div class="case-meta-value">60 jours (projet long)</div>
+          </div>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Rôle</div>
+            <div class="case-meta-value">Architecte réseau / Administrateur système</div>
+          </div>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Environnement</div>
+            <div class="case-meta-value">Matériel Cisco réel · Windows Server</div>
+          </div>
+        </div>
+
+        <div class="case-content">
+          <div class="case-section">
+            <div class="case-section-title">Contexte & Problème</div>
+            <p>L'école IRIS de Nice avait besoin d'une infrastructure réseau segmentée et sécurisée pour isoler les flux élèves, enseignants et administration. L'accès au réseau Wi-Fi devait être contrôlé par authentification forte (802.1X) adossée à l'annuaire Active Directory.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Approche & Méthodologie</div>
+            <ul>
+              <li>Audit des besoins et conception du schéma réseau (logique + physique)</li>
+              <li>Définition du plan d'adressage IP et de la politique de VLAN</li>
+              <li>Planification des interventions : brassage, configuration, déploiement</li>
+              <li>Tests de connectivité et correction des règles de sécurité</li>
+            </ul>
+          </div>
+          <div class="case-section full-width">
+            <div class="case-section-title">Solution technique</div>
+            <p>Configuration de switchs Cisco (VLANs, routage inter-VLAN) pour la segmentation réseau. Déploiement d'un serveur NPS RADIUS couplé à l'Active Directory pour le contrôle d'accès réseau 802.1X. Mise en place de WireGuard pour l'accès VPN distant. Services DNS et DHCP configurés sur Windows Server. Sauvegarde systématique des configurations (startup-config) des équipements.</p>
+          </div>
+          <div class="case-section section-results full-width">
+            <div class="case-section-title">Résultats & Impact</div>
+            <ul>
+              <li>Infrastructure réseau fonctionnelle et segmentée sur matériel physique</li>
+              <li>Contrôle d'accès Wi-Fi opérationnel via authentification 802.1X</li>
+              <li>Documentation d'exploitation complète rédigée</li>
+              <li>Première expérience sur du matériel Cisco réel (vs simulateur)</li>
+              <li>Montée en compétence : commutation L2/L3, RADIUS, VPN, planification infra</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-tech">
           <span class="tech-pill">Cisco IOS</span>
-          <span class="tech-pill">NPS Radius</span>
+          <span class="tech-pill">VLAN / Inter-VLAN</span>
+          <span class="tech-pill">NPS RADIUS</span>
+          <span class="tech-pill">802.1X</span>
           <span class="tech-pill">Active Directory</span>
           <span class="tech-pill">WireGuard</span>
-          <span class="tech-pill">DHCP</span>
-          <span class="tech-pill">DNS</span>
+          <span class="tech-pill">DNS / DHCP</span>
         </div>
-        <div class="project-actions">
-          <a href="../annexes/RP01%20-%20Infra%20Reseau%20Securise%20-%20Annexes%207.pdf" target="_blank"
-            class="btn-annexe">📎 Annexes</a>
-          <a href="../documentation/08_Infrastructure_IRIS.pdf" target="_blank" class="btn-doc">📄 Documentation</a>
-        </div>
-      </div>
 
-      <!-- PRA/PCRA -->
-      <div class="project-card" data-cat="reseau">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Garantir la continuité d'activité et la sauvegarde immuable des données critiques face aux risques de
-              ransomwares.</p>
+        <div class="case-actions">
+          <a href="https://github.com/delcoco95/infrastructure-iris" target="_blank" class="btn-github">GitHub</a>
+          <a href="../documentation/08_Infrastructure_IRIS.pdf" target="_blank" class="btn-doc">Documentation</a>
+          <a href="../annexes/RP01 - Infra Reseau Securise - Annexes 7.pdf" target="_blank" class="btn-annexe">Annexes</a>
+        </div>
+      </article>
+
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <!-- PROJET 5 — PRA/PCA (École)                             -->
+      <!-- ═══════════════════════════════════════════════════════ -->
+      <article class="case-study" id="project-pra-pca">
+        <span class="case-number">05</span>
+
+        <div class="case-header">
+          <div class="case-context-tag tag-school">
+            Projet de formation · 8 jours
           </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>PRA : BorgBackup/Borgmatic (sauvegarde horaire chiffrée AES-256, RPO&lt;1h). PCA : DRBD réplication
-              synchrone (RPO=0) + Keepalived/VRRP failover automatique (RTO&lt;30s). 3 VMs Vagrant + Docker Compose.</p>
+          <h2 class="case-title">Architecture PRA/PCA avec sauvegarde chiffrée et haute disponibilité</h2>
+          <p class="case-subtitle">Conception et déploiement d'un plan de reprise et de continuité d'activité avec sauvegarde immuable, réplication synchrone et failover automatique.</p>
+        </div>
+
+        <div class="case-meta">
+          <div class="case-meta-card">
+            <div class="case-meta-label">Durée</div>
+            <div class="case-meta-value">8 jours intensifs</div>
           </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Rôle</div>
+            <div class="case-meta-value">Architecte infrastructure / Admin système</div>
+          </div>
+          <div class="case-meta-card">
+            <div class="case-meta-label">Environnement</div>
+            <div class="case-meta-value">3 VMs Vagrant · Docker Compose</div>
+          </div>
+        </div>
+
+        <div class="case-content">
+          <div class="case-section">
+            <div class="case-section-title">Contexte & Problème</div>
+            <p>Face à la montée des menaces ransomware, un besoin de continuité d'activité et de sauvegarde immuable des données critiques a été identifié. L'objectif : garantir un RPO (perte de données) inférieur à 1 heure et un RTO (temps de reprise) inférieur à 30 secondes en cas de sinistre majeur.</p>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Approche & Méthodologie</div>
             <ul>
-              <li><strong>[B2]</strong> Installer et configurer des éléments nécessaires pour assurer la continuité des services<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration de la réplication DRBD et du basculement automatique via Keepalived.</span></li>
-              <li><strong>[B1.1]</strong> Gérer des sauvegardes<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Automatisation des sauvegardes immuables et chiffrées avec BorgBackup.</span></li>
-              <li><strong>[B2]</strong> Gérer des indicateurs et des fichiers d’activité des éléments d’une infrastructure<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Intégration de la supervision des nœuds DRBD dans les tableaux de bord Grafana.</span></li>
-              <li><strong>[B1.2]</strong> Traiter des demandes concernant les services réseau et système, applicatifs<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Configuration des interfaces réseau et des IP virtuelles (VIP) pour le cluster haute disponibilité.</span></li>
-              <li><strong>[B3]</strong> Caractériser les risques liés à l’utilisation malveillante d’un service informatique<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Étude des menaces cyber (ransomwares) et définition de l'architecture de reprise d'activité.</span></li>
-              <li><strong>[B1.4]</strong> Planifier les activités<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Établissement des objectifs de temps (RTO) et de perte de données (RPO) maximaux admissibles.</span></li>
-              <li><strong>[B1.5]</strong> Réaliser les tests d’intégration et d’acceptation d’un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Simulation d'un sinistre majeur et validation complète de la procédure de restauration.</span></li>
-              <li><strong>[B1.5]</strong> Déployer un service<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Instanciation des services conteneurisés de sauvegarde et de supervision via Docker.</span></li>
-              <li><strong>[B3]</strong> Analyser les incidents de sécurité, proposer et mettre en oeuvre des contre-mesures<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Analyse des modes opératoires des ransomwares récents pour adapter les défenses.</span></li>
-              <li><strong>[B1.6]</strong> Développer son projet professionnel<br>&nbsp;&nbsp;<span style="color:#aaa; font-size:0.9em;">Preuve : Maîtrise des architectures de haute disponibilité et des plans de continuité d'activité (PCA/PRA).</span></li>
+              <li>Analyse des menaces cyber et définition des objectifs RTO/RPO</li>
+              <li>Conception de l'architecture cible (PRA + PCA)</li>
+              <li>Déploiement automatisé via Vagrant (3 VMs)</li>
+              <li>Tests de sinistre : simulation de panne et validation de la restauration</li>
+            </ul>
+          </div>
+          <div class="case-section full-width">
+            <div class="case-section-title">Solution technique</div>
+            <p><strong>PRA :</strong> BorgBackup avec Borgmatic pour des sauvegardes horaires chiffrées AES-256 et immuables (RPO &lt; 1h). <strong>PCA :</strong> DRBD pour la réplication synchrone des données (RPO = 0) combiné à Keepalived/VRRP pour un failover automatique (RTO &lt; 30s). Supervision de l'ensemble via Prometheus et Grafana. Orchestration des services avec Docker Compose sur 3 machines virtuelles provisionnées par Vagrant.</p>
+          </div>
+          <div class="case-section section-results full-width">
+            <div class="case-section-title">Résultats & Impact</div>
+            <ul>
+              <li>PRA validé : restauration complète testée et documentée</li>
+              <li>PCA validé : failover automatique en &lt; 30 secondes</li>
+              <li>Sauvegardes immuables protégées contre les ransomwares</li>
+              <li>Supervision temps réel intégrée (Grafana dashboards)</li>
+              <li>Montée en compétence : architectures haute dispo, DRBD, IaC (Vagrant), Docker</li>
             </ul>
           </div>
         </div>
-        <a href="https://github.com/delcoco95/PRA-PCRA---backup-" target="_blank" class="project-link"
-          data-icon="github"><i class="fa-solid fa-arrow-up-right-from-square"></i><i
-            class="fa-brands fa-github project-link-hover"></i></a>
-        <span class="project-tag tag-network">Continuité</span>
-        <div class="project-duration">⏱ 8 jours</div>
-        <div class="project-title">PRA + PCA — Plan de Reprise d'Activité</div>
-        <div class="project-desc">BorgBackup chiffré AES-256, supervision Prometheus/Grafana et test de restauration
-          validé.</div>
-        <div class="project-tech">
+
+        <div class="case-tech">
           <span class="tech-pill">BorgBackup</span>
           <span class="tech-pill">DRBD</span>
-          <span class="tech-pill">Keepalived</span>
+          <span class="tech-pill">Keepalived / VRRP</span>
           <span class="tech-pill">Prometheus</span>
           <span class="tech-pill">Grafana</span>
-          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Docker Compose</span>
           <span class="tech-pill">Vagrant</span>
           <span class="tech-pill">OpenLDAP</span>
         </div>
-        <div class="project-actions">
-          <a href="../annexes/RP02 - Conception PRA_PCA - Annexes 7.pdf" target="_blank" class="btn-annexe">📎
-            Annexes</a>
-          <a href="../documentation/09_PRA_PCRA_Backup.pdf" target="_blank" class="btn-doc">📄
-            Documentation</a>
-        </div>
-      </div>
 
-      <!-- BookAuto -->
-      <div class="project-card" data-cat="web">
-        <button class="project-info-btn" aria-label="Informations supplémentaires">
-          <i class="fa-solid fa-circle-info"></i>
-        </button>
-        <div class="project-tooltip">
-          <div class="tooltip-section">
-            <h4>• Besoin</h4>
-            <p>Créer une plateforme mettant en relation clients et professionnels de l'automobile avec prise de
-              rendez-vous.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Solution</h4>
-            <p>Développement Back-End avec Node.js, modélisation de données (MongoDB) et intégration de la
-              géolocalisation.</p>
-          </div>
-          <div class="tooltip-section">
-            <h4>• Compétences</h4>
-            <ul>
-              <li>Développer la présence en ligne</li>
-              <li>Mettre à disposition un service</li>
-              <li>Travailler en mode projet</li>
-            </ul>
-          </div>
+        <div class="case-actions">
+          <a href="https://github.com/delcoco95/PRA-PCRA---backup-" target="_blank" class="btn-github">GitHub</a>
+          <a href="../documentation/09_PRA_PCRA_Backup.pdf" target="_blank" class="btn-doc">Documentation</a>
+          <a href="../annexes/RP02 - Conception PRA_PCA - Annexes 7.pdf" target="_blank" class="btn-annexe">Annexes</a>
         </div>
-        <a href="https://bookauto.vercel.app/" target="_blank" class="project-link" data-icon="globe"><i
-            class="fa-solid fa-arrow-up-right-from-square"></i><i class="fa-solid fa-globe project-link-hover"></i></a>
-        <span class="project-tag tag-web">Web</span>
-        <div class="project-duration">⏱ En cours</div>
-        <div class="project-title">BookAuto — Plateforme web</div>
-        <div class="project-desc">Mise en relation professionnels/clients avec agenda intégré et carte géographique.
-        </div>
-        <div class="project-tech">
-          <span class="tech-pill">MongoDB</span>
-          <span class="tech-pill">Node.js</span>
-          <span class="tech-pill">Docker</span>
-          <span class="tech-pill">Stripe</span>
-          <span class="tech-pill">OpenMaps</span>
-          <span class="tech-pill">Vercel</span>
-          <span class="tech-pill">Render</span>
-        </div>
-        <div class="project-actions">
-          <a href="../annexes/Annexe_BookAuto_Analyse_Marche.pdf" target="_blank" class="btn-annexe"
-            title="À compléter">📎 Annexes</a>
-          <a href="../documentation/Document_BookAuto_Analyse_Technique.pdf" target="_blank" class="btn-doc"
-            title="À compléter">📄
-            Documentation</a>
-        </div>
-      </div>
+      </article>
 
-    </div><!-- /projects-grid -->
+    </div><!-- /case-studies -->
 
   </section>
 
@@ -1046,7 +719,6 @@
             </div>
           </div>
 
-
           <div class="ent-section-label">Planification des sprints</div>
           <table class="ent-sprint-table">
             <thead>
@@ -1187,7 +859,7 @@
         <a href="projets.html">Projets</a>
         <a href="competences.html">Compétences</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank">LinkedIn</a>
         <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
       </div>
       <div class="footer-links" style="margin-top:10px;">
@@ -1206,6 +878,7 @@
   <script src="../js/projets.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="../js/particles-init.js"></script>
+
 </body>
 
 </html>

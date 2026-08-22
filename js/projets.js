@@ -1,4 +1,4 @@
-// projets.js — Scripts pour la page Projets
+// projets.js — Scripts pour la page Projets (format case study)
 
 // ── THEME TOGGLE ──
 const html = document.documentElement;
@@ -27,37 +27,18 @@ const mobileNav = document.getElementById('mobileNav');
 hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
 function closeMobileNav() { mobileNav.classList.remove('open'); }
 
-// ── FILTRES PROJETS ──
-const filterBtns = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.project-card');
-const displayCount = document.getElementById('displayCount');
-const totalCount = document.getElementById('totalCount');
-
-totalCount.textContent = `(${cards.length})`;
-displayCount.textContent = cards.length;
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const filter = btn.dataset.filter;
-
-    // Update active button
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    // Filter cards — support multi-catégories (espace-séparées)
-    let visible = 0;
-    cards.forEach(card => {
-      const cats = (card.dataset.cat || '').split(' ');
-      if (filter === 'all' || cats.includes(filter)) {
-        card.classList.remove('hidden');
-        visible++;
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-
-    displayCount.textContent = visible;
+// ── SCROLL ANIMATIONS (case studies) ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
   });
+}, { threshold: 0.06 });
+
+document.querySelectorAll('.case-study').forEach((el, i) => {
+  el.style.transitionDelay = (i * 0.08) + 's';
+  observer.observe(el);
 });
 
 // ── SCROLL TO TOP ──
@@ -71,37 +52,11 @@ if (scrollBtn) {
   });
 }
 
-// ── INFOBULLES DES PROJETS ──
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.project-info-btn');
-  // Fermer toutes les infobulles (sauf celle qu'on vient de cliquer)
-  const currentTooltip = btn ? btn.parentElement.querySelector('.project-tooltip') : null;
-  document.querySelectorAll('.project-tooltip.show-tooltip').forEach(tooltip => {
-    if (tooltip !== currentTooltip) {
-      tooltip.classList.remove('show-tooltip');
-    }
-  });
-  document.querySelectorAll('.project-info-btn.active').forEach(b => {
-    if (b !== btn) b.classList.remove('active');
-  });
-
-  // Si on a cliqué sur un bouton d'info, basculer son état
-  if (btn) {
-    e.preventDefault();
-    if (currentTooltip) {
-      currentTooltip.classList.toggle('show-tooltip');
-      btn.classList.toggle('active');
-    }
-  }
-});
-
 // ── MODALE PROJETS ENTREPRISE ──
 const entModal = document.getElementById('entProjectModal');
 const closeEntModal = document.getElementById('closeEntModal');
 
 if (entModal && closeEntModal) {
-  // Ouvrir la modale
-  // Ouvrir la modale
   document.addEventListener('click', (e) => {
     const detailsBtn = e.target.closest('.project-details-btn');
 
@@ -113,7 +68,6 @@ if (entModal && closeEntModal) {
     }
   });
 
-  // Fermer la modale
   closeEntModal.addEventListener('click', () => {
     entModal.classList.remove('show');
   });
@@ -136,4 +90,3 @@ if (entModal && closeEntModal) {
     });
   }
 }
-
