@@ -4,8 +4,8 @@
 .veille-intro {
   font-size: 17px;
   color: var(--text2);
-  font-weight: 300;
-  line-height: 1.75;
+  font-weight: 400;
+  line-height: 1.8;
   margin-bottom: 52px;
   max-width: 700px;
 }
@@ -13,46 +13,41 @@
 .themes-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
+  gap: 18px;
   margin-bottom: 60px;
 }
 .theme-card {
   background: var(--card);
-  padding: 32px 26px;
-  transition: background 0.2s;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
   opacity: 0;
   transform: translateY(16px);
-  transition: background 0.2s, opacity 0.5s ease, transform 0.5s ease;
+  transition: border-color 0.2s, transform 0.2s, opacity 0.5s ease;
 }
-.theme-card:hover { background: var(--card-hover); }
+.theme-card:hover { border-color: var(--text3); transform: translateY(-3px); }
 .theme-card.visible { opacity: 1; transform: translateY(0); }
 .theme-topic {
   display: inline-block;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent);
-  background: rgba(41,151,255,0.1);
-  border-radius: 20px;
-  padding: 4px 10px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
   margin-bottom: 14px;
-  letter-spacing: 0.3px;
 }
 .theme-title {
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 10px;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
   line-height: 1.3;
 }
 .theme-desc {
   font-size: 14px;
   color: var(--text3);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.65;
 }
 .theme-source {
@@ -63,10 +58,10 @@
   font-size: 12px;
   color: var(--accent);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: opacity 0.2s;
 }
-.theme-source:hover { opacity: 0.75; }
+.theme-source:hover { opacity: 0.7; }
 
 /* ── OUTILS MARQUEE (défilant infini) ── */
 .tools-marquee-wrap {
@@ -74,7 +69,7 @@
   overflow: hidden;
   margin-bottom: 60px;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   padding: 32px 0;
   background: var(--card);
 }
@@ -134,10 +129,10 @@
   filter: saturate(1) opacity(1);
 }
 [data-theme="dark"] .marquee-item img {
-  filter: saturate(0) opacity(0.5);
+  filter: saturate(0) opacity(0.5) invert(0.9);
 }
 [data-theme="dark"] .marquee-item:hover img {
-  filter: saturate(1) brightness(1.3) opacity(1);
+  filter: saturate(1) opacity(1) invert(0.9);
 }
 /* Logos noirs à inverser en blanc pour le mode sombre */
 [data-theme="dark"] .marquee-item img[alt="ANSSI"],
@@ -162,37 +157,36 @@
 /* ── IMAGE THEME CARD ── */
 .theme-img {
   width: 100%;
-  height: 120px;
+  height: 130px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   display: block;
+  filter: grayscale(0.3);
 }
 
 /* ── SITOGRAPHIE ── */
 .sitographie-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
+  gap: 14px;
   margin-bottom: 40px;
 }
 .sito-card {
   background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   padding: 20px 22px;
   display: flex;
   align-items: center;
   gap: 16px;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: border-color 0.2s;
 }
-.sito-card:hover { background: var(--card-hover); }
+.sito-card:hover { border-color: var(--text3); }
 .sito-dot {
-  width: 8px; height: 8px;
+  width: 6px; height: 6px;
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
@@ -200,15 +194,15 @@
 .sito-content { flex: 1; }
 .sito-title {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 2px;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.1px;
 }
 .sito-url {
   font-size: 12px;
   color: var(--text3);
-  font-weight: 300;
+  font-weight: 400;
 }
 .sito-arrow {
   margin-left: auto;
@@ -220,26 +214,27 @@
 
 /* ── CONCLUSION ── */
 .veille-conclusion {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 36px 32px;
+  background: var(--hero-bg);
+  border: 1px solid var(--hero-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
   font-size: 16px;
-  font-weight: 300;
-  color: var(--text2);
+  font-weight: 400;
+  color: var(--hero-text2);
   line-height: 1.8;
 }
+.veille-conclusion strong { color: var(--hero-text) !important; }
 
-/* ── FR&Eacute;QUENCE DE VEILLE ── */
+/* ── FRÉQUENCE DE VEILLE ── */
 .frequence-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 36px 32px;
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
 }
 .frequence-content p {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text2);
   line-height: 1.8;
   margin-bottom: 16px;
@@ -260,17 +255,18 @@
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  font-weight: 500;
-  color: var(--accent);
-  background: rgba(41,151,255,0.08);
-  border: 1px solid rgba(41,151,255,0.25);
-  border-radius: 20px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 999px;
   padding: 8px 16px;
   transition: all 0.2s;
 }
 .frequence-badge:hover {
-  background: rgba(41,151,255,0.15);
+  background: var(--accent);
   border-color: var(--accent);
+  color: #fff;
 }
 .frequence-badge i {
   font-size: 14px;

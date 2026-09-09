@@ -16,7 +16,7 @@ function setTheme(theme) {
     : `<path d="${moonPath}"/>`;
 }
 
-const saved = localStorage.getItem('theme') || 'dark';
+const saved = localStorage.getItem('theme') || 'light';
 setTheme(saved);
 
 toggle.addEventListener('click', () => {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -9,15 +9,13 @@
     content="Portfolio de Nedj Belloum, Administrateur Systèmes & Réseaux Junior, en Bachelor Administrateur Infrastructures Sécurisées (AIS) — Nice, France.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-  <div id="particles-js"></div>
-
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
@@ -53,13 +51,20 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-glow"></div>
-    <div>
-      <h1 class="hero-name">Nedj Belloum</h1>
-      <p class="hero-sub"><strong>Administrateur Systèmes & Réseaux Junior</strong></p>
-      <div class="hero-cta">
-        <a href="#experiences" class="btn-primary">Voir mes expériences ↓</a>
-        <a href="img/CV_Nedj_Belloum_.pdf" target="_blank" class="btn-secondary">Télécharger le CV</a>
+    <div class="hero-card">
+      <div class="hero-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">Administrateur Systèmes & Réseaux Junior</div>
+        <h1 class="hero-name">Nedj Belloum</h1>
+        <p class="hero-sub">Rigueur opérationnelle et goût du détail, au service de <strong>l'administration systèmes, réseaux et cloud</strong>.</p>
+        <div class="hero-cta">
+          <a href="#experiences" class="btn-primary">Voir mes expériences</a>
+          <a href="img/CV_Nedj_Belloum_.pdf" target="_blank" class="btn-secondary">Télécharger le CV</a>
+        </div>
       </div>
     </div>
     <div class="hero-scroll">
@@ -249,9 +254,6 @@
   </button>
 
   <script src="js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="js/particles-init.js"></script>
-  <script src="js/click-spark.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@ function setTheme(theme) {
     ? `<path d="${sunPath}"/>`
     : `<path d="${moonPath}"/>`;
 }
-const saved = localStorage.getItem('theme') || 'dark';
+const saved = localStorage.getItem('theme') || 'light';
 setTheme(saved);
 toggle.addEventListener('click', () => {
   setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
