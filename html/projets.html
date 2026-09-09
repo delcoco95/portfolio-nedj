@@ -55,19 +55,61 @@
     <div class="page-hero-tag">Réalisations</div>
     <h1>Projets &<br>réalisations.</h1>
     <p>Chaque projet présenté ici retrace une démarche complète : du besoin identifié à la solution livrée, en contexte professionnel ou de formation.</p>
-    <div class="project-nav-buttons">
-      <a href="#project-migration-os" class="project-nav-btn">Migration OS & Inventaire</a>
-      <a href="#project-migration-cloud" class="project-nav-btn">Migration Cloud 5 To</a>
-      <a href="#project-listes-diffusion" class="project-nav-btn">Listes de Distribution M365</a>
-      <a href="#project-infra-iris" class="project-nav-btn">Infrastructure IRIS 802.1X</a>
-      <a href="#project-pra-pca" class="project-nav-btn">PRA/PCA & Haute Disponibilité</a>
-    </div>
   </div>
+
+  <!-- PROJECT CARDS GRID -->
+  <section id="projets-grid" style="padding-top:0;">
+    <div class="project-cards-grid">
+      <a href="#project-migration-os" class="project-card" style="--hue:20;">
+        <div class="project-card-thumb"><i class="fa-brands fa-windows"></i></div>
+        <div class="project-card-body">
+          <span class="project-card-tag">Entreprise</span>
+          <h3 class="project-card-title">Migration OS & inventaire du parc</h3>
+          <p class="project-card-desc">Migration Windows 10 → 11 et fiabilisation de l'inventaire IT sur ~50 équipements.</p>
+        </div>
+      </a>
+      <a href="#project-migration-cloud" class="project-card" style="--hue:200;">
+        <div class="project-card-thumb"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <div class="project-card-body">
+          <span class="project-card-tag">Entreprise</span>
+          <h3 class="project-card-title">Migration Cloud 5 To</h3>
+          <p class="project-card-desc">Bascule des serveurs de fichiers locaux vers OneDrive / Microsoft 365 en 10 semaines.</p>
+        </div>
+      </a>
+      <a href="#project-listes-diffusion" class="project-card" style="--hue:150;">
+        <div class="project-card-thumb"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <div class="project-card-body">
+          <span class="project-card-tag">Entreprise</span>
+          <h3 class="project-card-title">Interface listes de distribution M365</h3>
+          <p class="project-card-desc">Outil interne pour décentraliser la gestion des listes de diffusion via Outlook.</p>
+        </div>
+      </a>
+      <a href="#project-infra-iris" class="project-card" style="--hue:265;">
+        <div class="project-card-thumb"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="project-card-body">
+          <span class="project-card-tag">École</span>
+          <h3 class="project-card-title">Infrastructure réseau IRIS 802.1X</h3>
+          <p class="project-card-desc">Architecture réseau segmentée avec authentification par certificat sur matériel Cisco réel.</p>
+        </div>
+      </a>
+      <a href="#project-pra-pca" class="project-card" style="--hue:340;">
+        <div class="project-card-thumb"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="project-card-body">
+          <span class="project-card-tag">École</span>
+          <h3 class="project-card-title">PRA/PCA & haute disponibilité</h3>
+          <p class="project-card-desc">Sauvegarde immuable, réplication synchrone et failover automatique en cas de sinistre.</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <div class="divider"></div>
 
   <!-- PROJETS — CASE STUDIES -->
   <section id="projets">
+    <p class="section-label">Détail des projets</p>
+    <h2 class="section-title">Études de cas<br>complètes.</h2>
+    <p class="section-sub">Contexte, méthodologie, solution technique et résultats pour chaque réalisation.</p>
 
     <div class="case-studies">
 
@@ -849,23 +891,63 @@
     </div>
   </div>
 
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="section-label">Questions fréquentes</p>
+    <h2 class="section-title">À propos de<br>ces projets.</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Quelle est la différence entre les projets « Entreprise » et « École » ?</div>
+        <div class="faq-a">Les projets « Entreprise » sont réalisés en situation réelle chez Groupe Ragni, avec un besoin métier concret et un suivi Jira. Les projets « École » sont menés en formation, sur des infrastructures réelles (matériel Cisco, VMs) mais dans un cadre pédagogique.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Les documentations et annexes sont-elles consultables ?</div>
+        <div class="faq-a">Oui, chaque étude de cas propose un accès direct à la documentation technique rédigée et, pour les projets académiques, aux annexes d'épreuve associées.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Le code source est-il disponible ?</div>
+        <div class="faq-a">Pour les projets techniques (infrastructure réseau, PRA/PCA), le code et la configuration sont publiés sur GitHub. Les projets en entreprise restent confidentiels mais sont documentés dans le détail ci-dessus.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quelle méthodologie est utilisée sur ces projets ?</div>
+        <div class="faq-a">Une approche agile adaptée au contexte : sprints hebdomadaires, suivi Jira, phases de test/validation, puis rédaction systématique d'une procédure ou documentation réutilisable.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="../index.html">Accueil</a>
-        <a href="projets.html">Projets</a>
-        <a href="competences.html">Compétences</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">Nedj Belloum</span>
+          <p class="footer-tagline">Administrateur Systèmes & Réseaux Junior, basé à Nice — disponible pour des missions IT en alternance ou ponctuelles.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" class="footer-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/delcoco95" target="_blank" class="footer-social" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <div class="footer-col-title">Navigation</div>
+            <a href="../index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Légal</div>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="plan-site.html">Plan du site</a>
+            <a href="confidentialite.html">Confidentialité</a>
+          </div>
+        </div>
       </div>
-      <div class="footer-links" style="margin-top:10px;">
-        <a href="mentions-legales.html">Mentions légales</a>
-        <a href="plan-site.html">Plan du site</a>
-        <a href="confidentialite.html">Politique de confidentialité</a>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Nedj Belloum — Tous droits réservés</p>
       </div>
-      <p class="footer-copy">© 2026 Nedj Belloum — Tous droits réservés</p>
     </div>
   </footer>
 

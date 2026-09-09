@@ -36,7 +36,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08 });
 
-document.querySelectorAll('.skill-panel, .patrimoine-card').forEach((el, i) => {
+document.querySelectorAll('.skill-article, .patrimoine-card').forEach((el, i) => {
   el.style.transitionDelay = (i * 0.06) + 's';
   observer.observe(el);
 });

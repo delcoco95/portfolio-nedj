@@ -38,7 +38,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.timeline-item, .cert-card').forEach(el => observer.observe(el));
+document.querySelectorAll('.timeline-item, .cert-card, .animate-up').forEach(el => observer.observe(el));
 
 // Stagger timeline items
 document.querySelectorAll('.timeline-item').forEach((item, i) => {
