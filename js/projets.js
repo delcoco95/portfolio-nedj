@@ -1,4 +1,4 @@
-// projets.js — Scripts pour la page Projets (format case study)
+// projets.js — Scripts pour la page Projets
 
 // ── THEME TOGGLE ──
 const html = document.documentElement;
@@ -27,17 +27,17 @@ const mobileNav = document.getElementById('mobileNav');
 hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
 function closeMobileNav() { mobileNav.classList.remove('open'); }
 
-// ── SCROLL ANIMATIONS (case studies) ──
+// ── SCROLL ANIMATIONS (cartes projets) ──
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     }
   });
-}, { threshold: 0.06 });
+}, { threshold: 0.08 });
 
-document.querySelectorAll('.case-study').forEach((el, i) => {
-  el.style.transitionDelay = (i * 0.08) + 's';
+document.querySelectorAll('.proj-card').forEach((el, i) => {
+  el.style.transitionDelay = (Math.min(i, 5) * 0.06) + 's';
   observer.observe(el);
 });
 
@@ -50,43 +50,4 @@ if (scrollBtn) {
   scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-}
-
-// ── MODALE PROJETS ENTREPRISE ──
-const entModal = document.getElementById('entProjectModal');
-const closeEntModal = document.getElementById('closeEntModal');
-
-if (entModal && closeEntModal) {
-  document.addEventListener('click', (e) => {
-    const detailsBtn = e.target.closest('.project-details-btn');
-
-    if (detailsBtn) {
-      e.preventDefault();
-      const targetPanel = detailsBtn.getAttribute('data-panel');
-      showEntTab(targetPanel);
-      entModal.classList.add('show');
-    }
-  });
-
-  closeEntModal.addEventListener('click', () => {
-    entModal.classList.remove('show');
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target === entModal) {
-      entModal.classList.remove('show');
-    }
-  });
-
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && entModal.classList.contains('show')) {
-      entModal.classList.remove('show');
-    }
-  });
-
-  function showEntTab(id) {
-    document.querySelectorAll('.ent-panel').forEach(p => {
-      p.classList.toggle('active', p.id === 'ent-panel-' + id);
-    });
-  }
 }

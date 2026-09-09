@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projets — Portfolio Nedj Belloum</title>
   <meta name="description"
-    content="Projets IT de Nedj Belloum : migration cloud, infrastructure réseau sécurisée, PRA/PCA, interfaces métier et automatisation PowerShell.">
+    content="8 projets IT de Nedj Belloum : migration cloud, infrastructure réseau sécurisée, PRA/PCA, sécurisation Linux, supervision Prometheus/Grafana et automatisation PowerShell.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets.css">
-  <link rel="stylesheet" href="../css/ent-modal.css">
 </head>
 
 <body>
@@ -24,11 +23,10 @@
       <ul class="nav-links">
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="projets.html" class="active">Projets</a></li>
-        <li><a href="competences.html">Compétences</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:10px;">
-        <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" class="nav-linkedin" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
         <button class="theme-toggle" id="themeToggle" title="Changer le thème">
@@ -46,7 +44,6 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="../index.html" onclick="closeMobileNav()">Accueil</a>
     <a href="projets.html" class="active" onclick="closeMobileNav()">Projets</a>
-    <a href="competences.html" onclick="closeMobileNav()">Compétences</a>
     <a href="contact.html" onclick="closeMobileNav()">Contact</a>
   </div>
 
@@ -54,866 +51,119 @@
   <div class="page-hero">
     <div class="page-hero-tag">Réalisations</div>
     <h1>Projets &<br>réalisations.</h1>
-    <p>Chaque projet présenté ici retrace une démarche complète : du besoin identifié à la solution livrée, en contexte professionnel ou de formation.</p>
+    <p>Huit projets menés en entreprise et en formation — administration système, réseau, cloud et sécurité.</p>
   </div>
-
-  <!-- PROJECT CARDS GRID -->
-  <section id="projets-grid" style="padding-top:0;">
-    <div class="project-cards-grid">
-      <a href="#project-migration-os" class="project-card" style="--hue:20;">
-        <div class="project-card-thumb"><i class="fa-brands fa-windows"></i></div>
-        <div class="project-card-body">
-          <span class="project-card-tag">Entreprise</span>
-          <h3 class="project-card-title">Migration OS & inventaire du parc</h3>
-          <p class="project-card-desc">Migration Windows 10 → 11 et fiabilisation de l'inventaire IT sur ~50 équipements.</p>
-        </div>
-      </a>
-      <a href="#project-migration-cloud" class="project-card" style="--hue:200;">
-        <div class="project-card-thumb"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-        <div class="project-card-body">
-          <span class="project-card-tag">Entreprise</span>
-          <h3 class="project-card-title">Migration Cloud 5 To</h3>
-          <p class="project-card-desc">Bascule des serveurs de fichiers locaux vers OneDrive / Microsoft 365 en 10 semaines.</p>
-        </div>
-      </a>
-      <a href="#project-listes-diffusion" class="project-card" style="--hue:150;">
-        <div class="project-card-thumb"><i class="fa-solid fa-envelope-open-text"></i></div>
-        <div class="project-card-body">
-          <span class="project-card-tag">Entreprise</span>
-          <h3 class="project-card-title">Interface listes de distribution M365</h3>
-          <p class="project-card-desc">Outil interne pour décentraliser la gestion des listes de diffusion via Outlook.</p>
-        </div>
-      </a>
-      <a href="#project-infra-iris" class="project-card" style="--hue:265;">
-        <div class="project-card-thumb"><i class="fa-solid fa-network-wired"></i></div>
-        <div class="project-card-body">
-          <span class="project-card-tag">École</span>
-          <h3 class="project-card-title">Infrastructure réseau IRIS 802.1X</h3>
-          <p class="project-card-desc">Architecture réseau segmentée avec authentification par certificat sur matériel Cisco réel.</p>
-        </div>
-      </a>
-      <a href="#project-pra-pca" class="project-card" style="--hue:340;">
-        <div class="project-card-thumb"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="project-card-body">
-          <span class="project-card-tag">École</span>
-          <h3 class="project-card-title">PRA/PCA & haute disponibilité</h3>
-          <p class="project-card-desc">Sauvegarde immuable, réplication synchrone et failover automatique en cas de sinistre.</p>
-        </div>
-      </a>
-    </div>
-  </section>
 
   <div class="divider"></div>
 
-  <!-- PROJETS — CASE STUDIES -->
+  <!-- PROJETS GRID -->
   <section id="projets">
-    <p class="section-label">Détail des projets</p>
-    <h2 class="section-title">Études de cas<br>complètes.</h2>
-    <p class="section-sub">Contexte, méthodologie, solution technique et résultats pour chaque réalisation.</p>
+    <div class="proj-grid">
 
-    <div class="case-studies">
-
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <!-- PROJET 1 — Migration OS + Gestion de parc (Entreprise) -->
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <article class="case-study" id="project-migration-os" style="--hue:20;">
-        <span class="case-number">01</span>
-
-        <div class="case-header">
-          <div class="case-context-tag tag-enterprise">
-            Entreprise · Alternance — Groupe Ragni
-          </div>
-          <h2 class="case-title">Pilotage de la migration OS et inventaire du parc informatique</h2>
-          <p class="case-subtitle">Mise en conformité des postes utilisateurs Windows 10 → 11 et fiabilisation de l'inventaire IT pour le budget annuel.</p>
+      <article class="proj-card" id="project-migration-os" style="--hue:20;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1681366099753-f904192f17bb?auto=format&fit=crop&w=900&q=80" alt="Salle remplie d'ordinateurs de bureau" loading="lazy">
+          <span class="proj-card-num">01</span>
         </div>
-
-        <div class="case-meta">
-          <div class="case-meta-card">
-            <div class="case-meta-label">Période</div>
-            <div class="case-meta-value">Sep. — Déc. 2025</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Rôle</div>
-            <div class="case-meta-value">Technicien IT / Chef de projet opérationnel</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Méthodologie</div>
-            <div class="case-meta-value">Agile (sprints hebdo) · Jira · Excel</div>
-          </div>
-        </div>
-
-        <div class="case-content">
-          <div class="case-section">
-            <div class="case-section-title">Contexte & Problème</div>
-            <p>Avec la fin du support de sécurité de Windows 10, le parc informatique du Groupe Ragni présentait un risque de conformité. En parallèle, ~50 équipements n'étaient pas référencés dans l'outil ITSM, rendant la planification budgétaire IT imprécise.</p>
-          </div>
-          <div class="case-section">
-            <div class="case-section-title">Approche & Méthodologie</div>
-            <ul>
-              <li>Audit matériel complet pour identifier les postes compatibles Win11</li>
-              <li>Planification en 4 sprints hebdomadaires avec suivi Jira</li>
-              <li>Déploiement pilote → validation → migration en masse</li>
-              <li>Inventaire terrain + déploiement agent Cockpit en parallèle</li>
-            </ul>
-          </div>
-          <div class="case-section full-width">
-            <div class="case-section-title">Solution technique</div>
-            <p>Migration progressive de plus de 10 postes vers Windows 11, avec rédaction d'une procédure de migration détaillée pour le support IT. En parallèle, déploiement des agents Cockpit sur les postes non référencés, saisie manuelle des périphériques (modèle, n° de série) et fiabilisation de l'inventaire complet dans la plateforme ITSM.</p>
-          </div>
-          <div class="case-section section-results full-width">
-            <div class="case-section-title">Résultats & Impact</div>
-            <ul>
-              <li>Parc migré et conforme aux exigences de sécurité Microsoft</li>
-              <li>Procédure de migration opérationnelle, réutilisable par le support</li>
-              <li>~50 équipements manquants intégrés à l'inventaire ITSM</li>
-              <li>Base fiable pour la planification du budget IT 2026</li>
-              <li>Montée en compétence : gestion de projet en contexte industriel, suivi Jira</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="case-tech">
-          <span class="tech-pill">Windows 11</span>
-          <span class="tech-pill">Cockpit (ITSM)</span>
-          <span class="tech-pill">Jira</span>
-          <span class="tech-pill">Excel</span>
-          <span class="tech-pill">Procédure IT</span>
-        </div>
-
-        <div class="case-actions">
-          <a href="#" class="btn-project-details project-details-btn" data-panel="win11">Suivi projet — Migration OS</a>
-          <a href="#" class="btn-project-details project-details-btn" data-panel="parc">Suivi projet — Inventaire</a>
-          <a href="../documentation/DOC_Migration_Windows10_Windows11.pdf" target="_blank" class="btn-doc">Documentation Migration</a>
-          <a href="../documentation/DOC_Gestion_Parc_Inventaire_Cockpit.pdf" target="_blank" class="btn-doc">Documentation Inventaire</a>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Migration Windows 10 → 11 & inventaire du parc</h3>
+          <p class="proj-card-desc">Mise en conformité de plus de 50 postes et fiabilisation de l'inventaire IT, en sprints hebdomadaires avec suivi Jira.</p>
+          <div class="proj-card-tags"><span>Windows 11</span><span>Cockpit</span><span>Jira</span></div>
+          <a href="../documentation/DOC_Migration_Windows10_Windows11.pdf" target="_blank" class="proj-card-link">Documentation <i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
       </article>
 
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <!-- PROJET 2 — Migration OneDrive & Cloud (Entreprise)     -->
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <article class="case-study" id="project-migration-cloud" style="--hue:200;">
-        <span class="case-number">02</span>
-
-        <div class="case-header">
-          <div class="case-context-tag tag-enterprise">
-            Entreprise · Alternance — Groupe Ragni
-          </div>
-          <h2 class="case-title">Migration de 5 To de données vers le cloud Microsoft 365</h2>
-          <p class="case-subtitle">Modernisation de l'infrastructure de stockage : du serveur de fichiers local vers OneDrive, en 10 semaines.</p>
+      <article class="proj-card" id="project-migration-cloud" style="--hue:210;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1667372283496-893f0b1e7c16?auto=format&fit=crop&w=900&q=80" alt="Cloud computing" loading="lazy">
+          <span class="proj-card-num">02</span>
         </div>
-
-        <div class="case-meta">
-          <div class="case-meta-card">
-            <div class="case-meta-label">Période</div>
-            <div class="case-meta-value">Nov. 2025 — Jan. 2026</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Rôle</div>
-            <div class="case-meta-value">Technicien IT / Responsable migration</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Méthodologie</div>
-            <div class="case-meta-value">Sprints itératifs · Jira · SPMT</div>
-          </div>
-        </div>
-
-        <div class="case-content">
-          <div class="case-section">
-            <div class="case-section-title">Contexte & Problème</div>
-            <p>Les serveurs de fichiers locaux du Groupe Ragni étaient saturés (~5 To) et ne répondaient plus aux besoins de mobilité des collaborateurs. La direction IT a décidé de migrer vers OneDrive (1 To/utilisateur) pour libérer de l'espace et centraliser les données dans le cloud Microsoft 365.</p>
-          </div>
-          <div class="case-section">
-            <div class="case-section-title">Approche & Méthodologie</div>
-            <ul>
-              <li>Identification et priorisation des utilisateurs concernés</li>
-              <li>Benchmark des outils de migration → sélection de SPMT</li>
-              <li>Demande et obtention des droits admin OneDrive</li>
-              <li>Migration pilote, puis déploiement par vagues successives</li>
-              <li>Suivi des anomalies et accompagnement des utilisateurs</li>
-            </ul>
-          </div>
-          <div class="case-section full-width">
-            <div class="case-section-title">Solution technique</div>
-            <p>Utilisation de SharePoint Migration Tool (SPMT) pour le transfert des données. Organisation de la migration en sprints : cartographie des données, tests de validation, puis déploiement progressif par groupes d'utilisateurs. Scripts PowerShell via Graph API pour l'automatisation de certaines tâches de provisioning et de contrôle post-migration.</p>
-          </div>
-          <div class="case-section section-results full-width">
-            <div class="case-section-title">Résultats & Impact</div>
-            <ul>
-              <li>~5 To libérés sur les serveurs de fichiers locaux</li>
-              <li>Données accessibles en mobilité pour l'ensemble des collaborateurs</li>
-              <li>Documentation de la méthodologie de migration réutilisable</li>
-              <li>Réduction de la charge de maintenance sur l'infrastructure locale</li>
-              <li>Montée en compétence : PowerShell + Graph API, gestion du changement</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="case-tech">
-          <span class="tech-pill">OneDrive</span>
-          <span class="tech-pill">Microsoft 365</span>
-          <span class="tech-pill">SPMT</span>
-          <span class="tech-pill">PowerShell</span>
-          <span class="tech-pill">Graph API</span>
-          <span class="tech-pill">Jira</span>
-        </div>
-
-        <div class="case-actions">
-          <a href="#" class="btn-project-details project-details-btn" data-panel="onedrive">Suivi projet</a>
-          <a href="../documentation/DOC_Migration_OneDrive_Cloud.pdf" target="_blank" class="btn-doc">Documentation</a>
-          <a href="../annexes/OneDrive - Epreuve E5 - BTS SIO.pdf" target="_blank" class="btn-annexe">Annexes</a>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Migration de 5 To vers le cloud Microsoft 365</h3>
+          <p class="proj-card-desc">Bascule des serveurs de fichiers locaux vers OneDrive en 10 semaines, avec automatisation PowerShell du provisioning.</p>
+          <div class="proj-card-tags"><span>OneDrive</span><span>SPMT</span><span>PowerShell</span></div>
+          <a href="../documentation/DOC_Migration_OneDrive_Cloud.pdf" target="_blank" class="proj-card-link">Documentation <i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
       </article>
 
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <!-- PROJET 3 — Interface Listes de Diffusion (Entreprise)  -->
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <article class="case-study" id="project-listes-diffusion" style="--hue:150;">
-        <span class="case-number">03</span>
-
-        <div class="case-header">
-          <div class="case-context-tag tag-enterprise">
-            Entreprise · Alternance — Groupe Ragni
-          </div>
-          <h2 class="case-title">Interface web de gestion des listes de distribution Microsoft 365</h2>
-          <p class="case-subtitle">Développement et déploiement d'un outil interne pour décentraliser la gestion des listes de diffusion auprès des responsables d'équipes.</p>
+      <article class="proj-card" id="project-listes-diffusion" style="--hue:150;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1556204976-d25efd967cba?auto=format&fit=crop&w=900&q=80" alt="Boîte mail avec notifications" loading="lazy">
+          <span class="proj-card-num">03</span>
         </div>
-
-        <div class="case-meta">
-          <div class="case-meta-card">
-            <div class="case-meta-label">Période</div>
-            <div class="case-meta-value">Fév. 2026 (2 semaines)</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Rôle</div>
-            <div class="case-meta-value">Développeur front-end / Administrateur système</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Méthodologie</div>
-            <div class="case-meta-value">2 sprints · Jira · Déploiement GPO</div>
-          </div>
-        </div>
-
-        <div class="case-content">
-          <div class="case-section">
-            <div class="case-section-title">Contexte & Problème</div>
-            <p>Les responsables d'équipes ne pouvaient ni consulter ni modifier les membres de leurs listes de distribution M365. Chaque modification passait par un ticket au support IT, générant une charge récurrente sur le niveau 1 et des délais pour les utilisateurs.</p>
-          </div>
-          <div class="case-section">
-            <div class="case-section-title">Approche & Méthodologie</div>
-            <ul>
-              <li>Étude de faisabilité et choix techniques (API M365, hébergement IIS)</li>
-              <li>Sprint 1 : développement de l'interface + hébergement local</li>
-              <li>Sprint 2 : déploiement GPO Outlook + tests + documentation</li>
-              <li>Intégration dans la charte graphique de l'entreprise</li>
-            </ul>
-          </div>
-          <div class="case-section full-width">
-            <div class="case-section-title">Solution technique</div>
-            <p>Interface web (HTML/CSS/JS) connectée à Microsoft 365 via PowerShell et tâches planifiées pour la synchronisation des données. Hébergement sur le serveur IIS de production. Déploiement automatisé via GPO Active Directory : ajout d'un raccourci dans le navigateur et intégration directe dans Outlook pour un accès contextuel.</p>
-          </div>
-          <div class="case-section section-results full-width">
-            <div class="case-section-title">Résultats & Impact</div>
-            <ul>
-              <li>Autonomie des responsables d'équipes pour gérer leurs listes</li>
-              <li>Réduction significative des tickets de niveau 1 liés aux listes</li>
-              <li>Interface conforme à la charte graphique, adoptée sans formation</li>
-              <li>Déploiement transparent via GPO, zéro intervention manuelle</li>
-              <li>Montée en compétence : dev web en contexte entreprise, GPO, IIS, API M365</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="case-tech">
-          <span class="tech-pill">HTML / CSS / JS</span>
-          <span class="tech-pill">Microsoft 365</span>
-          <span class="tech-pill">PowerShell</span>
-          <span class="tech-pill">IIS</span>
-          <span class="tech-pill">GPO Active Directory</span>
-          <span class="tech-pill">Tâche planifiée</span>
-        </div>
-
-        <div class="case-actions">
-          <a href="#" class="btn-project-details project-details-btn" data-panel="dl">Suivi projet</a>
-          <a href="../documentation/Interface_Listes_Distribution_O365.pdf" target="_blank" class="btn-doc">Documentation</a>
-          <a href="../annexes/ListesDistribution - Epreuve E5 - BTS SIO.pdf" target="_blank" class="btn-annexe">Annexes</a>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Interface web pour les listes de diffusion M365</h3>
+          <p class="proj-card-desc">Outil interne permettant aux responsables d'équipe de gérer leurs listes de diffusion sans passer par un ticket support.</p>
+          <div class="proj-card-tags"><span>HTML/CSS/JS</span><span>GPO</span><span>IIS</span></div>
+          <a href="../documentation/Interface_Listes_Distribution_O365.pdf" target="_blank" class="proj-card-link">Documentation <i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
       </article>
 
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <!-- PROJET 4 — Infrastructure réseau IRIS (École)          -->
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <article class="case-study" id="project-infra-iris" style="--hue:265;">
-        <span class="case-number">04</span>
-
-        <div class="case-header">
-          <div class="case-context-tag tag-school">
-            Projet de formation · 60 jours
-          </div>
-          <h2 class="case-title">Conception d'une infrastructure réseau sécurisée avec authentification 802.1X</h2>
-          <p class="case-subtitle">Architecture réseau segmentée pour un établissement scolaire, avec contrôle d'accès Wi-Fi par certificat sur matériel Cisco réel.</p>
+      <article class="proj-card" id="project-infra-iris" style="--hue:265;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1680691257251-5fead813b73e?auto=format&fit=crop&w=900&q=80" alt="Commutateur réseau" loading="lazy">
+          <span class="proj-card-num">04</span>
         </div>
-
-        <div class="case-meta">
-          <div class="case-meta-card">
-            <div class="case-meta-label">Durée</div>
-            <div class="case-meta-value">60 jours (projet long)</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Rôle</div>
-            <div class="case-meta-value">Architecte réseau / Administrateur système</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Environnement</div>
-            <div class="case-meta-value">Matériel Cisco réel · Windows Server</div>
-          </div>
-        </div>
-
-        <div class="case-content">
-          <div class="case-section">
-            <div class="case-section-title">Contexte & Problème</div>
-            <p>L'école IRIS de Nice avait besoin d'une infrastructure réseau segmentée et sécurisée pour isoler les flux élèves, enseignants et administration. L'accès au réseau Wi-Fi devait être contrôlé par authentification forte (802.1X) adossée à l'annuaire Active Directory.</p>
-          </div>
-          <div class="case-section">
-            <div class="case-section-title">Approche & Méthodologie</div>
-            <ul>
-              <li>Audit des besoins et conception du schéma réseau (logique + physique)</li>
-              <li>Définition du plan d'adressage IP et de la politique de VLAN</li>
-              <li>Planification des interventions : brassage, configuration, déploiement</li>
-              <li>Tests de connectivité et correction des règles de sécurité</li>
-            </ul>
-          </div>
-          <div class="case-section full-width">
-            <div class="case-section-title">Solution technique</div>
-            <p>Configuration de switchs Cisco (VLANs, routage inter-VLAN) pour la segmentation réseau. Déploiement d'un serveur NPS RADIUS couplé à l'Active Directory pour le contrôle d'accès réseau 802.1X. Mise en place de WireGuard pour l'accès VPN distant. Services DNS et DHCP configurés sur Windows Server. Sauvegarde systématique des configurations (startup-config) des équipements.</p>
-          </div>
-          <div class="case-section section-results full-width">
-            <div class="case-section-title">Résultats & Impact</div>
-            <ul>
-              <li>Infrastructure réseau fonctionnelle et segmentée sur matériel physique</li>
-              <li>Contrôle d'accès Wi-Fi opérationnel via authentification 802.1X</li>
-              <li>Documentation d'exploitation complète rédigée</li>
-              <li>Première expérience sur du matériel Cisco réel (vs simulateur)</li>
-              <li>Montée en compétence : commutation L2/L3, RADIUS, VPN, planification infra</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="case-tech">
-          <span class="tech-pill">Cisco IOS</span>
-          <span class="tech-pill">VLAN / Inter-VLAN</span>
-          <span class="tech-pill">NPS RADIUS</span>
-          <span class="tech-pill">802.1X</span>
-          <span class="tech-pill">Active Directory</span>
-          <span class="tech-pill">WireGuard</span>
-          <span class="tech-pill">DNS / DHCP</span>
-        </div>
-
-        <div class="case-actions">
-          <a href="https://github.com/delcoco95/infrastructure-iris" target="_blank" class="btn-github">GitHub</a>
-          <a href="../documentation/08_Infrastructure_IRIS.pdf" target="_blank" class="btn-doc">Documentation</a>
-          <a href="../annexes/RP01 - Infra Reseau Securise - Annexes 7.pdf" target="_blank" class="btn-annexe">Annexes</a>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Réseau sécurisé avec authentification 802.1X</h3>
+          <p class="proj-card-desc">Segmentation VLAN et contrôle d'accès Wi-Fi par certificat, déployés sur du matériel Cisco réel.</p>
+          <div class="proj-card-tags"><span>Cisco IOS</span><span>NPS RADIUS</span><span>WireGuard</span></div>
+          <a href="https://github.com/delcoco95/infrastructure-iris" target="_blank" class="proj-card-link"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
       </article>
 
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <!-- PROJET 5 — PRA/PCA (École)                             -->
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <article class="case-study" id="project-pra-pca" style="--hue:340;">
-        <span class="case-number">05</span>
-
-        <div class="case-header">
-          <div class="case-context-tag tag-school">
-            Projet de formation · 8 jours
-          </div>
-          <h2 class="case-title">Architecture PRA/PCA avec sauvegarde chiffrée et haute disponibilité</h2>
-          <p class="case-subtitle">Conception et déploiement d'un plan de reprise et de continuité d'activité avec sauvegarde immuable, réplication synchrone et failover automatique.</p>
+      <article class="proj-card" id="project-pra-pca" style="--hue:340;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1784652852605-6945598f2af3?auto=format&fit=crop&w=900&q=80" alt="Data center moderne" loading="lazy">
+          <span class="proj-card-num">05</span>
         </div>
-
-        <div class="case-meta">
-          <div class="case-meta-card">
-            <div class="case-meta-label">Durée</div>
-            <div class="case-meta-value">8 jours intensifs</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Rôle</div>
-            <div class="case-meta-value">Architecte infrastructure / Admin système</div>
-          </div>
-          <div class="case-meta-card">
-            <div class="case-meta-label">Environnement</div>
-            <div class="case-meta-value">3 VMs Vagrant · Docker Compose</div>
-          </div>
-        </div>
-
-        <div class="case-content">
-          <div class="case-section">
-            <div class="case-section-title">Contexte & Problème</div>
-            <p>Face à la montée des menaces ransomware, un besoin de continuité d'activité et de sauvegarde immuable des données critiques a été identifié. L'objectif : garantir un RPO (perte de données) inférieur à 1 heure et un RTO (temps de reprise) inférieur à 30 secondes en cas de sinistre majeur.</p>
-          </div>
-          <div class="case-section">
-            <div class="case-section-title">Approche & Méthodologie</div>
-            <ul>
-              <li>Analyse des menaces cyber et définition des objectifs RTO/RPO</li>
-              <li>Conception de l'architecture cible (PRA + PCA)</li>
-              <li>Déploiement automatisé via Vagrant (3 VMs)</li>
-              <li>Tests de sinistre : simulation de panne et validation de la restauration</li>
-            </ul>
-          </div>
-          <div class="case-section full-width">
-            <div class="case-section-title">Solution technique</div>
-            <p><strong>PRA :</strong> BorgBackup avec Borgmatic pour des sauvegardes horaires chiffrées AES-256 et immuables (RPO &lt; 1h). <strong>PCA :</strong> DRBD pour la réplication synchrone des données (RPO = 0) combiné à Keepalived/VRRP pour un failover automatique (RTO &lt; 30s). Supervision de l'ensemble via Prometheus et Grafana. Orchestration des services avec Docker Compose sur 3 machines virtuelles provisionnées par Vagrant.</p>
-          </div>
-          <div class="case-section section-results full-width">
-            <div class="case-section-title">Résultats & Impact</div>
-            <ul>
-              <li>PRA validé : restauration complète testée et documentée</li>
-              <li>PCA validé : failover automatique en &lt; 30 secondes</li>
-              <li>Sauvegardes immuables protégées contre les ransomwares</li>
-              <li>Supervision temps réel intégrée (Grafana dashboards)</li>
-              <li>Montée en compétence : architectures haute dispo, DRBD, IaC (Vagrant), Docker</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="case-tech">
-          <span class="tech-pill">BorgBackup</span>
-          <span class="tech-pill">DRBD</span>
-          <span class="tech-pill">Keepalived / VRRP</span>
-          <span class="tech-pill">Prometheus</span>
-          <span class="tech-pill">Grafana</span>
-          <span class="tech-pill">Docker Compose</span>
-          <span class="tech-pill">Vagrant</span>
-          <span class="tech-pill">OpenLDAP</span>
-        </div>
-
-        <div class="case-actions">
-          <a href="https://github.com/delcoco95/PRA-PCRA---backup-" target="_blank" class="btn-github">GitHub</a>
-          <a href="../documentation/09_PRA_PCRA_Backup.pdf" target="_blank" class="btn-doc">Documentation</a>
-          <a href="../annexes/RP02 - Conception PRA_PCA - Annexes 7.pdf" target="_blank" class="btn-annexe">Annexes</a>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Plan de reprise & continuité d'activité</h3>
+          <p class="proj-card-desc">Sauvegardes chiffrées immuables et failover automatique en moins de 30 secondes en cas de sinistre.</p>
+          <div class="proj-card-tags"><span>BorgBackup</span><span>DRBD</span><span>Grafana</span></div>
+          <a href="https://github.com/delcoco95/PRA-PCRA---backup-" target="_blank" class="proj-card-link"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
       </article>
 
-    </div><!-- /case-studies -->
-
-  </section>
-
-  <!-- MODAL DETAILS PROJET ENTREPRISE -->
-  <div id="entProjectModal" class="ent-modal">
-    <div class="ent-modal-content">
-      <span class="ent-modal-close" id="closeEntModal" title="Fermer la fenêtre (Échap)">&times;</span>
-      <div id="entModalBody">
-        <!-- ===== WIN11 ===== -->
-        <div class="ent-panel" id="ent-panel-win11">
-          <div class="ent-hero">
-            <div class="ent-hero-tag">Projet IT en entreprise</div>
-            <h1 class="ent-hero-title">Migration Windows 10 → 11</h1>
-            <p class="ent-hero-sub">Conduite de projet d'infrastructure avec sprints hebdomadaires, suivi Jira et
-              déploiement progressif.</p>
-          </div>
-          <div class="ent-proj-meta">
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Période</div>
-              <div class="ent-meta-value">15 sept. → 15 oct. 2025</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Besoin</div>
-              <div class="ent-meta-value" style="font-size:12px">Windows 10 sans mises à jour sécurité → risque
-                entreprise</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Livrable</div>
-              <div class="ent-meta-value" style="font-size:12px">Procédure de migration Win10 → Win11</div>
-            </div>
-          </div>
-
-          <div class="ent-section-label">Diagramme de Gantt — Sprints hebdomadaires</div>
-          <div class="ent-gantt-wrapper">
-            <div class="ent-gantt-timeline" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-header-col">Tâches</div>
-              <div class="ent-gantt-header-col">S1</div>
-              <div class="ent-gantt-header-col">S2</div>
-              <div class="ent-gantt-header-col">S3</div>
-              <div class="ent-gantt-header-col">S4</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Vérification compatibilité</div>
-              <div class="ent-gantt-bar" style="grid-column: 2 / span 1;">S1</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Planification & pilote</div>
-              <div class="ent-gantt-bar g-blue" style="grid-column: 3 / span 1;">S2</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Migration en masse</div>
-              <div class="ent-gantt-bar g-amber" style="grid-column: 4 / span 1;">S3</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Procédure & validation</div>
-              <div class="ent-gantt-bar g-green" style="grid-column: 5 / span 1;">S4</div>
-            </div>
-          </div>
-
-          <div class="ent-section-label">Planification des sprints</div>
-          <table class="ent-sprint-table">
-            <thead>
-              <tr>
-                <th>Sprint</th>
-                <th>Période</th>
-                <th>Objectif</th>
-                <th>Livrable</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S1</span></td>
-                <td>15–21 sept.</td>
-                <td>Vérification compatibilité (modèle, CPU, RAM, stockage)</td>
-                <td>Liste postes compatibles / incompatibles</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S2</span></td>
-                <td>22–28 sept.</td>
-                <td>Planification des interventions + déploiement pilote</td>
-                <td>Calendrier + postes pilotes migrés</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S3</span></td>
-                <td>29 sept.–5 oct.</td>
-                <td>Migration en masse + tests de validation</td>
-                <td>Parc migré + rapport de tests</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S4</span></td>
-                <td>6–15 oct.</td>
-                <td>Corrections + rédaction procédure</td>
-                <td>Procédure Win10 → Win11</td>
-              </tr>
-            </tbody>
-          </table>
+      <article class="proj-card" id="project-securisation-linux" style="--hue:5;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=900&q=80" alt="Cadenas de sécurité sur un clavier" loading="lazy">
+          <span class="proj-card-num">06</span>
         </div>
-
-        <!-- ===== ONEDRIVE ===== -->
-        <div class="ent-panel" id="ent-panel-onedrive">
-          <div class="ent-hero">
-            <div class="ent-hero-tag">Projet IT en entreprise</div>
-            <h1 class="ent-hero-title">Migration OneDrive & Cloud</h1>
-            <p class="ent-hero-sub">Libération d'espace disque et transfert vers le cloud (~5 To libérés).</p>
-          </div>
-          <div class="ent-proj-meta">
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Période</div>
-              <div class="ent-meta-value">10 nov. 2025 → 25 jan. 2026</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Besoin</div>
-              <div class="ent-meta-value" style="font-size:12px">Serveur saturé → migration vers OneDrive (1 To / user),
-                libérer ~5 To</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Outil choisi</div>
-              <div class="ent-meta-value" style="font-size:12px">SharePoint Migration Tool (SPMT)</div>
-            </div>
-          </div>
-
-          <div class="ent-section-label">Diagramme de Gantt — Sprints hebdomadaires</div>
-          <div class="ent-gantt-wrapper">
-            <div class="ent-gantt-timeline" style="grid-template-columns: 200px repeat(6, 1fr);">
-              <div class="ent-gantt-header-col">Tâches</div>
-              <div class="ent-gantt-header-col">S1</div>
-              <div class="ent-gantt-header-col">S2</div>
-              <div class="ent-gantt-header-col">S3</div>
-              <div class="ent-gantt-header-col">S4</div>
-              <div class="ent-gantt-header-col">S5-S9</div>
-              <div class="ent-gantt-header-col">S10</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(6, 1fr);">
-              <div class="ent-gantt-task-name">Identification users</div>
-              <div class="ent-gantt-bar" style="grid-column: 2 / span 1;">S1</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(6, 1fr);">
-              <div class="ent-gantt-task-name">Benchmark & SPMT</div>
-              <div class="ent-gantt-bar g-blue" style="grid-column: 3 / span 1;">S2</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(6, 1fr);">
-              <div class="ent-gantt-task-name">Droits & Admin</div>
-              <div class="ent-gantt-bar g-amber" style="grid-column: 4 / span 1;">S3</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(6, 1fr);">
-              <div class="ent-gantt-task-name">Migration pilote</div>
-              <div class="ent-gantt-bar g-purple" style="grid-column: 5 / span 1;">S4</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(6, 1fr);">
-              <div class="ent-gantt-task-name">Déploiement progressif</div>
-              <div class="ent-gantt-bar g-green" style="grid-column: 6 / span 1;">S5-S9</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(6, 1fr);">
-              <div class="ent-gantt-task-name">Clôture & Documentation</div>
-              <div class="ent-gantt-bar" style="grid-column: 7 / span 1;">S10</div>
-            </div>
-          </div>
-
-          <div class="ent-section-label">Planification des sprints</div>
-          <table class="ent-sprint-table">
-            <thead>
-              <tr>
-                <th>Sprint</th>
-                <th>Période</th>
-                <th>Objectif</th>
-                <th>Livrable</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S1</span></td>
-                <td>10–16 nov.</td>
-                <td>Identification et priorisation des utilisateurs concernés</td>
-                <td>Liste priorisée</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S2</span></td>
-                <td>17–30 nov.</td>
-                <td>Benchmark des outils + sélection SPMT</td>
-                <td>Décision outil documentée</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S3</span></td>
-                <td>1–7 déc.</td>
-                <td>Demande et obtention des droits admin OneDrive</td>
-                <td>Droits accordés</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S4</span></td>
-                <td>8–21 déc.</td>
-                <td>Migration pilote + tests de validation</td>
-                <td>Rapport pilote</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S5–S9</span></td>
-                <td>5–18 jan.</td>
-                <td>Déploiement progressif par vagues d'utilisateurs</td>
-                <td>~5 To libérés sur serveur</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S10</span></td>
-                <td>19–25 jan.</td>
-                <td>Clôture + rédaction documentation</td>
-                <td>Guide méthode migration</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="ent-section-label" style="margin-top: 30px;">Suivi Jira</div>
-          <div class="ent-gantt-container">
-            <img src="../img/Jira - Migration cloud.jpg" alt="Suivi Jira de la migration OneDrive"
-              class="ent-gantt-img">
-            <p class="ent-img-desc">Aperçu du suivi Jira de la migration OneDrive.</p>
-          </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Serveur Linux multi-services sécurisé</h3>
+          <p class="proj-card-desc">Annuaire LDAP, VPN WireGuard et antivirus, déployés de façon reproductible sur une infrastructure conteneurisée.</p>
+          <div class="proj-card-tags"><span>OpenLDAP</span><span>WireGuard</span><span>Docker</span></div>
+          <a href="../documentation/07_Securite_Serveur_Mediaschool.pdf" target="_blank" class="proj-card-link">Documentation <i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
+      </article>
 
-        <!-- ===== PARC ===== -->
-        <div class="ent-panel" id="ent-panel-parc">
-          <div class="ent-hero">
-            <div class="ent-hero-tag">Projet IT en entreprise</div>
-            <h1 class="ent-hero-title">Gestion de parc & inventaire</h1>
-            <p class="ent-hero-sub">Inventaire de plus de 50 équipements via Cockpit pour mise en conformité.</p>
-          </div>
-          <div class="ent-proj-meta">
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Période</div>
-              <div class="ent-meta-value">3 nov. → 3 déc. 2025</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Besoin</div>
-              <div class="ent-meta-value" style="font-size:12px">~50 équipements non référencés dans Cockpit → risque de
-                perte et mauvaise gestion</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Livrable</div>
-              <div class="ent-meta-value" style="font-size:12px">Procédure de gestion et d'inventaire du parc</div>
-            </div>
-          </div>
-
-          <div class="ent-section-label">Diagramme de Gantt — Sprints hebdomadaires</div>
-          <div class="ent-gantt-wrapper">
-            <div class="ent-gantt-timeline" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-header-col">Tâches</div>
-              <div class="ent-gantt-header-col">S1</div>
-              <div class="ent-gantt-header-col">S2</div>
-              <div class="ent-gantt-header-col">S3</div>
-              <div class="ent-gantt-header-col">S4</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Inventaire terrain</div>
-              <div class="ent-gantt-bar" style="grid-column: 2 / span 1;">S1</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Installation agent Cockpit</div>
-              <div class="ent-gantt-bar g-blue" style="grid-column: 3 / span 1;">S2</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Saisie manuelle</div>
-              <div class="ent-gantt-bar g-amber" style="grid-column: 4 / span 1;">S3</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(4, 1fr);">
-              <div class="ent-gantt-task-name">Tests & procédure</div>
-              <div class="ent-gantt-bar g-green" style="grid-column: 5 / span 1;">S4</div>
-            </div>
-          </div>
-
-          <div class="ent-section-label">Planification des sprints</div>
-          <table class="ent-sprint-table">
-            <thead>
-              <tr>
-                <th>Sprint</th>
-                <th>Période</th>
-                <th>Objectif</th>
-                <th>Livrable</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S1</span></td>
-                <td>3–9 nov.</td>
-                <td>Inventaire terrain + identification des équipements manquants</td>
-                <td>Liste des ~50 équipements non référencés</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S2</span></td>
-                <td>10–16 nov.</td>
-                <td>Installation de l'agent Cockpit sur les postes</td>
-                <td>Agents déployés, remontée automatique</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S3</span></td>
-                <td>17–23 nov.</td>
-                <td>Saisie manuelle des périphériques (modèle, n° série)</td>
-                <td>Parc complet dans Cockpit</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S4</span></td>
-                <td>24 nov.–3 déc.</td>
-                <td>Tests de validation + rédaction procédure</td>
-                <td>Procédure gestion & inventaire</td>
-              </tr>
-            </tbody>
-          </table>
+      <article class="proj-card" id="project-supervision" style="--hue:190;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Graphiques de supervision" loading="lazy">
+          <span class="proj-card-num">07</span>
         </div>
-
-        <!-- ===== DL ===== -->
-        <div class="ent-panel" id="ent-panel-dl">
-          <div class="ent-hero">
-            <div class="ent-hero-tag">Projet IT en entreprise</div>
-            <h1 class="ent-hero-title">Interface listes de distribution</h1>
-            <p class="ent-hero-sub">Développement d'une interface web connectée à l'Active Directory pour déléguer la
-              gestion.</p>
-          </div>
-          <div class="ent-proj-meta">
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Période</div>
-              <div class="ent-meta-value">5 fév. → 18 fév. 2026</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Besoin</div>
-              <div class="ent-meta-value" style="font-size:12px">Utilisateurs ne pouvaient pas consulter les listes de
-                distribution M365 (dynamiques/statiques)</div>
-            </div>
-            <div class="ent-meta-card">
-              <div class="ent-meta-label">Solution</div>
-              <div class="ent-meta-value" style="font-size:12px">Interface web intégrée à Outlook via GPO · Hébergement
-                IIS</div>
-            </div>
-          </div>
-
-          <div class="ent-section-label">Diagramme de Gantt — Sprints hebdomadaires</div>
-          <div class="ent-gantt-wrapper">
-            <div class="ent-gantt-timeline" style="grid-template-columns: 200px repeat(2, 1fr);">
-              <div class="ent-gantt-header-col">Tâches</div>
-              <div class="ent-gantt-header-col">S1</div>
-              <div class="ent-gantt-header-col">S2</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(2, 1fr);">
-              <div class="ent-gantt-task-name">Dév. interface & IIS</div>
-              <div class="ent-gantt-bar" style="grid-column: 2 / span 1;">S1</div>
-            </div>
-            <div class="ent-gantt-row" style="grid-template-columns: 200px repeat(2, 1fr);">
-              <div class="ent-gantt-task-name">Déploiement GPO & Tests</div>
-              <div class="ent-gantt-bar g-green" style="grid-column: 3 / span 1;">S2</div>
-            </div>
-          </div>
-          <div class="ent-gantt-container">
-            <img src="../img/Jira - Interface Liste distribution.png"
-              alt="Tableau de bord Jira de l'interface liste de distribution" class="ent-gantt-img">
-            <p class="ent-img-desc">Aperçu Jira du suivi des tâches de développement.</p>
-          </div>
-
-          <div class="ent-section-label">Planification des sprints</div>
-          <table class="ent-sprint-table">
-            <thead>
-              <tr>
-                <th>Sprint</th>
-                <th>Période</th>
-                <th>Objectif</th>
-                <th>Livrable</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S1</span></td>
-                <td>5–11 fév.</td>
-                <td>Développement interface + création domaine local + hébergement IIS</td>
-                <td>Interface fonctionnelle en local</td>
-              </tr>
-              <tr>
-                <td><span class="ent-tag ent-tag-purple">S2</span></td>
-                <td>12–18 fév.</td>
-                <td>Déploiement GPO Outlook + tests + documentation</td>
-                <td>Guide mise en place & utilisation</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="ent-section-label" style="margin-top: 30px;">Aperçu de l'interface Web</div>
-          <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 24px;">
-            <img src="../img/Webui liste distrib.jpeg" alt="Interface d'accueil Web UI liste de distribution"
-              class="ent-gantt-img">
-            <img src="../img/Webui liste distrib contenu.jpeg"
-              alt="Interface de gestion des membres liste de distribution Web UI" class="ent-gantt-img">
-          </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Supervision d'infrastructure & alertes</h3>
+          <p class="proj-card-desc">Détection automatique des pannes et surcharges, avec alerte mail avant que l'incident ne devienne visible.</p>
+          <div class="proj-card-tags"><span>Prometheus</span><span>Grafana</span><span>Alertmanager</span></div>
+          <a href="../documentation/05_Supervision_Prometheus_Grafana.pdf" target="_blank" class="proj-card-link">Documentation <i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
+      </article>
 
-        <div class="ent-footer">
-          <div class="ent-f-left">Projet réalisé en alternance · Méthode Agile</div>
-          <div class="ent-f-right">
-            <span class="ent-tag ent-tag-purple">Jira</span>
-            <span class="ent-tag ent-tag-green">Excel</span>
-          </div>
+      <article class="proj-card" id="project-powershell-menu" style="--hue:230;">
+        <div class="proj-card-media">
+          <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=900&q=80" alt="Écran affichant du code" loading="lazy">
+          <span class="proj-card-num">08</span>
         </div>
-      </div>
-    </div>
-  </div>
+        <div class="proj-card-body">
+          <h3 class="proj-card-title">Automatisation du déploiement Windows Server</h3>
+          <p class="proj-card-desc">Un script unique pour configurer les rôles réseau courants (AD, DHCP, DNS) en quelques minutes plutôt qu'en heures.</p>
+          <div class="proj-card-tags"><span>PowerShell</span><span>Active Directory</span><span>DHCP/DNS</span></div>
+          <a href="../documentation/02_PowerShell_WindowsServer.pdf" target="_blank" class="proj-card-link">Documentation <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+      </article>
 
-  <div class="divider"></div>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <p class="section-label">Questions fréquentes</p>
-    <h2 class="section-title">À propos de<br>ces projets.</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-q">Quelle est la différence entre les projets « Entreprise » et « École » ?</div>
-        <div class="faq-a">Les projets « Entreprise » sont réalisés en situation réelle chez Groupe Ragni, avec un besoin métier concret et un suivi Jira. Les projets « École » sont menés en formation, sur des infrastructures réelles (matériel Cisco, VMs) mais dans un cadre pédagogique.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Les documentations et annexes sont-elles consultables ?</div>
-        <div class="faq-a">Oui, chaque étude de cas propose un accès direct à la documentation technique rédigée et, pour les projets académiques, aux annexes d'épreuve associées.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Le code source est-il disponible ?</div>
-        <div class="faq-a">Pour les projets techniques (infrastructure réseau, PRA/PCA), le code et la configuration sont publiés sur GitHub. Les projets en entreprise restent confidentiels mais sont documentés dans le détail ci-dessus.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Quelle méthodologie est utilisée sur ces projets ?</div>
-        <div class="faq-a">Une approche agile adaptée au contexte : sprints hebdomadaires, suivi Jira, phases de test/validation, puis rédaction systématique d'une procédure ou documentation réutilisable.</div>
-      </div>
     </div>
   </section>
 
@@ -925,7 +175,7 @@
           <span class="footer-logo">Nedj Belloum</span>
           <p class="footer-tagline">Administrateur Systèmes & Réseaux Junior, basé à Nice — disponible pour des missions IT en alternance ou ponctuelles.</p>
           <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" class="footer-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="footer-social" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://github.com/delcoco95" target="_blank" class="footer-social" title="GitHub"><i class="fa-brands fa-github"></i></a>
           </div>
         </div>
@@ -934,7 +184,6 @@
             <div class="footer-col-title">Navigation</div>
             <a href="../index.html">Accueil</a>
             <a href="projets.html">Projets</a>
-            <a href="competences.html">Compétences</a>
             <a href="contact.html">Contact</a>
           </div>
           <div class="footer-col">

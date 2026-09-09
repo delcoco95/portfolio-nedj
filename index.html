@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nedj Belloum — Administrateur Systèmes & Réseaux Junior</title>
+  <title>Nedj Belloum — Administrateur Systèmes, Réseaux & Cybersécurité</title>
   <meta name="description"
-    content="Portfolio de Nedj Belloum, Administrateur Systèmes & Réseaux Junior, en Bachelor Administrateur Infrastructures Sécurisées (AIS) — Nice, France.">
+    content="Portfolio de Nedj Belloum — administration systèmes, réseaux, cloud et sécurité. Bachelor Administrateur Infrastructures Sécurisées (AIS), Nice. Disponible en alternance et pour des missions IT ponctuelles.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
@@ -23,7 +23,6 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="html/projets.html">Projets</a></li>
-        <li><a href="html/competences.html">Compétences</a></li>
         <li><a href="html/contact.html">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:10px;">
@@ -45,29 +44,28 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html" class="active" onclick="closeMobileNav()">Accueil</a>
     <a href="html/projets.html" onclick="closeMobileNav()">Projets</a>
-    <a href="html/competences.html" onclick="closeMobileNav()">Compétences</a>
     <a href="html/contact.html" onclick="closeMobileNav()">Contact</a>
   </div>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-card">
-      <div class="hero-photo-particles" id="heroPhotoParticles" aria-hidden="true">
-        <canvas id="heroParticleCanvas"></canvas>
-      </div>
+    <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-eyebrow">Administrateur Systèmes & Réseaux Junior</div>
-        <h1 class="hero-name">Nedj Belloum</h1>
-        <p class="hero-sub">Rigueur opérationnelle et goût du détail, au service de <strong>l'administration systèmes, réseaux et cloud</strong>.</p>
+        <h1 class="hero-name">Administrateur Systèmes<br>&amp; Réseaux<span class="hero-dot">.</span></h1>
+        <p class="hero-sub">Rigueur opérationnelle et goût du détail au service de <strong>l'administration d'infrastructures IT</strong> — du support N1 au déploiement d'architectures réseau sécurisées.</p>
         <div class="hero-cta">
-          <a href="#experiences" class="btn-primary">Voir mes expériences</a>
+          <a href="html/projets.html" class="btn-primary">Voir mes projets</a>
           <a href="img/CV_Nedj_Belloum_.pdf" target="_blank" class="btn-secondary">Télécharger le CV</a>
         </div>
+      </div>
+      <div class="hero-photo-particles" id="heroPhotoParticles" aria-hidden="true">
+        <canvas id="heroParticleCanvas"></canvas>
       </div>
     </div>
     <div class="hero-scroll">
       <span>Scroll</span>
       <div class="scroll-line"></div>
+      <span class="hero-scroll-meta">8 projets IT · 4 certifications · Bachelor AIS 2027</span>
     </div>
   </section>
 
@@ -75,34 +73,23 @@
 
   <!-- ABOUT -->
   <section id="about">
-    <p class="section-label">À propos</p>
-    <h2 class="section-title">Passionné par<br>l'infrastructure IT.</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Avec 1 an d'expérience en IT et 4 ans d'expérience dans le <strong>transport et la logistique</strong>, j'ai
-          développé un profil polyvalent combinant compétences techniques, rigueur et sens du service.</p>
-        <p>Actuellement en <strong>Bachelor Administrateur Infrastructures Sécurisées (AIS)</strong>, je me spécialise
-          dans l'administration des systèmes et réseaux, le cloud et la cybersécurité.</p>
-        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="btn-secondary"
-          style="margin-top:8px;">LinkedIn →</a>
+    <p class="eyebrow-num">01 — À propos</p>
+    <div class="about-stats">
+      <div class="stat-box">
+        <div class="stat-num" data-count="5">0</div>
+        <div class="stat-desc">Années d'expérience professionnelle</div>
       </div>
-      <div class="about-stats">
-        <div class="stat-box">
-          <div class="stat-num">+5</div>
-          <div class="stat-desc">Années d'expérience professionnelle</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">10+</div>
-          <div class="stat-desc">Projets réseaux & systèmes</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">4</div>
-          <div class="stat-desc">Certifications obtenues</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">2027</div>
-          <div class="stat-desc">Diplôme Bachelor AIS prévu</div>
-        </div>
+      <div class="stat-box">
+        <div class="stat-num" data-count="8">0</div>
+        <div class="stat-desc">Projets IT documentés</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-count="4">0</div>
+        <div class="stat-desc">Certifications obtenues</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-plain="2027">2027</div>
+        <div class="stat-desc">Diplôme Bachelor AIS prévu</div>
       </div>
     </div>
   </section>
@@ -111,9 +98,8 @@
 
   <!-- EXPÉRIENCES -->
   <section id="experiences">
-    <p class="section-label">Parcours</p>
+    <p class="eyebrow-num">02 — Parcours</p>
     <h2 class="section-title">Expériences<br>professionnelles.</h2>
-    <p class="section-sub">De la logistique à l'IT — un parcours de reconversion mené avec rigueur.</p>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot"></div>
@@ -160,61 +146,165 @@
 
   <div class="divider"></div>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <p class="section-label">Certifications</p>
-    <h2 class="section-title">Diplômes &<br>certifications.</h2>
-    <div class="certs-row">
-      <div class="cert-card"
-        onclick="openCertif('certif/Certification Cisco - Networking Basics - Nedj Belloum.pdf', 'Cisco — Introduction to Networks')">
-        <img src="img/cisco.png" alt="Cisco" class="cert-logo">
-        <div class="cert-name">Cisco — Introduction to Networks</div>
-        <div class="cert-desc">Adressage IP, modèle OSI, routage et commutation réseau.</div>
+  <!-- COMPÉTENCES -->
+  <section id="competences">
+    <p class="eyebrow-num">03 — Savoir-faire</p>
+    <h2 class="section-title">Compétences<br>techniques.</h2>
+    <p class="section-sub">Acquises en situation professionnelle et consolidées à travers des projets de formation exigeants.</p>
+
+    <div class="skills-list">
+
+      <div class="skills-row">
+        <div class="skills-row-head">
+          <span class="skills-row-index">01</span>
+          <h3>Administration système</h3>
+        </div>
+        <div class="skills-row-body">
+          <p>Déploiement, sécurisation et maintien en condition opérationnelle des infrastructures Windows et Linux.</p>
+          <div class="skills-tags">
+            <span>Windows Server 2022</span><span>Active Directory & GPO</span><span>Linux (Debian, Ubuntu)</span><span>Hyper-V / Docker / Vagrant</span><span>Veeam & BorgBackup</span>
+          </div>
+        </div>
       </div>
-      <div class="cert-card"
-        onclick="openCertif('certif/Attestation_SecNumacademie_ANSSI - Nedj Belloum.pdf', 'ANSSI — Cybersécurité')">
-        <img src="img/Logo_ANSSI-removebg-preview.png" alt="ANSSI" class="cert-logo">
-        <div class="cert-name">ANSSI — Cybersécurité</div>
-        <div class="cert-desc">Bonnes pratiques, mots de passe, risques numériques, RGPD.</div>
+
+      <div class="skills-row">
+        <div class="skills-row-head">
+          <span class="skills-row-index">02</span>
+          <h3>Réseau & sécurité</h3>
+        </div>
+        <div class="skills-row-body">
+          <p>Conception et sécurisation d'infrastructures réseau, contrôle d'accès et continuité d'activité.</p>
+          <div class="skills-tags">
+            <span>Cisco IOS</span><span>802.1X / NPS RADIUS</span><span>VPN WireGuard</span><span>Fortinet / UFW</span><span>DRBD & Keepalived</span>
+          </div>
+        </div>
       </div>
-      <div class="cert-card"
-        onclick="openCertif('certif/Certificat Fortinet Fundamentals in Cybersecurity - NSE 1-2.pdf', 'Fortinet — NSE 1 & 2')">
-        <img src="img/Fortinet-logo-rgb-black-red.svg" alt="Fortinet" class="cert-logo cert-logo-svg">
-        <div class="cert-name">Fortinet — NSE 1 & 2</div>
-        <div class="cert-desc">Reconnaissance des attaques : phishing, ransomware, politiques d'accès.</div>
+
+      <div class="skills-row">
+        <div class="skills-row-head">
+          <span class="skills-row-index">03</span>
+          <h3>Cloud & Microsoft 365</h3>
+        </div>
+        <div class="skills-row-body">
+          <p>Migration et administration des services cloud Microsoft : stockage, identités, appareils.</p>
+          <div class="skills-tags">
+            <span>OneDrive & SharePoint</span><span>Exchange Online</span><span>Entra ID (Azure AD)</span><span>Intune</span>
+          </div>
+        </div>
       </div>
-      <div class="cert-card">
-        <img src="img/microsoft.svg" alt="Microsoft" class="cert-logo cert-logo-color">
-        <div class="cert-name">Microsoft — AZ-900</div>
-        <div class="cert-desc">Notions fondamentales du cloud Azure : services, sécurité, conformité et tarification.</div>
+
+      <div class="skills-row">
+        <div class="skills-row-head">
+          <span class="skills-row-index">04</span>
+          <h3>Automatisation & supervision</h3>
+        </div>
+        <div class="skills-row-body">
+          <p>Scripts, monitoring et environnements reproductibles pour fiabiliser l'exploitation.</p>
+          <div class="skills-tags">
+            <span>PowerShell</span><span>Bash</span><span>Prometheus & Grafana</span><span>Docker Compose</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-row">
+        <div class="skills-row-head">
+          <span class="skills-row-index">05</span>
+          <h3>Gestion de projet</h3>
+        </div>
+        <div class="skills-row-body">
+          <p>Suivi agile, documentation et support — le socle méthodologique de chaque projet.</p>
+          <div class="skills-tags">
+            <span>Jira</span><span>Git & GitHub</span><span>Documentation technique</span><span>Support N1/N2</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tech-carousel">
+      <div class="tech-carousel-track">
+        <span class="tech-chip"><i class="fa-brands fa-windows"></i> Windows Server</span>
+        <span class="tech-chip"><i class="fa-solid fa-sitemap"></i> Active Directory</span>
+        <span class="tech-chip"><i class="fa-solid fa-cloud"></i> Entra ID / Azure AD</span>
+        <span class="tech-chip"><i class="fa-solid fa-shield-halved"></i> Fortinet</span>
+        <span class="tech-chip"><i class="fa-solid fa-address-book"></i> OpenLDAP</span>
+        <span class="tech-chip"><i class="fa-solid fa-lock"></i> WireGuard</span>
+        <span class="tech-chip"><i class="fa-brands fa-microsoft"></i> Microsoft 365</span>
+        <span class="tech-chip"><i class="fa-solid fa-cloud-arrow-up"></i> OneDrive / SharePoint</span>
+        <span class="tech-chip"><i class="fa-solid fa-terminal"></i> PowerShell</span>
+        <span class="tech-chip"><i class="fa-solid fa-chart-line"></i> Prometheus / Grafana</span>
+        <span class="tech-chip"><i class="fa-solid fa-database"></i> Veeam Backup</span>
+        <span class="tech-chip"><i class="fa-solid fa-list-check"></i> Cockpit / GLPI</span>
+        <span class="tech-chip"><i class="fa-solid fa-magnifying-glass"></i> Wireshark</span>
+        <span class="tech-chip"><i class="fa-solid fa-mobile-screen"></i> Intune</span>
+        <span class="tech-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+        <span class="tech-chip"><i class="fa-brands fa-github"></i> Git / GitHub</span>
+        <!-- doublon pour la boucle infinie -->
+        <span class="tech-chip"><i class="fa-brands fa-windows"></i> Windows Server</span>
+        <span class="tech-chip"><i class="fa-solid fa-sitemap"></i> Active Directory</span>
+        <span class="tech-chip"><i class="fa-solid fa-cloud"></i> Entra ID / Azure AD</span>
+        <span class="tech-chip"><i class="fa-solid fa-shield-halved"></i> Fortinet</span>
+        <span class="tech-chip"><i class="fa-solid fa-address-book"></i> OpenLDAP</span>
+        <span class="tech-chip"><i class="fa-solid fa-lock"></i> WireGuard</span>
+        <span class="tech-chip"><i class="fa-brands fa-microsoft"></i> Microsoft 365</span>
+        <span class="tech-chip"><i class="fa-solid fa-cloud-arrow-up"></i> OneDrive / SharePoint</span>
+        <span class="tech-chip"><i class="fa-solid fa-terminal"></i> PowerShell</span>
+        <span class="tech-chip"><i class="fa-solid fa-chart-line"></i> Prometheus / Grafana</span>
+        <span class="tech-chip"><i class="fa-solid fa-database"></i> Veeam Backup</span>
+        <span class="tech-chip"><i class="fa-solid fa-list-check"></i> Cockpit / GLPI</span>
+        <span class="tech-chip"><i class="fa-solid fa-magnifying-glass"></i> Wireshark</span>
+        <span class="tech-chip"><i class="fa-solid fa-mobile-screen"></i> Intune</span>
+        <span class="tech-chip"><i class="fa-brands fa-docker"></i> Docker</span>
+        <span class="tech-chip"><i class="fa-brands fa-github"></i> Git / GitHub</span>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- CTA COMMERCIAL -->
-  <section id="cta-commercial">
-    <div class="cta-commercial">
-      <h2 class="cta-commercial-title">Un projet IT en tête ?</h2>
-      <p class="cta-commercial-text">Je suis disponible pour échanger autour de vos besoins en administration
-        systèmes, réseaux, cloud ou sécurité — que ce soit pour une mission ponctuelle, un renfort d'équipe ou un
-        besoin de support et d'optimisation IT.</p>
-      <div class="cta-commercial-tags">
-        <span class="cta-tag">Administration systèmes</span>
-        <span class="cta-tag">Réseaux</span>
-        <span class="cta-tag">Automatisation & PowerShell</span>
-        <span class="cta-tag">Microsoft 365</span>
-        <span class="cta-tag">Power Automate</span>
-        <span class="cta-tag">Cloud</span>
-        <span class="cta-tag">Sécurité des infrastructures</span>
-        <span class="cta-tag">Support / Optimisation IT</span>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <p class="eyebrow-num">04 — Certifications</p>
+    <h2 class="section-title">Diplômes &<br>certifications.</h2>
+    <div class="certs-list">
+      <div class="cert-row"
+        onclick="openCertif('certif/Certification Cisco - Networking Basics - Nedj Belloum.pdf', 'Cisco — Introduction to Networks')">
+        <img src="img/cisco.png" alt="Cisco" class="cert-row-logo">
+        <div class="cert-row-body">
+          <div class="cert-row-name">Cisco — Introduction to Networks</div>
+          <div class="cert-row-desc">Adressage IP, modèle OSI, routage et commutation réseau.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cert-row-icon"></i>
       </div>
-      <div class="cta-commercial-btn-wrap">
-        <a href="html/contact.html" class="btn-primary">Parlons de votre projet</a>
+      <div class="cert-row"
+        onclick="openCertif('certif/Attestation_SecNumacademie_ANSSI - Nedj Belloum.pdf', 'ANSSI — Cybersécurité')">
+        <img src="img/Logo_ANSSI-removebg-preview.png" alt="ANSSI" class="cert-row-logo">
+        <div class="cert-row-body">
+          <div class="cert-row-name">ANSSI — Cybersécurité</div>
+          <div class="cert-row-desc">Bonnes pratiques, mots de passe, risques numériques, RGPD.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cert-row-icon"></i>
+      </div>
+      <div class="cert-row"
+        onclick="openCertif('certif/Certificat Fortinet Fundamentals in Cybersecurity - NSE 1-2.pdf', 'Fortinet — NSE 1 & 2')">
+        <img src="img/Fortinet-logo-rgb-black-red.svg" alt="Fortinet" class="cert-row-logo cert-row-logo-svg">
+        <div class="cert-row-body">
+          <div class="cert-row-name">Fortinet — NSE 1 & 2</div>
+          <div class="cert-row-desc">Reconnaissance des attaques : phishing, ransomware, politiques d'accès.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square cert-row-icon"></i>
+      </div>
+      <div class="cert-row cert-row-static">
+        <img src="img/microsoft.svg" alt="Microsoft" class="cert-row-logo cert-row-logo-color">
+        <div class="cert-row-body">
+          <div class="cert-row-name">Microsoft — AZ-900</div>
+          <div class="cert-row-desc">Notions fondamentales du cloud Azure : services, sécurité, conformité et tarification.</div>
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="divider"></div>
 
   <!-- FOOTER -->
   <footer>
@@ -233,7 +323,6 @@
             <div class="footer-col-title">Navigation</div>
             <a href="index.html">Accueil</a>
             <a href="html/projets.html">Projets</a>
-            <a href="html/competences.html">Compétences</a>
             <a href="html/contact.html">Contact</a>
           </div>
           <div class="footer-col">

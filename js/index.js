@@ -38,12 +38,34 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.timeline-item, .cert-card, .animate-up').forEach(el => observer.observe(el));
+document.querySelectorAll('.timeline-item, .animate-up').forEach(el => observer.observe(el));
 
 // Stagger timeline items
 document.querySelectorAll('.timeline-item').forEach((item, i) => {
   item.style.transitionDelay = (i * 0.1) + 's';
 });
+
+// ── STAT COUNTERS ──
+const statNums = document.querySelectorAll('.stat-num[data-count]');
+if (statNums.length) {
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const duration = 900;
+      const start = performance.now();
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      statObserver.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  statNums.forEach(el => statObserver.observe(el));
+}
 
 // ── MODAL CERTIFICAT ──
 function openCertif(pdfPath, title) {
@@ -134,16 +156,25 @@ if (scrollBtn) {
     const scale = Math.max(width / img.width, height / img.height);
     const iw = img.width * scale;
     const ih = img.height * scale;
-    octx.drawImage(img, (width - iw) / 2, (height - ih) / 2, iw, ih);
+    // La photo source est un portrait plein pied cadré vers le haut : un
+    // centrage vertical classique ne montre que le torse. On ancre le
+    // visage (repère mesuré sur la photo, ~14.5% de sa hauteur) vers le
+    // tiers supérieur du cadre plutôt que de centrer l'image entière.
+    const FOCUS_Y = 0.145;
+    const TARGET_Y = 0.34;
+    const dx = (width - iw) / 2;
+    let dy = TARGET_Y * height - FOCUS_Y * ih;
+    dy = Math.min(0, Math.max(dy, height - ih));
+    octx.drawImage(img, dx, dy, iw, ih);
 
     const data = octx.getImageData(0, 0, width, height).data;
     // Le portrait n'a pas de fond transparent : on approxime la silhouette
     // tête/épaules avec un masque elliptique à bord doux plutôt que la photo
     // rectangulaire entière.
     const cx = width * 0.5;
-    const cy = height * 0.42;
+    const cy = height * 0.4;
     const rx = width * 0.42;
-    const ry = height * 0.48;
+    const ry = height * 0.46;
     particles = [];
     for (let y = 0; y < height; y += GAP) {
       for (let x = 0; x < width; x += GAP) {

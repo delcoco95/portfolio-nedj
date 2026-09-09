@@ -27,6 +27,23 @@ const mobileNav = document.getElementById('mobileNav');
 hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
 function closeMobileNav() { mobileNav.classList.remove('open'); }
 
+// ── TOGGLE AUDIENCE (recruteur / client) ──
+const audienceBtns = document.querySelectorAll('.audience-btn');
+const subjectInput = document.getElementById('subject');
+const AUDIENCE_SUBJECTS = {
+  recruteur: 'Opportunité — alternance / poste',
+  client: 'Mission / besoin IT ponctuel'
+};
+function setAudience(type) {
+  audienceBtns.forEach(b => b.classList.toggle('active', b.dataset.audience === type));
+  if (subjectInput && !subjectInput.value) subjectInput.value = AUDIENCE_SUBJECTS[type] || '';
+}
+audienceBtns.forEach(btn => {
+  btn.addEventListener('click', () => setAudience(btn.dataset.audience));
+});
+const urlType = new URLSearchParams(window.location.search).get('type');
+if (urlType === 'recruteur' || urlType === 'client') setAudience(urlType);
+
 // ── FORMULAIRE DE CONTACT ──
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
@@ -60,19 +77,19 @@ form.addEventListener('submit', async (e) => {
     if (response.ok) {
       formSuccess.style.display = 'block';
       formSuccess.style.color = 'var(--accent2)';
-      formSuccess.textContent = '✓ Message envoyé ! Je vous répondrai dans les plus brefs délais.';
+      formSuccess.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message envoyé ! Je vous répondrai dans les plus brefs délais.';
       submitBtn.textContent = 'Envoyer le message →';
       form.reset();
     } else {
       formSuccess.style.display = 'block';
       formSuccess.style.color = 'var(--accent3)';
-      formSuccess.textContent = '❌ Une erreur est survenue lors de l\'envoi. Veuillez réessayer.';
+      formSuccess.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Une erreur est survenue lors de l\'envoi. Veuillez réessayer.';
       submitBtn.textContent = 'Envoyer le message →';
     }
   } catch (error) {
     formSuccess.style.display = 'block';
     formSuccess.style.color = 'var(--accent3)';
-    formSuccess.textContent = '❌ Erreur réseau. Vérifiez votre connexion.';
+    formSuccess.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Erreur réseau. Vérifiez votre connexion.';
     submitBtn.textContent = 'Envoyer le message →';
   } finally {
     submitBtn.disabled = false;
