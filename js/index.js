@@ -105,7 +105,7 @@ if (scrollBtn) {
   if (!wrap || !canvas || !window.requestAnimationFrame) return;
 
   const ctx = canvas.getContext('2d');
-  const PHOTO_SRC = 'img/nedj-portrait.jpg';
+  const PHOTO_SRC = 'img/Nedj_Belloum.jpg';
   const GAP = 4.5;
   const REPEL_RADIUS = 65;
   const REPEL_FORCE = 7;
@@ -137,21 +137,33 @@ if (scrollBtn) {
     octx.drawImage(img, (width - iw) / 2, (height - ih) / 2, iw, ih);
 
     const data = octx.getImageData(0, 0, width, height).data;
+    // Le portrait n'a pas de fond transparent : on approxime la silhouette
+    // tête/épaules avec un masque elliptique à bord doux plutôt que la photo
+    // rectangulaire entière.
+    const cx = width * 0.5;
+    const cy = height * 0.42;
+    const rx = width * 0.42;
+    const ry = height * 0.48;
     particles = [];
     for (let y = 0; y < height; y += GAP) {
       for (let x = 0; x < width; x += GAP) {
         const idx = (Math.floor(y) * width + Math.floor(x)) * 4;
         const alpha = data[idx + 3];
-        if (alpha > 60) {
-          particles.push({
-            hx: x, hy: y,
-            x: x + (Math.random() - 0.5) * 30,
-            y: y + (Math.random() - 0.5) * 30,
-            vx: 0, vy: 0,
-            r: 1.3 + Math.random() * 1.3,
-            color: `rgb(${data[idx]},${data[idx + 1]},${data[idx + 2]})`
-          });
-        }
+        if (alpha <= 60) continue;
+        const dx = (x - cx) / rx;
+        const dy = (y - cy) / ry;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist >= 1) continue;
+        const mask = dist < 0.65 ? 1 : 1 - (dist - 0.65) / 0.35;
+        if (Math.random() > mask) continue;
+        particles.push({
+          hx: x, hy: y,
+          x: x + (Math.random() - 0.5) * 30,
+          y: y + (Math.random() - 0.5) * 30,
+          vx: 0, vy: 0,
+          r: 1.3 + Math.random() * 1.3,
+          color: `rgb(${data[idx]},${data[idx + 1]},${data[idx + 2]})`
+        });
       }
     }
   }
