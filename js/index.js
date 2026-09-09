@@ -97,4 +97,121 @@ if (scrollBtn) {
   });
 }
 
+// ── HERO PHOTO PARTICLES ──
+// Reconstitue la photo de profil en mini billes qui se dispersent au survol.
+(function () {
+  const wrap = document.getElementById('heroPhotoParticles');
+  const canvas = document.getElementById('heroParticleCanvas');
+  if (!wrap || !canvas || !window.requestAnimationFrame) return;
+
+  const ctx = canvas.getContext('2d');
+  const PHOTO_SRC = 'img/nedj-portrait.jpg';
+  const GAP = 4.5;
+  const REPEL_RADIUS = 65;
+  const REPEL_FORCE = 7;
+  const EASE = 0.018;
+  const FRICTION = 0.86;
+
+  let width = 0, height = 0, particles = [];
+  let mouse = { x: -9999, y: -9999, active: false };
+  let raf = null;
+
+  function buildParticles(img) {
+    const rect = wrap.getBoundingClientRect();
+    width = rect.width;
+    height = rect.height;
+    if (!width || !height) return;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const off = document.createElement('canvas');
+    off.width = width;
+    off.height = height;
+    const octx = off.getContext('2d');
+    const scale = Math.max(width / img.width, height / img.height);
+    const iw = img.width * scale;
+    const ih = img.height * scale;
+    octx.drawImage(img, (width - iw) / 2, (height - ih) / 2, iw, ih);
+
+    const data = octx.getImageData(0, 0, width, height).data;
+    particles = [];
+    for (let y = 0; y < height; y += GAP) {
+      for (let x = 0; x < width; x += GAP) {
+        const idx = (Math.floor(y) * width + Math.floor(x)) * 4;
+        const alpha = data[idx + 3];
+        if (alpha > 60) {
+          particles.push({
+            hx: x, hy: y,
+            x: x + (Math.random() - 0.5) * 30,
+            y: y + (Math.random() - 0.5) * 30,
+            vx: 0, vy: 0,
+            r: 1.3 + Math.random() * 1.3,
+            color: `rgb(${data[idx]},${data[idx + 1]},${data[idx + 2]})`
+          });
+        }
+      }
+    }
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, width, height);
+    for (const p of particles) {
+      let fx = (p.hx - p.x) * EASE;
+      let fy = (p.hy - p.y) * EASE;
+      if (mouse.active) {
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const dist = Math.hypot(dx, dy) || 0.001;
+        if (dist < REPEL_RADIUS) {
+          const force = (REPEL_RADIUS - dist) / REPEL_RADIUS;
+          fx += (dx / dist) * force * REPEL_FORCE;
+          fy += (dy / dist) * force * REPEL_FORCE;
+        }
+      }
+      p.vx = (p.vx + fx) * FRICTION;
+      p.vy = (p.vy + fy) * FRICTION;
+      p.x += p.vx;
+      p.y += p.vy;
+
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(tick);
+  }
+
+  wrap.addEventListener('mousemove', (e) => {
+    const rect = wrap.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+    mouse.active = true;
+  });
+  wrap.addEventListener('mouseleave', () => {
+    mouse.active = false;
+    mouse.x = -9999;
+    mouse.y = -9999;
+  });
+
+  const img = new Image();
+  img.onload = () => {
+    buildParticles(img);
+    if (!raf) tick();
+  };
+  img.onerror = () => {
+    // Photo absente : on masque simplement le conteneur.
+    wrap.style.display = 'none';
+  };
+  img.src = PHOTO_SRC;
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { if (img.complete && img.naturalWidth) buildParticles(img); }, 200);
+  });
+})();
+
 

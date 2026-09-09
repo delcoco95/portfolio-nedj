@@ -73,6 +73,12 @@
   .skill-article-featured .skill-article-thumb { height: 120px; }
 }
 
+.skill-illus { width: 120px; height: auto; display: block; }
+.skill-article-featured .skill-illus { width: 190px; }
+@media (max-width: 900px) {
+  .skill-article-featured .skill-illus { width: 120px; }
+}
+
 /* ── SKILL ITEMS ── */
 .skill-items {
   display: flex;
