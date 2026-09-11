@@ -57,6 +57,9 @@
   var imgEl = document.getElementById('aboutPhotoImg');
   if(!wrap || !canvas || !imgEl || !window.requestAnimationFrame) return;
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Photo masquée en CSS sur téléphone (interaction à la souris inutile au doigt,
+  // et rendu illisible une fois réduite) : inutile de construire les particules.
+  if(window.matchMedia && window.matchMedia('(max-width: 809px)').matches) return;
 
   var ctx = canvas.getContext('2d');
   var GAP = 7;
@@ -183,6 +186,55 @@
 })();
 
 (function(){
+  // Notifications "toast" maison — remplace les alert() natifs du navigateur
+  // par un composant qui reprend la charte du site (cartes arrondies, accent,
+  // DM Mono), disponible globalement via window.showToast({type, title, text}).
+  var stack = null;
+  function getStack(){
+    if (stack) return stack;
+    stack = document.createElement('div');
+    stack.className = 'toast-stack';
+    stack.setAttribute('role', 'status');
+    stack.setAttribute('aria-live', 'polite');
+    document.body.appendChild(stack);
+    return stack;
+  }
+
+  var ICONS = {
+    success: '<path d="M4 12.5 9 17l11-11"/>',
+    error: '<path d="M12 8.5v4.25"/><path d="M12 15.75h.01"/><path d="M10.29 3.86 1.94 18a1.75 1.75 0 0 0 1.5 2.63h17.12a1.75 1.75 0 0 0 1.5-2.63L13.71 3.86a1.75 1.75 0 0 0-3.42 0Z"/>'
+  };
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  window.showToast = function(opts){
+    opts = opts || {};
+    var type = opts.type === 'error' ? 'error' : 'success';
+    var el = document.createElement('div');
+    el.className = 'toast ' + type;
+    if (reduceMotion) el.classList.add('no-anim');
+    el.innerHTML =
+      '<span class="toast-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + ICONS[type] + '</svg></span>' +
+      '<span class="toast-body"><span class="toast-title"></span><span class="toast-text"></span></span>' +
+      '<button type="button" class="toast-close" aria-label="Fermer la notification"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>';
+    el.querySelector('.toast-title').textContent = opts.title || '';
+    el.querySelector('.toast-text').textContent = opts.text || '';
+
+    var timer;
+    function dismiss(){
+      if (!el.parentNode) return;
+      clearTimeout(timer);
+      el.classList.add('toast-out');
+      setTimeout(function(){ if (el.parentNode) el.remove(); }, reduceMotion ? 0 : 260);
+    }
+    el.querySelector('.toast-close').addEventListener('click', dismiss);
+
+    getStack().appendChild(el);
+    timer = setTimeout(dismiss, opts.duration || 5000);
+    return dismiss;
+  };
+})();
+
+(function(){
   // generic dialog open/close wiring, with a manual backdrop-click fallback
   // for browsers that don't yet support `closedby="any"`.
   function wireDialog(dialog){
@@ -216,7 +268,7 @@
   });
 
   var contactDialog = document.getElementById('contactDialog');
-  ['headerContactBtn','footerContactBtn'].forEach(function(id){
+  ['headerContactBtn','footerContactBtn','bottomNavContactBtn'].forEach(function(id){
     var b = document.getElementById(id);
     if(b) b.addEventListener('click', function(){ contactDialog.showModal(); });
   });
@@ -254,13 +306,25 @@
           if (typeof contactDialog !== 'undefined' && contactDialog.close) {
              contactDialog.close();
           }
-          alert('Votre message a bien été envoyé ! Je vous répondrai dans les plus brefs délais.');
+          window.showToast({
+            type: 'success',
+            title: 'Message envoyé',
+            text: 'Merci, je vous répondrai dans les plus brefs délais.'
+          });
         } else {
-          alert("Oops! Une erreur est survenue lors de l'envoi du message.");
+          window.showToast({
+            type: 'error',
+            title: "Échec de l'envoi",
+            text: 'Une erreur est survenue. Réessayez ou écrivez-moi directement par email.'
+          });
         }
       })
       .catch(function(error) {
-        alert("Oops! Une erreur est survenue lors de l'envoi du message.");
+        window.showToast({
+          type: 'error',
+          title: "Échec de l'envoi",
+          text: 'Une erreur est survenue. Réessayez ou écrivez-moi directement par email.'
+        });
       })
       .finally(function() {
         submitBtn.innerHTML = originalBtnHtml;
@@ -279,7 +343,7 @@
   else if (path.indexOf('confidentialite.html') !== -1) route = 'confidentialite';
   else if (path.indexOf('plan-site.html') !== -1) route = 'plan-site';
 
-  document.querySelectorAll('.topnav a, .idpill .name, .foot-legal a, .legal-card a').forEach(function(a){
+  document.querySelectorAll('.topnav a, .idpill .name, .foot-legal a, .legal-card a, .bottomnav-item').forEach(function(a){
     if(a.dataset && a.dataset.route){
       if(a.dataset.route === route){
         a.classList.add('active');
