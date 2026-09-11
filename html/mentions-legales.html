@@ -1,101 +1,113 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentions l&eacute;gales &mdash; Nedj Belloum</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+<title>Nedj Belloum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <div id="particles-js"></div>
-<nav>
-  <div class="nav-inner">
-    <a href="../index.html" class="nav-logo">Nedj Belloum</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">Accueil</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="competences.html">Comp&eacute;tences</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
+<div class="page">
+
+  <header class="topbar">
+    <div class="idpill">
+      <div class="avatar-outer">
+        <div class="avatar-wrap">
+          <img src="../assets/avatar.jpg" alt="Nedj Belloum">
+        </div>
+        <span class="avatar-dot"></span>
+      </div>
+      <div class="idtext">
+        <a class="name" href="../index.html" data-route="accueil">Nedj Belloum</a>
+      </div>
+    </div>
+    <nav class="topnav" aria-label="Navigation principale">
+      <a href="../index.html" data-route="accueil">Accueil</a>
+      <a href="../html/projets.html" data-route="projets">Projets</a>
+    </nav>
+    <div class="socials">
+      <button aria-label="Activer le mode clair" id="themeToggle" type="button">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+      </button>
+      <a href="https://github.com/delcoco95" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
       </a>
-      <button class="theme-toggle" id="themeToggle" title="Changer le thème">
-        <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 3a9 9 0 100 18A9 9 0 0012 3zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"></path>
-        </svg>
+      <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </a>
+      <button aria-label="Me contacter" id="headerContactBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6 12 13l8.5-7"/></svg>
       </button>
     </div>
-  </div>
-</nav>
-<section style="max-width:800px;margin:120px auto;padding:0 22px;">
-  <p class="section-label">L&eacute;gal</p>
-  <h1 class="section-title">Mentions<br>l&eacute;gales.</h1>
-  <div style="font-size:15px;color:var(--text2);line-height:1.8;font-weight:300;">
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">&Eacute;diteur du site</h2>
-    <p>Nedj Belloum &mdash; &Eacute;tudiant BTS SIO SISR<br>Nice, France</p>
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">H&eacute;bergement</h2>
-    <p>Ce site est h&eacute;berg&eacute; sur GitHub Pages.<br>GitHub Inc. &mdash; 88 Colin P Kelly Jr St, San Francisco, CA 94107, &Eacute;tats-Unis.</p>
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Propri&eacute;t&eacute; intellectuelle</h2>
-    <p>L'ensemble du contenu de ce site (textes, images, code) est la propri&eacute;t&eacute; de Nedj Belloum. Toute reproduction sans autorisation expresse est interdite.</p>
-    <h2 style="color:var(--text);font-size:18px;margin:32px 0 12px;">Responsabilit&eacute;</h2>
-    <p>Ce portfolio est &agrave; vocation p&eacute;dagogique et professionnelle. Les informations pr&eacute;sent&eacute;es sont fournies &agrave; titre indicatif et peuvent &ecirc;tre modifi&eacute;es sans pr&eacute;avis.</p>
-  </div>
-</section>
-<footer>
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="../index.html">Accueil</a>
-      <a href="projets.html">Projets</a>
-      <a href="competences.html">Comp&eacute;tences</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-links" style="margin-top:10px;">
-      <a href="mentions-legales.html">Mentions l&eacute;gales</a>
-      <a href="plan-site.html">Plan du site</a>
-      <a href="confidentialite.html">Politique de confidentialit&eacute;</a>
-    </div>
-    <p class="footer-copy">&copy; 2026 Nedj Belloum &mdash; Tous droits r&eacute;serv&eacute;s</p>
-  </div>
-</footer>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="../js/particles-init.js"></script>
+  </header>
+  <div class="view">
+    <section class="hero projects-hero">
+      <h1>Mentions l&eacute;gales</h1>
+    </section>
+    <div class="legal-wrap">
+      <div class="legal-card">
+        <h2>&Eacute;diteur du site</h2>
+        <p>Ce site est un portfolio personnel &eacute;dit&eacute; par Nedj Belloum, Administrateur Syst&egrave;mes &amp; R&eacute;seaux, bas&eacute; &agrave; Nice. Pour toute question, vous pouvez utiliser le formulaire de contact accessible depuis l&rsquo;ic&ocirc;ne enveloppe du site.</p>
 
-  <button class="scroll-top" id="scrollTopBtn" title="Retour en haut">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
+        <h2>H&eacute;bergement</h2>
+        <p>Ce site est publi&eacute; via la plateforme Claude, &eacute;dit&eacute;e par Anthropic, PBC &ndash; 548 Market St, San Francisco, CA 94104, &Eacute;tats-Unis.</p>
 
-  <script>
-    // Scroll to top
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    window.addEventListener('scroll', () => {
-      scrollBtn.classList.toggle('visible', window.scrollY > 300);
-    });
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-  <script src="../js/click-spark.js"></script>
-  <script>
-    const html = document.documentElement;
-    const toggle = document.getElementById('themeToggle');
-    const icon = document.getElementById('themeIcon');
-    const sunPath = 'M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 101.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.591-1.59a.75.75 0 00-1.06-1.061L6.166 6.166z';
-    const moonPath = 'M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z';
-    function setTheme(theme) {
-      html.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      icon.innerHTML = theme === 'dark' ? `<path d="${sunPath}"/>` : `<path d="${moonPath}"/>`;
-    }
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-    toggle.addEventListener('click', () => {
-      setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-    });
-  </script>
+        <h2>Propri&eacute;t&eacute; intellectuelle</h2>
+        <p>L&rsquo;ensemble des contenus de ce site (textes, mises en page, visuels) est la propri&eacute;t&eacute; de Nedj Belloum, sauf mention contraire. Les logos des certifications et outils cit&eacute;s appartiennent &agrave; leurs propri&eacute;taires respectifs et sont utilis&eacute;s &agrave; titre d&rsquo;identification uniquement.</p>
+
+        <h2>Responsabilit&eacute;</h2>
+        <p>Les informations pr&eacute;sent&eacute;es (projets, exp&eacute;riences, certifications) sont fournies &agrave; titre indicatif. Nedj Belloum s&rsquo;efforce d&rsquo;assurer l&rsquo;exactitude des informations diffus&eacute;es sur ce site, sans garantie d&rsquo;absence d&rsquo;erreur.</p>
+      </div>
+    </div>
+  </div>
+  <dialog id="contactDialog" closedby="any" aria-labelledby="contactDialogTitle">
+    <div class="dlg-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="contactDialogTitle">Me contacter</h3>
+          <p class="dlg-meta">Je r&eacute;ponds g&eacute;n&eacute;ralement sous 24 &agrave; 48h.</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+      <form id="contactForm">
+        <div class="field">
+          <label for="cf-name">Nom</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Votre email</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="form-submit" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </dialog>
+  <footer>
+    <div class="foot-row">
+      <p class="mono">Derni&egrave;re mise &agrave; jour 09/2026</p>
+      <div class="foot-legal">
+        <a href="../html/mentions-legales.html" data-route="mentions-legales">Mentions l&eacute;gales</a>
+        <a href="../html/confidentialite.html" data-route="confidentialite">Confidentialit&eacute;</a>
+        <a href="../html/plan-site.html" data-route="plan-site">Plan du site</a>
+      </div>
+      <div class="foot-links">
+        <a href="https://github.com/delcoco95" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="../js/main.js"></script>
 </body>
 </html>
+
+

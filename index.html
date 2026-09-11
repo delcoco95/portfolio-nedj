@@ -1,257 +1,274 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
-
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nedj Belloum — Administrateur Systèmes & Réseaux Junior</title>
-  <meta name="description"
-    content="Portfolio de Nedj Belloum, Administrateur Systèmes & Réseaux Junior, en Bachelor Administrateur Infrastructures Sécurisées (AIS) — Nice, France.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/index.css">
+<title>Nedj Belloum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div id="particles-js"></div>
+<div class="page">
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Nedj Belloum</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="html/projets.html">Projets</a></li>
-        <li><a href="html/competences.html">Compétences</a></li>
-        <li><a href="html/contact.html">Contact</a></li>
-      </ul>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="nav-linkedin" title="LinkedIn">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <button class="theme-toggle" id="themeToggle" title="Changer le thème">
-          <svg id="themeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M12 3a9 9 0 100 18A9 9 0 0012 3zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z" />
-          </svg>
-        </button>
-        <button class="hamburger" id="hamburger">
-          <span></span><span></span><span></span>
-        </button>
+  <header class="topbar">
+    <div class="idpill">
+      <div class="avatar-outer">
+        <div class="avatar-wrap">
+          <img src="assets/avatar.jpg" alt="Nedj Belloum">
+        </div>
+        <span class="avatar-dot"></span>
+      </div>
+      <div class="idtext">
+        <a class="name" href="index.html" data-route="accueil">Nedj Belloum</a>
       </div>
     </div>
-  </nav>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html" class="active" onclick="closeMobileNav()">Accueil</a>
-    <a href="html/projets.html" onclick="closeMobileNav()">Projets</a>
-    <a href="html/competences.html" onclick="closeMobileNav()">Compétences</a>
-    <a href="html/contact.html" onclick="closeMobileNav()">Contact</a>
+    <nav class="topnav" aria-label="Navigation principale">
+      <a href="index.html" data-route="accueil">Accueil</a>
+      <a href="html/projets.html" data-route="projets">Projets</a>
+    </nav>
+    <div class="socials">
+      <button aria-label="Activer le mode clair" id="themeToggle" type="button">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.752 15.002A9.72 9.72 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+      </button>
+      <a href="https://github.com/delcoco95" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </a>
+      <button aria-label="Me contacter" id="headerContactBtn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.5 6 12 13l8.5-7"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="view">
+
+  <section class="hero">
+    <h1><span class="word" style="animation-delay:.02s"><span>Administrateur</span></span> <span class="word" style="animation-delay:.09s"><span>Syst&egrave;mes</span></span> <span class="word" style="animation-delay:.16s"><span>&amp;</span></span> <span class="word" style="animation-delay:.23s"><span>R&eacute;seaux</span></span></h1>
+    <div class="hero-row">
+      <p class="tagline">Je con&ccedil;ois, s&eacute;curise et maintiens des infrastructures IT sur lesquelles les &eacute;quipes peuvent compter. Bas&eacute; &agrave; Nice.</p>
+      <div class="scrollbox">
+        <span class="scroll-label">D&eacute;filer pour d&eacute;couvrir</span>
+        <div class="scroll-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l7 7 7-7"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="split">
+    <div class="sticky-col">
+      <div class="about-photo" id="aboutPhoto">
+        <img src="assets/photo.jpg" alt="Nedj Belloum" id="aboutPhotoImg">
+        <canvas id="aboutParticleCanvas" aria-hidden="true"></canvas>
+      </div>
+      <div class="logos-bar">
+        <div class="logos-track">
+          <span class="logo-mark">POWERSHELL</span><span class="logo-mark">POWER AUTOMATE</span><span class="logo-mark">WINDOWS SERVER</span><span class="logo-mark">ACTIVE DIRECTORY</span><span class="logo-mark">MICROSOFT 365</span><span class="logo-mark">IIS</span><span class="logo-mark">CISCO IOS</span><span class="logo-mark">DOCKER</span><span class="logo-mark">WIREGUARD</span><span class="logo-mark">ENTRA ID</span><span class="logo-mark">GRAPH API</span><span class="logo-mark">JIRA</span>
+          <span class="logo-mark">POWERSHELL</span><span class="logo-mark">POWER AUTOMATE</span><span class="logo-mark">WINDOWS SERVER</span><span class="logo-mark">ACTIVE DIRECTORY</span><span class="logo-mark">MICROSOFT 365</span><span class="logo-mark">IIS</span><span class="logo-mark">CISCO IOS</span><span class="logo-mark">DOCKER</span><span class="logo-mark">WIREGUARD</span><span class="logo-mark">ENTRA ID</span><span class="logo-mark">GRAPH API</span><span class="logo-mark">JIRA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-col">
+
+      <div class="card">
+        <span class="tag">About</span>
+        <h2>Salut, je suis Nedj Belloum - Administrateur Syst&egrave;mes &amp; R&eacute;seaux</h2>
+        <p class="bio">Je travaille aujourd&rsquo;hui chez Groupe Ragni sur l&rsquo;administration Windows Server, Active Directory et Microsoft&nbsp;365, apr&egrave;s un passage chez Resistex sur la supervision r&eacute;seaux. Rigoureux et autonome, j&rsquo;aime autant r&eacute;soudre un incident critique que documenter et automatiser pour que &ccedil;a ne se reproduise plus.</p>
+        <div class="vline"></div>
+        <div class="stats">
+          <p>(+5 ans d&rsquo;exp&eacute;rience professionnelle)</p>
+          <p>(10+ projets r&eacute;seaux &amp; syst&egrave;mes)</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="tag">Exp&eacute;rience</span>
+        <div class="exp-list">
+
+          <div class="exp-row">
+            <div class="exp-years"><span>2026</span><span class="bar"></span><span>2027</span></div>
+            <div class="exp-role"><h4>Bachelor Administrateur Infrastructures S&eacute;curis&eacute;es</h4><p>IRIS &ndash; &Eacute;cole Sup&eacute;rieure d&rsquo;Informatique</p></div>
+          </div>
+
+          <div class="exp-row">
+            <div class="exp-years"><span>2025</span><span class="bar"></span><span>Pr&eacute;sent</span></div>
+            <div class="exp-role"><h4>Technicien Support IT</h4><p>Groupe Ragni &middot; La Gaude</p></div>
+          </div>
+
+          <div class="exp-row">
+            <div class="exp-years"><span>Juil.</span><span class="bar"></span><span>Ao&ucirc;t 2025</span></div>
+            <div class="exp-role"><h4>Assistant Administrateur Syst&egrave;me &amp; R&eacute;seaux</h4><p>Resistex &middot; Saint-Andr&eacute;-de-la-Roche</p></div>
+          </div>
+
+          <div class="exp-row">
+            <div class="exp-years"><span>2024</span><span class="bar"></span><span>2026</span></div>
+            <div class="exp-role"><h4>BTS Services Informatiques aux Organisations &middot; SISR</h4><p>IRIS &ndash; &Eacute;cole Sup&eacute;rieure d&rsquo;Informatique</p></div>
+          </div>
+
+          <div class="exp-row">
+            <div class="exp-years"><span>2021</span><span class="bar"></span><span>2024</span></div>
+            <div class="exp-role"><h4>Agent de Support et Dispatcher</h4><p>Pickup Logistics &middot; Saint-Ouen-sur-Seine</p></div>
+          </div>
+
+        </div>
+        <a class="cv-btn" id="cvBtn" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v13"/><path d="m6 11 6 6 6-6"/><path d="M4 21h16"/></svg>
+          T&eacute;l&eacute;charger mon CV
+        </a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Certifications</span>
+        <div class="cert-list">
+
+          <div class="cert-row">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="1" y="1" width="10" height="10" rx="1"/><rect x="13" y="1" width="10" height="10" rx="1"/><rect x="1" y="13" width="10" height="10" rx="1"/><rect x="13" y="13" width="10" height="10" rx="1"/></svg>
+            <div class="ct">
+              <p class="cn">Microsoft Azure Fundamentals (AZ-900)</p>
+              <p class="cm">Microsoft &middot; en cours d&rsquo;obtention</p>
+            </div>
+          </div>
+
+          <button type="button" class="cert-row cert-clickable" data-pdf="dlg-cert-fortinet" aria-haspopup="dialog" aria-label="Voir le certificat Fortinet Certified Fundamentals in Cybersecurity">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><g fill="currentColor" stroke="none"><rect x="9.4" y="7.6" width="1.7" height="9" rx="0.4"/><rect x="9.4" y="7.6" width="5.6" height="1.7" rx="0.4"/><rect x="9.4" y="11.5" width="4.1" height="1.7" rx="0.4"/></g></svg>
+            <div class="ct">
+              <p class="cn">Fortinet Certified Fundamentals in Cybersecurity</p>
+              <p class="cm">Fortinet &middot; 2025</p>
+            </div>
+            <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </button>
+
+          <button type="button" class="cert-row cert-clickable" data-pdf="dlg-cert-cisco" aria-haspopup="dialog" aria-label="Voir le certificat Cisco Networking Basics">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><line x1="1" y1="9" x2="1" y2="15"/><line x1="4.14" y1="7" x2="4.14" y2="17"/><line x1="7.29" y1="5" x2="7.29" y2="19"/><line x1="10.43" y1="3" x2="10.43" y2="21"/><line x1="13.57" y1="3" x2="13.57" y2="21"/><line x1="16.71" y1="5" x2="16.71" y2="19"/><line x1="19.86" y1="7" x2="19.86" y2="17"/><line x1="23" y1="9" x2="23" y2="15"/></svg>
+            <div class="ct">
+              <p class="cn">Networking Basics</p>
+              <p class="cm">Cisco &middot; 2025</p>
+            </div>
+            <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </button>
+
+          <button type="button" class="cert-row cert-clickable" data-pdf="dlg-cert-anssi" aria-haspopup="dialog" aria-label="Voir l&rsquo;attestation SecNumacad&eacute;mie ANSSI">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <div class="ct">
+              <p class="cn">MOOC SecNumAcad&eacute;mie</p>
+              <p class="cm">ANSSI &middot; 2025</p>
+            </div>
+            <svg class="cert-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-glow"></div>
-    <div>
-      <h1 class="hero-name">Nedj Belloum</h1>
-      <p class="hero-sub"><strong>Administrateur Systèmes & Réseaux Junior</strong></p>
-      <div class="hero-cta">
-        <a href="#experiences" class="btn-primary">Voir mes expériences ↓</a>
-        <a href="img/CV_Nedj_Belloum_.pdf" target="_blank" class="btn-secondary">Télécharger le CV</a>
+  <div class="contact-wrap">
+    <div class="contact-card">
+      <span class="tag">Contact</span>
+      <h2>Je ne me contente pas de faire tourner des syst&egrave;mes&nbsp;; je construis une infrastructure sur laquelle vous pouvez compter.</h2>
+      <p>N&rsquo;h&eacute;sitez pas &agrave; me contacter pour toute question, opportunit&eacute; ou collaboration.</p>
+      <div class="talk-wrap">
+        <button class="talk-btn" type="button" id="footerContactBtn">Me contacter</button>
       </div>
     </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+  </div>
+
+  </div>
+  <dialog id="contactDialog" closedby="any" aria-labelledby="contactDialogTitle">
+    <div class="dlg-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="contactDialogTitle">Me contacter</h3>
+          <p class="dlg-meta">Je r&eacute;ponds g&eacute;n&eacute;ralement sous 24 &agrave; 48h.</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+      <form id="contactForm">
+        <div class="field">
+          <label for="cf-name">Nom</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Votre email</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="form-submit" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>
+          Envoyer
+        </button>
+      </form>
     </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <p class="section-label">À propos</p>
-    <h2 class="section-title">Passionné par<br>l'infrastructure IT.</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Avec 1 an d'expérience en IT et 4 ans d'expérience dans le <strong>transport et la logistique</strong>, j'ai
-          développé un profil polyvalent combinant compétences techniques, rigueur et sens du service.</p>
-        <p>Actuellement en <strong>Bachelor Administrateur Infrastructures Sécurisées (AIS)</strong>, je me spécialise
-          dans l'administration des systèmes et réseaux, le cloud et la cybersécurité.</p>
-        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank" class="btn-secondary"
-          style="margin-top:8px;">LinkedIn →</a>
+  </dialog>
+  <dialog id="dlg-cert-fortinet" class="cert-dialog" closedby="any" aria-labelledby="dlg-cert-fortinet-title">
+    <div class="dlg-inner cert-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-cert-fortinet-title">Fortinet Certified Fundamentals in Cybersecurity</h3>
+          <p class="dlg-meta">Fortinet &middot; 2025</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       </div>
-      <div class="about-stats">
-        <div class="stat-box">
-          <div class="stat-num">+5</div>
-          <div class="stat-desc">Années d'expérience professionnelle</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">10+</div>
-          <div class="stat-desc">Projets réseaux & systèmes</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">4</div>
-          <div class="stat-desc">Certifications obtenues</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">2027</div>
-          <div class="stat-desc">Diplôme Bachelor AIS prévu</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- EXPÉRIENCES -->
-  <section id="experiences">
-    <p class="section-label">Parcours</p>
-    <h2 class="section-title">Expériences<br>professionnelles.</h2>
-    <p class="section-sub">De la logistique à l'IT — un parcours de reconversion mené avec rigueur.</p>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Sep. 2025 — Sep. 2027</div>
-        <div class="timeline-title">Technicien Support Informatique</div>
-        <div class="timeline-company"><a href="https://www.ragni.com/" target="_blank">Groupe Ragni</a> · Alternance —
-          <button type="button" class="info-btn" data-info-target="infoRagni">+ d'info</button>
-        </div>
-        <div class="timeline-desc">Gestion du parc informatique, support technique N1/N2, déploiement d'infrastructures
-          Windows, administration Active Directory et Microsoft 365.</div>
-
-        <div class="company-popover" id="infoRagni">
-          <button type="button" class="company-popover-close" aria-label="Fermer">✕</button>
-          <p class="company-popover-desc">Entreprise française opérant à l'international, spécialisée dans la
-            conception et la fabrication de luminaires pour l'éclairage public et la mise en valeur des espaces
-            extérieurs.</p>
-          <ul class="company-popover-meta">
-            <li><span class="meta-dot"></span>Site : Cagnes-sur-Mer</li>
-            <li><span class="meta-dot"></span>Équipe IT : Support & Projets</li>
-            <li><span class="meta-dot"></span>Secteur : Éclairage / Industrie</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Juil. — Août 2025</div>
-        <div class="timeline-title">Assistant Administrateur Système & Réseau</div>
-        <div class="timeline-company"><a href="https://www.resistex-sa.com/" target="_blank">Resistex</a> · Stage —
-          <button type="button" class="info-btn" data-info-target="infoResistex">+ d'info</button>
-        </div>
-        <div class="timeline-desc">Supervision des réseaux, maintenance des systèmes, optimisation IT.</div>
-
-        <div class="company-popover" id="infoResistex">
-          <button type="button" class="company-popover-close" aria-label="Fermer">✕</button>
-          <p class="company-popover-desc">Entreprise familiale dans le secteur privé du luminaire, spécialisée dans l'éclairage éco-responsable et les solutions LED pour professionnels et particuliers.<br><br><a href="img/Rapport de stage RESISTEX.pdf" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;display:inline-block;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">Note de synthèse →</a></p>
-          <ul class="company-popover-meta">
-            <li><span class="meta-dot"></span>Site : Saint-André-de-la-Roche</li>
-            <li><span class="meta-dot"></span>Équipe IT : Système & Réseau</li>
-          </ul>
-        </div>
+      <div class="cert-pages">
+        <img src="assets/cert-fortinet-1.png" alt="Certificat Fortinet Certified Fundamentals in Cybersecurity, page 1">
+        <img src="assets/cert-fortinet-2.png" alt="Certificat Fortinet, cours FCF Introduction to the Threat Landscape">
+        <img src="assets/cert-fortinet-3.png" alt="Certificat Fortinet, cours FCF Getting Started in Cybersecurity">
       </div>
     </div>
-  </section>
+  </dialog>
 
-  <div class="divider"></div>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <p class="section-label">Certifications</p>
-    <h2 class="section-title">Diplômes &<br>certifications.</h2>
-    <div class="certs-row">
-      <div class="cert-card"
-        onclick="openCertif('certif/Certification Cisco - Networking Basics - Nedj Belloum.pdf', 'Cisco — Introduction to Networks')">
-        <img src="img/cisco.png" alt="Cisco" class="cert-logo">
-        <div class="cert-name">Cisco — Introduction to Networks</div>
-        <div class="cert-desc">Adressage IP, modèle OSI, routage et commutation réseau.</div>
+  <dialog id="dlg-cert-cisco" class="cert-dialog" closedby="any" aria-labelledby="dlg-cert-cisco-title">
+    <div class="dlg-inner cert-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-cert-cisco-title">Networking Basics</h3>
+          <p class="dlg-meta">Cisco &middot; 2025</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       </div>
-      <div class="cert-card"
-        onclick="openCertif('certif/Attestation_SecNumacademie_ANSSI - Nedj Belloum.pdf', 'ANSSI — Cybersécurité')">
-        <img src="img/Logo_ANSSI-removebg-preview.png" alt="ANSSI" class="cert-logo">
-        <div class="cert-name">ANSSI — Cybersécurité</div>
-        <div class="cert-desc">Bonnes pratiques, mots de passe, risques numériques, RGPD.</div>
-      </div>
-      <div class="cert-card"
-        onclick="openCertif('certif/Certificat Fortinet Fundamentals in Cybersecurity - NSE 1-2.pdf', 'Fortinet — NSE 1 & 2')">
-        <img src="img/Fortinet-logo-rgb-black-red.svg" alt="Fortinet" class="cert-logo cert-logo-svg">
-        <div class="cert-name">Fortinet — NSE 1 & 2</div>
-        <div class="cert-desc">Reconnaissance des attaques : phishing, ransomware, politiques d'accès.</div>
-      </div>
-      <div class="cert-card">
-        <img src="img/microsoft.svg" alt="Microsoft" class="cert-logo cert-logo-color">
-        <div class="cert-name">Microsoft — AZ-900</div>
-        <div class="cert-desc">Notions fondamentales du cloud Azure : services, sécurité, conformité et tarification.</div>
+      <div class="cert-pages">
+        <img src="assets/cert-cisco.png" alt="Certification Cisco Networking Basics">
       </div>
     </div>
-  </section>
+  </dialog>
 
-  <div class="divider"></div>
-
-  <!-- CTA COMMERCIAL -->
-  <section id="cta-commercial">
-    <div class="cta-commercial">
-      <h2 class="cta-commercial-title">Un projet IT en tête ?</h2>
-      <p class="cta-commercial-text">Je suis disponible pour échanger autour de vos besoins en administration
-        systèmes, réseaux, cloud ou sécurité — que ce soit pour une mission ponctuelle, un renfort d'équipe ou un
-        besoin de support et d'optimisation IT.</p>
-      <div class="cta-commercial-tags">
-        <span class="cta-tag">Administration systèmes</span>
-        <span class="cta-tag">Réseaux</span>
-        <span class="cta-tag">Automatisation & PowerShell</span>
-        <span class="cta-tag">Microsoft 365</span>
-        <span class="cta-tag">Power Automate</span>
-        <span class="cta-tag">Cloud</span>
-        <span class="cta-tag">Sécurité des infrastructures</span>
-        <span class="cta-tag">Support / Optimisation IT</span>
+  <dialog id="dlg-cert-anssi" class="cert-dialog" closedby="any" aria-labelledby="dlg-cert-anssi-title">
+    <div class="dlg-inner cert-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-cert-anssi-title">MOOC SecNumAcad&eacute;mie</h3>
+          <p class="dlg-meta">ANSSI &middot; 2025</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       </div>
-      <div class="cta-commercial-btn-wrap">
-        <a href="html/contact.html" class="btn-primary">Parlons de votre projet</a>
+      <div class="cert-pages">
+        <img src="assets/cert-anssi.png" alt="Attestation SecNumacad&eacute;mie ANSSI">
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
+  </dialog>
   <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="index.html">Accueil</a>
-        <a href="html/projets.html">Projets</a>
-        <a href="html/competences.html">Compétences</a>
-        <a href="html/contact.html">Contact</a>
-        <a href="https://www.linkedin.com/in/nedj-b-002558194/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/delcoco95" target="_blank">GitHub</a>
+    <div class="foot-row">
+      <p class="mono">Derni&egrave;re mise &agrave; jour 09/2026</p>
+      <div class="foot-legal">
+        <a href="html/mentions-legales.html" data-route="mentions-legales">Mentions l&eacute;gales</a>
+        <a href="html/confidentialite.html" data-route="confidentialite">Confidentialit&eacute;</a>
+        <a href="html/plan-site.html" data-route="plan-site">Plan du site</a>
       </div>
-      <div class="footer-links" style="margin-top:10px;">
-        <a href="html/mentions-legales.html">Mentions légales</a>
-        <a href="html/plan-site.html">Plan du site</a>
-        <a href="html/confidentialite.html">Politique de confidentialité</a>
+      <div class="foot-links">
+        <a href="https://github.com/delcoco95" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/nedj-belloum/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-      <p class="footer-copy">© 2026 Nedj Belloum — Tous droits réservés</p>
     </div>
   </footer>
 
-  <!-- MODAL CERTIFICAT -->
-  <div class="certif-modal-overlay" id="certifOverlay" onclick="closeCertifOutside(event)">
-    <div class="certif-modal" id="certifModal">
-      <div class="certif-modal-header">
-        <span class="certif-modal-title" id="certifTitle"></span>
-        <button class="certif-modal-close" onclick="closeCertif()">✕</button>
-      </div>
-      <iframe id="certifFrame" src="" title="Certificat"></iframe>
-    </div>
-  </div>
-
-  <button class="scroll-top" id="scrollTopBtn" title="Retour en haut">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
-
-  <script src="js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="js/particles-init.js"></script>
-  <script src="js/click-spark.js"></script>
+</div>
+<script src="js/main.js"></script>
 </body>
-
 </html>
+
+
