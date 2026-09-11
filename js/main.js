@@ -222,18 +222,52 @@
   });
 
   var form = document.getElementById('contactForm');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = document.getElementById('cf-name').value.trim();
-    var email = document.getElementById('cf-email').value.trim();
-    var message = document.getElementById('cf-message').value.trim();
-    var subject = 'Contact via portfolio - ' + name;
-    var body = message + '\n\n-\n' + name + ' (' + email + ')';
-    var mailto = 'mailto:nedjpro06@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    window.location.href = mailto;
-    form.reset();
-    contactDialog.close();
-  });
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Envoi...';
+      submitBtn.disabled = true;
+
+      var name = document.getElementById('cf-name').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+      var message = document.getElementById('cf-message').value.trim();
+
+      fetch('https://formspree.io/f/xbgjbqgy', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+          _subject: 'Contact Portfolio - ' + name
+        })
+      })
+      .then(function(response) {
+        if (response.ok) {
+          form.reset();
+          if (typeof contactDialog !== 'undefined' && contactDialog.close) {
+             contactDialog.close();
+          }
+          alert('Votre message a bien été envoyé ! Je vous répondrai dans les plus brefs délais.');
+        } else {
+          alert("Oops! Une erreur est survenue lors de l'envoi du message.");
+        }
+      })
+      .catch(function(error) {
+        alert("Oops! Une erreur est survenue lors de l'envoi du message.");
+      })
+      .finally(function() {
+        submitBtn.innerHTML = originalBtnHtml;
+        submitBtn.disabled = false;
+      });
+    });
+  }
 })();
 
 (function(){
