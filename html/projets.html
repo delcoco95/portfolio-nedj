@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/projets.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script>(function(d){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("js-motion");setTimeout(function(){if(!window.Motion)d.classList.remove("js-motion")},2500)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body>
 <div class="page">
@@ -49,7 +52,7 @@
   <section class="hero projects-hero works-hero">
     <h1><span class="word" style="animation-delay:.02s"><span>Mes</span></span> <span class="word" style="animation-delay:.09s"><span>Projets</span></span> <span class="word" style="animation-delay:.16s"><span>et</span></span> <span class="word" style="animation-delay:.23s"><span>Comp&eacute;tences</span></span></h1>
     <div class="hero-row">
-      <p class="tagline">Une s&eacute;lection de projets d&rsquo;infrastructure, de s&eacute;curit&eacute; et d&rsquo;automatisation, men&eacute;s en formation et en entreprise.</p>
+      <p class="tagline">Une s&eacute;lection de projets men&eacute;s en entreprise, sur mon temps libre et en formation, avec captures, liens et r&eacute;sultats.</p>
       <div class="scrollbox">
         <span class="scroll-label">D&eacute;filer pour d&eacute;couvrir</span>
         <div class="scroll-badge">
@@ -59,10 +62,119 @@
     </div>
   </section>
 
+    <section class="statement" aria-label="Domaines">
+      <p class="statement-text"><span>J&rsquo;automatise</span> <span>ce</span> <span>qui</span> <span>se</span> <span>r&eacute;p&egrave;te,</span> <span>je</span> <span>d&eacute;veloppe</span> <span>les</span> <span>outils</span> <span>qui</span> <span>manquent</span> <span>et</span> <span>je</span> <span>s&eacute;curise</span> <span>le</span> <span>r&eacute;seau.</span></p>
+    </section>
     <div class="works-wrap">
-    <div class="works-grid">
-
-      <button class="work-card" type="button" data-dialog="dlg-iris" aria-haspopup="dialog" aria-label="Voir le d&eacute;tail du projet Infrastructure IRIS - 802.1X">
+      <div class="works-filter" role="toolbar" aria-label="Filtrer par domaine">
+        <span class="filter-pill" aria-hidden="true"></span>
+        <button type="button" class="is-active" data-filter="all" aria-pressed="true">Tous <sup>6</sup></button>
+        <button type="button" data-filter="auto" aria-pressed="false">Automatisation <sup>3</sup></button>
+        <button type="button" data-filter="dev" aria-pressed="false">D&eacute;veloppement <sup>2</sup></button>
+        <button type="button" data-filter="net" aria-pressed="false">R&eacute;seaux &amp; s&eacute;curit&eacute; <sup>1</sup></button>
+      </div>
+      <div class="works-grid">
+      <button class="work-card" type="button" data-dialog="dlg-accueil" data-kind="Entreprise" data-domain="auto" aria-haspopup="dialog" aria-label="Voir le détail du projet Tri intelligent des e-mails d&#x27;accueil">
+        <div class="work-media">
+          <div class="work-chip">2026 · Automatisation &amp; IA</div>
+          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+          <svg viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+<defs><linearGradient id="gaccueil" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1b1b21"/><stop offset="100%" stop-color="#0d0d10"/></linearGradient>
+<pattern id="daccueil" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#fff" opacity=".06"/></pattern>
+<radialGradient id="raccueil" cx="72%" cy="45%" r="45%"><stop offset="0%" stop-color="#ff4d2e" stop-opacity=".16"/><stop offset="100%" stop-color="#ff4d2e" stop-opacity="0"/></radialGradient></defs>
+<rect width="480" height="270" fill="url(#gaccueil)"/><rect width="480" height="270" fill="url(#daccueil)"/><rect width="480" height="270" fill="url(#raccueil)"/>
+<g class="cv-motif" transform="translate(250,30)"><rect x="0" y="80" width="62" height="44" rx="6" fill="#1c1c22" stroke="#5a5a66" stroke-width="1.5"/><path d="M2 84 31 106 60 84" fill="none" stroke="#5a5a66" stroke-width="1.5"/>
+<circle cx="110" cy="102" r="20" fill="#141419" stroke="#ff4d2e" stroke-width="1.6"/><text x="110" y="107" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" fill="#ff4d2e">IA</text>
+<path d="M62 102 H90" stroke="#ff4d2e" stroke-width="1.5"/>
+<g fill="none" stroke="#3f3f48" stroke-width="1.5"><path d="M130 102 C150 102 150 40 175 40"/><path d="M130 102 H175"/><path d="M130 102 C150 102 150 164 175 164"/></g>
+<g fill="#1c1c22" stroke="#5a5a66" stroke-width="1.4"><rect x="175" y="26" width="46" height="28" rx="6"/><rect x="175" y="88" width="46" height="28" rx="6"/><rect x="175" y="150" width="46" height="28" rx="6"/></g>
+<g fill="#ff4d2e"><circle cx="187" cy="40" r="3"/><circle cx="187" cy="102" r="3"/><circle cx="187" cy="164" r="3"/></g>
+<g fill="#2a2a31"><rect x="195" y="37" width="18" height="6" rx="3"/><rect x="195" y="99" width="18" height="6" rx="3"/><rect x="195" y="161" width="18" height="6" rx="3"/></g></g>
+<text class="cv-num" data-to="133" x="36" y="168" font-family="Inter Tight, Inter, sans-serif" font-weight="600" font-size="58" fill="#f2f2f4" letter-spacing="-1.5"><tspan class="cv-val">133</tspan><tspan fill="#ff4d2e" font-size="30" dx="4"></tspan></text>
+<text class="cv-label" x="38" y="198" font-family="DM Mono, monospace" font-size="12.5" fill="#8d8d9a">e-mails routés par l’IA</text>
+</svg>
+          <span class="work-proof">4 captures</span>
+        </div>
+        <div class="work-title"><div class="work-labels"><span class="work-domain d-auto">Automatisation</span><span class="work-ctx">Entreprise</span></div><h3>Tri intelligent des e-mails d&#x27;accueil</h3></div>
+      </button>
+      <button class="work-card" type="button" data-dialog="dlg-cadence" data-kind="Personnel" data-domain="dev" aria-haspopup="dialog" aria-label="Voir le détail du projet Cadence : application pour apprendre les langues">
+        <div class="work-media">
+          <div class="work-chip">2026 · Application web</div>
+          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+          <svg viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+<defs><linearGradient id="gcadence" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1b1b21"/><stop offset="100%" stop-color="#0d0d10"/></linearGradient>
+<pattern id="dcadence" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#fff" opacity=".06"/></pattern>
+<radialGradient id="rcadence" cx="72%" cy="45%" r="45%"><stop offset="0%" stop-color="#ff4d2e" stop-opacity=".16"/><stop offset="100%" stop-color="#ff4d2e" stop-opacity="0"/></radialGradient></defs>
+<rect width="480" height="270" fill="url(#gcadence)"/><rect width="480" height="270" fill="url(#dcadence)"/><rect width="480" height="270" fill="url(#rcadence)"/>
+<g class="cv-motif" transform="translate(250,30)"><rect x="50" y="0" width="112" height="210" rx="18" fill="#131317" stroke="#5a5a66" stroke-width="1.5"/>
+<circle cx="106" cy="80" r="34" fill="none" stroke="#2a2a31" stroke-width="8"/><circle cx="106" cy="80" r="34" fill="none" stroke="#ff4d2e" stroke-width="8" stroke-dasharray="150 214" transform="rotate(-90 106 80)" stroke-linecap="round"/>
+<text x="106" y="86" text-anchor="middle" font-family="Inter Tight,sans-serif" font-size="18" font-weight="600" fill="#f2f2f4">B1</text>
+<rect x="68" y="132" width="76" height="14" rx="7" fill="#1c1c22"/><rect x="76" y="137" width="44" height="4" rx="2" fill="#ff4d2e"/><rect x="68" y="154" width="76" height="14" rx="7" fill="#1c1c22"/><rect x="76" y="159" width="34" height="4" rx="2" fill="#5a5a66"/><rect x="68" y="176" width="76" height="14" rx="7" fill="#1c1c22"/><rect x="76" y="181" width="24" height="4" rx="2" fill="#5a5a66"/></g>
+<text class="cv-num" data-to="137" x="36" y="168" font-family="Inter Tight, Inter, sans-serif" font-weight="600" font-size="58" fill="#f2f2f4" letter-spacing="-1.5"><tspan class="cv-val">137</tspan><tspan fill="#ff4d2e" font-size="30" dx="4"></tspan></text>
+<text class="cv-label" x="38" y="198" font-family="DM Mono, monospace" font-size="12.5" fill="#8d8d9a">tests · 3 langues</text>
+</svg>
+          <span class="work-proof">8 captures</span>
+        </div>
+        <div class="work-title"><div class="work-labels"><span class="work-domain d-dev">Développement</span><span class="work-ctx">Projet perso</span></div><h3>Cadence : application pour apprendre les langues</h3></div>
+      </button>
+      <button class="work-card" type="button" data-dialog="dlg-listes" data-kind="Entreprise" data-domain="auto" aria-haspopup="dialog" aria-label="Voir le détail du projet Portail des listes de diffusion">
+        <div class="work-media">
+          <div class="work-chip">2026 · Microsoft 365</div>
+          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+          <svg viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+<defs><linearGradient id="glistes" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1b1b21"/><stop offset="100%" stop-color="#0d0d10"/></linearGradient>
+<pattern id="dlistes" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#fff" opacity=".06"/></pattern>
+<radialGradient id="rlistes" cx="72%" cy="45%" r="45%"><stop offset="0%" stop-color="#ff4d2e" stop-opacity=".16"/><stop offset="100%" stop-color="#ff4d2e" stop-opacity="0"/></radialGradient></defs>
+<rect width="480" height="270" fill="url(#glistes)"/><rect width="480" height="270" fill="url(#dlistes)"/><rect width="480" height="270" fill="url(#rlistes)"/>
+<g class="cv-motif" transform="translate(250,30)"><rect x="0" y="10" width="210" height="190" rx="12" fill="#131317" stroke="#3f3f48" stroke-width="1.4"/>
+<rect x="18" y="30" width="174" height="24" rx="12" fill="#1c1c22" stroke="#5a5a66"/><circle cx="34" cy="42" r="5" fill="none" stroke="#ff4d2e" stroke-width="1.5"/><path d="M38 46l4 4" stroke="#ff4d2e" stroke-width="1.5"/>
+<rect x="18" y="70" width="174" height="22" rx="6" fill="#1c1c22"/><circle cx="32" cy="81" r="5" fill="#ff4d2e"/><rect x="44" y="78" width="90" height="6" rx="3" fill="#3a3a42"/><rect x="160" y="76" width="22" height="10" rx="5" fill="none" stroke="#5a5a66"/><rect x="18" y="100" width="174" height="22" rx="6" fill="#1c1c22"/><circle cx="32" cy="111" r="5" fill="#5a5a66"/><rect x="44" y="108" width="78" height="6" rx="3" fill="#3a3a42"/><rect x="160" y="106" width="22" height="10" rx="5" fill="none" stroke="#5a5a66"/><rect x="18" y="130" width="174" height="22" rx="6" fill="#1c1c22"/><circle cx="32" cy="141" r="5" fill="#5a5a66"/><rect x="44" y="138" width="66" height="6" rx="3" fill="#3a3a42"/><rect x="160" y="136" width="22" height="10" rx="5" fill="none" stroke="#5a5a66"/><rect x="18" y="160" width="174" height="22" rx="6" fill="#1c1c22"/><circle cx="32" cy="171" r="5" fill="#5a5a66"/><rect x="44" y="168" width="54" height="6" rx="3" fill="#3a3a42"/><rect x="160" y="166" width="22" height="10" rx="5" fill="none" stroke="#5a5a66"/></g>
+<text class="cv-num" data-to="95" x="36" y="168" font-family="Inter Tight, Inter, sans-serif" font-weight="600" font-size="58" fill="#f2f2f4" letter-spacing="-1.5"><tspan class="cv-val">95</tspan><tspan fill="#ff4d2e" font-size="30" dx="4"></tspan></text>
+<text class="cv-label" x="38" y="198" font-family="DM Mono, monospace" font-size="12.5" fill="#8d8d9a">listes de diffusion</text>
+</svg>
+          <span class="work-proof">3 captures</span>
+        </div>
+        <div class="work-title"><div class="work-labels"><span class="work-domain d-auto">Automatisation</span><span class="work-ctx">Entreprise</span></div><h3>Portail des listes de diffusion</h3></div>
+      </button>
+      <button class="work-card" type="button" data-dialog="dlg-dashauto" data-kind="Personnel" data-domain="dev" aria-haspopup="dialog" aria-label="Voir le détail du projet Dash Auto : pilotage d’une activité automobile">
+        <div class="work-media">
+          <div class="work-chip">2026 · Full-stack</div>
+          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+          <svg viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+<defs><linearGradient id="gdashauto" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1b1b21"/><stop offset="100%" stop-color="#0d0d10"/></linearGradient>
+<pattern id="ddashauto" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#fff" opacity=".06"/></pattern>
+<radialGradient id="rdashauto" cx="72%" cy="45%" r="45%"><stop offset="0%" stop-color="#ff4d2e" stop-opacity=".16"/><stop offset="100%" stop-color="#ff4d2e" stop-opacity="0"/></radialGradient></defs>
+<rect width="480" height="270" fill="url(#gdashauto)"/><rect width="480" height="270" fill="url(#ddashauto)"/><rect width="480" height="270" fill="url(#rdashauto)"/>
+<g class="cv-motif" transform="translate(250,30)"><rect x="0" y="14" width="220" height="182" rx="12" fill="#131317" stroke="#3f3f48" stroke-width="1.4"/>
+<rect x="20" y="130" width="14" height="40" rx="3" fill="#2e2e36"/><rect x="44" y="108" width="14" height="62" rx="3" fill="#2e2e36"/><rect x="68" y="120" width="14" height="50" rx="3" fill="#2e2e36"/><rect x="92" y="74" width="14" height="96" rx="3" fill="#ff4d2e"/><rect x="116" y="100" width="14" height="70" rx="3" fill="#2e2e36"/><rect x="140" y="86" width="14" height="84" rx="3" fill="#2e2e36"/><rect x="164" y="52" width="14" height="118" rx="3" fill="#ff4d2e"/><rect x="188" y="80" width="14" height="90" rx="3" fill="#2e2e36"/>
+<path d="M20 120 L58 96 L106 104 L154 70 L200 52" fill="none" stroke="#8d8d9a" stroke-width="1.5" stroke-dasharray="3 4"/></g>
+<text class="cv-num" data-to="35" x="36" y="168" font-family="Inter Tight, Inter, sans-serif" font-weight="600" font-size="58" fill="#f2f2f4" letter-spacing="-1.5"><tspan class="cv-val">35</tspan><tspan fill="#ff4d2e" font-size="30" dx="4"></tspan></text>
+<text class="cv-label" x="38" y="198" font-family="DM Mono, monospace" font-size="12.5" fill="#8d8d9a">routes d’API</text>
+</svg>
+          <span class="work-proof">4 captures</span>
+        </div>
+        <div class="work-title"><div class="work-labels"><span class="work-domain d-dev">Développement</span><span class="work-ctx">Projet perso</span></div><h3>Dash Auto : pilotage d’une activité automobile</h3></div>
+      </button>
+      <button class="work-card" type="button" data-dialog="dlg-da" data-kind="Entreprise" data-domain="auto" aria-haspopup="dialog" aria-label="Voir le détail du projet Demandes d&#x27;achat : confidentialité et suivi">
+        <div class="work-media">
+          <div class="work-chip">2026 · SharePoint</div>
+          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+          <svg viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+<defs><linearGradient id="gda" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1b1b21"/><stop offset="100%" stop-color="#0d0d10"/></linearGradient>
+<pattern id="dda" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#fff" opacity=".06"/></pattern>
+<radialGradient id="rda" cx="72%" cy="45%" r="45%"><stop offset="0%" stop-color="#ff4d2e" stop-opacity=".16"/><stop offset="100%" stop-color="#ff4d2e" stop-opacity="0"/></radialGradient></defs>
+<rect width="480" height="270" fill="url(#gda)"/><rect width="480" height="270" fill="url(#dda)"/><rect width="480" height="270" fill="url(#rda)"/>
+<g class="cv-motif" transform="translate(250,30)"><rect x="0" y="14" width="150" height="182" rx="10" fill="#131317" stroke="#3f3f48" stroke-width="1.4"/>
+<rect x="16" y="32" width="118" height="26" rx="6" fill="#1c1c22"/><rect x="26" y="42" width="46" height="6" rx="3" fill="#3a3a42"/><rect x="88" y="39" width="38" height="12" rx="6" fill="#f2f2f4" opacity=".9"/><rect x="16" y="70" width="118" height="26" rx="6" fill="#1c1c22"/><rect x="26" y="80" width="46" height="6" rx="3" fill="#3a3a42"/><rect x="88" y="77" width="38" height="12" rx="6" fill="#3a7d5c" opacity=".9"/><rect x="16" y="108" width="118" height="26" rx="6" fill="#1c1c22"/><rect x="26" y="118" width="46" height="6" rx="3" fill="#3a3a42"/><rect x="88" y="115" width="38" height="12" rx="6" fill="#ff4d2e" opacity=".9"/><rect x="16" y="146" width="118" height="26" rx="6" fill="#1c1c22"/><rect x="26" y="156" width="46" height="6" rx="3" fill="#3a3a42"/><rect x="88" y="153" width="38" height="12" rx="6" fill="#5a5a66" opacity=".9"/>
+<rect x="172" y="104" width="56" height="46" rx="8" fill="#141419" stroke="#ff4d2e" stroke-width="1.6"/><path d="M184 104v-12a16 16 0 0 1 32 0v12" fill="none" stroke="#ff4d2e" stroke-width="1.6"/><circle cx="200" cy="124" r="5" fill="#ff4d2e"/><path d="M200 128v8" stroke="#ff4d2e" stroke-width="2"/></g>
+<text class="cv-num" data-to="989" x="36" y="168" font-family="Inter Tight, Inter, sans-serif" font-weight="600" font-size="58" fill="#f2f2f4" letter-spacing="-1.5"><tspan class="cv-val">989</tspan><tspan fill="#ff4d2e" font-size="30" dx="4"></tspan></text>
+<text class="cv-label" x="38" y="198" font-family="DM Mono, monospace" font-size="12.5" fill="#8d8d9a">demandes sécurisées</text>
+</svg>
+          <span class="work-proof">6 captures</span>
+        </div>
+        <div class="work-title"><div class="work-labels"><span class="work-domain d-auto">Automatisation</span><span class="work-ctx">Entreprise</span></div><h3>Demandes d&#x27;achat : confidentialité et suivi</h3></div>
+      </button>
+      <button class="work-card" type="button" data-dialog="dlg-iris" data-kind="Formation" data-domain="net" aria-haspopup="dialog" aria-label="Voir le d&eacute;tail du projet Infrastructure IRIS - 802.1X">
         <div class="work-media">
           <div class="work-chip">2025 &middot; R&eacute;seaux &amp; S&eacute;curit&eacute;</div>
           <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
@@ -101,143 +213,13 @@
           <path d="M200 137 l11 4 v10 c0 8 -5 13 -11 16 c-6 -3 -11 -8 -11 -16 v-10 z" fill="none" stroke="#ff4d2e" stroke-width="1.6" stroke-linejoin="round"/>
         </svg>
         </div>
-        <div class="work-title"><h3>Infrastructure IRIS - 802.1X</h3></div>
+        <div class="work-title"><div class="work-labels"><span class="work-domain d-net">Réseaux &amp; sécurité</span><span class="work-ctx">Formation</span></div><h3>Infrastructure IRIS - 802.1X</h3></div>
       </button>
 
-      <button class="work-card" type="button" data-dialog="dlg-pra" aria-haspopup="dialog" aria-label="Voir le d&eacute;tail du projet PRA / PCA">
-        <div class="work-media">
-          <div class="work-chip">2025&ndash;2026 &middot; Sauvegarde</div>
-          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
-          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="gBak" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#1c1a1a"/><stop offset="100%" stop-color="#0e0e11"/>
-            </linearGradient>
-            <pattern id="dotsBak" width="26" height="26" patternUnits="userSpaceOnUse">
-              <circle cx="1.4" cy="1.4" r="1.4" fill="#ffffff" opacity="0.06"/>
-            </pattern>
-            <marker id="arrEnd" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="#ff4d2e"/>
-            </marker>
-          </defs>
-          <rect width="400" height="300" fill="url(#gBak)"/>
-          <rect width="400" height="300" fill="url(#dotsBak)"/>
-          <g fill="#141419" stroke="#5a5a66" stroke-width="1.5">
-            <rect x="55" y="90" width="72" height="120" rx="8"/>
-            <rect x="273" y="90" width="72" height="120" rx="8"/>
-          </g>
-          <g stroke="#3f3f48" stroke-width="1.3">
-            <line x1="67" y1="112" x2="115" y2="112"/><circle cx="112" cy="112" r="2.4" fill="#ff4d2e" stroke="none"/>
-            <line x1="67" y1="134" x2="115" y2="134"/><circle cx="112" cy="134" r="2.4" fill="#5a5a66" stroke="none"/>
-            <line x1="67" y1="156" x2="115" y2="156"/><circle cx="112" cy="156" r="2.4" fill="#5a5a66" stroke="none"/>
-            <line x1="67" y1="178" x2="115" y2="178"/><circle cx="112" cy="178" r="2.4" fill="#5a5a66" stroke="none"/>
-            <line x1="285" y1="112" x2="333" y2="112"/><circle cx="330" cy="112" r="2.4" fill="#ff4d2e" stroke="none"/>
-            <line x1="285" y1="134" x2="333" y2="134"/><circle cx="330" cy="134" r="2.4" fill="#5a5a66" stroke="none"/>
-            <line x1="285" y1="156" x2="333" y2="156"/><circle cx="330" cy="156" r="2.4" fill="#5a5a66" stroke="none"/>
-            <line x1="285" y1="178" x2="333" y2="178"/><circle cx="330" cy="178" r="2.4" fill="#5a5a66" stroke="none"/>
-          </g>
-          <g stroke="#ff4d2e" stroke-width="1.6" fill="none">
-            <path d="M133 118 h134" marker-end="url(#arrEnd)"/>
-            <path d="M267 168 h-134" marker-end="url(#arrEnd)"/>
-          </g>
-          <g transform="translate(200,225)" stroke="#8d8d9a" stroke-width="1.5" fill="none">
-            <circle r="15"/>
-            <path d="M0,-15 A15,15 0 1 1 -10.6,-10.6" />
-            <path d="M-13,-13 l3,-4 l4,3" fill="#8d8d9a" stroke="none"/>
-            <line x1="0" y1="0" x2="0" y2="-7"/>
-            <line x1="0" y1="0" x2="5" y2="2"/>
-          </g>
-        </svg>
-        </div>
-        <div class="work-title"><h3>PRA / PCA</h3></div>
-      </button>
-
-      <button class="work-card" type="button" data-dialog="dlg-onedrive" aria-haspopup="dialog" aria-label="Voir le d&eacute;tail du projet Migration OneDrive - 5 To">
-        <div class="work-media">
-          <div class="work-chip">2025&ndash;2026 &middot; Cloud</div>
-          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
-          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="gCld" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#191c1e"/><stop offset="100%" stop-color="#0e0e11"/>
-            </linearGradient>
-            <pattern id="dotsCld" width="26" height="26" patternUnits="userSpaceOnUse">
-              <circle cx="1.4" cy="1.4" r="1.4" fill="#ffffff" opacity="0.06"/>
-            </pattern>
-          </defs>
-          <rect width="400" height="300" fill="url(#gCld)"/>
-          <rect width="400" height="300" fill="url(#dotsCld)"/>
-          <g fill="none" stroke="#5a5a66" stroke-width="1.5">
-            <rect x="135" y="185" width="26" height="32" rx="3"/>
-            <rect x="168" y="200" width="26" height="17" rx="3"/>
-            <rect x="108" y="200" width="26" height="17" rx="3"/>
-          </g>
-          <path d="M140 118c-22 0-34 17-30 34-18 2-28 15-28 29 0 17 14 29 31 29h158c17 0 30-13 30-29 0-15-11-27-27-29 1-24-18-43-42-43-15 0-27 7-33 18-3-6-6-9-9-9Z"
-                fill="#14171a" stroke="#8d8d9a" stroke-width="1.6"/>
-          <g stroke="#ff4d2e" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M200 205 v-52"/>
-            <path d="M186 167 l14-14 14 14"/>
-          </g>
-          <g>
-            <rect x="150" y="238" width="100" height="6" rx="3" fill="#232329"/>
-            <rect x="150" y="238" width="66" height="6" rx="3" fill="#ff4d2e"/>
-          </g>
-          <text x="200" y="262" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="#8d8d9a">5&#8239;To &middot; 66%</text>
-        </svg>
-        </div>
-        <div class="work-title"><h3>Migration OneDrive - 5&nbsp;To</h3></div>
-      </button>
-
-      <button class="work-card" type="button" data-dialog="dlg-portail" aria-haspopup="dialog" aria-label="Voir le d&eacute;tail du projet Portail listes de diffusion">
-        <div class="work-media">
-          <div class="work-chip">2026 &middot; Automatisation</div>
-          <div class="work-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
-          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="gWeb" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#1a1a20"/><stop offset="100%" stop-color="#0e0e11"/>
-            </linearGradient>
-            <pattern id="dotsWeb" width="26" height="26" patternUnits="userSpaceOnUse">
-              <circle cx="1.4" cy="1.4" r="1.4" fill="#ffffff" opacity="0.06"/>
-            </pattern>
-          </defs>
-          <rect width="400" height="300" fill="url(#gWeb)"/>
-          <rect width="400" height="300" fill="url(#dotsWeb)"/>
-          <rect x="62" y="56" width="276" height="188" rx="12" fill="#131317" stroke="#3f3f48" stroke-width="1.4"/>
-          <rect x="62" y="56" width="276" height="30" rx="12" fill="#1a1a20" stroke="#3f3f48" stroke-width="1.4"/>
-          <circle cx="80" cy="71" r="4" fill="#5a5a66"/>
-          <circle cx="94" cy="71" r="4" fill="#5a5a66"/>
-          <circle cx="108" cy="71" r="4" fill="#5a5a66"/>
-          <rect x="150" y="66" width="150" height="10" rx="5" fill="#232329"/>
-          <g>
-            <rect x="82" y="102" width="236" height="30" rx="7" fill="#1c1c22"/>
-            <rect x="94" y="112" width="12" height="12" rx="3" fill="none" stroke="#ff4d2e" stroke-width="1.6"/>
-            <path d="M97 118 l2.6 2.8 5-6" fill="none" stroke="#ff4d2e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="118" y="114" width="120" height="8" rx="4" fill="#3f3f48"/>
-            <rect x="255" y="114" width="45" height="8" rx="4" fill="#2a2a31"/>
-          </g>
-          <g opacity="0.85">
-            <rect x="82" y="140" width="236" height="30" rx="7" fill="#17171b"/>
-            <rect x="94" y="150" width="12" height="12" rx="3" fill="none" stroke="#5a5a66" stroke-width="1.6"/>
-            <rect x="118" y="152" width="96" height="8" rx="4" fill="#2a2a31"/>
-            <rect x="228" y="152" width="45" height="8" rx="4" fill="#232329"/>
-          </g>
-          <g opacity="0.85">
-            <rect x="82" y="178" width="236" height="30" rx="7" fill="#17171b"/>
-            <rect x="94" y="188" width="12" height="12" rx="3" fill="none" stroke="#5a5a66" stroke-width="1.6"/>
-            <rect x="118" y="190" width="140" height="8" rx="4" fill="#2a2a31"/>
-            <rect x="270" y="190" width="30" height="8" rx="4" fill="#232329"/>
-          </g>
-          <path d="M300 118 l14 12-14 12" fill="none" stroke="#ff4d2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        </div>
-        <div class="work-title"><h3>Portail listes de diffusion</h3></div>
-      </button>
-
+            </div>
     </div>
-  </div>
 
-  <p class="more-projects">Vous pouvez retrouver d&rsquo;autres projets sur mon <a href="https://github.com/delcoco95" target="_blank" rel="noopener">GitHub</a>.</p>
+    <p class="more-projects">Vous pouvez retrouver d&rsquo;autres projets sur mon <a href="https://github.com/delcoco95" target="_blank" rel="noopener">GitHub</a>.</p>
 
   <div class="skills-wrap">
     <div class="skills-head">
@@ -314,7 +296,173 @@
     </button>
   </nav>
 
-  <dialog id="dlg-iris" class="project-dialog" closedby="any" aria-labelledby="dlg-iris-title">
+  <dialog id="dlg-accueil" class="project-dialog wide" closedby="any" aria-labelledby="dlg-accueil-title">
+    <div class="dlg-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-accueil-title">Tri intelligent des e-mails d&#x27;accueil</h3>
+          <p class="dlg-meta">Groupe Ragni · Juil. – août 2026 · Projet mené seul, suivi dans Jira</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+      <div class="dlg-section">
+        <h4>Besoin</h4>
+        <p>Les e-mails reçus sur les deux adresses de contact publiques du groupe étaient triés à la main par l&#x27;accueil : délais de réponse, oublis et e-mails envoyés à la mauvaise agence.</p>
+      </div>
+      <div class="dlg-section">
+        <h4>Ce que j&rsquo;ai réalisé</h4>
+        <ul class="dlg-list"><li>Recueil du besoin avec l&#x27;accueil, puis deux démonstrations avant la mise en production.</li><li>Flux Power Automate : à chaque e-mail, un prompt d&#x27;IA (AI Builder) lit l&#x27;objet et le corps et choisit une catégorie (facture, devis, candidature, partenariat…).</li><li>Aiguillage avec une branche par destinataire ; pour les demandes de devis, recherche de l&#x27;agence commerciale à partir de l&#x27;adresse du client.</li><li>Branche « courrier inconnu » : aucun e-mail ne disparaît, tout est classé et tracé.</li><li>Bilan chiffré présenté à la direction, guide utilisateur et procédure technique.</li></ul>
+      </div>
+      <div class="dlg-section">
+        <h4>Résultats</h4>
+        <div class="dlg-kpis"><div><b>133</b><span>e-mails routés automatiquement au 1er bilan</span></div><div><b>100 %</b><span>des e-mails tracés</span></div><div><b>2</b><span>boîtes de contact automatisées</span></div></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Technologies</h4>
+        <div class="dlg-chips"><span>Power Automate</span><span>AI Builder (prompt)</span><span>Exchange Online</span><span>Excel / SharePoint</span><span>Jira</span></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Preuves</h4>
+        <div class="dlg-gallery"><figure><button type="button" class="shot" data-src="../assets/projets/pro-accueil-flux.webp" data-caption="Vue complète du flux : analyse IA, aiguillage, recherche de l&#x27;agence" aria-label="Agrandir : Vue complète du flux : analyse IA, aiguillage, recherche de l&#x27;agence"><img src="../assets/projets/pro-accueil-flux.webp" alt="Vue complète du flux : analyse IA, aiguillage, recherche de l&#x27;agence" loading="lazy" decoding="async"></button><figcaption>Vue complète du flux : analyse IA, aiguillage, recherche de l&#x27;agence</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-accueil-prompt.webp" data-caption="Le prompt d&#x27;IA qui classe chaque e-mail" aria-label="Agrandir : Le prompt d&#x27;IA qui classe chaque e-mail"><img src="../assets/projets/pro-accueil-prompt.webp" alt="Le prompt d&#x27;IA qui classe chaque e-mail" loading="lazy" decoding="async"></button><figcaption>Le prompt d&#x27;IA qui classe chaque e-mail</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-accueil-switch.webp" data-caption="Une branche par destinataire" aria-label="Agrandir : Une branche par destinataire"><img src="../assets/projets/pro-accueil-switch.webp" alt="Une branche par destinataire" loading="lazy" decoding="async"></button><figcaption>Une branche par destinataire</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-accueil-bilan.webp" data-caption="Bilan présenté à la direction (informations internes floutées)" aria-label="Agrandir : Bilan présenté à la direction (informations internes floutées)"><img src="../assets/projets/pro-accueil-bilan.webp" alt="Bilan présenté à la direction (informations internes floutées)" loading="lazy" decoding="async"></button><figcaption>Bilan présenté à la direction (informations internes floutées)</figcaption></figure></div>
+      </div>
+      <p class="dlg-note">Les captures d&rsquo;entreprise ont été anonymisées : noms, adresses et informations internes sont floutés.</p>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-listes" class="project-dialog wide" closedby="any" aria-labelledby="dlg-listes-title">
+    <div class="dlg-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-listes-title">Portail des listes de diffusion</h3>
+          <p class="dlg-meta">Groupe Ragni · Févr. – juil. 2026 · Interface reprise puis terminée et maintenue</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+      <div class="dlg-section">
+        <h4>Besoin</h4>
+        <p>Les collaborateurs ne savaient pas quelle liste de diffusion utiliser ni qui en faisait partie, et Microsoft a supprimé l&#x27;authentification par mot de passe pour les scripts Exchange.</p>
+      </div>
+      <div class="dlg-section">
+        <h4>Ce que j&rsquo;ai réalisé</h4>
+        <ul class="dlg-list"><li>Interface web de recherche par filiale (reprise d&#x27;une première version, terminée et améliorée), hébergée sur IIS avec son enregistrement DNS.</li><li>Script PowerShell d&#x27;extraction des listes et de leurs membres depuis Exchange Online.</li><li>Automatisation sans mot de passe : App Registration Entra ID, authentification par certificat, droits minimaux, tâche planifiée sur Windows Server.</li><li>Onglet ajouté dans Outlook et déployé par GPO pour accéder au portail depuis la messagerie.</li></ul>
+      </div>
+      <div class="dlg-section">
+        <h4>Résultats</h4>
+        <div class="dlg-kpis"><div><b>95</b><span>listes consultables</span></div><div><b>0</b><span>mot de passe dans les scripts</span></div><div><b>Quotidienne</b><span>mise à jour automatique</span></div></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Technologies</h4>
+        <div class="dlg-chips"><span>PowerShell</span><span>Exchange Online</span><span>Entra ID</span><span>Certificats</span><span>IIS</span><span>GPO</span><span>HTML / CSS / JS</span></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Preuves</h4>
+        <div class="dlg-gallery"><figure><button type="button" class="shot" data-src="../assets/projets/pro-listes-accueil.webp" data-caption="Accueil du portail : recherche et filtre par filiale" aria-label="Agrandir : Accueil du portail : recherche et filtre par filiale"><img src="../assets/projets/pro-listes-accueil.webp" alt="Accueil du portail : recherche et filtre par filiale" loading="lazy" decoding="async"></button><figcaption>Accueil du portail : recherche et filtre par filiale</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-listes-filtre.webp" data-caption="Listes d&#x27;une filiale avec le nombre de membres (adresses floutées)" aria-label="Agrandir : Listes d&#x27;une filiale avec le nombre de membres (adresses floutées)"><img src="../assets/projets/pro-listes-filtre.webp" alt="Listes d&#x27;une filiale avec le nombre de membres (adresses floutées)" loading="lazy" decoding="async"></button><figcaption>Listes d&#x27;une filiale avec le nombre de membres (adresses floutées)</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-listes-jira.webp" data-caption="Suivi dans Jira : 7 sous-tâches terminées" aria-label="Agrandir : Suivi dans Jira : 7 sous-tâches terminées"><img src="../assets/projets/pro-listes-jira.webp" alt="Suivi dans Jira : 7 sous-tâches terminées" loading="lazy" decoding="async"></button><figcaption>Suivi dans Jira : 7 sous-tâches terminées</figcaption></figure></div>
+      </div>
+      <p class="dlg-note">Les captures d&rsquo;entreprise ont été anonymisées : noms, adresses et informations internes sont floutés.</p>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-da" class="project-dialog wide" closedby="any" aria-labelledby="dlg-da-title">
+    <div class="dlg-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-da-title">Demandes d&#x27;achat : confidentialité et suivi</h3>
+          <p class="dlg-meta">Groupe Ragni · Oct. 2026 · Demande du service Achats, suivie dans Jira</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+      <div class="dlg-section">
+        <h4>Besoin</h4>
+        <p>Sur la liste SharePoint des demandes d&#x27;achat, tous les membres du site voyaient toutes les demandes (montants, fournisseurs), et une simple case « Traité » ne disait pas si une commande était passée, en attente ou refusée. Le service Achats a demandé la confidentialité et un meilleur suivi.</p>
+      </div>
+      <div class="dlg-section">
+        <h4>Ce que j&rsquo;ai réalisé</h4>
+        <ul class="dlg-list"><li>Confidentialité : la liste n&#x27;hérite plus des droits du site ; chacun ne voit et ne modifie que ses propres demandes, les Achats voient tout.</li><li>Création de niveaux d&#x27;autorisation dédiés (« Demandeur DA », « Valideur DA ») et d&#x27;un groupe de valideurs qui voient les demandes sans pouvoir les modifier.</li><li>Remplacement de la case « Traité » par une colonne « État de la commande » (A traiter, Traité, Stand-By, Non) avec mise en forme JSON, et ajout d&#x27;un champ Fournisseur obligatoire.</li><li>Correction du formulaire Power Apps et reprise des 989 demandes existantes, sans envoi de mail.</li><li>Flux de notification sous un compte de service : le demandeur reçoit un mail depuis l&#x27;adresse des Achats uniquement quand l&#x27;état change.</li><li>Remise en état du flux de validation existant (connexion, champs obligatoires) et documentation des problèmes rencontrés et de leurs solutions.</li></ul>
+      </div>
+      <div class="dlg-section">
+        <h4>Résultats</h4>
+        <div class="dlg-kpis"><div><b>989</b><span>demandes reprises</span></div><div><b>4</b><span>états de commande au lieu d&#x27;une case</span></div><div><b>2</b><span>documents : procédure IT et guide utilisateur</span></div></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Technologies</h4>
+        <div class="dlg-chips"><span>SharePoint</span><span>Autorisations</span><span>Power Automate</span><span>Power Apps</span><span>JSON formatting</span><span>Exchange Online</span></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Preuves</h4>
+        <div class="dlg-gallery"><figure><button type="button" class="shot" data-src="../assets/projets/pro-da-formulaire.webp" data-caption="Formulaire de demande avec le nouveau champ Fournisseur obligatoire" aria-label="Agrandir : Formulaire de demande avec le nouveau champ Fournisseur obligatoire"><img src="../assets/projets/pro-da-formulaire.webp" alt="Formulaire de demande avec le nouveau champ Fournisseur obligatoire" loading="lazy" decoding="async"></button><figcaption>Formulaire de demande avec le nouveau champ Fournisseur obligatoire</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-da-powerapps.webp" data-caption="Correction du formulaire Power Apps après le remplacement de la colonne « Traité » (données floutées)" aria-label="Agrandir : Correction du formulaire Power Apps après le remplacement de la colonne « Traité » (données floutées)"><img src="../assets/projets/pro-da-powerapps.webp" alt="Correction du formulaire Power Apps après le remplacement de la colonne « Traité » (données floutées)" loading="lazy" decoding="async"></button><figcaption>Correction du formulaire Power Apps après le remplacement de la colonne « Traité » (données floutées)</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-da-etat.webp" data-caption="Colonne « État de la commande » : 4 états, valeur par défaut et mise en forme JSON" aria-label="Agrandir : Colonne « État de la commande » : 4 états, valeur par défaut et mise en forme JSON"><img src="../assets/projets/pro-da-etat.webp" alt="Colonne « État de la commande » : 4 états, valeur par défaut et mise en forme JSON" loading="lazy" decoding="async"></button><figcaption>Colonne « État de la commande » : 4 états, valeur par défaut et mise en forme JSON</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-da-droits.webp" data-caption="Niveaux d&#x27;autorisation créés : « Demandeur DA » et « Valideur DA »" aria-label="Agrandir : Niveaux d&#x27;autorisation créés : « Demandeur DA » et « Valideur DA »"><img src="../assets/projets/pro-da-droits.webp" alt="Niveaux d&#x27;autorisation créés : « Demandeur DA » et « Valideur DA »" loading="lazy" decoding="async"></button><figcaption>Niveaux d&#x27;autorisation créés : « Demandeur DA » et « Valideur DA »</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-da-flux.webp" data-caption="Flux de notification Power Automate : déclencheur, contrôle des changements, aiguillage par état (adresses floutées)" aria-label="Agrandir : Flux de notification Power Automate : déclencheur, contrôle des changements, aiguillage par état (adresses floutées)"><img src="../assets/projets/pro-da-flux.webp" alt="Flux de notification Power Automate : déclencheur, contrôle des changements, aiguillage par état (adresses floutées)" loading="lazy" decoding="async"></button><figcaption>Flux de notification Power Automate : déclencheur, contrôle des changements, aiguillage par état (adresses floutées)</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/pro-da-notification.webp" data-caption="Logique du flux : un mail seulement quand l&#x27;état change" aria-label="Agrandir : Logique du flux : un mail seulement quand l&#x27;état change"><img src="../assets/projets/pro-da-notification.webp" alt="Logique du flux : un mail seulement quand l&#x27;état change" loading="lazy" decoding="async"></button><figcaption>Logique du flux : un mail seulement quand l&#x27;état change</figcaption></figure></div>
+      </div>
+      <p class="dlg-note">Les captures d&rsquo;entreprise ont été anonymisées : noms, adresses et informations internes sont floutés.</p>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-cadence" class="project-dialog wide" closedby="any" aria-labelledby="dlg-cadence-title">
+    <div class="dlg-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-cadence-title">Cadence : application pour apprendre les langues</h3>
+          <p class="dlg-meta">Projet personnel · Sept. 2026 – en cours · En ligne</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+      <div class="dlg-links"><a class="cv-btn" href="https://delcoco95.github.io/cadence/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg> Ouvrir l&#x27;application</a><a class="cv-btn" href="https://github.com/delcoco95/cadence" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg> GitHub</a></div>
+      <div class="dlg-section">
+        <h4>Besoin</h4>
+        <p>Progresser en langues chaque jour sur téléphone, sans abonnement, avec un outil qui mesure vraiment la progression plutôt que la seule régularité.</p>
+      </div>
+      <div class="dlg-section">
+        <h4>Ce que j&rsquo;ai réalisé</h4>
+        <ul class="dlg-list"><li>Application installable sur iPhone (PWA), utilisable hors ligne, hébergée gratuitement sur GitHub Pages.</li><li>Trois langues : anglais de A2 à C2, italien et espagnol de A1 à C2, avec un test de niveau adaptatif.</li><li>Conversations guidées à l&#x27;oral avec des personnages (café, hôtel, entretien d&#x27;embauche, appel au support informatique) : la réponse est évaluée sur le sens, pas sur une phrase exacte.</li><li>Moteur pédagogique en TypeScript séparé de l&#x27;interface : correction tolérante, répétition espacée (FSRS), maîtrise par notion.</li><li>Voix naturelles pré-générées avec des modèles open source : près de 30 000 fichiers audio, identiques sur tous les téléphones.</li><li>Tests automatisés et déploiement automatique à chaque modification, avec une version de prévisualisation (GitHub Actions).</li></ul>
+      </div>
+      <div class="dlg-section">
+        <h4>Résultats</h4>
+        <div class="dlg-kpis"><div><b>137</b><span>tests automatisés</span></div><div><b>3</b><span>langues, jusqu&#x27;au niveau C2</span></div><div><b>~30 000</b><span>fichiers audio générés</span></div></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Technologies</h4>
+        <div class="dlg-chips"><span>React</span><span>TypeScript</span><span>PWA</span><span>IndexedDB</span><span>Vitest</span><span>GitHub Actions</span></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Preuves</h4>
+        <div class="dlg-gallery"><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-accueil.webp" data-caption="Écran d&#x27;accueil de l&#x27;application" aria-label="Agrandir : Écran d&#x27;accueil de l&#x27;application"><img src="../assets/projets/perso-cadence-accueil.webp" alt="Écran d&#x27;accueil de l&#x27;application" loading="lazy" decoding="async"></button><figcaption>Écran d&#x27;accueil de l&#x27;application</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-home.webp" data-caption="Objectif du jour et prochaine leçon" aria-label="Agrandir : Objectif du jour et prochaine leçon"><img src="../assets/projets/perso-cadence-home.webp" alt="Objectif du jour et prochaine leçon" loading="lazy" decoding="async"></button><figcaption>Objectif du jour et prochaine leçon</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-parcours.webp" data-caption="Parcours par unités, débloquées au fur et à mesure" aria-label="Agrandir : Parcours par unités, débloquées au fur et à mesure"><img src="../assets/projets/perso-cadence-parcours.webp" alt="Parcours par unités, débloquées au fur et à mesure" loading="lazy" decoding="async"></button><figcaption>Parcours par unités, débloquées au fur et à mesure</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-exercice.webp" data-caption="Exercice corrigé automatiquement" aria-label="Agrandir : Exercice corrigé automatiquement"><img src="../assets/projets/perso-cadence-exercice.webp" alt="Exercice corrigé automatiquement" loading="lazy" decoding="async"></button><figcaption>Exercice corrigé automatiquement</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-parler.webp" data-caption="Conversations guidées avec des personnages" aria-label="Agrandir : Conversations guidées avec des personnages"><img src="../assets/projets/perso-cadence-parler.webp" alt="Conversations guidées avec des personnages" loading="lazy" decoding="async"></button><figcaption>Conversations guidées avec des personnages</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-scene.webp" data-caption="Scène B1 : appel au support informatique" aria-label="Agrandir : Scène B1 : appel au support informatique"><img src="../assets/projets/perso-cadence-scene.webp" alt="Scène B1 : appel au support informatique" loading="lazy" decoding="async"></button><figcaption>Scène B1 : appel au support informatique</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-oral.webp" data-caption="Réponse à l&#x27;oral, avec coup de pouce si besoin" aria-label="Agrandir : Réponse à l&#x27;oral, avec coup de pouce si besoin"><img src="../assets/projets/perso-cadence-oral.webp" alt="Réponse à l&#x27;oral, avec coup de pouce si besoin" loading="lazy" decoding="async"></button><figcaption>Réponse à l&#x27;oral, avec coup de pouce si besoin</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-cadence-langues.webp" data-caption="Profil : anglais, italien et espagnol" aria-label="Agrandir : Profil : anglais, italien et espagnol"><img src="../assets/projets/perso-cadence-langues.webp" alt="Profil : anglais, italien et espagnol" loading="lazy" decoding="async"></button><figcaption>Profil : anglais, italien et espagnol</figcaption></figure></div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-dashauto" class="project-dialog wide" closedby="any" aria-labelledby="dlg-dashauto-title">
+    <div class="dlg-inner">
+      <div class="dlg-head">
+        <div>
+          <h3 id="dlg-dashauto-title">Dash Auto : pilotage d’une activité automobile</h3>
+          <p class="dlg-meta">Projet personnel · Août 2026 – en cours</p>
+        </div>
+        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      </div>
+      <div class="dlg-links"><a class="cv-btn" href="https://github.com/delcoco95/Dash_Auto" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg> GitHub</a></div>
+      <div class="dlg-section">
+        <h4>Besoin</h4>
+        <p>Suivre les achats, frais, travaux et marges de mon activité automobile à temps partiel, jusque-là gérés dans des fichiers dispersés.</p>
+      </div>
+      <div class="dlg-section">
+        <h4>Ce que j&rsquo;ai réalisé</h4>
+        <ul class="dlg-list"><li>API FastAPI de 35 routes (véhicules, photos, travaux, frais, documents, planning) avec authentification JWT.</li><li>Calculs financiers isolés dans un module : coût des travaux, marge par véhicule, indicateurs globaux.</li><li>Tableau de bord Next.js avec graphiques, fiches véhicules, calendrier, génération de PDF et exports Excel.</li><li>Workflow GitHub Actions planifié qui lit les e-mails liés aux véhicules et alimente la base avec l&#x27;aide d&#x27;une IA.</li><li>Environnement reproductible avec Docker Compose (PostgreSQL + API).</li></ul>
+      </div>
+      <div class="dlg-section">
+        <h4>Résultats</h4>
+        <div class="dlg-kpis"><div><b>35</b><span>routes d&#x27;API</span></div><div><b>15 min</b><span>traitement automatique des e-mails</span></div><div><b>Docker</b><span>déploiement reproductible</span></div></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Technologies</h4>
+        <div class="dlg-chips"><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>Docker</span><span>JWT</span><span>GitHub Actions</span></div>
+      </div>
+      <div class="dlg-section">
+        <h4>Preuves</h4>
+        <div class="dlg-gallery"><figure><button type="button" class="shot" data-src="../assets/projets/perso-dash-tableau.webp" data-caption="Tableau de bord (données fictives)" aria-label="Agrandir : Tableau de bord (données fictives)"><img src="../assets/projets/perso-dash-tableau.webp" alt="Tableau de bord (données fictives)" loading="lazy" decoding="async"></button><figcaption>Tableau de bord (données fictives)</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-dash-vehicules.webp" data-caption="Liste des véhicules" aria-label="Agrandir : Liste des véhicules"><img src="../assets/projets/perso-dash-vehicules.webp" alt="Liste des véhicules" loading="lazy" decoding="async"></button><figcaption>Liste des véhicules</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-dash-fiche.webp" data-caption="Fiche véhicule" aria-label="Agrandir : Fiche véhicule"><img src="../assets/projets/perso-dash-fiche.webp" alt="Fiche véhicule" loading="lazy" decoding="async"></button><figcaption>Fiche véhicule</figcaption></figure><figure><button type="button" class="shot" data-src="../assets/projets/perso-dash-planning.webp" data-caption="Planning" aria-label="Agrandir : Planning"><img src="../assets/projets/perso-dash-planning.webp" alt="Planning" loading="lazy" decoding="async"></button><figcaption>Planning</figcaption></figure></div>
+      </div>
+      <p class="dlg-note">Captures réalisées avec des données de démonstration fictives.</p>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-iris" class="project-dialog wide" closedby="any" aria-labelledby="dlg-iris-title">
     <div class="dlg-inner">
       <div class="dlg-head">
         <div>
@@ -344,7 +492,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
           GitHub
         </a>
-        <a class="cv-btn" href="https://nedjb.fr/documentation/08_Infrastructure_IRIS.pdf" target="_blank" rel="noopener">
+        <a class="cv-btn" href="../documentation/08_Infrastructure_IRIS.pdf" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 16.5h7M8.5 9.5h3"/></svg>
           Documentation
         </a>
@@ -352,111 +500,13 @@
     </div>
   </dialog>
 
-  <dialog id="dlg-pra" class="project-dialog" closedby="any" aria-labelledby="dlg-pra-title">
-    <div class="dlg-inner">
-      <div class="dlg-head">
-        <div>
-          <h3 id="dlg-pra-title">PRA / PCA</h3>
-          <p class="dlg-meta">Projet de formation &middot; 8 jours intensifs</p>
-        </div>
-        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
-      </div>
-      <div class="dlg-section">
-        <h4>Besoin</h4>
-        <p>Face &agrave; la mont&eacute;e des menaces ransomware, il fallait garantir la continuit&eacute; d&rsquo;activit&eacute; avec une strat&eacute;gie de sauvegarde immuable, un RPO&nbsp;&lt;&nbsp;1&nbsp;h et un RTO&nbsp;&lt;&nbsp;30&nbsp;s.</p>
-      </div>
-      <div class="dlg-section">
-        <h4>Solution technique</h4>
-        <p>Sauvegardes chiffr&eacute;es AES-256 immuables toutes les heures avec BorgBackup/Borgmatic&nbsp;; r&eacute;plication synchrone DRBD (RPO=0) coupl&eacute;e &agrave; Keepalived/VRRP pour un basculement automatique (RTO&nbsp;&lt;&nbsp;30&nbsp;s)&nbsp;; supervision Prometheus/Grafana&nbsp;; orchestration Docker Compose sur 3&nbsp;VMs provisionn&eacute;es avec Vagrant.</p>
-      </div>
-      <div class="dlg-section">
-        <h4>Technologies</h4>
-        <div class="dlg-chips"><span>BorgBackup</span><span>DRBD</span><span>Keepalived / VRRP</span><span>Prometheus</span><span>Grafana</span><span>Docker Compose</span><span>Vagrant</span><span>OpenLDAP</span></div>
-      </div>
-      <div class="dlg-section">
-        <h4>R&eacute;sultats</h4>
-        <p>PRA valid&eacute; avec restauration compl&egrave;te test&eacute;e, bascule PCA automatique valid&eacute;e en moins de 30 secondes, sauvegardes r&eacute;sistantes aux ransomwares, et tableaux de bord de supervision en temps r&eacute;el.</p>
-      </div>
-      <div class="dlg-links">
-        <a class="cv-btn" href="https://github.com/delcoco95/PRA-PCRA---backup-" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-          GitHub
-        </a>
-        <a class="cv-btn" href="https://nedjb.fr/documentation/09_PRA_PCRA_Backup.pdf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 16.5h7M8.5 9.5h3"/></svg>
-          Documentation
-        </a>
-      </div>
-    </div>
+    <dialog id="lightbox" class="lightbox" closedby="any" aria-label="Capture agrandie">
+    <figure>
+      <img id="lb-img" alt="">
+      <figcaption><button type="button" id="lb-prev" aria-label="Capture précédente">←</button><span id="lb-cap"></span><button type="button" id="lb-next" aria-label="Capture suivante">→</button><button type="button" data-close aria-label="Fermer">✕</button></figcaption>
+    </figure>
   </dialog>
 
-  <dialog id="dlg-onedrive" class="project-dialog" closedby="any" aria-labelledby="dlg-onedrive-title">
-    <div class="dlg-inner">
-      <div class="dlg-head">
-        <div>
-          <h3 id="dlg-onedrive-title">Migration OneDrive - 5&nbsp;To</h3>
-          <p class="dlg-meta">Groupe Ragni &middot; Nov. 2025 &ndash; Jan. 2026</p>
-        </div>
-        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
-      </div>
-      <div class="dlg-section">
-        <h4>Besoin</h4>
-        <p>Les serveurs de fichiers locaux du Groupe Ragni &eacute;taient satur&eacute;s (environ 5&nbsp;To) et ne permettaient pas d&rsquo;acc&egrave;s mobile aux donn&eacute;es&nbsp;; d&eacute;cision de migrer vers OneDrive / Microsoft&nbsp;365.</p>
-      </div>
-      <div class="dlg-section">
-        <h4>Solution technique</h4>
-        <p>Transfert des donn&eacute;es avec le SharePoint Migration Tool (SPMT), organis&eacute; en sprints avec d&eacute;ploiement progressif par groupes d&rsquo;utilisateurs&nbsp;; automatisation du provisionnement et de la validation post-migration via PowerShell et Microsoft Graph API.</p>
-      </div>
-      <div class="dlg-section">
-        <h4>Technologies</h4>
-        <div class="dlg-chips"><span>OneDrive</span><span>Microsoft 365</span><span>SPMT</span><span>PowerShell</span><span>Graph API</span><span>Jira</span></div>
-      </div>
-      <div class="dlg-section">
-        <h4>R&eacute;sultats</h4>
-        <p>Environ 5&nbsp;To lib&eacute;r&eacute;s sur les serveurs locaux, acc&egrave;s mobile aux donn&eacute;es pour toute l&rsquo;entreprise, m&eacute;thodologie de migration r&eacute;utilisable document&eacute;e, et charge de maintenance de l&rsquo;infrastructure locale r&eacute;duite.</p>
-      </div>
-      <div class="dlg-links">
-        <a class="cv-btn" href="https://nedjb.fr/documentation/DOC_Migration_OneDrive_Cloud.pdf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 16.5h7M8.5 9.5h3"/></svg>
-          Documentation
-        </a>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog id="dlg-portail" class="project-dialog" closedby="any" aria-labelledby="dlg-portail-title">
-    <div class="dlg-inner">
-      <div class="dlg-head">
-        <div>
-          <h3 id="dlg-portail-title">Portail listes de diffusion</h3>
-          <p class="dlg-meta">Groupe Ragni &middot; F&eacute;v. 2026 &middot; 2 semaines</p>
-        </div>
-        <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
-      </div>
-      <div class="dlg-section">
-        <h4>Besoin</h4>
-        <p>Les chefs d&rsquo;&eacute;quipe ne pouvaient ni consulter ni modifier les membres des listes de diffusion Microsoft&nbsp;365&nbsp;; chaque changement n&eacute;cessitait un ticket support, cr&eacute;ant des goulots d&rsquo;&eacute;tranglement.</p>
-      </div>
-      <div class="dlg-section">
-        <h4>Solution technique</h4>
-        <p>D&eacute;veloppement d&rsquo;une interface web (HTML/CSS/JS) connect&eacute;e &agrave; Microsoft&nbsp;365 via PowerShell et des t&acirc;ches planifi&eacute;es, h&eacute;berg&eacute;e sur IIS en production&nbsp;; d&eacute;ploiement automatis&eacute; par GPO Active Directory avec int&eacute;gration contextuelle dans Outlook.</p>
-      </div>
-      <div class="dlg-section">
-        <h4>Technologies</h4>
-        <div class="dlg-chips"><span>HTML/CSS/JS</span><span>Microsoft 365</span><span>PowerShell</span><span>IIS</span><span>GPO</span><span>Active Directory</span><span>T&acirc;ches planifi&eacute;es</span></div>
-      </div>
-      <div class="dlg-section">
-        <h4>R&eacute;sultats</h4>
-        <p>Autonomie donn&eacute;e aux chefs d&rsquo;&eacute;quipe pour g&eacute;rer leurs listes, r&eacute;duction significative des tickets de support niveau&nbsp;1, d&eacute;ploiement GPO sans intervention manuelle, et adoption imm&eacute;diate sans formation.</p>
-      </div>
-      <div class="dlg-links">
-        <a class="cv-btn" href="https://nedjb.fr/documentation/Interface_Listes_Distribution_O365.pdf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 16.5h7M8.5 9.5h3"/></svg>
-          Documentation
-        </a>
-      </div>
-    </div>
-  </dialog>
   <dialog id="contactDialog" closedby="any" aria-labelledby="contactDialogTitle">
     <div class="dlg-inner">
       <div class="dlg-head">
@@ -488,7 +538,7 @@
   </dialog>
   <footer>
     <div class="foot-row">
-      <p class="mono">Derni&egrave;re mise &agrave; jour 09/2026</p>
+      <p class="mono">Nedj Belloum</p>
       <div class="foot-legal">
         <a href="../html/mentions-legales.html" data-route="mentions-legales">Mentions l&eacute;gales</a>
         <a href="../html/confidentialite.html" data-route="confidentialite">Confidentialit&eacute;</a>
@@ -502,7 +552,9 @@
   </footer>
 
 </div>
-<script src="../js/main.js"></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/vendor/motion.js" defer></script>
+<script src="../js/projets.js" defer></script>
 </body>
 </html>
 

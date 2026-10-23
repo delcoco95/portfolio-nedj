@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script>(function(d){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("js-motion");setTimeout(function(){if(!window.Motion)d.classList.remove("js-motion")},2500)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body>
 <div class="page">
@@ -17,7 +19,7 @@
     <div class="idpill">
       <div class="avatar-outer">
         <div class="avatar-wrap">
-          <img src="assets/avatar.jpg" alt="Nedj Belloum">
+          <img src="assets/avatar.jpg" alt="Nedj Belloum" width="240" height="240" decoding="async">
         </div>
         <span class="avatar-dot"></span>
       </div>
@@ -62,7 +64,7 @@
   <div class="split">
     <div class="sticky-col">
       <div class="about-photo" id="aboutPhoto">
-        <img src="assets/photo.jpg" alt="Nedj Belloum" id="aboutPhotoImg">
+        <img src="assets/photo.webp" alt="Nedj Belloum" id="aboutPhotoImg" width="1100" height="1100" loading="lazy" decoding="async">
         <canvas id="aboutParticleCanvas" aria-hidden="true"></canvas>
       </div>
       <div class="logos-bar">
@@ -81,8 +83,8 @@
         <p class="bio">Je travaille aujourd&rsquo;hui chez Groupe Ragni sur l&rsquo;administration Windows Server, Active Directory et Microsoft&nbsp;365, apr&egrave;s un passage chez Resistex sur la supervision r&eacute;seaux. Rigoureux et autonome, j&rsquo;aime autant r&eacute;soudre un incident critique que documenter et automatiser pour que &ccedil;a ne se reproduise plus.</p>
         <div class="vline"></div>
         <div class="stats">
-          <p>(+5 ans d&rsquo;exp&eacute;rience professionnelle)</p>
-          <p>(10+ projets r&eacute;seaux &amp; syst&egrave;mes)</p>
+          <p>(+<span class="count" data-to="5">5</span> ans d&rsquo;exp&eacute;rience professionnelle)</p>
+          <p>(<span class="count" data-to="10">10</span>+ projets r&eacute;seaux &amp; syst&egrave;mes)</p>
         </div>
       </div>
 
@@ -167,6 +169,7 @@
     </div>
   </div>
 
+
   <div class="contact-wrap">
     <div class="contact-card">
       <span class="tag">Contact</span>
@@ -234,9 +237,9 @@
         <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       </div>
       <div class="cert-pages">
-        <img src="assets/cert-fortinet-1.png" alt="Certificat Fortinet Certified Fundamentals in Cybersecurity, page 1">
-        <img src="assets/cert-fortinet-2.png" alt="Certificat Fortinet, cours FCF Introduction to the Threat Landscape">
-        <img src="assets/cert-fortinet-3.png" alt="Certificat Fortinet, cours FCF Getting Started in Cybersecurity">
+        <img src="assets/cert-fortinet-1.webp" width="1400" height="990" loading="lazy" decoding="async" alt="Certificat Fortinet Certified Fundamentals in Cybersecurity, page 1">
+        <img src="assets/cert-fortinet-2.webp" width="1400" height="1018" loading="lazy" decoding="async" alt="Certificat Fortinet, cours FCF Introduction to the Threat Landscape">
+        <img src="assets/cert-fortinet-3.webp" width="1400" height="1018" loading="lazy" decoding="async" alt="Certificat Fortinet, cours FCF Getting Started in Cybersecurity">
       </div>
     </div>
   </dialog>
@@ -251,7 +254,7 @@
         <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       </div>
       <div class="cert-pages">
-        <img src="assets/cert-cisco.png" alt="Certification Cisco Networking Basics">
+        <img src="assets/cert-cisco.webp" width="1400" height="1081" loading="lazy" decoding="async" alt="Certification Cisco Networking Basics">
       </div>
     </div>
   </dialog>
@@ -266,13 +269,13 @@
         <button class="dlg-close" type="button" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
       </div>
       <div class="cert-pages">
-        <img src="assets/cert-anssi.png" alt="Attestation SecNumacad&eacute;mie ANSSI">
+        <img src="assets/cert-anssi.webp" width="1400" height="990" loading="lazy" decoding="async" alt="Attestation SecNumacad&eacute;mie ANSSI">
       </div>
     </div>
   </dialog>
   <footer>
     <div class="foot-row">
-      <p class="mono">Derni&egrave;re mise &agrave; jour 09/2026</p>
+      <p class="mono">Nedj Belloum</p>
       <div class="foot-legal">
         <a href="html/mentions-legales.html" data-route="mentions-legales">Mentions l&eacute;gales</a>
         <a href="html/confidentialite.html" data-route="confidentialite">Confidentialit&eacute;</a>
@@ -286,7 +289,9 @@
   </footer>
 
 </div>
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
+<script src="js/vendor/motion.js" defer></script>
+<script src="js/accueil.js" defer></script>
 </body>
 </html>
 

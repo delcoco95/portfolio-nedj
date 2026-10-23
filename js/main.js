@@ -115,14 +115,23 @@
           y: y + (Math.random() - 0.5) * 30,
           vx: 0, vy: 0,
           r: 1.2 + Math.random() * 1.2,
+          s: 0,
           color: 'rgb(' + data[idx] + ',' + data[idx + 1] + ',' + data[idx + 2] + ')'
         });
       }
     }
+    for (var k = 0; k < particles.length; k++) particles[k].s = particles[k].r * 1.78;
   }
 
+  // Boucle d'animation économe : elle s'arrête d'elle-même quand les particules
+  // sont revenues en place, quand le cadre sort de l'écran ou quand l'onglet est
+  // masqué, et ne redémarre qu'au survol. Zéro calcul en continu = zéro latence.
+  var visible = true, sleeping = false;
+  function wake(){ if (!raf && visible && !document.hidden && particles.length) raf = requestAnimationFrame(tick); }
   function tick(){
+    raf = null;
     ctx.clearRect(0, 0, width, height);
+    var moving = 0, R2 = REPEL_RADIUS * REPEL_RADIUS;
     for (var i = 0; i < particles.length; i++){
       var p = particles[i];
       var fx = (p.hx - p.x) * EASE;
@@ -130,8 +139,9 @@
       if (mouse.active) {
         var dx = p.x - mouse.x;
         var dy = p.y - mouse.y;
-        var dist = Math.hypot(dx, dy) || 0.001;
-        if (dist < REPEL_RADIUS) {
+        var d2 = dx * dx + dy * dy;
+        if (d2 < R2) {
+          var dist = Math.sqrt(d2) || 0.001;
           var force = (REPEL_RADIUS - dist) / REPEL_RADIUS;
           fx += (dx / dist) * force * REPEL_FORCE;
           fy += (dy / dist) * force * REPEL_FORCE;
@@ -141,13 +151,11 @@
       p.vy = (p.vy + fy) * FRICTION;
       p.x += p.vx;
       p.y += p.vy;
-
+      if (p.vx > 0.02 || p.vx < -0.02 || p.vy > 0.02 || p.vy < -0.02) moving++;
       ctx.fillStyle = p.color;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.fillRect(p.x - p.s * 0.5, p.y - p.s * 0.5, p.s, p.s);
     }
-    raf = requestAnimationFrame(tick);
+    if (moving || mouse.active) wake();
   }
 
   wrap.addEventListener('mousemove', function(e){
@@ -155,32 +163,45 @@
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
     mouse.active = true;
-  });
+    wake();
+  }, { passive: true });
   wrap.addEventListener('mouseleave', function(){
     mouse.active = false;
     mouse.x = -9999;
     mouse.y = -9999;
+    wake();
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      visible = entries[0].isIntersecting;
+      if (visible) wake(); else if (raf) { cancelAnimationFrame(raf); raf = null; }
+    }).observe(wrap);
+  }
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden && raf) { cancelAnimationFrame(raf); raf = null; } else wake();
   });
 
   function start(){
     try {
       buildParticles(imgEl);
       wrap.classList.add('particles-ready');
-      if (!raf) tick();
+      wake();
     } catch(e) { /* image indisponible ou canvas bloqué : la photo reste normale */ }
   }
 
+  // Construction différée après l'affichage de la page pour ne pas retarder le premier rendu
+  function later(fn){ (window.requestIdleCallback || function(f){ setTimeout(f, 200); })(fn, { timeout: 1200 }); }
   if (imgEl.complete && imgEl.naturalWidth) {
-    start();
+    later(start);
   } else {
-    imgEl.addEventListener('load', start, { once: true });
+    imgEl.addEventListener('load', function(){ later(start); }, { once: true });
   }
 
   var resizeTimer;
   window.addEventListener('resize', function(){
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function(){
-      if (imgEl.complete && imgEl.naturalWidth) buildParticles(imgEl);
+      if (imgEl.complete && imgEl.naturalWidth) { buildParticles(imgEl); wake(); }
     }, 200);
   });
 })();

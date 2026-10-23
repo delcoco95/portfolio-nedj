@@ -86,9 +86,9 @@
   }
   @media (max-width:809px){ .hero h1{ line-height:1.1em; font-size:clamp(30px,11vw,56px);} }
   .hero h1 .word{display:inline-block; overflow:hidden; vertical-align:top; padding-bottom:.08em; margin-bottom:-.08em;}
-  .hero h1 .word span{display:inline-block; transform:translateY(115%); opacity:0; animation:word-up .85s cubic-bezier(.16,1,.3,1) forwards;}
-  @keyframes word-up{to{transform:translateY(0); opacity:1;}}
-  @media (prefers-reduced-motion: reduce){ .hero h1 .word span{animation:none; transform:none; opacity:1;} }
+  .hero h1 .word span{display:inline-block; transform:translateY(115%); opacity:0; filter:blur(10px); animation:word-up .9s cubic-bezier(.16,1,.3,1) forwards;}
+  @keyframes word-up{to{transform:translateY(0); opacity:1; filter:blur(0);}}
+  @media (prefers-reduced-motion: reduce){ .hero h1 .word span{animation:none; transform:none; opacity:1; filter:none;} }
   .hero-row{display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; opacity:0; transform:translateY(14px); animation:fade-up .7s cubic-bezier(.16,1,.3,1) .42s forwards;}
   @media (max-width:809px){ .hero-row{flex-direction:column; align-items:flex-start; gap:48px;} }
   @keyframes fade-up{to{opacity:1; transform:translateY(0);}}
@@ -238,7 +238,7 @@
   .cert-dialog{max-width:min(820px,calc(100vw - 32px)); max-height:min(90vh,900px);}
   .cert-inner{padding:24px; max-height:min(90vh,900px);}
   .cert-pages{flex:1; min-height:0; overflow-y:auto; display:flex; flex-direction:column; gap:12px; border-radius:12px;}
-  .cert-pages img{width:100%; display:block; border:1px solid var(--border); border-radius:12px;}
+  .cert-pages img{width:100%; height:auto; display:block; border:1px solid var(--border); border-radius:12px;}
 
   /* contact */
   .contact-wrap{max-width:1440px; margin:0 auto; padding:0 24px 24px;}
@@ -324,3 +324,15 @@
     .foot-row{flex-direction:column; align-items:center; text-align:center; row-gap:16px;}
     .foot-links, .foot-legal{justify-content:center;}
   }
+
+/* ---------- Navigation fluide entre pages (View Transitions) ---------- */
+@view-transition{navigation:auto;}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.32s; animation-timing-function:cubic-bezier(.16,1,.3,1);}
+@media (prefers-reduced-motion: reduce){ @view-transition{navigation:none;} }
+
+/* ---------- Accueil : états initiaux du motion design (uniquement si JS + motion actifs) ---------- */
+.js-motion .card, .js-motion .contact-card{opacity:0;}
+.contact-card h2 .w{display:inline-block; transition:none;}
+.js-motion .contact-card h2 .w{opacity:.14;}
+.contact-card h2 .w.hl{color:var(--accent);}
+.cv-btn, .talk-btn{will-change:transform;}
