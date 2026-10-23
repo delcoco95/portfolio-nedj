@@ -71,3 +71,62 @@
 .work-card.is-hidden{display:none;}
 .js-motion .work-card, .js-motion .statement-text span{opacity:0;}
 .js-motion .statement-text span{opacity:.14;}
+
+/* =========================================================
+   Téléphone : page Projets façon application
+   ========================================================= */
+@media (max-width:809px){
+  html{-webkit-tap-highlight-color:transparent;}
+  .statement{padding:8px 16px 36px;}
+  .statement-text{font-size:clamp(24px,7.2vw,34px); line-height:1.18;}
+
+  /* Filtre : barre segmentée collante, défilement horizontal avec aimantation */
+  .works-filter{position:sticky; top:calc(10px + env(safe-area-inset-top)); z-index:30; margin:0 0 20px; background:color-mix(in srgb, var(--card) 82%, transparent); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); box-shadow:0 8px 24px rgba(0,0,0,.08); scroll-snap-type:x proximity; scroll-padding:5px;}
+  .works-filter button{scroll-snap-align:start; padding:9px 14px; font-size:13px;}
+  .works-wrap{padding:0 12px 12px;}
+  .works-grid{gap:12px;}
+
+  /* Cartes : format compact, retour tactile */
+  .work-card{height:auto; border-radius:18px;}
+  .work-media{flex:none; aspect-ratio:16/10;}
+  .work-chip{display:none;}
+  .work-title{padding:12px 16px 14px;}
+  .work-title h3{font-size:16.5px; line-height:1.3;}
+  .work-domain{font-size:10.5px;}
+  .work-ctx{font-size:10.5px;}
+  .work-proof{font-size:11px; padding:4px 9px; right:10px; bottom:10px;}
+  .work-card:active{transform:scale(.975); transition:transform .15s;}
+  .more-projects{padding:0 20px;}
+
+  /* Fiche projet : feuille qui monte du bas de l'écran */
+  .project-dialog, .project-dialog.wide{max-width:100vw; width:100vw; margin:auto 0 0; max-height:94dvh; border-radius:24px 24px 0 0;}
+  .project-dialog .dlg-inner{max-height:94dvh; border-radius:24px 24px 0 0; border-bottom:none; padding:0 18px calc(28px + env(safe-area-inset-bottom)); gap:18px; overscroll-behavior:contain; touch-action:pan-y;}
+  .project-dialog .dlg-head{position:sticky; top:0; z-index:5; margin:0 -18px; padding:26px 18px 12px; background:var(--card); border-bottom:1px solid var(--border); align-items:center; cursor:grab;}
+  .project-dialog .dlg-head::before{content:""; position:absolute; top:9px; left:50%; width:38px; height:5px; margin-left:-19px; border-radius:5px; background:var(--border);}
+  .project-dialog .dlg-head h3{font-size:19px; line-height:1.25;}
+  .project-dialog .dlg-meta{font-size:11.5px; line-height:1.5; margin-top:3px;}
+  .project-dialog .dlg-close{width:34px; height:34px; background:var(--bg);}
+  .dlg-links{display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:8px;}
+  .dlg-links .cv-btn{justify-content:center; padding:11px 12px; font-size:14px;}
+  .dlg-section p, .dlg-list{font-size:14.5px; line-height:1.6;}
+  .dlg-kpis{grid-template-columns:repeat(3,1fr); gap:8px;}
+  .dlg-kpis div{padding:12px 10px; border-radius:14px;}
+  .dlg-kpis b{font-size:clamp(15px,4.6vw,20px); overflow-wrap:anywhere;}
+  .dlg-kpis span{font-size:11.5px; display:block; margin-top:2px;}
+  .dlg-chips{gap:6px;}
+  .dlg-chips span{font-size:11.5px; padding:5px 10px;}
+  /* Galerie : carrousel horizontal à balayer */
+  .dlg-gallery{display:grid; grid-auto-flow:column; grid-auto-columns:80%; grid-template-columns:none; overflow-x:auto; scroll-snap-type:x mandatory; gap:10px; margin:0 -18px; padding:0 18px 6px; scrollbar-width:none;}
+  .dlg-gallery::-webkit-scrollbar{display:none;}
+  .dlg-gallery figure{scroll-snap-align:center;}
+
+  /* Visionneuse plein écran */
+  .lightbox figure{padding:12px 8px calc(16px + env(safe-area-inset-bottom));}
+  .lightbox img{max-height:calc(100dvh - 120px); touch-action:pan-y;}
+  .lightbox figcaption{font-size:12.5px; gap:8px; width:100%;}
+
+  /* Compétences */
+  .skills-wrap{padding:8px 12px 40px;}
+  .skill-card{border-radius:18px;}
+}
+.project-dialog:focus, .project-dialog:focus-visible, .lightbox:focus{outline:none;}

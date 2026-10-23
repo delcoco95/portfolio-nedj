@@ -7,6 +7,7 @@
   var on = !!M && !reduce;
   var SPRING = { type: 'spring', stiffness: 260, damping: 26 };
   var SOFT = { type: 'spring', stiffness: 140, damping: 22 };
+  var mobile = window.matchMedia('(max-width: 809px)');
   if(on) document.documentElement.classList.add('js-motion');
   else document.documentElement.classList.remove('js-motion');
 
@@ -124,7 +125,8 @@
         if(!dlg) return;
         requestAnimationFrame(function(){
           var inner = dlg.querySelector('.dlg-inner');
-          M.animate(inner, { opacity: [0, 1], y: [40, 0], scale: [0.94, 1], filter: ['blur(8px)', 'blur(0px)'] }, SPRING);
+          if(mobile.matches) M.animate(inner, { y: [Math.round(window.innerHeight * 0.75), 0], opacity: [0.4, 1] }, { type: 'spring', stiffness: 320, damping: 34 });
+          else M.animate(inner, { opacity: [0, 1], y: [40, 0], scale: [0.94, 1], filter: ['blur(8px)', 'blur(0px)'] }, SPRING);
           var sections = dlg.querySelectorAll('.dlg-head, .dlg-links, .dlg-section, .dlg-note');
           M.animate(sections, { opacity: [0, 1], y: [16, 0] }, { delay: M.stagger(0.05, { startDelay: 0.12 }), duration: 0.45, ease: [0.16, 1, 0.3, 1] });
           dlg.querySelectorAll('.dlg-kpis b').forEach(function(b){
@@ -141,6 +143,43 @@
       });
     });
   }
+
+  /* ---------- Téléphone : glisser la fiche vers le bas pour la fermer ---------- */
+  document.querySelectorAll('.project-dialog').forEach(function(dlg){
+    var inner = dlg.querySelector('.dlg-inner');
+    if(!inner) return;
+    var y0 = null, t0 = 0, dy = 0, dragging = false, head = false;
+    inner.addEventListener('touchstart', function(e){
+      if(!mobile.matches || e.touches.length > 1) return;
+      var fromHead = !!e.target.closest('.dlg-head');
+      if(!fromHead && inner.scrollTop > 0) { y0 = null; return; }
+      if(e.target.closest('.dlg-gallery')) { y0 = null; return; }
+      y0 = e.touches[0].clientY; t0 = Date.now(); dy = 0; dragging = false; head = fromHead;
+    }, { passive: true });
+    inner.addEventListener('touchmove', function(e){
+      if(y0 === null) return;
+      dy = e.touches[0].clientY - y0;
+      if(dy > 6 && (dragging || head || inner.scrollTop <= 0)){
+        dragging = true;
+        if(e.cancelable) e.preventDefault();
+        inner.style.transform = 'translateY(' + dy + 'px)';
+      }
+    }, { passive: false });
+    inner.addEventListener('touchend', function(){
+      if(y0 === null) return;
+      var fast = dy / Math.max(1, Date.now() - t0) > 0.6;
+      y0 = null;
+      if(!dragging) return;
+      if(dy > 120 || (fast && dy > 40)){
+        var done = function(){ dlg.close(); inner.style.transform = ''; };
+        if(M) M.animate(inner, { y: window.innerHeight }, { duration: 0.22, ease: 'easeIn' }).then(function(){ done(); M.animate(inner, { y: 0 }, { duration: 0 }); });
+        else done();
+      } else if(M) {
+        M.animate(inner, { y: [dy, 0] }, { type: 'spring', stiffness: 420, damping: 32 }).then(function(){ inner.style.transform = ''; });
+        inner.style.transform = '';
+      } else inner.style.transform = '';
+    });
+  });
 
   /* ---------- Lien direct vers une fiche (ex. projets.html#dlg-cadence depuis l'accueil) ---------- */
   var target = location.hash && document.querySelector('.work-card[data-dialog="' + location.hash.slice(1) + '"]');
@@ -165,6 +204,15 @@
   });
   document.getElementById('lb-prev').addEventListener('click', function(){ idx = (idx - 1 + list.length) % list.length; show(-1); });
   document.getElementById('lb-next').addEventListener('click', function(){ idx = (idx + 1) % list.length; show(1); });
+  // Balayage gauche / droite pour changer de capture, vers le bas pour fermer
+  var sx = null, sy = 0;
+  lb.addEventListener('touchstart', function(e){ if(e.touches.length === 1){ sx = e.touches[0].clientX; sy = e.touches[0].clientY; } }, { passive: true });
+  lb.addEventListener('touchend', function(e){
+    if(sx === null) return;
+    var t = e.changedTouches[0], dx = t.clientX - sx, dyy = t.clientY - sy; sx = null;
+    if(Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dyy)) document.getElementById(dx < 0 ? 'lb-next' : 'lb-prev').click();
+    else if(dyy > 100) lb.close();
+  });
   lb.addEventListener('keydown', function(e){
     if(e.key === 'ArrowLeft') document.getElementById('lb-prev').click();
     if(e.key === 'ArrowRight') document.getElementById('lb-next').click();
