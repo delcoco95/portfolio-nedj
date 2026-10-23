@@ -14,7 +14,7 @@
   var statement = document.querySelector('.statement');
   if(statement){
     var words = Array.prototype.slice.call(statement.querySelectorAll('.statement-text span'));
-    var key = /automatise|d.veloppe|s.curise/i;
+    var key = /administre|automatise|d.veloppe|s.curise/i;
     if(on){
       M.scroll(function(progress){
         var lit = progress * (words.length + 2);
@@ -94,11 +94,12 @@
         var f = btn.dataset.filter;
         buttons.forEach(function(b){ var a = b === btn; b.classList.toggle('is-active', a); b.setAttribute('aria-pressed', a); });
         placePill(btn, true);
+        if(bar.scrollWidth > bar.clientWidth) btn.scrollIntoView({ inline: 'center', block: 'nearest', behavior: on ? 'smooth' : 'auto' });
 
         // FLIP : mémoriser les positions, appliquer le filtre, animer depuis l'ancienne position
         var before = new Map();
         cards.forEach(function(c){ if(!c.classList.contains('is-hidden')) before.set(c, c.getBoundingClientRect()); });
-        cards.forEach(function(c){ c.classList.toggle('is-hidden', !(f === 'all' || c.dataset.domain === f)); });
+        cards.forEach(function(c){ c.classList.toggle('is-hidden', !(f === 'all' || (' ' + c.dataset.domain + ' ').indexOf(' ' + f + ' ') > -1)); });
         if(!on) return;
         var k = 0;
         cards.forEach(function(c){

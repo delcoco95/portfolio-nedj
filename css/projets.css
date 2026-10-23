@@ -35,16 +35,19 @@
 .work-card:hover .work-media > svg{transform:scale(1.02);}
 
 /* ===== Domaines ===== */
-.work-labels{display:flex; align-items:center; gap:10px; margin-bottom:4px;}
+.work-labels{display:flex; align-items:center; gap:6px 12px; margin-bottom:4px;}
 .work-domain{font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.04em; text-transform:uppercase; display:inline-flex; align-items:center; gap:7px; color:var(--accent);}
 .work-domain::before{content:""; width:7px; height:7px; border-radius:50%; background:currentColor; box-shadow:0 0 10px currentColor;}
 .work-domain.d-dev{color:#7c8cff;}
 .work-domain.d-net{color:#2fbf8a;}
+.work-domain.d-sys{color:#3fb0e0;}
+.work-labels{flex-wrap:wrap; row-gap:4px;}
+.dlg-list strong{color:var(--text); font-weight:600;}
 .work-ctx{font-family:'DM Mono',monospace; font-size:11.5px; color:var(--dim); border:1px solid var(--border); border-radius:20px; padding:2px 8px;}
 .work-kind{display:none;}
 
 /* ===== Filtre par domaine avec pastille animée ===== */
-.works-filter{position:relative; width:max-content; max-width:100%; margin:0 auto 40px; padding:5px; gap:4px; border:1px solid var(--border); border-radius:40px; background:var(--card); flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;}
+.works-filter{position:relative; width:max-content; max-width:100%; margin:0 auto 40px; padding:5px; gap:4px; border:1px solid var(--border); border-radius:40px; background:var(--card); flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; overscroll-behavior-x:contain; scrollbar-width:none;}
 .works-filter::-webkit-scrollbar{display:none;}
 .works-filter button{position:relative; z-index:1; border:none; background:transparent; white-space:nowrap; padding:9px 16px;}
 .works-filter button sup{font-size:10px; opacity:.6; margin-left:2px;}
